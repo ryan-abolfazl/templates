@@ -72,7 +72,8 @@ async function build(slug) {
     written.push(dest);
   }
 
-  // Icon sprite: only icons referenced in HTML/JS output
+  // Icon sprite: only icons referenced in HTML/JS output. Paint (fill/stroke) comes from
+  // .icon in base.css so templates can restyle icons (e.g. filled stars, thinner strokes).
   const used = new Set();
   const scan = (dir) => {
     for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -86,7 +87,7 @@ async function build(slug) {
   if (missing.length) throw new Error(`Unknown Lucide icons: ${missing.join(', ')}`);
   const symbols = [...used]
     .sort()
-    .map((n) => `<symbol id="i-${n}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICONS[n]}</symbol>`)
+    .map((n) => `<symbol id="i-${n}" viewBox="0 0 24 24">${ICONS[n]}</symbol>`)
     .join('');
   fs.writeFileSync(
     path.join(out, 'assets/js/icons.js'),

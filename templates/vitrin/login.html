@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ورود / عضویت | ویترین</title>
+    <meta name="description" content="ورود یا عضویت در ویترین با شماره موبایل" />
+    <meta name="theme-color" content="#faf8f4" />
+    <meta property="og:title" content="ورود / عضویت | ویترین" />
+    <meta property="og:description" content="ورود یا عضویت در ویترین با شماره موبایل" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function (d) {
+        d.classList.add("js");
+        try {
+          var t = JSON.parse(localStorage.getItem("theme"));
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          d.setAttribute("data-theme", t);
+        } catch (e) {}
+      })(document.documentElement);
+    </script>
+    <link rel="preload" href="assets/fonts/vazirmatn/Vazirmatn-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/core.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body class="">
+    <script src="assets/js/icons.js"></script>
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+
+    <main id="main" class="auth">
+      <div class="auth__art" aria-hidden="true">
+        <svg class="garment" viewBox="0 0 200 240" aria-hidden="true" style="color: #b98a56">
+          <g fill="currentColor">
+            <path d="m64 38 24-10 12 22 12-22 24 10 24 24 10 110-18 2-8-72 4 122H52l4-122-8 72-18-2 10-110Z" />
+            <path class="g-d" d="m88 28 12 22 12-22 10 6-18 50h-8L78 34Z" />
+            <path class="g-d" d="M56 122h88v12H56Z" />
+            <rect class="g-l2" x="92" y="120" width="16" height="16" rx="2" />
+            <circle class="g-d" cx="88" cy="150" r="3.5" />
+            <circle class="g-d" cx="112" cy="150" r="3.5" />
+            <circle class="g-d" cx="88" cy="176" r="3.5" />
+            <circle class="g-d" cx="112" cy="176" r="3.5" />
+            <path class="g-l" d="M100 84v140" />
+          </g>
+        </svg>
+        <p>«کمتر بخریم، بهتر بپوشیم.»</p>
+      </div>
+      <section class="auth__panel">
+        <a class="logo" href="index.html" aria-label="ویترین، صفحه اصلی">ویترین<span>VITRIN</span></a>
+        <div class="auth__box" data-tabs>
+          <div class="tabs" role="tablist" aria-label="ورود یا عضویت">
+            <button role="tab" id="lt-1" aria-controls="lp-1" aria-selected="true" type="button">ورود</button>
+            <button role="tab" id="lt-2" aria-controls="lp-2" aria-selected="false" type="button">عضویت</button>
+          </div>
+          <form
+            role="tabpanel"
+            id="lp-1"
+            aria-labelledby="lt-1"
+            class="stack"
+            style="--gap: 1.25rem"
+            data-validate
+            data-success="خوش آمدید"
+            data-redirect="account.html"
+          >
+            <h1>خوش برگشتید</h1>
+            <div class="field">
+              <label class="label" for="l-p">شماره موبایل</label
+              ><input
+                class="input"
+                id="l-p"
+                type="tel"
+                required
+                pattern="09[0-9]{9}"
+                data-msg="شماره موبایل ۱۱ رقمی و با ۰۹ شروع شود"
+                placeholder="۰۹۱۲۳۴۵۶۷۸۹"
+                autocomplete="tel"
+              />
+            </div>
+            <div class="field">
+              <label class="label" for="l-w">رمز عبور</label
+              ><input class="input" id="l-w" type="password" required minlength="6" autocomplete="current-password" />
+            </div>
+            <button class="btn btn--solid btn--lg btn--block" type="submit">ورود</button>
+            <button class="link xs" type="button" data-toast="کد یکبارمصرف پیامک شد" data-toast-type="info" style="justify-self: center">
+              ورود با کد یکبارمصرف
+            </button>
+          </form>
+          <form
+            role="tabpanel"
+            id="lp-2"
+            aria-labelledby="lt-2"
+            class="stack"
+            style="--gap: 1.25rem"
+            hidden
+            data-validate
+            data-success="عضویت انجام شد؛ کد ۱۰٪ تخفیف پیامک شد"
+            data-redirect="account.html"
+          >
+            <h1>به ویترین بپیوندید</h1>
+            <p class="small muted">با عضویت، ۱۰٪ تخفیف اولین خرید و دسترسی زودهنگام به حراج‌ها را بگیرید.</p>
+            <div class="field">
+              <label class="label" for="r-n">نام و نام خانوادگی</label><input class="input" id="r-n" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label class="label" for="r-p">شماره موبایل</label
+              ><input
+                class="input"
+                id="r-p"
+                type="tel"
+                required
+                pattern="09[0-9]{9}"
+                data-msg="شماره موبایل ۱۱ رقمی و با ۰۹ شروع شود"
+                autocomplete="tel"
+              />
+            </div>
+            <label class="check"><input type="checkbox" checked /> عضویت در خبرنامه</label>
+            <button class="btn btn--solid btn--lg btn--block" type="submit">ساخت حساب</button>
+          </form>
+        </div>
+        <a class="link xs" href="index.html"
+          ><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg> بازگشت به فروشگاه</a
+        >
+      </section>
+    </main>
+  </body>
+</html>

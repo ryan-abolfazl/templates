@@ -1,0 +1,169 @@
+/* docs.css: styles for documentation/index.html, shared by all templates.
+   Uses each template's tokens (--primary, --surface, --border, --text, --radius…). */
+
+.docs {
+  display: grid;
+  grid-template-columns: 16rem minmax(0, 1fr);
+  gap: 3rem;
+  max-inline-size: 72rem;
+  margin-inline: auto;
+  padding: 2.5rem clamp(1rem, 3vw, 2rem) 4rem;
+}
+
+.docs__nav {
+  position: sticky;
+  inset-block-start: 2rem;
+  align-self: start;
+  display: grid;
+  gap: 0.25rem;
+  font-size: var(--text-sm);
+}
+
+.docs__nav a {
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  color: var(--text-muted);
+}
+
+.docs__nav a:hover {
+  background: var(--surface);
+  color: var(--primary);
+}
+
+.docs__body {
+  display: grid;
+  gap: 2.5rem;
+  line-height: 2;
+}
+
+.docs__body section {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.docs__body h1 {
+  font-size: var(--text-4xl);
+  font-weight: 900;
+}
+
+.docs__body h2 {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  padding-block-start: 1rem;
+  border-block-start: 1px solid var(--border);
+}
+
+.docs__body h3 {
+  font-size: var(--text-lg);
+}
+
+.docs__body ul,
+.docs__body ol {
+  padding-inline-start: 1.25rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.docs__body pre {
+  direction: ltr;
+  text-align: left;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius);
+  background: #0f1729;
+  color: #d8def0;
+  overflow-x: auto;
+  font-size: var(--text-sm);
+  line-height: 1.7;
+}
+
+.docs__body .table {
+  white-space: normal;
+}
+
+@media (max-width: 900px) {
+  .docs {
+    grid-template-columns: 1fr;
+  }
+
+  .docs__nav {
+    position: static;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  }
+}
+
+.docs__kicker {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.docs__body code {
+  padding: 0.1rem 0.35rem;
+  border-radius: 6px;
+  background: var(--surface-2, rgb(127 127 127 / 0.1));
+  border: 1px solid var(--border);
+  font-size: 0.85em;
+}
+
+.docs__body pre code {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.docs__body a {
+  color: var(--primary);
+}
+
+.docs__table {
+  font-size: var(--text-sm);
+  border: 1px solid var(--border);
+}
+
+.docs__table th,
+.docs__table td {
+  padding: 0.7rem 0.9rem;
+  text-align: start;
+  border-block-end: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.docs__table th {
+  background: var(--surface-2, rgb(127 127 127 / 0.08));
+}
+
+.docs__swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 0.75rem;
+}
+
+.docs__swatch {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius, 12px);
+  font-size: var(--text-xs);
+  line-height: 1.6;
+}
+
+.docs__swatch i {
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  border-radius: 8px;
+  flex-shrink: 0;
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.08);
+}
+
+.docs__swatch span {
+  display: grid;
+}
+
+.docs__swatch code {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--text-muted);
+}

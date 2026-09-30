@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>تسویه حساب | ویترین</title>
+    <meta name="description" content="فرم آدرس، روش ارسال و پرداخت" />
+    <meta name="theme-color" content="#faf8f4" />
+    <meta property="og:title" content="تسویه حساب | ویترین" />
+    <meta property="og:description" content="فرم آدرس، روش ارسال و پرداخت" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function (d) {
+        d.classList.add("js");
+        try {
+          var t = JSON.parse(localStorage.getItem("theme"));
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          d.setAttribute("data-theme", t);
+        } catch (e) {}
+      })(document.documentElement);
+    </script>
+    <link rel="preload" href="assets/fonts/vazirmatn/Vazirmatn-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/core.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body class="">
+    <script src="assets/js/icons.js"></script>
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+
+    <header class="co-head">
+      <div class="container row-between">
+        <a class="logo" href="index.html" aria-label="ویترین، صفحه اصلی">ویترین<span>VITRIN</span></a
+        ><a class="link xs" href="cart.html"
+          ><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg> بازگشت به سبد</a
+        >
+      </div>
+    </header>
+    <main id="main" class="container checkout">
+      <form class="checkout__form" data-validate data-success="سفارش شما ثبت شد! کد پیگیری: VT-48213" data-redirect="account.html">
+        <ol class="co-steps list-plain" aria-label="مراحل">
+          <li class="is-done">سبد خرید</li>
+          <li class="is-current">اطلاعات و ارسال</li>
+          <li>پرداخت</li>
+        </ol>
+        <section>
+          <h2>اطلاعات تماس</h2>
+          <div class="form-grid">
+            <div class="field">
+              <label class="label" for="co-name">نام و نام خانوادگی</label><input class="input" id="co-name" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label class="label" for="co-phone">موبایل</label
+              ><input
+                class="input"
+                id="co-phone"
+                type="tel"
+                required
+                pattern="09[0-9]{9}"
+                data-msg="شماره موبایل ۱۱ رقمی و با ۰۹ شروع شود"
+                autocomplete="tel"
+              />
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>آدرس تحویل</h2>
+          <div class="form-grid">
+            <div class="field">
+              <label class="label" for="co-prov">استان</label
+              ><select class="select" id="co-prov" required>
+                <option value="">انتخاب کنید</option>
+                <option>تهران</option>
+                <option>البرز</option>
+                <option>اصفهان</option>
+                <option>فارس</option>
+                <option>خراسان رضوی</option>
+                <option>آذربایجان شرقی</option>
+                <option>گیلان</option>
+                <option>مازندران</option>
+                <option>خوزستان</option>
+                <option>کرمان</option>
+                <option>یزد</option>
+                <option>قم</option>
+              </select>
+            </div>
+            <div class="field"><label class="label" for="co-city">شهر</label><input class="input" id="co-city" required /></div>
+            <div class="field full">
+              <label class="label" for="co-addr">آدرس کامل</label
+              ><textarea class="textarea" id="co-addr" required rows="2" placeholder="خیابان، کوچه، پلاک، واحد"></textarea>
+            </div>
+            <div class="field">
+              <label class="label" for="co-zip">کد پستی</label
+              ><input class="input ltr" id="co-zip" inputmode="numeric" pattern="[0-9]{10}" data-msg="کد پستی ۱۰ رقمی است" />
+            </div>
+            <div class="field"><label class="label" for="co-unit">پلاک و واحد</label><input class="input" id="co-unit" /></div>
+          </div>
+        </section>
+        <section>
+          <h2>روش ارسال</h2>
+          <div class="options">
+            <label class="option"
+              ><span class="check"><input type="radio" name="ship" checked /></span
+              ><span><b>پیک ویترین (تهران)</b><span class="xs muted">تحویل فردا، ۹ تا ۲۱</span></span
+              ><span class="small bold">رایگان</span></label
+            ><label class="option"
+              ><span class="check"><input type="radio" name="ship" /></span
+              ><span><b>پست پیشتاز</b><span class="xs muted">۲ تا ۴ روز کاری</span></span
+              ><span class="small bold">رایگان</span></label
+            ><label class="option"
+              ><span class="check"><input type="radio" name="ship" /></span
+              ><span><b>تیپاکس</b><span class="xs muted">۱ تا ۲ روز کاری</span></span
+              ><span class="small bold">۱۲۰٬۰۰۰ تومان</span></label
+            >
+          </div>
+        </section>
+        <section>
+          <h2>روش پرداخت</h2>
+          <div class="options">
+            <label class="option"
+              ><span class="check"><input type="radio" name="pay" checked /></span
+              ><span><b>درگاه بانکی</b><span class="xs muted">همه کارت‌های عضو شتاب</span></span
+              ><svg class="icon" aria-hidden="true"><use href="#i-credit-card"></use></svg></label
+            ><label class="option"
+              ><span class="check"><input type="radio" name="pay" /></span
+              ><span><b>پرداخت اقساطی</b><span class="xs muted">۴ قسط بدون کارمزد</span></span
+              ><svg class="icon" aria-hidden="true"><use href="#i-calendar-range"></use></svg></label
+            ><label class="option"
+              ><span class="check"><input type="radio" name="pay" /></span
+              ><span><b>پرداخت در محل</b><span class="xs muted">فقط تهران، با کارتخوان</span></span
+              ><svg class="icon" aria-hidden="true"><use href="#i-hand-coins"></use></svg
+            ></label>
+          </div>
+        </section>
+        <label class="check"
+          ><input type="checkbox" required />
+          <span><a class="link" href="documentation/index.html">قوانین فروشگاه</a> را می‌پذیرم</span></label
+        >
+        <button class="btn btn--solid btn--lg btn--block" type="submit">
+          <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg> ثبت سفارش و پرداخت
+        </button>
+      </form>
+
+      <aside class="checkout__sum">
+        <h2>سفارش شما</h2>
+        <ul class="list-plain">
+          <li class="mini-item">
+            <div style="position: relative">
+              <div class="art" style="--art-bg: #e8dfd1">
+                <svg class="garment" viewBox="0 0 200 240" aria-hidden="true" style="color: #b98a56">
+                  <g fill="currentColor">
+                    <path d="m64 38 24-10 12 22 12-22 24 10 24 24 10 110-18 2-8-72 4 122H52l4-122-8 72-18-2 10-110Z" />
+                    <path class="g-d" d="m88 28 12 22 12-22 10 6-18 50h-8L78 34Z" />
+                    <path class="g-d" d="M56 122h88v12H56Z" />
+                    <rect class="g-l2" x="92" y="120" width="16" height="16" rx="2" />
+                    <circle class="g-d" cx="88" cy="150" r="3.5" />
+                    <circle class="g-d" cx="112" cy="150" r="3.5" />
+                    <circle class="g-d" cx="88" cy="176" r="3.5" />
+                    <circle class="g-d" cx="112" cy="176" r="3.5" />
+                    <path class="g-l" d="M100 84v140" />
+                  </g>
+                </svg>
+              </div>
+              <span class="qty-dot">۱</span>
+            </div>
+            <div>
+              <b>بارانی بلند کتان</b><span>شتری · <span class="ltr">M</span></span>
+            </div>
+            <b class="small">۷٬۸۹۰٬۰۰۰</b>
+          </li>
+          <li class="mini-item">
+            <div style="position: relative">
+              <div class="art" style="--art-bg: #e9e4da">
+                <svg class="garment" viewBox="0 0 200 240" aria-hidden="true" style="color: #1f1d1b">
+                  <g fill="currentColor">
+                    <path d="M60 44 85 32q15 14 30 0l25 12 30 30-20 22-12-10v124H62V86l-12 10-20-22Z" />
+                    <path class="g-d" d="M85 32q15 14 30 0l3 2q-18 20-36 0Z" />
+                    <path class="g-l" d="M62 190h76" />
+                  </g>
+                </svg>
+              </div>
+              <span class="qty-dot">۲</span>
+            </div>
+            <div>
+              <b>تی‌شرت پنبه ارگانیک</b><span>مشکی · <span class="ltr">L</span></span>
+            </div>
+            <b class="small">۱٬۷۸۰٬۰۰۰</b>
+          </li>
+        </ul>
+        <dl class="order-sum">
+          <div>
+            <dt>جمع محصولات</dt>
+            <dd>۹٬۶۷۰٬۰۰۰ تومان</dd>
+          </div>
+          <div>
+            <dt>ارسال</dt>
+            <dd>رایگان</dd>
+          </div>
+          <div class="order-sum__total">
+            <dt>مبلغ نهایی</dt>
+            <dd>۹٬۶۷۰٬۰۰۰ تومان</dd>
+          </div>
+        </dl>
+      </aside>
+    </main>
+  </body>
+</html>

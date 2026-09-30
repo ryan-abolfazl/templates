@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>لوک‌بوک پاییز ۱۴۰۵ | ویترین</title>
+    <meta name="description" content="لوک‌بوک ادیتوریال کالکشن پاییز ویترین" />
+    <meta name="theme-color" content="#faf8f4" />
+    <meta property="og:title" content="لوک‌بوک پاییز ۱۴۰۵ | ویترین" />
+    <meta property="og:description" content="لوک‌بوک ادیتوریال کالکشن پاییز ویترین" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function (d) {
+        d.classList.add("js");
+        try {
+          var t = JSON.parse(localStorage.getItem("theme"));
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          d.setAttribute("data-theme", t);
+        } catch (e) {}
+      })(document.documentElement);
+    </script>
+    <link rel="preload" href="assets/fonts/vazirmatn/Vazirmatn-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/core.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body class="">
+    <script src="assets/js/icons.js"></script>
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+
+    <div class="topline">
+      <span>ارسال رایگان برای سفارش‌های بالای <b>۲ میلیون تومان</b></span
+      ><span class="hide-md">۷ روز ضمانت تعویض بی‌قیدوشرط</span>
+    </div>
+    <header class="header" data-sticky-header>
+      <div class="container header__inner">
+        <nav class="nav" aria-label="منوی اصلی">
+          <a class="" href="shop.html">جدیدترین‌ها</a><a class="" href="shop.html">زنانه</a><a class="" href="shop.html">مردانه</a
+          ><a class="" href="shop.html">اکسسوری</a><a class="is-active" href="lookbook.html" aria-current="page">لوک‌بوک</a
+          ><a class="" href="journal.html">ژورنال</a>
+          <a class="sale" href="shop.html">حراج</a>
+        </nav>
+        <button
+          class="icon-btn menu-btn"
+          type="button"
+          data-drawer-open="menu"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="باز کردن منو"
+        >
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+        </button>
+        <a class="logo" href="index.html" aria-label="ویترین، صفحه اصلی">ویترین<span>VITRIN</span></a>
+        <div class="header__actions">
+          <button class="icon-btn hide-md" type="button" data-modal-open="search" aria-label="جستجو">
+            <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+          </button>
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="تغییر حالت روشن و تاریک" aria-pressed="false">
+            <svg class="icon theme-icon-light" aria-hidden="true"><use href="#i-moon"></use></svg
+            ><svg class="icon theme-icon-dark" aria-hidden="true"><use href="#i-sun"></use></svg>
+          </button>
+          <a class="icon-btn hide-md" href="account.html" aria-label="حساب کاربری"
+            ><svg class="icon" aria-hidden="true"><use href="#i-user-round"></use></svg
+          ></a>
+          <a class="icon-btn hide-md" href="wishlist.html" aria-label="علاقه‌مندی‌ها"
+            ><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg
+          ></a>
+          <button class="icon-btn" type="button" data-drawer-open="cart" aria-controls="cart" aria-expanded="false" aria-label="سبد خرید">
+            <svg class="icon" aria-hidden="true"><use href="#i-shopping-bag"></use></svg><span class="count" data-cart-count>۲</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="drawer" id="menu" data-drawer>
+      <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="منو">
+        <div class="drawer__head">
+          <a class="logo" href="index.html" aria-label="ویترین، صفحه اصلی">ویترین<span>VITRIN</span></a
+          ><button class="icon-btn" type="button" data-drawer-close aria-label="بستن">
+            <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+          </button>
+        </div>
+        <div class="drawer__body">
+          <nav class="drawer__nav" aria-label="منوی موبایل">
+            <a href="shop.html"
+              >جدیدترین‌ها<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-left"></use></svg></a
+            ><a href="shop.html"
+              >زنانه<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-left"></use></svg></a
+            ><a href="shop.html"
+              >مردانه<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-left"></use></svg></a
+            ><a href="shop.html"
+              >اکسسوری<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-left"></use></svg></a
+            ><a href="lookbook.html"
+              >لوک‌بوک<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-left"></use></svg></a
+            ><a href="journal.html"
+              >ژورنال<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-left"></use></svg
+            ></a>
+            <a href="about.html"
+              >درباره ما<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-left"></use></svg
+            ></a>
+            <a href="contact.html"
+              >تماس<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-left"></use></svg
+            ></a>
+          </nav>
+        </div>
+        <div class="drawer__foot">
+          <a class="btn btn--solid btn--block" href="account.html"
+            ><svg class="icon" aria-hidden="true"><use href="#i-user-round"></use></svg> حساب کاربری</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="drawer drawer--end" id="cart" data-drawer>
+      <div class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+        <div class="drawer__head">
+          <h2 id="cart-title">سبد خرید (۲)</h2>
+          <button class="icon-btn" type="button" data-drawer-close aria-label="بستن">
+            <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+          </button>
+        </div>
+        <div class="drawer__body">
+          <div class="ship-meter">
+            <span>فقط <b>۲۱۰٬۰۰۰ تومان</b> تا ارسال رایگان</span>
+            <div class="ship-meter__bar"><span style="--value: 90%"></span></div>
+          </div>
+          <div class="mini-item">
+            <div class="art" style="--art-bg: #e8dfd1">
+              <svg class="garment" viewBox="0 0 200 240" aria-hidden="true" style="color: #b98a56">
+                <g fill="currentColor">
+                  <path d="m64 38 24-10 12 22 12-22 24 10 24 24 10 110-18 2-8-72 4 122H52l4-122-8 72-18-2 10-110Z" />
+                  <path class="g-d" d="m88 28 12 22 12-22 10 6-18 50h-8L78 34Z" />
+                  <path class="g-d" d="M56 122h88v12H56Z" />
+                  <rect class="g-l2" x="92" y="120" width="16" height="16" rx="2" />
+                  <circle class="g-d" cx="88" cy="150" r="3.5" />
+                  <circle class="g-d" cx="112" cy="150" r="3.5" />
+                  <circle class="g-d" cx="88" cy="176" r="3.5" />
+                  <circle class="g-d" cx="112" cy="176" r="3.5" />
+                  <path class="g-l" d="M100 84v140" />
+                </g>
+              </svg>
+            </div>
+            <div>
+              <b>بارانی بلند کتان</b><span>شتری · سایز M</span>
+              <div class="mt-1">
+                <span class="price price--sale"><del>۹٬۹۰۰٬۰۰۰</del><b>۷٬۸۹۰٬۰۰۰</b><small>تومان</small></span>
+              </div>
+            </div>
+            <button class="icon-btn" type="button" aria-label="حذف">
+              <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+            </button>
+          </div>
+          <div class="mini-item">
+            <div class="art" style="--art-bg: #e9e4da">
+              <svg class="garment" viewBox="0 0 200 240" aria-hidden="true" style="color: #1f1d1b">
+                <g fill="currentColor">
+                  <path d="M60 44 85 32q15 14 30 0l25 12 30 30-20 22-12-10v124H62V86l-12 10-20-22Z" />
+                  <path class="g-d" d="M85 32q15 14 30 0l3 2q-18 20-36 0Z" />
+                  <path class="g-l" d="M62 190h76" />
+                </g>
+              </svg>
+            </div>
+            <div>
+              <b>تی‌شرت پنبه ارگانیک</b><span>مشکی · سایز M</span>
+              <div class="mt-1">
+                <span class="price"><b>۸۹۰٬۰۰۰</b><small>تومان</small></span>
+              </div>
+            </div>
+            <button class="icon-btn" type="button" aria-label="حذف">
+              <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+            </button>
+          </div>
+        </div>
+        <div class="drawer__foot">
+          <div class="row-between"><span>جمع کل</span><b>۸٬۷۸۰٬۰۰۰ تومان</b></div>
+          <a class="btn btn--solid btn--block btn--lg" href="checkout.html">تسویه حساب</a>
+          <a class="btn btn--block" href="cart.html">مشاهده سبد خرید</a>
+        </div>
+      </div>
+    </div>
+
+    <dialog class="modal" id="search" aria-label="جستجو">
+      <form class="modal__body stack" action="shop.html">
+        <label class="label" for="sq">جستجو در ویترین</label>
+        <input
+          class="input input--line"
+          id="sq"
+          type="search"
+          placeholder="بارانی، پیراهن لینن، کیف چرم…"
+          style="font-size: var(--text-xl)"
+        />
+        <div class="row wrap small">
+          <span class="muted">پرجستجو:</span><a class="link" href="shop.html">بارانی</a><a class="link" href="shop.html">لینن</a
+          ><a class="link" href="shop.html">بافت</a><a class="link" href="shop.html">کیف</a>
+        </div>
+      </form>
+    </dialog>
+    <main id="main">
+      <section class="lb-hero">
+        <div class="container">
+          <span class="kicker"><span class="num">۰۷</span> لوک‌بوک</span>
+          <h1>کالکشن پاییز<br /><span class="clay">۱۴۰۵</span></h1>
+          <p class="muted">چهار روایت از پاییز ایرانی؛ از صبح‌های سرد تبریز تا عصرهای طلایی باغ ارم.</p>
+        </div>
+      </section>
+      <section class="section section--tight">
+        <div class="container looks">
+          <article class="look look--wide" data-reveal>
+            <div class="look__art" style="--art-bg: #d9c3a5">
+              <svg class="garment" viewBox="0 0 200 240" aria-hidden="true" style="color: #b98a56">
+                <g fill="currentColor">
+                  <path d="m64 38 24-10 12 22 12-22 24 10 24 24 10 110-18 2-8-72 4 122H52l4-122-8 72-18-2 10-110Z" />
+                  <path class="g-d" d="m88 28 12 22 12-22 10 6-18 50h-8L78 34Z" />
+                  <path class="g-d" d="M56 122h88v12H56Z" />
+                  <rect class="g-l2" x="92" y="120" width="16" height="16" rx="2" />
+                  <circle class="g-d" cx="88" cy="150" r="3.5" />
+                  <circle class="g-d" cx="112" cy="150" r="3.5" />
+                  <circle class="g-d" cx="88" cy="176" r="3.5" />
+                  <circle class="g-d" cx="112" cy="176" r="3.5" />
+                  <path class="g-l" d="M100 84v140" />
+                </g></svg
+              ><svg class="garment" viewBox="0 0 200 240" aria-hidden="true" style="color: #efe6d2">
+                <g fill="currentColor">
+                  <path d="M64 42q36 18 72 0l26 22 14 104-20 4-14-74v110H58V98l-14 74-20-4 14-104Z" />
+                  <path class="g-d" d="M58 194h84v14H58ZM24 160l20 4-2 10-20-4ZM176 160l-20 4 2 10 20-4Z" />
+                  <path class="g-s" d="M76 40q24 20 48 0" fill="none" />
+                  <path class="g-l" d="M72 110h56M72 130h56M72 150h56M72 170h56" />
+                </g>
+              </svg>
+            </div>
+            <div class="look__text">
+              <span class="look__num">۰۱</span>
+              <div>
+                <h2>صبح در تبریز</h2>
+                <p class="small muted">بارانی شتری روی بافت کرم؛ گرمای لایه‌ها در سرمای صبح پاییز.</p>
+                <a class="link mt-1" href="shop.html"
+                  >خرید این استایل <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article class="look" data-reveal>
+            <div class="look__art" style="--art-bg: #c9c4ad">
+              <svg class="garment" viewBox="0 0 200 240" aria-hidden="true" style="color: #e9e1d3">
+                <g fill="currentColor">
+                  <path d="m62 44 24-10 14 12 14-12 24 10 24 22 10 88-18 4-12-64v114H58V94l-12 64-18-4 10-88Z" />
+                  <path class="g-d" d="M86 34 100 58l14-24 8 4-14 22h-16L78 38Z" />
+                  <path class="g-l" d="M100 58v150" />
+                  <circle class="g-d" cx="100" cy="80" r="3" />
+                  <circle class="g-d" cx="100" cy="110" r="3" />
+                  <circle class="g-d" cx="100" cy="140" r="3" />
+                  <circle class="g-d" cx="100" cy="170" r="3" />
+                  <path class="g-d" d="M112 96h18v14h-18Z" />
+                </g></svg
+              ><svg class="garment" viewBox="0 0 200 240" aria-hidden="true" style="color: #6b6a45">
+                <g fill="currentColor">
+                  <path d="M62 30h76l8 188h-36l-10-126-10 126H54Z" />
+                  <path class="g-d" d="M62 30h76l1 14H61Z" />
+                  <path class="g-l" d="M80 44l-6 170M120 44l6 170M100 44v44" />
+                  <path class="g-l" d="M68 44q4 18 18 22M132 44q-4 18-18 22" />
+                </g>
+              </svg>
+            </div>
+            <div class="look__text">
+              <span class="look__num">۰۲</span>
+              <div>
+                <h2>بازار</h2>
+                <p class="small muted">پیراهن لینن و شلوار زیتونی؛ ساده، راحت، بی‌زمان.</p>
+                <a class="link mt-1" href="shop.html"
+                  >خرید این استایل <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article class="look" data-reveal>
+            <div class="look__art" style="--art-bg: #ecdccc">
+              <svg class="garment" viewBox="0 0 200 240" aria-hidden="true" style="color: #b5532f">
+                <g fill="currentColor">
+                  <path d="M84 30h32l2 30q24 10 14 38l34 112q-66 18-132 0L68 98q-10-28 14-38Z" />
+                  <path class="g-d" d="M68 98h64l-3 12H71Z" />
+                  <path class="g-l" d="M84 30v28M116 30v28M84 118l-18 90M100 118v96M116 118l18 90" />
+                </g></svg
+              ><svg class="garment" viewBox="0 0 200 240" aria-hidden="true" style="color: #d9a296">
+                <g fill="currentColor">
+                  <path d="M72 30h56v70l-12 110h-28l6-90-16 92H50l18-112Z" />
+                  <path class="g-l" d="M72 60h56M72 80h56" />
+                  <path class="g-d" d="M50 200h28l-2 10H48ZM88 200h28v10H88Z" />
+                </g>
+              </svg>
+            </div>
+            <div class="look__text">
+              <span class="look__num">۰۳</span>
+              <div>
+                <h2>عصر در باغ</h2>
+                <p class="small muted">پیراهن میدی آجری با شال نخی گلبهی.</p>
+                <a class="link mt-1" href="shop.html"
+                  >خرید این استایل <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article class="look look--wide" data-reveal>
+            <div class="look__art" style="--art-bg: #d4d9d6">
+              <svg class="garment" viewBox="0 0 200 240" aria-hidden="true" style="color: #4d6583">
+                <g fill="currentColor">
+                  <path d="m66 40 22-8 12 16 12-16 22 8 26 26 8 90-18 4-10-60v84H58v-84l-10 60-18-4 8-90Z" />
+                  <path class="g-d" d="m88 32 12 16 12-16 8 6-16 26h-8L80 38Z" />
+                  <path class="g-d" d="M58 176h84v14H58Z" />
+                  <path class="g-l" d="M100 64v126M66 100h24v18H66ZM110 100h24v18h-24Z" />
+                </g></svg
+              ><svg class="garment" viewBox="0 0 200 240" aria-hidden="true" style="color: #1f1d1b">
+                <g fill="currentColor">
+                  <path d="M60 44 85 32q15 14 30 0l25 12 30 30-20 22-12-10v124H62V86l-12 10-20-22Z" />
+                  <path class="g-d" d="M85 32q15 14 30 0l3 2q-18 20-36 0Z" />
+                  <path class="g-l" d="M62 190h76" />
+                </g></svg
+              ><svg class="garment" viewBox="0 0 200 240" aria-hidden="true" style="color: #e9e1d3">
+                <g fill="currentColor">
+                  <path d="M28 150q0-28 30-30l42-10q20-12 32 8 30 10 44 32 6 18-6 26H36q-10-4-8-26Z" />
+                  <path class="g-l2" d="M30 160h148l-4 18H34Z" />
+                  <path class="g-l" d="m96 118 10 18M108 114l10 18M120 114l8 16" />
+                  <path class="g-d" d="M140 124q20 8 32 26h-24Z" />
+                </g>
+              </svg>
+            </div>
+            <div class="look__text">
+              <span class="look__num">۰۴</span>
+              <div>
+                <h2>سفر</h2>
+                <p class="small muted">کاپشن جین، تی‌شرت مشکی و کتانی چرمی؛ همراه همیشگی.</p>
+                <a class="link mt-1" href="shop.html"
+                  >خرید این استایل <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__big" aria-hidden="true">
+          ویترین<small>پوشاک معاصر، دوخته‌شده در کارگاه‌های کوچک ایرانی با پارچه‌های طبیعی و قیمت منصفانه.</small>
+        </p>
+        <div class="footer__grid">
+          <div>
+            <h3>فروشگاه</h3>
+            <ul class="list-plain">
+              <li><a href="shop.html">زنانه</a></li>
+              <li><a href="shop.html">مردانه</a></li>
+              <li><a href="shop.html">اکسسوری</a></li>
+              <li><a href="shop.html">حراج</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>ویترین</h3>
+            <ul class="list-plain">
+              <li><a href="about.html">داستان ما</a></li>
+              <li><a href="lookbook.html">لوک‌بوک</a></li>
+              <li><a href="journal.html">ژورنال</a></li>
+              <li><a href="contact.html">فروشگاه‌های حضوری</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>راهنما</h3>
+            <ul class="list-plain">
+              <li><a href="contact.html">پیگیری سفارش</a></li>
+              <li><a href="product.html">راهنمای سایز</a></li>
+              <li><a href="contact.html">تعویض و مرجوعی</a></li>
+              <li><a href="documentation/index.html">قوانین</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>ما را دنبال کنید</h3>
+            <ul class="list-plain">
+              <li><a href="#">اینستاگرام</a></li>
+              <li><a href="#">پینترست</a></li>
+              <li><a href="#">تلگرام</a></li>
+            </ul>
+          </div>
+          <div class="footer__news">
+            <h3>خبرنامه ویترین</h3>
+            <p class="small">اولین نفری باشید که از کالکشن‌های تازه و حراج‌ها باخبر می‌شود.</p>
+            <form class="row mt-2" data-validate data-success="به خبرنامه ویترین خوش آمدید">
+              <label class="sr-only" for="nl">ایمیل</label
+              ><input class="input input--line ltr" id="nl" type="email" required placeholder="email@example.com" /><button
+                class="btn btn--light btn--sm"
+                type="submit"
+              >
+                عضویت
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© ۱۴۰۵ ویترین. همه حقوق محفوظ است.</span>
+          <div class="pay-icons" aria-label="روش‌های پرداخت">
+            <span>شتاب</span><span>اقساط</span><span>کیف پول</span><span>پرداخت در محل</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <button class="scroll-top" type="button" data-scroll-top aria-label="بازگشت به بالا">
+      <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+    </button>
+  </body>
+</html>
