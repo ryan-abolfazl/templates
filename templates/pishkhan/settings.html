@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>تنظیمات | پیشخوان</title>
+    <meta name="description" content="تنظیمات حساب، امنیت، اعلان‌ها و اشتراک" />
+    <meta name="theme-color" content="#4f46e5" />
+    <meta property="og:title" content="تنظیمات | پیشخوان" />
+    <meta property="og:description" content="تنظیمات حساب، امنیت، اعلان‌ها و اشتراک" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function (d) {
+        d.classList.add("js");
+        try {
+          var t = JSON.parse(localStorage.getItem("theme"));
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          d.setAttribute("data-theme", t);
+          if (JSON.parse(localStorage.getItem("pishkhan-sidebar"))) d.classList.add("sidebar-collapsed");
+        } catch (e) {}
+      })(document.documentElement);
+    </script>
+    <link rel="preload" href="assets/fonts/vazirmatn/Vazirmatn-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/core.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body class="">
+    <script src="assets/js/icons.js"></script>
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+    <div class="app">
+      <aside class="sidebar" id="sidebar" data-drawer data-drawer-media="(max-width: 1100px)" aria-label="منوی اصلی">
+        <div class="sidebar__brand">
+          <a href="index.html" class="row" aria-label="پیشخوان، صفحه اصلی">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 20V10l8-6 8 6v10" />
+                <path d="M9 20v-5.5a3 3 0 0 1 6 0V20" />
+              </svg>
+            </span>
+            <span class="brand-name">پیشخوان<small>پنل مدیریت فروشگاه</small></span>
+          </a>
+          <button class="icon-btn sidebar__close" type="button" data-drawer-close aria-label="بستن منو">
+            <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+          </button>
+        </div>
+        <nav class="sidebar__scroll">
+          <div class="nav-group">
+            <p class="nav-group__title">اصلی</p>
+            <a class="nav-link" href="index.html" title="داشبورد فروش">
+              <svg class="icon" aria-hidden="true"><use href="#i-layout-dashboard"></use></svg><span>داشبورد فروش</span> </a
+            ><a class="nav-link" href="analytics.html" title="تحلیل‌ها">
+              <svg class="icon" aria-hidden="true"><use href="#i-chart-spline"></use></svg><span>تحلیل‌ها</span>
+            </a>
+          </div>
+          <div class="nav-group">
+            <p class="nav-group__title">فروشگاه</p>
+            <a class="nav-link" href="orders.html" title="سفارش‌ها">
+              <svg class="icon" aria-hidden="true"><use href="#i-shopping-cart"></use></svg><span>سفارش‌ها</span>
+              <span class="badge badge--count badge--solid t-primary">۱۲</span> </a
+            ><a class="nav-link" href="products.html" title="محصولات">
+              <svg class="icon" aria-hidden="true"><use href="#i-package"></use></svg><span>محصولات</span> </a
+            ><a class="nav-link" href="product-form.html" title="افزودن محصول">
+              <svg class="icon" aria-hidden="true"><use href="#i-package-plus"></use></svg><span>افزودن محصول</span> </a
+            ><a class="nav-link" href="customers.html" title="مشتریان">
+              <svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg><span>مشتریان</span> </a
+            ><a class="nav-link" href="invoice.html" title="فاکتور">
+              <svg class="icon" aria-hidden="true"><use href="#i-receipt-text"></use></svg><span>فاکتور</span>
+            </a>
+          </div>
+          <div class="nav-group">
+            <p class="nav-group__title">برنامه‌ها</p>
+            <a class="nav-link" href="chat.html" title="پیام‌ها">
+              <svg class="icon" aria-hidden="true"><use href="#i-messages-square"></use></svg><span>پیام‌ها</span>
+              <span class="badge badge--count badge--solid t-accent">۳</span> </a
+            ><a class="nav-link" href="calendar.html" title="تقویم شمسی">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar-days"></use></svg><span>تقویم شمسی</span> </a
+            ><a class="nav-link" href="kanban.html" title="مدیریت پروژه">
+              <svg class="icon" aria-hidden="true"><use href="#i-square-kanban"></use></svg><span>مدیریت پروژه</span>
+            </a>
+          </div>
+          <div class="nav-group">
+            <p class="nav-group__title">صفحات</p>
+            <a class="nav-link" href="profile.html" title="پروفایل">
+              <svg class="icon" aria-hidden="true"><use href="#i-circle-user-round"></use></svg><span>پروفایل</span> </a
+            ><a class="nav-link is-active" aria-current="page" href="settings.html" title="تنظیمات">
+              <svg class="icon" aria-hidden="true"><use href="#i-settings"></use></svg><span>تنظیمات</span>
+            </a>
+            <details class="nav-sub">
+              <summary title="احراز هویت">
+                <svg class="icon" aria-hidden="true"><use href="#i-lock-keyhole"></use></svg><span>احراز هویت</span
+                ><svg class="icon chev" aria-hidden="true"><use href="#i-chevron-left"></use></svg>
+              </summary>
+              <div class="nav-sub__list">
+                <a href="login.html">ورود</a><a href="register.html">ثبت‌نام</a><a href="forgot-password.html">فراموشی رمز عبور</a
+                ><a href="verify.html">تأیید کد یکبارمصرف</a>
+              </div>
+            </details>
+            <a class="nav-link" href="components.html" title="کامپوننت‌ها">
+              <svg class="icon" aria-hidden="true"><use href="#i-blocks"></use></svg><span>کامپوننت‌ها</span> </a
+            ><a class="nav-link" href="404.html" title="صفحه ۴۰۴">
+              <svg class="icon" aria-hidden="true"><use href="#i-file-question"></use></svg><span>صفحه ۴۰۴</span> </a
+            ><a class="nav-link" href="documentation/index.html" title="مستندات">
+              <svg class="icon" aria-hidden="true"><use href="#i-book-open"></use></svg><span>مستندات</span>
+            </a>
+          </div>
+          <div class="sidebar__promo">
+            <strong>نسخه حرفه‌ای</strong>
+            <p>گزارش‌های پیشرفته، چند انبار و دسترسی تیمی.</p>
+            <a class="btn btn--sm" href="settings.html">ارتقای حساب</a>
+          </div>
+        </nav>
+        <div class="sidebar__user">
+          <span class="avatar avatar--sm" style="--h: 315" aria-hidden="true">س‌م<span class="status"></span></span>
+          <div><strong>سارا محمدی</strong><span>مدیر فروشگاه</span></div>
+          <a class="icon-btn icon-btn--sm" href="login.html" aria-label="خروج"
+            ><svg class="icon icon-flip" aria-hidden="true"><use href="#i-log-out"></use></svg
+          ></a>
+        </div>
+      </aside>
+      <div class="sidebar-backdrop" data-drawer-open="sidebar" aria-hidden="true"></div>
+      <div class="app__main">
+        <header class="topbar" data-sticky-header>
+          <button
+            class="icon-btn topbar__menu"
+            type="button"
+            data-drawer-open="sidebar"
+            aria-controls="sidebar"
+            aria-expanded="false"
+            aria-label="باز کردن منو"
+          >
+            <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+          </button>
+          <button class="icon-btn topbar__collapse" type="button" data-sidebar-collapse aria-label="جمع کردن منوی کناری">
+            <svg class="icon" aria-hidden="true"><use href="#i-panel-right"></use></svg>
+          </button>
+          <button class="search-trigger" type="button" data-modal-open="cmdk" aria-label="جستجو در پنل">
+            <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg><span>جستجو در پنل…</span><kbd>Ctrl K</kbd>
+          </button>
+          <div class="topbar__actions">
+            <button class="icon-btn" type="button" data-theme-toggle aria-label="تغییر حالت روشن و تاریک" aria-pressed="false">
+              <svg class="icon theme-icon-light" aria-hidden="true"><use href="#i-moon"></use></svg
+              ><svg class="icon theme-icon-dark" aria-hidden="true"><use href="#i-sun"></use></svg>
+            </button>
+            <div data-dropdown class="hide-sm">
+              <button class="icon-btn" type="button" data-dropdown-toggle aria-expanded="false" aria-label="زبان">
+                <svg class="icon" aria-hidden="true"><use href="#i-languages"></use></svg>
+              </button>
+              <div class="dropdown-menu" data-dropdown-menu>
+                <button type="button">
+                  <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> فارسی
+                </button>
+                <button type="button"><span class="icon"></span> English</button>
+                <button type="button"><span class="icon"></span> العربية</button>
+              </div>
+            </div>
+            <div data-dropdown>
+              <button class="icon-btn" type="button" data-dropdown-toggle aria-expanded="false" aria-label="اعلان‌ها، ۲ مورد خوانده‌نشده">
+                <svg class="icon" aria-hidden="true"><use href="#i-bell"></use></svg><span class="dot"></span>
+              </button>
+              <div class="dropdown-menu notif-menu" data-dropdown-menu>
+                <div class="notif-menu__head"><strong>اعلان‌ها</strong><span class="badge t-primary">۲ جدید</span></div>
+                <div class="notif-list">
+                  <a href="orders.html" class="notif is-unread">
+                    <span class="thumb t-primary" style="inline-size: 2.25rem; block-size: 2.25rem"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-shopping-bag"></use></svg
+                    ></span>
+                    <span
+                      ><p>سفارش جدید <b>#۴۸۲۱</b> از علی رضایی ثبت شد.</p>
+                      <time>۲ دقیقه پیش</time></span
+                    > </a
+                  ><a href="orders.html" class="notif is-unread">
+                    <span class="thumb t-warning" style="inline-size: 2.25rem; block-size: 2.25rem"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-triangle-alert"></use></svg
+                    ></span>
+                    <span
+                      ><p>موجودی «هدفون بی‌سیم نوا» به ۳ عدد رسید.</p>
+                      <time>۱ ساعت پیش</time></span
+                    > </a
+                  ><a href="orders.html" class="notif">
+                    <span class="thumb t-info" style="inline-size: 2.25rem; block-size: 2.25rem"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-message-circle"></use></svg
+                    ></span>
+                    <span
+                      ><p>مریم احمدی به تیکت پشتیبانی پاسخ داد.</p>
+                      <time>۳ ساعت پیش</time></span
+                    > </a
+                  ><a href="orders.html" class="notif">
+                    <span class="thumb t-success" style="inline-size: 2.25rem; block-size: 2.25rem"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-circle-check"></use></svg
+                    ></span>
+                    <span
+                      ><p>تسویه‌حساب هفتگی با موفقیت واریز شد.</p>
+                      <time>دیروز</time></span
+                    >
+                  </a>
+                </div>
+                <a class="notif-menu__foot" href="settings.html">مشاهده همه اعلان‌ها</a>
+              </div>
+            </div>
+            <div data-dropdown>
+              <button class="topbar__profile" type="button" data-dropdown-toggle aria-expanded="false">
+                <span class="avatar avatar--sm" style="--h: 315" aria-hidden="true">س‌م</span><span>سارا محمدی</span
+                ><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg>
+              </button>
+              <div class="dropdown-menu" data-dropdown-menu>
+                <div class="dropdown-head"><strong>سارا محمدی</strong><span class="ltr">sara@pishkhan.ir</span></div>
+                <hr />
+                <a href="profile.html"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-circle-user-round"></use></svg> پروفایل من</a
+                >
+                <a href="settings.html"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-settings"></use></svg> تنظیمات حساب</a
+                >
+                <a href="invoice.html"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-credit-card"></use></svg> صورتحساب‌ها</a
+                >
+                <a href="documentation/index.html"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-life-buoy"></use></svg> راهنما و پشتیبانی</a
+                >
+                <hr />
+                <a href="login.html" class="danger"
+                  ><svg class="icon icon-flip" aria-hidden="true"><use href="#i-log-out"></use></svg> خروج از حساب</a
+                >
+              </div>
+            </div>
+          </div>
+        </header>
+        <main id="main" class="page">
+          <div class="page-head">
+            <div>
+              <nav class="breadcrumb" aria-label="مسیر صفحه">
+                <a href="index.html">پیشخوان</a>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg><span aria-current="page">تنظیمات</span>
+              </nav>
+              <h1>تنظیمات</h1>
+              <p>حساب کاربری و ترجیحات پنل را مدیریت کنید</p>
+            </div>
+          </div>
+
+          <div class="card" data-tabs>
+            <div class="tabs" role="tablist" aria-label="بخش‌های تنظیمات">
+              <button role="tab" id="st-1" aria-controls="sp-1" aria-selected="true" type="button">
+                <svg class="icon" aria-hidden="true"><use href="#i-user-round"></use></svg> حساب کاربری
+              </button>
+              <button role="tab" id="st-2" aria-controls="sp-2" aria-selected="false" type="button">
+                <svg class="icon" aria-hidden="true"><use href="#i-shield-check"></use></svg> امنیت
+              </button>
+              <button role="tab" id="st-3" aria-controls="sp-3" aria-selected="false" type="button">
+                <svg class="icon" aria-hidden="true"><use href="#i-bell"></use></svg> اعلان‌ها
+              </button>
+              <button role="tab" id="st-4" aria-controls="sp-4" aria-selected="false" type="button">
+                <svg class="icon" aria-hidden="true"><use href="#i-credit-card"></use></svg> اشتراک و پرداخت
+              </button>
+            </div>
+
+            <div role="tabpanel" id="sp-1" aria-labelledby="st-1">
+              <form data-validate data-success="تغییرات ذخیره شد">
+                <div class="settings-section">
+                  <div>
+                    <h2>تصویر پروفایل</h2>
+                    <p>تصویر مربعی با حداقل ابعاد ۴۰۰ پیکسل.</p>
+                  </div>
+                  <div class="row wrap">
+                    <span class="avatar avatar--xl" style="--h: 315" aria-hidden="true">س‌م</span>
+                    <div class="row">
+                      <button class="btn" type="button">
+                        <svg class="icon" aria-hidden="true"><use href="#i-upload"></use></svg> بارگذاری تصویر</button
+                      ><button class="btn btn--ghost" type="button">حذف</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="settings-section">
+                  <div>
+                    <h2>اطلاعات شخصی</h2>
+                    <p>این اطلاعات در فاکتورها و ایمیل‌ها استفاده می‌شود.</p>
+                  </div>
+                  <div class="form-grid">
+                    <div class="field">
+                      <label class="label" for="s-first">نام</label><input class="input" id="s-first" value="سارا" required />
+                    </div>
+                    <div class="field">
+                      <label class="label" for="s-last">نام خانوادگی</label><input class="input" id="s-last" value="محمدی" required />
+                    </div>
+                    <div class="field">
+                      <label class="label" for="s-email">ایمیل</label
+                      ><input class="input ltr" id="s-email" type="email" value="sara@pishkhan.ir" required />
+                    </div>
+                    <div class="field">
+                      <label class="label" for="s-phone">موبایل</label><input class="input" id="s-phone" type="tel" value="09123456789" />
+                    </div>
+                    <div class="field">
+                      <label class="label" for="s-birth">تاریخ تولد</label>
+                      <div class="input-icon">
+                        <svg class="icon" aria-hidden="true"><use href="#i-cake"></use></svg
+                        ><input class="input" id="s-birth" data-datepicker readonly value="۱۳۷۰/۰۵/۱۲" />
+                      </div>
+                    </div>
+                    <div class="field">
+                      <label class="label" for="s-city">شهر</label
+                      ><select class="select" id="s-city">
+                        <option>تهران</option>
+                        <option>اصفهان</option>
+                        <option>شیراز</option>
+                        <option>مشهد</option>
+                        <option>تبریز</option>
+                      </select>
+                    </div>
+                    <div class="field full">
+                      <label class="label" for="s-bio">درباره من</label
+                      ><textarea class="textarea" id="s-bio" rows="3">
+بیش از ۸ سال تجربه در مدیریت فروشگاه‌های آنلاین و بازاریابی دیجیتال.</textarea
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="settings-section">
+                  <div>
+                    <h2>ترجیحات</h2>
+                    <p>زبان، تقویم و واحد پول پنل.</p>
+                  </div>
+                  <div class="form-grid">
+                    <div class="field">
+                      <label class="label" for="s-lang">زبان</label
+                      ><select class="select" id="s-lang">
+                        <option>فارسی</option>
+                        <option>English</option>
+                      </select>
+                    </div>
+                    <div class="field">
+                      <label class="label" for="s-cal">تقویم</label
+                      ><select class="select" id="s-cal">
+                        <option>شمسی (جلالی)</option>
+                        <option>میلادی</option>
+                      </select>
+                    </div>
+                    <div class="field">
+                      <label class="label" for="s-cur">واحد پول</label
+                      ><select class="select" id="s-cur">
+                        <option>تومان</option>
+                        <option>ریال</option>
+                      </select>
+                    </div>
+                    <div class="field">
+                      <label class="label" for="s-tz">منطقه زمانی</label
+                      ><select class="select" id="s-tz">
+                        <option>تهران (UTC+03:30)</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row" style="justify-content: flex-end; padding-block-start: 1rem; border-block-start: 1px solid var(--border)">
+                  <button class="btn" type="reset">انصراف</button><button class="btn btn--primary" type="submit">ذخیره تغییرات</button>
+                </div>
+              </form>
+            </div>
+
+            <div role="tabpanel" id="sp-2" aria-labelledby="st-2" hidden>
+              <div class="settings-section">
+                <div>
+                  <h2>تغییر رمز عبور</h2>
+                  <p>از رمزی با حداقل ۸ کاراکتر شامل عدد و حرف استفاده کنید.</p>
+                </div>
+                <form class="form-grid" data-validate data-success="رمز عبور تغییر کرد">
+                  <div class="field full">
+                    <label class="label" for="s-pw0">رمز فعلی</label><input class="input" id="s-pw0" type="password" required />
+                  </div>
+                  <div class="field">
+                    <label class="label" for="s-pw1">رمز جدید</label
+                    ><input class="input" id="s-pw1" type="password" required minlength="8" />
+                  </div>
+                  <div class="field">
+                    <label class="label" for="s-pw2">تکرار رمز جدید</label
+                    ><input class="input" id="s-pw2" type="password" required minlength="8" />
+                  </div>
+                  <div class="full"><button class="btn btn--primary" type="submit">به‌روزرسانی رمز</button></div>
+                </form>
+              </div>
+              <div class="settings-section">
+                <div>
+                  <h2>ورود دومرحله‌ای</h2>
+                  <p>با کد پیامکی یا اپلیکیشن احراز هویت، امنیت حساب را بالا ببرید.</p>
+                </div>
+                <div>
+                  <div class="setting-row">
+                    <div><strong>کد پیامکی</strong><span>ارسال کد به ۰۹۱۲ ۳۴۵ ****</span></div>
+                    <label class="switch"><input type="checkbox" checked aria-label="کد پیامکی" /></label>
+                  </div>
+                  <div class="setting-row">
+                    <div><strong>اپلیکیشن احراز هویت</strong><span>Google Authenticator یا Microsoft Authenticator</span></div>
+                    <label class="switch"><input type="checkbox" aria-label="اپلیکیشن احراز هویت" /></label>
+                  </div>
+                </div>
+              </div>
+              <div class="settings-section">
+                <div>
+                  <h2>نشست‌های فعال</h2>
+                  <p>دستگاه‌هایی که اکنون به حساب شما متصل هستند.</p>
+                </div>
+                <div>
+                  <div class="session">
+                    <span class="thumb"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-monitor"></use></svg
+                    ></span>
+                    <div>
+                      <strong>کروم روی ویندوز <span class="badge t-success">دستگاه فعلی</span></strong
+                      ><span>تهران · همین حالا</span>
+                    </div>
+                  </div>
+                  <div class="session">
+                    <span class="thumb"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-smartphone"></use></svg
+                    ></span>
+                    <div><strong>اپلیکیشن پیشخوان روی اندروید </strong><span>تهران · ۲ ساعت پیش</span></div>
+                    <button class="btn btn--sm" type="button" data-toast="نشست خاتمه یافت">خروج</button>
+                  </div>
+                  <div class="session">
+                    <span class="thumb"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-laptop"></use></svg
+                    ></span>
+                    <div><strong>سافاری روی مک‌بوک </strong><span>اصفهان · ۳ روز پیش</span></div>
+                    <button class="btn btn--sm" type="button" data-toast="نشست خاتمه یافت">خروج</button>
+                  </div>
+                </div>
+              </div>
+              <div class="settings-section">
+                <div>
+                  <h2 class="text-danger">حذف حساب</h2>
+                  <p>با حذف حساب، همه داده‌ها برای همیشه پاک می‌شوند.</p>
+                </div>
+                <div>
+                  <button class="btn btn--danger" type="button" data-modal-open="delete-account">
+                    <svg class="icon" aria-hidden="true"><use href="#i-trash-2"></use></svg> حذف حساب کاربری
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div role="tabpanel" id="sp-3" aria-labelledby="st-3" hidden>
+              <div class="settings-section">
+                <div>
+                  <h2>ایمیل</h2>
+                  <p>چه ایمیل‌هایی برای شما ارسال شود؟</p>
+                </div>
+                <div>
+                  <div class="setting-row">
+                    <div><strong>سفارش جدید</strong><span>هر بار که سفارشی ثبت می‌شود</span></div>
+                    <label class="switch"><input type="checkbox" checked aria-label="سفارش جدید" /></label>
+                  </div>
+                  <div class="setting-row">
+                    <div><strong>گزارش هفتگی</strong><span>خلاصه فروش هر شنبه صبح</span></div>
+                    <label class="switch"><input type="checkbox" checked aria-label="گزارش هفتگی" /></label>
+                  </div>
+                  <div class="setting-row">
+                    <div><strong>خبرنامه محصول</strong><span>امکانات جدید پیشخوان</span></div>
+                    <label class="switch"><input type="checkbox" aria-label="خبرنامه محصول" /></label>
+                  </div>
+                </div>
+              </div>
+              <div class="settings-section">
+                <div>
+                  <h2>پیامک و پوش</h2>
+                  <p>اعلان‌های فوری روی موبایل.</p>
+                </div>
+                <div>
+                  <div class="setting-row">
+                    <div><strong>کمبود موجودی</strong><span>وقتی موجودی کالا کمتر از ۵ عدد شود</span></div>
+                    <label class="switch"><input type="checkbox" checked aria-label="کمبود موجودی" /></label>
+                  </div>
+                  <div class="setting-row">
+                    <div><strong>پیام مشتری</strong><span>پیام‌های جدید در گفتگوها</span></div>
+                    <label class="switch"><input type="checkbox" checked aria-label="پیام مشتری" /></label>
+                  </div>
+                  <div class="setting-row">
+                    <div><strong>تسویه‌حساب</strong><span>واریز وجه از درگاه</span></div>
+                    <label class="switch"><input type="checkbox" aria-label="تسویه‌حساب" /></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div role="tabpanel" id="sp-4" aria-labelledby="st-4" hidden>
+              <div class="settings-section">
+                <div>
+                  <h2>طرح اشتراک</h2>
+                  <p>هر زمان می‌توانید طرح خود را تغییر دهید.</p>
+                </div>
+                <div class="plan-cards">
+                  <label class="plan"
+                    ><input type="radio" name="plan" class="check" /><strong>پایه</strong>
+                    <p class="plan__price">رایگان</p>
+                    <ul class="list-plain">
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>۱ کاربر
+                      </li>
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>۱۰۰ محصول
+                      </li>
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>گزارش ماهانه
+                      </li>
+                    </ul></label
+                  ><label class="plan"
+                    ><input type="radio" name="plan" checked class="check" /><strong>حرفه‌ای</strong>
+                    <p class="plan__price">۴۹۰٬۰۰۰ <small>تومان / ماه</small></p>
+                    <ul class="list-plain">
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>۵ کاربر
+                      </li>
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>محصول نامحدود
+                      </li>
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>گزارش پیشرفته
+                      </li>
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>چند انبار
+                      </li>
+                    </ul></label
+                  ><label class="plan"
+                    ><input type="radio" name="plan" class="check" /><strong>سازمانی</strong>
+                    <p class="plan__price">۱٬۲۹۰٬۰۰۰ <small>تومان / ماه</small></p>
+                    <ul class="list-plain">
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>کاربر نامحدود
+                      </li>
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>API اختصاصی
+                      </li>
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>پشتیبانی ۲۴ ساعته
+                      </li>
+                    </ul></label
+                  >
+                </div>
+              </div>
+              <div class="settings-section">
+                <div>
+                  <h2>روش پرداخت</h2>
+                  <p>کارت بانکی برای تمدید خودکار.</p>
+                </div>
+                <div class="session">
+                  <span class="thumb t-primary"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-credit-card"></use></svg
+                  ></span>
+                  <div><strong class="ltr" style="text-align: end">6037 **** **** 4821</strong><span>بانک ملی · انقضا ۰۸/۱۴۰۷</span></div>
+                  <button class="btn btn--sm" type="button">تغییر</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <dialog class="modal" id="delete-account" aria-labelledby="da-title">
+            <div class="modal__head">
+              <h2 id="da-title">حذف حساب کاربری</h2>
+              <button class="icon-btn" type="button" data-modal-close aria-label="بستن">
+                <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+              </button>
+            </div>
+            <div class="modal__body stack" style="--gap: 1rem">
+              <div class="alert t-danger">
+                <svg class="icon" aria-hidden="true"><use href="#i-triangle-alert"></use></svg>
+                <div><strong>این عمل برگشت‌پذیر نیست</strong>همه سفارش‌ها، محصولات و گزارش‌ها حذف خواهند شد.</div>
+              </div>
+              <div class="field">
+                <label class="label" for="da-confirm">برای تأیید عبارت «حذف» را بنویسید</label><input class="input" id="da-confirm" />
+              </div>
+            </div>
+            <div class="modal__foot">
+              <button class="btn" type="button" data-modal-close>انصراف</button
+              ><button class="btn btn--danger" type="button" data-modal-close data-toast="درخواست حذف ثبت شد" data-toast-type="error">
+                حذف دائمی
+              </button>
+            </div>
+          </dialog>
+        </main>
+
+        <footer class="app-footer">
+          <p>© ۱۴۰۵ پیشخوان. طراحی‌شده با دقت برای فروشگاه‌های ایرانی.</p>
+          <nav aria-label="پیوندهای پانویس">
+            <a href="documentation/index.html">مستندات</a>
+            <a href="settings.html">حریم خصوصی</a>
+            <a href="chat.html">پشتیبانی</a>
+          </nav>
+        </footer>
+      </div>
+    </div>
+
+    <dialog class="modal cmdk" id="cmdk" aria-label="جستجوی سریع">
+      <div class="cmdk__search">
+        <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+        <input type="search" placeholder="نام صفحه یا دستور را بنویسید…" aria-label="جستجو" data-cmdk-input autocomplete="off" />
+        <kbd>Esc</kbd>
+      </div>
+      <div class="cmdk__list" data-cmdk-list role="listbox">
+        <p class="cmdk__group">اصلی</p>
+        <a class="cmdk__item" role="option" href="index.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-layout-dashboard"></use></svg><span>داشبورد فروش</span></a
+        ><a class="cmdk__item" role="option" href="analytics.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-chart-spline"></use></svg><span>تحلیل‌ها</span></a
+        >
+        <p class="cmdk__group">فروشگاه</p>
+        <a class="cmdk__item" role="option" href="orders.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-shopping-cart"></use></svg><span>سفارش‌ها</span></a
+        ><a class="cmdk__item" role="option" href="products.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-package"></use></svg><span>محصولات</span></a
+        ><a class="cmdk__item" role="option" href="product-form.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-package-plus"></use></svg><span>افزودن محصول</span></a
+        ><a class="cmdk__item" role="option" href="customers.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg><span>مشتریان</span></a
+        ><a class="cmdk__item" role="option" href="invoice.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-receipt-text"></use></svg><span>فاکتور</span></a
+        >
+        <p class="cmdk__group">برنامه‌ها</p>
+        <a class="cmdk__item" role="option" href="chat.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-messages-square"></use></svg><span>پیام‌ها</span></a
+        ><a class="cmdk__item" role="option" href="calendar.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-calendar-days"></use></svg><span>تقویم شمسی</span></a
+        ><a class="cmdk__item" role="option" href="kanban.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-square-kanban"></use></svg><span>مدیریت پروژه</span></a
+        >
+        <p class="cmdk__group">صفحات</p>
+        <a class="cmdk__item" role="option" href="profile.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-circle-user-round"></use></svg><span>پروفایل</span></a
+        ><a class="cmdk__item" role="option" href="settings.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-settings"></use></svg><span>تنظیمات</span></a
+        ><a class="cmdk__item" role="option" href="components.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-blocks"></use></svg><span>کامپوننت‌ها</span></a
+        ><a class="cmdk__item" role="option" href="404.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-file-question"></use></svg><span>صفحه ۴۰۴</span></a
+        ><a class="cmdk__item" role="option" href="documentation/index.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-book-open"></use></svg><span>مستندات</span></a
+        >
+        <p class="cmdk__group">دستورها</p>
+        <button type="button" class="cmdk__item" role="option" data-cmdk-item data-theme-toggle>
+          <svg class="icon" aria-hidden="true"><use href="#i-sun-moon"></use></svg><span>تغییر حالت روشن/تاریک</span>
+        </button>
+        <a class="cmdk__item" role="option" href="product-form.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg><span>افزودن محصول جدید</span><kbd>N</kbd></a
+        >
+      </div>
+      <div class="cmdk__foot">
+        <span><kbd>↑</kbd> <kbd>↓</kbd> جابه‌جایی</span><span><kbd>Enter</kbd> انتخاب</span><span><kbd>Esc</kbd> بستن</span>
+      </div>
+    </dialog>
+  </body>
+</html>

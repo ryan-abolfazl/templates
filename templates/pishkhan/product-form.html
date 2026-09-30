@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>افزودن محصول | پیشخوان</title>
+    <meta name="description" content="فرم کامل افزودن محصول با تصاویر، قیمت و موجودی" />
+    <meta name="theme-color" content="#4f46e5" />
+    <meta property="og:title" content="افزودن محصول | پیشخوان" />
+    <meta property="og:description" content="فرم کامل افزودن محصول با تصاویر، قیمت و موجودی" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function (d) {
+        d.classList.add("js");
+        try {
+          var t = JSON.parse(localStorage.getItem("theme"));
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          d.setAttribute("data-theme", t);
+          if (JSON.parse(localStorage.getItem("pishkhan-sidebar"))) d.classList.add("sidebar-collapsed");
+        } catch (e) {}
+      })(document.documentElement);
+    </script>
+    <link rel="preload" href="assets/fonts/vazirmatn/Vazirmatn-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/core.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body class="">
+    <script src="assets/js/icons.js"></script>
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+    <div class="app">
+      <aside class="sidebar" id="sidebar" data-drawer data-drawer-media="(max-width: 1100px)" aria-label="منوی اصلی">
+        <div class="sidebar__brand">
+          <a href="index.html" class="row" aria-label="پیشخوان، صفحه اصلی">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 20V10l8-6 8 6v10" />
+                <path d="M9 20v-5.5a3 3 0 0 1 6 0V20" />
+              </svg>
+            </span>
+            <span class="brand-name">پیشخوان<small>پنل مدیریت فروشگاه</small></span>
+          </a>
+          <button class="icon-btn sidebar__close" type="button" data-drawer-close aria-label="بستن منو">
+            <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+          </button>
+        </div>
+        <nav class="sidebar__scroll">
+          <div class="nav-group">
+            <p class="nav-group__title">اصلی</p>
+            <a class="nav-link" href="index.html" title="داشبورد فروش">
+              <svg class="icon" aria-hidden="true"><use href="#i-layout-dashboard"></use></svg><span>داشبورد فروش</span> </a
+            ><a class="nav-link" href="analytics.html" title="تحلیل‌ها">
+              <svg class="icon" aria-hidden="true"><use href="#i-chart-spline"></use></svg><span>تحلیل‌ها</span>
+            </a>
+          </div>
+          <div class="nav-group">
+            <p class="nav-group__title">فروشگاه</p>
+            <a class="nav-link" href="orders.html" title="سفارش‌ها">
+              <svg class="icon" aria-hidden="true"><use href="#i-shopping-cart"></use></svg><span>سفارش‌ها</span>
+              <span class="badge badge--count badge--solid t-primary">۱۲</span> </a
+            ><a class="nav-link" href="products.html" title="محصولات">
+              <svg class="icon" aria-hidden="true"><use href="#i-package"></use></svg><span>محصولات</span> </a
+            ><a class="nav-link is-active" aria-current="page" href="product-form.html" title="افزودن محصول">
+              <svg class="icon" aria-hidden="true"><use href="#i-package-plus"></use></svg><span>افزودن محصول</span> </a
+            ><a class="nav-link" href="customers.html" title="مشتریان">
+              <svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg><span>مشتریان</span> </a
+            ><a class="nav-link" href="invoice.html" title="فاکتور">
+              <svg class="icon" aria-hidden="true"><use href="#i-receipt-text"></use></svg><span>فاکتور</span>
+            </a>
+          </div>
+          <div class="nav-group">
+            <p class="nav-group__title">برنامه‌ها</p>
+            <a class="nav-link" href="chat.html" title="پیام‌ها">
+              <svg class="icon" aria-hidden="true"><use href="#i-messages-square"></use></svg><span>پیام‌ها</span>
+              <span class="badge badge--count badge--solid t-accent">۳</span> </a
+            ><a class="nav-link" href="calendar.html" title="تقویم شمسی">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar-days"></use></svg><span>تقویم شمسی</span> </a
+            ><a class="nav-link" href="kanban.html" title="مدیریت پروژه">
+              <svg class="icon" aria-hidden="true"><use href="#i-square-kanban"></use></svg><span>مدیریت پروژه</span>
+            </a>
+          </div>
+          <div class="nav-group">
+            <p class="nav-group__title">صفحات</p>
+            <a class="nav-link" href="profile.html" title="پروفایل">
+              <svg class="icon" aria-hidden="true"><use href="#i-circle-user-round"></use></svg><span>پروفایل</span> </a
+            ><a class="nav-link" href="settings.html" title="تنظیمات">
+              <svg class="icon" aria-hidden="true"><use href="#i-settings"></use></svg><span>تنظیمات</span>
+            </a>
+            <details class="nav-sub">
+              <summary title="احراز هویت">
+                <svg class="icon" aria-hidden="true"><use href="#i-lock-keyhole"></use></svg><span>احراز هویت</span
+                ><svg class="icon chev" aria-hidden="true"><use href="#i-chevron-left"></use></svg>
+              </summary>
+              <div class="nav-sub__list">
+                <a href="login.html">ورود</a><a href="register.html">ثبت‌نام</a><a href="forgot-password.html">فراموشی رمز عبور</a
+                ><a href="verify.html">تأیید کد یکبارمصرف</a>
+              </div>
+            </details>
+            <a class="nav-link" href="components.html" title="کامپوننت‌ها">
+              <svg class="icon" aria-hidden="true"><use href="#i-blocks"></use></svg><span>کامپوننت‌ها</span> </a
+            ><a class="nav-link" href="404.html" title="صفحه ۴۰۴">
+              <svg class="icon" aria-hidden="true"><use href="#i-file-question"></use></svg><span>صفحه ۴۰۴</span> </a
+            ><a class="nav-link" href="documentation/index.html" title="مستندات">
+              <svg class="icon" aria-hidden="true"><use href="#i-book-open"></use></svg><span>مستندات</span>
+            </a>
+          </div>
+          <div class="sidebar__promo">
+            <strong>نسخه حرفه‌ای</strong>
+            <p>گزارش‌های پیشرفته، چند انبار و دسترسی تیمی.</p>
+            <a class="btn btn--sm" href="settings.html">ارتقای حساب</a>
+          </div>
+        </nav>
+        <div class="sidebar__user">
+          <span class="avatar avatar--sm" style="--h: 315" aria-hidden="true">س‌م<span class="status"></span></span>
+          <div><strong>سارا محمدی</strong><span>مدیر فروشگاه</span></div>
+          <a class="icon-btn icon-btn--sm" href="login.html" aria-label="خروج"
+            ><svg class="icon icon-flip" aria-hidden="true"><use href="#i-log-out"></use></svg
+          ></a>
+        </div>
+      </aside>
+      <div class="sidebar-backdrop" data-drawer-open="sidebar" aria-hidden="true"></div>
+      <div class="app__main">
+        <header class="topbar" data-sticky-header>
+          <button
+            class="icon-btn topbar__menu"
+            type="button"
+            data-drawer-open="sidebar"
+            aria-controls="sidebar"
+            aria-expanded="false"
+            aria-label="باز کردن منو"
+          >
+            <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+          </button>
+          <button class="icon-btn topbar__collapse" type="button" data-sidebar-collapse aria-label="جمع کردن منوی کناری">
+            <svg class="icon" aria-hidden="true"><use href="#i-panel-right"></use></svg>
+          </button>
+          <button class="search-trigger" type="button" data-modal-open="cmdk" aria-label="جستجو در پنل">
+            <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg><span>جستجو در پنل…</span><kbd>Ctrl K</kbd>
+          </button>
+          <div class="topbar__actions">
+            <button class="icon-btn" type="button" data-theme-toggle aria-label="تغییر حالت روشن و تاریک" aria-pressed="false">
+              <svg class="icon theme-icon-light" aria-hidden="true"><use href="#i-moon"></use></svg
+              ><svg class="icon theme-icon-dark" aria-hidden="true"><use href="#i-sun"></use></svg>
+            </button>
+            <div data-dropdown class="hide-sm">
+              <button class="icon-btn" type="button" data-dropdown-toggle aria-expanded="false" aria-label="زبان">
+                <svg class="icon" aria-hidden="true"><use href="#i-languages"></use></svg>
+              </button>
+              <div class="dropdown-menu" data-dropdown-menu>
+                <button type="button">
+                  <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> فارسی
+                </button>
+                <button type="button"><span class="icon"></span> English</button>
+                <button type="button"><span class="icon"></span> العربية</button>
+              </div>
+            </div>
+            <div data-dropdown>
+              <button class="icon-btn" type="button" data-dropdown-toggle aria-expanded="false" aria-label="اعلان‌ها، ۲ مورد خوانده‌نشده">
+                <svg class="icon" aria-hidden="true"><use href="#i-bell"></use></svg><span class="dot"></span>
+              </button>
+              <div class="dropdown-menu notif-menu" data-dropdown-menu>
+                <div class="notif-menu__head"><strong>اعلان‌ها</strong><span class="badge t-primary">۲ جدید</span></div>
+                <div class="notif-list">
+                  <a href="orders.html" class="notif is-unread">
+                    <span class="thumb t-primary" style="inline-size: 2.25rem; block-size: 2.25rem"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-shopping-bag"></use></svg
+                    ></span>
+                    <span
+                      ><p>سفارش جدید <b>#۴۸۲۱</b> از علی رضایی ثبت شد.</p>
+                      <time>۲ دقیقه پیش</time></span
+                    > </a
+                  ><a href="orders.html" class="notif is-unread">
+                    <span class="thumb t-warning" style="inline-size: 2.25rem; block-size: 2.25rem"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-triangle-alert"></use></svg
+                    ></span>
+                    <span
+                      ><p>موجودی «هدفون بی‌سیم نوا» به ۳ عدد رسید.</p>
+                      <time>۱ ساعت پیش</time></span
+                    > </a
+                  ><a href="orders.html" class="notif">
+                    <span class="thumb t-info" style="inline-size: 2.25rem; block-size: 2.25rem"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-message-circle"></use></svg
+                    ></span>
+                    <span
+                      ><p>مریم احمدی به تیکت پشتیبانی پاسخ داد.</p>
+                      <time>۳ ساعت پیش</time></span
+                    > </a
+                  ><a href="orders.html" class="notif">
+                    <span class="thumb t-success" style="inline-size: 2.25rem; block-size: 2.25rem"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-circle-check"></use></svg
+                    ></span>
+                    <span
+                      ><p>تسویه‌حساب هفتگی با موفقیت واریز شد.</p>
+                      <time>دیروز</time></span
+                    >
+                  </a>
+                </div>
+                <a class="notif-menu__foot" href="settings.html">مشاهده همه اعلان‌ها</a>
+              </div>
+            </div>
+            <div data-dropdown>
+              <button class="topbar__profile" type="button" data-dropdown-toggle aria-expanded="false">
+                <span class="avatar avatar--sm" style="--h: 315" aria-hidden="true">س‌م</span><span>سارا محمدی</span
+                ><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg>
+              </button>
+              <div class="dropdown-menu" data-dropdown-menu>
+                <div class="dropdown-head"><strong>سارا محمدی</strong><span class="ltr">sara@pishkhan.ir</span></div>
+                <hr />
+                <a href="profile.html"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-circle-user-round"></use></svg> پروفایل من</a
+                >
+                <a href="settings.html"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-settings"></use></svg> تنظیمات حساب</a
+                >
+                <a href="invoice.html"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-credit-card"></use></svg> صورتحساب‌ها</a
+                >
+                <a href="documentation/index.html"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-life-buoy"></use></svg> راهنما و پشتیبانی</a
+                >
+                <hr />
+                <a href="login.html" class="danger"
+                  ><svg class="icon icon-flip" aria-hidden="true"><use href="#i-log-out"></use></svg> خروج از حساب</a
+                >
+              </div>
+            </div>
+          </div>
+        </header>
+        <main id="main" class="page">
+          <div class="page-head">
+            <div>
+              <nav class="breadcrumb" aria-label="مسیر صفحه">
+                <a href="index.html">پیشخوان</a>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg><a href="products.html">محصولات</a
+                ><svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg><span aria-current="page">افزودن محصول</span>
+              </nav>
+              <h1>افزودن محصول جدید</h1>
+              <p>اطلاعات محصول را کامل کنید تا در فروشگاه نمایش داده شود</p>
+            </div>
+          </div>
+
+          <form class="grid" data-validate data-success="محصول با موفقیت ذخیره شد" data-redirect="products.html">
+            <div class="stack lg-8">
+              <section class="card">
+                <div class="card__head"><h2 class="card__title">اطلاعات پایه</h2></div>
+                <div class="form-grid">
+                  <div class="field full">
+                    <label class="label" for="p-name">نام محصول <span class="req">*</span></label
+                    ><input class="input" id="p-name" required minlength="3" placeholder="مثلاً هدفون بی‌سیم نوا" />
+                  </div>
+                  <div class="field">
+                    <label class="label" for="p-sku">کد محصول (SKU)</label><input class="input ltr" id="p-sku" placeholder="NV-210" />
+                  </div>
+                  <div class="field">
+                    <label class="label" for="p-cat">دسته‌بندی <span class="req">*</span></label>
+                    <select class="select" id="p-cat" required>
+                      <option value="">انتخاب کنید</option>
+                      <option>صوتی</option>
+                      <option>پوشیدنی</option>
+                      <option>کامپیوتر</option>
+                      <option>موبایل</option>
+                      <option>لوازم جانبی</option>
+                    </select>
+                  </div>
+                  <div class="field full">
+                    <label class="label" for="p-desc">توضیحات</label>
+                    <textarea
+                      class="textarea"
+                      id="p-desc"
+                      rows="5"
+                      placeholder="ویژگی‌ها، مشخصات فنی و مزایای محصول را بنویسید…"
+                    ></textarea>
+                    <span class="field__hint">حداقل ۱۵۰ کلمه برای سئوی بهتر پیشنهاد می‌شود.</span>
+                  </div>
+                </div>
+              </section>
+
+              <section class="card">
+                <div class="card__head">
+                  <div>
+                    <h2 class="card__title">تصاویر محصول</h2>
+                    <p class="card__sub">حداکثر ۸ تصویر، فرمت JPG یا PNG یا WebP</p>
+                  </div>
+                </div>
+                <div class="dropzone" data-dropzone="#p-thumbs" tabindex="0" role="button" aria-label="انتخاب یا رها کردن تصاویر">
+                  <svg class="icon" aria-hidden="true"><use href="#i-image-up"></use></svg>
+                  <strong>تصاویر را اینجا رها کنید</strong>
+                  <span>یا برای انتخاب از رایانه کلیک کنید</span>
+                  <input type="file" accept="image/*" multiple />
+                </div>
+                <ul class="list-plain thumbs mt-2" id="p-thumbs"></ul>
+              </section>
+
+              <section class="card">
+                <div class="card__head"><h2 class="card__title">قیمت و موجودی</h2></div>
+                <div class="form-grid">
+                  <div class="field">
+                    <label class="label" for="p-price">قیمت <span class="req">*</span></label>
+                    <div class="input-group">
+                      <input class="input" id="p-price" inputmode="numeric" required placeholder="۰" /><span class="input-group__addon"
+                        >تومان</span
+                      >
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="p-sale">قیمت با تخفیف</label>
+                    <div class="input-group">
+                      <input class="input" id="p-sale" inputmode="numeric" placeholder="۰" /><span class="input-group__addon">تومان</span>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="p-stock">موجودی انبار</label
+                    ><input class="input" id="p-stock" type="number" min="0" value="10" />
+                  </div>
+                  <div class="field">
+                    <label class="label" for="p-sale-end">پایان تخفیف</label>
+                    <div class="input-icon">
+                      <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg
+                      ><input class="input" id="p-sale-end" data-datepicker readonly placeholder="انتخاب تاریخ" />
+                    </div>
+                  </div>
+                  <div class="full">
+                    <label class="switch"><input type="checkbox" checked /> مدیریت خودکار موجودی و اطلاع‌رسانی هنگام کمبود</label>
+                  </div>
+                </div>
+              </section>
+
+              <section class="card">
+                <div class="card__head"><h2 class="card__title">ویژگی‌ها و تنوع</h2></div>
+                <div class="field">
+                  <span class="label">رنگ‌ها</span>
+                  <div class="row wrap">
+                    <label class="check"
+                      ><input type="checkbox" checked /><span class="row" style="gap: 0.4rem"
+                        ><i
+                          style="
+                            inline-size: 1rem;
+                            block-size: 1rem;
+                            border-radius: 50%;
+                            background: #111827;
+                            box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.15);
+                          "
+                        ></i
+                        >مشکی</span
+                      ></label
+                    ><label class="check"
+                      ><input type="checkbox" checked /><span class="row" style="gap: 0.4rem"
+                        ><i
+                          style="
+                            inline-size: 1rem;
+                            block-size: 1rem;
+                            border-radius: 50%;
+                            background: #f3f4f6;
+                            box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.15);
+                          "
+                        ></i
+                        >سفید</span
+                      ></label
+                    ><label class="check"
+                      ><input type="checkbox" /><span class="row" style="gap: 0.4rem"
+                        ><i
+                          style="
+                            inline-size: 1rem;
+                            block-size: 1rem;
+                            border-radius: 50%;
+                            background: #1e3a8a;
+                            box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.15);
+                          "
+                        ></i
+                        >سرمه‌ای</span
+                      ></label
+                    ><label class="check"
+                      ><input type="checkbox" /><span class="row" style="gap: 0.4rem"
+                        ><i
+                          style="
+                            inline-size: 1rem;
+                            block-size: 1rem;
+                            border-radius: 50%;
+                            background: #e8b4a0;
+                            box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.15);
+                          "
+                        ></i
+                        >رزگلد</span
+                      ></label
+                    >
+                  </div>
+                </div>
+                <div class="field mt-2">
+                  <label class="label" for="p-tags">برچسب‌ها</label>
+                  <div class="tag-input">
+                    <span class="badge t-primary"
+                      >بلوتوث ۵٫۳<button type="button" aria-label="حذف بلوتوث ۵٫۳">
+                        <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg></button></span
+                    ><span class="badge t-primary"
+                      >نویزگیر<button type="button" aria-label="حذف نویزگیر">
+                        <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg></button></span
+                    ><span class="badge t-primary"
+                      >گارانتی ۱۸ ماهه<button type="button" aria-label="حذف گارانتی ۱۸ ماهه">
+                        <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg></button
+                    ></span>
+                    <input id="p-tags" placeholder="برچسب جدید + Enter" />
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <aside class="stack lg-4">
+              <div class="stack sticky-side">
+                <section class="card">
+                  <div class="card__head"><h2 class="card__title">انتشار</h2></div>
+                  <div class="field">
+                    <label class="label" for="p-status">وضعیت</label
+                    ><select class="select" id="p-status">
+                      <option>منتشرشده</option>
+                      <option>پیش‌نویس</option>
+                      <option>زمان‌بندی‌شده</option>
+                    </select>
+                  </div>
+                  <div class="field mt-2">
+                    <label class="label" for="p-vis">نمایش</label
+                    ><select class="select" id="p-vis">
+                      <option>عمومی</option>
+                      <option>فقط با لینک</option>
+                      <option>خصوصی</option>
+                    </select>
+                  </div>
+                  <hr class="divider" />
+                  <div class="stack" style="--gap: 0.6rem">
+                    <label class="switch"><input type="checkbox" checked /> نمایش در صفحه اصلی</label>
+                    <label class="switch"><input type="checkbox" /> محصول ویژه</label>
+                    <label class="switch"><input type="checkbox" checked /> امکان ثبت نظر</label>
+                  </div>
+                  <div class="row mt-3">
+                    <button class="btn" type="button" data-toast="پیش‌نویس ذخیره شد" data-toast-type="info">ذخیره پیش‌نویس</button>
+                    <button class="btn btn--primary" type="submit" style="flex: 1">
+                      <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> انتشار محصول
+                    </button>
+                  </div>
+                </section>
+                <section class="card">
+                  <div class="card__head"><h2 class="card__title">ارسال</h2></div>
+                  <div class="form-grid">
+                    <div class="field">
+                      <label class="label" for="p-w">وزن (گرم)</label><input class="input" id="p-w" type="number" min="0" value="250" />
+                    </div>
+                    <div class="field">
+                      <label class="label" for="p-days">زمان آماده‌سازی</label
+                      ><select class="select" id="p-days">
+                        <option>۱ روز کاری</option>
+                        <option>۲ روز کاری</option>
+                        <option>۳ روز کاری</option>
+                      </select>
+                    </div>
+                  </div>
+                </section>
+                <div class="alert t-warning">
+                  <svg class="icon" aria-hidden="true"><use href="#i-lightbulb"></use></svg>
+                  <div><strong>نکته</strong>محصولات دارای ۴ تصویر یا بیشتر تا ۳۰٪ فروش بیشتری دارند.</div>
+                </div>
+              </div>
+            </aside>
+          </form>
+        </main>
+
+        <footer class="app-footer">
+          <p>© ۱۴۰۵ پیشخوان. طراحی‌شده با دقت برای فروشگاه‌های ایرانی.</p>
+          <nav aria-label="پیوندهای پانویس">
+            <a href="documentation/index.html">مستندات</a>
+            <a href="settings.html">حریم خصوصی</a>
+            <a href="chat.html">پشتیبانی</a>
+          </nav>
+        </footer>
+      </div>
+    </div>
+
+    <dialog class="modal cmdk" id="cmdk" aria-label="جستجوی سریع">
+      <div class="cmdk__search">
+        <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+        <input type="search" placeholder="نام صفحه یا دستور را بنویسید…" aria-label="جستجو" data-cmdk-input autocomplete="off" />
+        <kbd>Esc</kbd>
+      </div>
+      <div class="cmdk__list" data-cmdk-list role="listbox">
+        <p class="cmdk__group">اصلی</p>
+        <a class="cmdk__item" role="option" href="index.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-layout-dashboard"></use></svg><span>داشبورد فروش</span></a
+        ><a class="cmdk__item" role="option" href="analytics.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-chart-spline"></use></svg><span>تحلیل‌ها</span></a
+        >
+        <p class="cmdk__group">فروشگاه</p>
+        <a class="cmdk__item" role="option" href="orders.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-shopping-cart"></use></svg><span>سفارش‌ها</span></a
+        ><a class="cmdk__item" role="option" href="products.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-package"></use></svg><span>محصولات</span></a
+        ><a class="cmdk__item" role="option" href="product-form.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-package-plus"></use></svg><span>افزودن محصول</span></a
+        ><a class="cmdk__item" role="option" href="customers.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg><span>مشتریان</span></a
+        ><a class="cmdk__item" role="option" href="invoice.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-receipt-text"></use></svg><span>فاکتور</span></a
+        >
+        <p class="cmdk__group">برنامه‌ها</p>
+        <a class="cmdk__item" role="option" href="chat.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-messages-square"></use></svg><span>پیام‌ها</span></a
+        ><a class="cmdk__item" role="option" href="calendar.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-calendar-days"></use></svg><span>تقویم شمسی</span></a
+        ><a class="cmdk__item" role="option" href="kanban.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-square-kanban"></use></svg><span>مدیریت پروژه</span></a
+        >
+        <p class="cmdk__group">صفحات</p>
+        <a class="cmdk__item" role="option" href="profile.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-circle-user-round"></use></svg><span>پروفایل</span></a
+        ><a class="cmdk__item" role="option" href="settings.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-settings"></use></svg><span>تنظیمات</span></a
+        ><a class="cmdk__item" role="option" href="components.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-blocks"></use></svg><span>کامپوننت‌ها</span></a
+        ><a class="cmdk__item" role="option" href="404.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-file-question"></use></svg><span>صفحه ۴۰۴</span></a
+        ><a class="cmdk__item" role="option" href="documentation/index.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-book-open"></use></svg><span>مستندات</span></a
+        >
+        <p class="cmdk__group">دستورها</p>
+        <button type="button" class="cmdk__item" role="option" data-cmdk-item data-theme-toggle>
+          <svg class="icon" aria-hidden="true"><use href="#i-sun-moon"></use></svg><span>تغییر حالت روشن/تاریک</span>
+        </button>
+        <a class="cmdk__item" role="option" href="product-form.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg><span>افزودن محصول جدید</span><kbd>N</kbd></a
+        >
+      </div>
+      <div class="cmdk__foot">
+        <span><kbd>↑</kbd> <kbd>↓</kbd> جابه‌جایی</span><span><kbd>Enter</kbd> انتخاب</span><span><kbd>Esc</kbd> بستن</span>
+      </div>
+    </dialog>
+  </body>
+</html>

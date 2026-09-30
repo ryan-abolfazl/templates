@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>تحلیل‌ها | پیشخوان</title>
+    <meta name="description" content="تحلیل ترافیک، منابع ورودی و رفتار کاربران" />
+    <meta name="theme-color" content="#4f46e5" />
+    <meta property="og:title" content="تحلیل‌ها | پیشخوان" />
+    <meta property="og:description" content="تحلیل ترافیک، منابع ورودی و رفتار کاربران" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function (d) {
+        d.classList.add("js");
+        try {
+          var t = JSON.parse(localStorage.getItem("theme"));
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          d.setAttribute("data-theme", t);
+          if (JSON.parse(localStorage.getItem("pishkhan-sidebar"))) d.classList.add("sidebar-collapsed");
+        } catch (e) {}
+      })(document.documentElement);
+    </script>
+    <link rel="preload" href="assets/fonts/vazirmatn/Vazirmatn-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/core.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body class="">
+    <script src="assets/js/icons.js"></script>
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+    <div class="app">
+      <aside class="sidebar" id="sidebar" data-drawer data-drawer-media="(max-width: 1100px)" aria-label="منوی اصلی">
+        <div class="sidebar__brand">
+          <a href="index.html" class="row" aria-label="پیشخوان، صفحه اصلی">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 20V10l8-6 8 6v10" />
+                <path d="M9 20v-5.5a3 3 0 0 1 6 0V20" />
+              </svg>
+            </span>
+            <span class="brand-name">پیشخوان<small>پنل مدیریت فروشگاه</small></span>
+          </a>
+          <button class="icon-btn sidebar__close" type="button" data-drawer-close aria-label="بستن منو">
+            <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+          </button>
+        </div>
+        <nav class="sidebar__scroll">
+          <div class="nav-group">
+            <p class="nav-group__title">اصلی</p>
+            <a class="nav-link" href="index.html" title="داشبورد فروش">
+              <svg class="icon" aria-hidden="true"><use href="#i-layout-dashboard"></use></svg><span>داشبورد فروش</span> </a
+            ><a class="nav-link is-active" aria-current="page" href="analytics.html" title="تحلیل‌ها">
+              <svg class="icon" aria-hidden="true"><use href="#i-chart-spline"></use></svg><span>تحلیل‌ها</span>
+            </a>
+          </div>
+          <div class="nav-group">
+            <p class="nav-group__title">فروشگاه</p>
+            <a class="nav-link" href="orders.html" title="سفارش‌ها">
+              <svg class="icon" aria-hidden="true"><use href="#i-shopping-cart"></use></svg><span>سفارش‌ها</span>
+              <span class="badge badge--count badge--solid t-primary">۱۲</span> </a
+            ><a class="nav-link" href="products.html" title="محصولات">
+              <svg class="icon" aria-hidden="true"><use href="#i-package"></use></svg><span>محصولات</span> </a
+            ><a class="nav-link" href="product-form.html" title="افزودن محصول">
+              <svg class="icon" aria-hidden="true"><use href="#i-package-plus"></use></svg><span>افزودن محصول</span> </a
+            ><a class="nav-link" href="customers.html" title="مشتریان">
+              <svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg><span>مشتریان</span> </a
+            ><a class="nav-link" href="invoice.html" title="فاکتور">
+              <svg class="icon" aria-hidden="true"><use href="#i-receipt-text"></use></svg><span>فاکتور</span>
+            </a>
+          </div>
+          <div class="nav-group">
+            <p class="nav-group__title">برنامه‌ها</p>
+            <a class="nav-link" href="chat.html" title="پیام‌ها">
+              <svg class="icon" aria-hidden="true"><use href="#i-messages-square"></use></svg><span>پیام‌ها</span>
+              <span class="badge badge--count badge--solid t-accent">۳</span> </a
+            ><a class="nav-link" href="calendar.html" title="تقویم شمسی">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar-days"></use></svg><span>تقویم شمسی</span> </a
+            ><a class="nav-link" href="kanban.html" title="مدیریت پروژه">
+              <svg class="icon" aria-hidden="true"><use href="#i-square-kanban"></use></svg><span>مدیریت پروژه</span>
+            </a>
+          </div>
+          <div class="nav-group">
+            <p class="nav-group__title">صفحات</p>
+            <a class="nav-link" href="profile.html" title="پروفایل">
+              <svg class="icon" aria-hidden="true"><use href="#i-circle-user-round"></use></svg><span>پروفایل</span> </a
+            ><a class="nav-link" href="settings.html" title="تنظیمات">
+              <svg class="icon" aria-hidden="true"><use href="#i-settings"></use></svg><span>تنظیمات</span>
+            </a>
+            <details class="nav-sub">
+              <summary title="احراز هویت">
+                <svg class="icon" aria-hidden="true"><use href="#i-lock-keyhole"></use></svg><span>احراز هویت</span
+                ><svg class="icon chev" aria-hidden="true"><use href="#i-chevron-left"></use></svg>
+              </summary>
+              <div class="nav-sub__list">
+                <a href="login.html">ورود</a><a href="register.html">ثبت‌نام</a><a href="forgot-password.html">فراموشی رمز عبور</a
+                ><a href="verify.html">تأیید کد یکبارمصرف</a>
+              </div>
+            </details>
+            <a class="nav-link" href="components.html" title="کامپوننت‌ها">
+              <svg class="icon" aria-hidden="true"><use href="#i-blocks"></use></svg><span>کامپوننت‌ها</span> </a
+            ><a class="nav-link" href="404.html" title="صفحه ۴۰۴">
+              <svg class="icon" aria-hidden="true"><use href="#i-file-question"></use></svg><span>صفحه ۴۰۴</span> </a
+            ><a class="nav-link" href="documentation/index.html" title="مستندات">
+              <svg class="icon" aria-hidden="true"><use href="#i-book-open"></use></svg><span>مستندات</span>
+            </a>
+          </div>
+          <div class="sidebar__promo">
+            <strong>نسخه حرفه‌ای</strong>
+            <p>گزارش‌های پیشرفته، چند انبار و دسترسی تیمی.</p>
+            <a class="btn btn--sm" href="settings.html">ارتقای حساب</a>
+          </div>
+        </nav>
+        <div class="sidebar__user">
+          <span class="avatar avatar--sm" style="--h: 315" aria-hidden="true">س‌م<span class="status"></span></span>
+          <div><strong>سارا محمدی</strong><span>مدیر فروشگاه</span></div>
+          <a class="icon-btn icon-btn--sm" href="login.html" aria-label="خروج"
+            ><svg class="icon icon-flip" aria-hidden="true"><use href="#i-log-out"></use></svg
+          ></a>
+        </div>
+      </aside>
+      <div class="sidebar-backdrop" data-drawer-open="sidebar" aria-hidden="true"></div>
+      <div class="app__main">
+        <header class="topbar" data-sticky-header>
+          <button
+            class="icon-btn topbar__menu"
+            type="button"
+            data-drawer-open="sidebar"
+            aria-controls="sidebar"
+            aria-expanded="false"
+            aria-label="باز کردن منو"
+          >
+            <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+          </button>
+          <button class="icon-btn topbar__collapse" type="button" data-sidebar-collapse aria-label="جمع کردن منوی کناری">
+            <svg class="icon" aria-hidden="true"><use href="#i-panel-right"></use></svg>
+          </button>
+          <button class="search-trigger" type="button" data-modal-open="cmdk" aria-label="جستجو در پنل">
+            <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg><span>جستجو در پنل…</span><kbd>Ctrl K</kbd>
+          </button>
+          <div class="topbar__actions">
+            <button class="icon-btn" type="button" data-theme-toggle aria-label="تغییر حالت روشن و تاریک" aria-pressed="false">
+              <svg class="icon theme-icon-light" aria-hidden="true"><use href="#i-moon"></use></svg
+              ><svg class="icon theme-icon-dark" aria-hidden="true"><use href="#i-sun"></use></svg>
+            </button>
+            <div data-dropdown class="hide-sm">
+              <button class="icon-btn" type="button" data-dropdown-toggle aria-expanded="false" aria-label="زبان">
+                <svg class="icon" aria-hidden="true"><use href="#i-languages"></use></svg>
+              </button>
+              <div class="dropdown-menu" data-dropdown-menu>
+                <button type="button">
+                  <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> فارسی
+                </button>
+                <button type="button"><span class="icon"></span> English</button>
+                <button type="button"><span class="icon"></span> العربية</button>
+              </div>
+            </div>
+            <div data-dropdown>
+              <button class="icon-btn" type="button" data-dropdown-toggle aria-expanded="false" aria-label="اعلان‌ها، ۲ مورد خوانده‌نشده">
+                <svg class="icon" aria-hidden="true"><use href="#i-bell"></use></svg><span class="dot"></span>
+              </button>
+              <div class="dropdown-menu notif-menu" data-dropdown-menu>
+                <div class="notif-menu__head"><strong>اعلان‌ها</strong><span class="badge t-primary">۲ جدید</span></div>
+                <div class="notif-list">
+                  <a href="orders.html" class="notif is-unread">
+                    <span class="thumb t-primary" style="inline-size: 2.25rem; block-size: 2.25rem"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-shopping-bag"></use></svg
+                    ></span>
+                    <span
+                      ><p>سفارش جدید <b>#۴۸۲۱</b> از علی رضایی ثبت شد.</p>
+                      <time>۲ دقیقه پیش</time></span
+                    > </a
+                  ><a href="orders.html" class="notif is-unread">
+                    <span class="thumb t-warning" style="inline-size: 2.25rem; block-size: 2.25rem"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-triangle-alert"></use></svg
+                    ></span>
+                    <span
+                      ><p>موجودی «هدفون بی‌سیم نوا» به ۳ عدد رسید.</p>
+                      <time>۱ ساعت پیش</time></span
+                    > </a
+                  ><a href="orders.html" class="notif">
+                    <span class="thumb t-info" style="inline-size: 2.25rem; block-size: 2.25rem"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-message-circle"></use></svg
+                    ></span>
+                    <span
+                      ><p>مریم احمدی به تیکت پشتیبانی پاسخ داد.</p>
+                      <time>۳ ساعت پیش</time></span
+                    > </a
+                  ><a href="orders.html" class="notif">
+                    <span class="thumb t-success" style="inline-size: 2.25rem; block-size: 2.25rem"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-circle-check"></use></svg
+                    ></span>
+                    <span
+                      ><p>تسویه‌حساب هفتگی با موفقیت واریز شد.</p>
+                      <time>دیروز</time></span
+                    >
+                  </a>
+                </div>
+                <a class="notif-menu__foot" href="settings.html">مشاهده همه اعلان‌ها</a>
+              </div>
+            </div>
+            <div data-dropdown>
+              <button class="topbar__profile" type="button" data-dropdown-toggle aria-expanded="false">
+                <span class="avatar avatar--sm" style="--h: 315" aria-hidden="true">س‌م</span><span>سارا محمدی</span
+                ><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg>
+              </button>
+              <div class="dropdown-menu" data-dropdown-menu>
+                <div class="dropdown-head"><strong>سارا محمدی</strong><span class="ltr">sara@pishkhan.ir</span></div>
+                <hr />
+                <a href="profile.html"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-circle-user-round"></use></svg> پروفایل من</a
+                >
+                <a href="settings.html"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-settings"></use></svg> تنظیمات حساب</a
+                >
+                <a href="invoice.html"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-credit-card"></use></svg> صورتحساب‌ها</a
+                >
+                <a href="documentation/index.html"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-life-buoy"></use></svg> راهنما و پشتیبانی</a
+                >
+                <hr />
+                <a href="login.html" class="danger"
+                  ><svg class="icon icon-flip" aria-hidden="true"><use href="#i-log-out"></use></svg> خروج از حساب</a
+                >
+              </div>
+            </div>
+          </div>
+        </header>
+        <main id="main" class="page">
+          <div class="page-head">
+            <div>
+              <nav class="breadcrumb" aria-label="مسیر صفحه">
+                <a href="index.html">پیشخوان</a>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg><span aria-current="page">تحلیل‌ها</span>
+              </nav>
+              <h1>تحلیل‌ها</h1>
+              <p>رفتار بازدیدکنندگان و منابع ترافیک در ۳۰ روز گذشته</p>
+            </div>
+            <div class="page-head__actions">
+              <div class="input-icon" style="inline-size: 13rem">
+                <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg
+                ><input class="input" data-datepicker placeholder="انتخاب تاریخ" aria-label="از تاریخ" readonly />
+              </div>
+              <button class="btn" type="button" data-toast="گزارش PDF ساخته شد">
+                <svg class="icon" aria-hidden="true"><use href="#i-file-down"></use></svg> دانلود PDF
+              </button>
+            </div>
+          </div>
+
+          <section class="grid">
+            <article class="card card--flush" style="grid-column: 1/-1">
+              <dl class="stat-strip">
+                <div>
+                  <dt>بازدیدکنندگان یکتا</dt>
+                  <dd>
+                    ۱۲۸٬۴۳۰
+                    <span class="delta delta--up"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-trending-up"></use></svg> ۱۸٪</span
+                    >
+                  </dd>
+                </div>
+                <div>
+                  <dt>بازدید صفحه</dt>
+                  <dd>
+                    ۴۹۲٬۱۱۰
+                    <span class="delta delta--up"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-trending-up"></use></svg> ۹٪</span
+                    >
+                  </dd>
+                </div>
+                <div>
+                  <dt>میانگین مدت بازدید</dt>
+                  <dd>
+                    ۰۳:۲۴
+                    <span class="delta delta--down"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-trending-down"></use></svg> ۲٪</span
+                    >
+                  </dd>
+                </div>
+                <div>
+                  <dt>نرخ پرش</dt>
+                  <dd>
+                    ۳۴٫۲٪
+                    <span class="delta delta--up"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-trending-down"></use></svg> ۴٪</span
+                    >
+                  </dd>
+                </div>
+              </dl>
+            </article>
+
+            <article class="card lg-8">
+              <div class="card__head">
+                <div>
+                  <h2 class="card__title">ترافیک روزانه</h2>
+                  <p class="card__sub">بازدیدکنندگان و بازدید صفحه</p>
+                </div>
+                <div class="tabs tabs--pill" role="tablist" aria-label="نوع نمودار">
+                  <button role="tab" aria-selected="true" type="button">بازدید</button>
+                  <button role="tab" aria-selected="false" type="button">فروش</button>
+                </div>
+              </div>
+              <div
+                class="chart"
+                data-chart='{"type":"line","height":300,"compact":true,"labels":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],"series":[{"name":"بازدید صفحه","data":[17318,18647,19700,18129,18614,18862,16603,16583,16559,16619,14512,14969,15701,14390,15691,17232,18950,18434,20260,22007,21258,22614,23697,24490,22670,22941,23030,20683,20654,20701]},{"name":"بازدیدکننده یکتا","data":[5629,5374,5049,5371,4965,4558,4176,4543,4281,4100,4707,4697,4759,4875,5720,5868,5992,6767,6774,6699,6537,6991,6672,6299,6595,6186,5800,5462,5891,5702]}]}'
+              ></div>
+            </article>
+
+            <article class="card lg-4">
+              <div class="card__head">
+                <div>
+                  <h2 class="card__title">دستگاه‌ها</h2>
+                  <p class="card__sub">سهم بازدید از هر دستگاه</p>
+                </div>
+              </div>
+              <div
+                class="chart"
+                data-chart='{"type":"donut","height":200,"labels":["موبایل","دسکتاپ","تبلت"],"series":[{"name":"دستگاه","data":[71,23,6]}],"centerValue":"۷۱٪","centerLabel":"موبایل"}'
+              ></div>
+              <div class="alert t-info mt-2">
+                <svg class="icon" aria-hidden="true"><use href="#i-smartphone"></use></svg>
+                <div><strong>بیشتر مشتریان با موبایل می‌خرند</strong>بهینه‌سازی صفحه پرداخت موبایل را در اولویت قرار دهید.</div>
+              </div>
+            </article>
+
+            <article class="card lg-5">
+              <div class="card__head"><h2 class="card__title">منابع ورودی</h2></div>
+              <ul class="list-plain sources">
+                <li class="t-primary">
+                  <span class="thumb" style="inline-size: 2.25rem; block-size: 2.25rem"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg
+                  ></span>
+                  <span class="small bold">جستجوی گوگل</span>
+                  <span class="small muted num">۵۳٬۹۰۰ · <b style="color: var(--text)">۴۲٪</b></span>
+                  <div class="progress progress--sm"><span style="--value: 84%"></span></div>
+                </li>
+                <li class="t-accent">
+                  <span class="thumb" style="inline-size: 2.25rem; block-size: 2.25rem"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg
+                  ></span>
+                  <span class="small bold">اینستاگرام</span>
+                  <span class="small muted num">۳۰٬۸۲۰ · <b style="color: var(--text)">۲۴٪</b></span>
+                  <div class="progress progress--sm"><span style="--value: 48%"></span></div>
+                </li>
+                <li class="t-info">
+                  <span class="thumb" style="inline-size: 2.25rem; block-size: 2.25rem"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-send"></use></svg
+                  ></span>
+                  <span class="small bold">تلگرام</span>
+                  <span class="small muted num">۱۶٬۷۰۰ · <b style="color: var(--text)">۱۳٪</b></span>
+                  <div class="progress progress--sm"><span style="--value: 26%"></span></div>
+                </li>
+                <li class="t-success">
+                  <span class="thumb" style="inline-size: 2.25rem; block-size: 2.25rem"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-link"></use></svg
+                  ></span>
+                  <span class="small bold">ورود مستقیم</span>
+                  <span class="small muted num">۱۵٬۴۱۰ · <b style="color: var(--text)">۱۲٪</b></span>
+                  <div class="progress progress--sm"><span style="--value: 24%"></span></div>
+                </li>
+                <li class="t-warning">
+                  <span class="thumb" style="inline-size: 2.25rem; block-size: 2.25rem"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg
+                  ></span>
+                  <span class="small bold">خبرنامه ایمیلی</span>
+                  <span class="small muted num">۱۱٬۶۰۰ · <b style="color: var(--text)">۹٪</b></span>
+                  <div class="progress progress--sm"><span style="--value: 18%"></span></div>
+                </li>
+              </ul>
+            </article>
+
+            <article class="card lg-7">
+              <div class="card__head">
+                <div>
+                  <h2 class="card__title">فروش ماهانه بر اساس کانال</h2>
+                  <p class="card__sub">میلیون تومان</p>
+                </div>
+              </div>
+              <div
+                class="chart"
+                data-chart='{"type":"bar","height":280,"stacked":true,"labels":["فروردین","اردیبهشت","خرداد","تیر","مرداد","شهریور","مهر"],"series":[{"name":"وب‌سایت","data":[52,58,61,70,76,88,104]},{"name":"اپلیکیشن","data":[28,30,26,34,40,43,55]},{"name":"فروشگاه حضوری","data":[12,16,11,17,18,19,25]}]}'
+              ></div>
+            </article>
+
+            <article class="card lg-7">
+              <div class="card__head">
+                <div>
+                  <h2 class="card__title">ساعات اوج خرید</h2>
+                  <p class="card__sub">پررنگ‌تر یعنی سفارش بیشتر</p>
+                </div>
+              </div>
+              <div class="heatmap" role="img" aria-label="نقشه حرارتی سفارش‌ها بر اساس روز و ساعت">
+                <span></span><span class="hm-hour">۰</span><span class="hm-hour">۲</span><span class="hm-hour">۴</span
+                ><span class="hm-hour">۶</span><span class="hm-hour">۸</span><span class="hm-hour">۱۰</span><span class="hm-hour">۱۲</span
+                ><span class="hm-hour">۱۴</span><span class="hm-hour">۱۶</span><span class="hm-hour">۱۸</span><span class="hm-hour">۲۰</span
+                ><span class="hm-hour">۲۲</span> <span class="hm-label">شنبه</span
+                ><span class="cell" style="--v: 4" title="شنبه، ساعت ۰"></span
+                ><span class="cell" style="--v: 16" title="شنبه، ساعت ۲"></span
+                ><span class="cell" style="--v: 42" title="شنبه، ساعت ۴"></span
+                ><span class="cell" style="--v: 93" title="شنبه، ساعت ۶"></span
+                ><span class="cell" style="--v: 82" title="شنبه، ساعت ۸"></span
+                ><span class="cell" style="--v: 83" title="شنبه، ساعت ۱۰"></span
+                ><span class="cell" style="--v: 74" title="شنبه، ساعت ۱۲"></span
+                ><span class="cell" style="--v: 60" title="شنبه، ساعت ۱۴"></span
+                ><span class="cell" style="--v: 24" title="شنبه، ساعت ۱۶"></span
+                ><span class="cell" style="--v: 15" title="شنبه، ساعت ۱۸"></span
+                ><span class="cell" style="--v: 16" title="شنبه، ساعت ۲۰"></span
+                ><span class="cell" style="--v: 5" title="شنبه، ساعت ۲۲"></span><span class="hm-label">یکشنبه</span
+                ><span class="cell" style="--v: 4" title="یکشنبه، ساعت ۰"></span
+                ><span class="cell" style="--v: 30" title="یکشنبه، ساعت ۲"></span
+                ><span class="cell" style="--v: 34" title="یکشنبه، ساعت ۴"></span
+                ><span class="cell" style="--v: 85" title="یکشنبه، ساعت ۶"></span
+                ><span class="cell" style="--v: 96" title="یکشنبه، ساعت ۸"></span
+                ><span class="cell" style="--v: 75" title="یکشنبه، ساعت ۱۰"></span
+                ><span class="cell" style="--v: 66" title="یکشنبه، ساعت ۱۲"></span
+                ><span class="cell" style="--v: 52" title="یکشنبه، ساعت ۱۴"></span
+                ><span class="cell" style="--v: 38" title="یکشنبه، ساعت ۱۶"></span
+                ><span class="cell" style="--v: 7" title="یکشنبه، ساعت ۱۸"></span
+                ><span class="cell" style="--v: 8" title="یکشنبه، ساعت ۲۰"></span
+                ><span class="cell" style="--v: 19" title="یکشنبه، ساعت ۲۲"></span><span class="hm-label">دوشنبه</span
+                ><span class="cell" style="--v: 4" title="دوشنبه، ساعت ۰"></span
+                ><span class="cell" style="--v: 22" title="دوشنبه، ساعت ۲"></span
+                ><span class="cell" style="--v: 48" title="دوشنبه، ساعت ۴"></span
+                ><span class="cell" style="--v: 77" title="دوشنبه، ساعت ۶"></span
+                ><span class="cell" style="--v: 88" title="دوشنبه، ساعت ۸"></span
+                ><span class="cell" style="--v: 89" title="دوشنبه، ساعت ۱۰"></span
+                ><span class="cell" style="--v: 80" title="دوشنبه، ساعت ۱۲"></span
+                ><span class="cell" style="--v: 44" title="دوشنبه، ساعت ۱۴"></span
+                ><span class="cell" style="--v: 30" title="دوشنبه، ساعت ۱۶"></span
+                ><span class="cell" style="--v: 21" title="دوشنبه، ساعت ۱۸"></span
+                ><span class="cell" style="--v: 4" title="دوشنبه، ساعت ۲۰"></span
+                ><span class="cell" style="--v: 11" title="دوشنبه، ساعت ۲۲"></span><span class="hm-label">سه‌شنبه</span
+                ><span class="cell" style="--v: 10" title="سه‌شنبه، ساعت ۰"></span
+                ><span class="cell" style="--v: 14" title="سه‌شنبه، ساعت ۲"></span
+                ><span class="cell" style="--v: 40" title="سه‌شنبه، ساعت ۴"></span
+                ><span class="cell" style="--v: 91" title="سه‌شنبه، ساعت ۶"></span
+                ><span class="cell" style="--v: 80" title="سه‌شنبه، ساعت ۸"></span
+                ><span class="cell" style="--v: 81" title="سه‌شنبه، ساعت ۱۰"></span
+                ><span class="cell" style="--v: 72" title="سه‌شنبه، ساعت ۱۲"></span
+                ><span class="cell" style="--v: 58" title="سه‌شنبه، ساعت ۱۴"></span
+                ><span class="cell" style="--v: 22" title="سه‌شنبه، ساعت ۱۶"></span
+                ><span class="cell" style="--v: 13" title="سه‌شنبه، ساعت ۱۸"></span
+                ><span class="cell" style="--v: 14" title="سه‌شنبه، ساعت ۲۰"></span
+                ><span class="cell" style="--v: 25" title="سه‌شنبه، ساعت ۲۲"></span><span class="hm-label">چهارشنبه</span
+                ><span class="cell" style="--v: 4" title="چهارشنبه، ساعت ۰"></span
+                ><span class="cell" style="--v: 28" title="چهارشنبه، ساعت ۲"></span
+                ><span class="cell" style="--v: 32" title="چهارشنبه، ساعت ۴"></span
+                ><span class="cell" style="--v: 83" title="چهارشنبه، ساعت ۶"></span
+                ><span class="cell" style="--v: 94" title="چهارشنبه، ساعت ۸"></span
+                ><span class="cell" style="--v: 95" title="چهارشنبه، ساعت ۱۰"></span
+                ><span class="cell" style="--v: 64" title="چهارشنبه، ساعت ۱۲"></span
+                ><span class="cell" style="--v: 50" title="چهارشنبه، ساعت ۱۴"></span
+                ><span class="cell" style="--v: 36" title="چهارشنبه، ساعت ۱۶"></span
+                ><span class="cell" style="--v: 5" title="چهارشنبه، ساعت ۱۸"></span
+                ><span class="cell" style="--v: 6" title="چهارشنبه، ساعت ۲۰"></span
+                ><span class="cell" style="--v: 17" title="چهارشنبه، ساعت ۲۲"></span><span class="hm-label">پنجشنبه</span
+                ><span class="cell" style="--v: 4" title="پنجشنبه، ساعت ۰"></span
+                ><span class="cell" style="--v: 30" title="پنجشنبه، ساعت ۲"></span
+                ><span class="cell" style="--v: 56" title="پنجشنبه، ساعت ۴"></span
+                ><span class="cell" style="--v: 85" title="پنجشنبه، ساعت ۶"></span
+                ><span class="cell" style="--v: 96" title="پنجشنبه، ساعت ۸"></span
+                ><span class="cell" style="--v: 97" title="پنجشنبه، ساعت ۱۰"></span
+                ><span class="cell" style="--v: 88" title="پنجشنبه، ساعت ۱۲"></span
+                ><span class="cell" style="--v: 52" title="پنجشنبه، ساعت ۱۴"></span
+                ><span class="cell" style="--v: 38" title="پنجشنبه، ساعت ۱۶"></span
+                ><span class="cell" style="--v: 29" title="پنجشنبه، ساعت ۱۸"></span
+                ><span class="cell" style="--v: 30" title="پنجشنبه، ساعت ۲۰"></span
+                ><span class="cell" style="--v: 19" title="پنجشنبه، ساعت ۲۲"></span><span class="hm-label">جمعه</span
+                ><span class="cell" style="--v: 18" title="جمعه، ساعت ۰"></span
+                ><span class="cell" style="--v: 22" title="جمعه، ساعت ۲"></span
+                ><span class="cell" style="--v: 48" title="جمعه، ساعت ۴"></span
+                ><span class="cell" style="--v: 99" title="جمعه، ساعت ۶"></span
+                ><span class="cell" style="--v: 100" title="جمعه، ساعت ۸"></span
+                ><span class="cell" style="--v: 89" title="جمعه، ساعت ۱۰"></span
+                ><span class="cell" style="--v: 80" title="جمعه، ساعت ۱۲"></span
+                ><span class="cell" style="--v: 66" title="جمعه، ساعت ۱۴"></span
+                ><span class="cell" style="--v: 30" title="جمعه، ساعت ۱۶"></span
+                ><span class="cell" style="--v: 21" title="جمعه، ساعت ۱۸"></span
+                ><span class="cell" style="--v: 22" title="جمعه، ساعت ۲۰"></span
+                ><span class="cell" style="--v: 33" title="جمعه، ساعت ۲۲"></span>
+              </div>
+            </article>
+
+            <article class="card lg-5">
+              <div class="card__head"><h2 class="card__title">اهداف فصل پاییز</h2></div>
+              <div class="grid" style="--gap: 1rem">
+                <div class="sm-6 row">
+                  <div class="ring t-primary" style="--value: 78">۷۸٪</div>
+                  <div>
+                    <b class="small">فروش</b>
+                    <p class="xs muted">۱۸۴ از ۲۳۶ میلیون</p>
+                  </div>
+                </div>
+                <div class="sm-6 row">
+                  <div class="ring t-success" style="--value: 64">۶۴٪</div>
+                  <div>
+                    <b class="small">مشتری جدید</b>
+                    <p class="xs muted">۶۴۰ از ۱۰۰۰</p>
+                  </div>
+                </div>
+                <div class="sm-6 row">
+                  <div class="ring t-warning" style="--value: 92">۹۲٪</div>
+                  <div>
+                    <b class="small">رضایت</b>
+                    <p class="xs muted">۴٫۶ از ۵</p>
+                  </div>
+                </div>
+                <div class="sm-6 row">
+                  <div class="ring t-danger" style="--value: 18">۱۸٪</div>
+                  <div>
+                    <b class="small">مرجوعی</b>
+                    <p class="xs muted">زیر ۲۰٪ هدف</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card card--flush" style="grid-column: 1/-1">
+              <div class="card__head">
+                <div>
+                  <h2 class="card__title">پربازدیدترین صفحات</h2>
+                  <p class="card__sub">مرتب‌سازی با کلیک روی عنوان ستون</p>
+                </div>
+              </div>
+              <div data-table>
+                <div class="table-wrap mt-2" data-overflow-ok>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">
+                          <button class="th-sort" type="button" data-sort>
+                            صفحه <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+                          </button>
+                        </th>
+                        <th scope="col">
+                          <button class="th-sort" type="button" data-sort>
+                            بازدید <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+                          </button>
+                        </th>
+                        <th scope="col">میانگین زمان</th>
+                        <th scope="col">
+                          <button class="th-sort" type="button" data-sort>
+                            نرخ خروج <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+                          </button>
+                        </th>
+                        <th scope="col">روند</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span class="person__name">صفحه اصلی</span><span class="person__meta ltr">/</span></td>
+                        <td class="num" data-value="48210">۴۸٬۲۱۰</td>
+                        <td class="muted">۰۰:۵۲</td>
+                        <td data-value="32.4">
+                          <div class="row">
+                            <div class="progress progress--sm" style="inline-size: 5rem"><span style="--value: 64.8%"></span></div>
+                            <span class="xs">۳۲٫۴٪</span>
+                          </div>
+                        </td>
+                        <td style="inline-size: 8rem">
+                          <div
+                            class="chart"
+                            data-chart='{"type":"sparkline","height":32,"series":[{"name":"صفحه اصلی","data":[59,64,68,71,72,73,63,62,60,59,58,57]}]}'
+                          ></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="person__name">هدفون بی‌سیم نوا</span><span class="person__meta ltr">/products/nova-headphone</span>
+                        </td>
+                        <td class="num" data-value="21430">۲۱٬۴۳۰</td>
+                        <td class="muted">۰۲:۱۸</td>
+                        <td data-value="18.9">
+                          <div class="row">
+                            <div class="progress progress--sm" style="inline-size: 5rem"><span style="--value: 37.8%"></span></div>
+                            <span class="xs">۱۸٫۹٪</span>
+                          </div>
+                        </td>
+                        <td style="inline-size: 8rem">
+                          <div
+                            class="chart"
+                            data-chart='{"type":"sparkline","height":32,"series":[{"name":"هدفون بی‌سیم نوا","data":[63,68,72,66,68,69,60,60,59,59,51,53]}]}'
+                          ></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span class="person__name">دسته صوتی</span><span class="person__meta ltr">/category/audio</span></td>
+                        <td class="num" data-value="17840">۱۷٬۸۴۰</td>
+                        <td class="muted">۰۱:۴۰</td>
+                        <td data-value="24.1">
+                          <div class="row">
+                            <div class="progress progress--sm" style="inline-size: 5rem"><span style="--value: 48.2%"></span></div>
+                            <span class="xs">۲۴٫۱٪</span>
+                          </div>
+                        </td>
+                        <td style="inline-size: 8rem">
+                          <div
+                            class="chart"
+                            data-chart='{"type":"sparkline","height":32,"series":[{"name":"دسته صوتی","data":[66,72,67,70,63,64,56,57,59,51,55,49]}]}'
+                          ></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="person__name">بهترین ساعت‌های هوشمند ۱۴۰۵</span
+                          ><span class="person__meta ltr">/blog/best-smartwatch-1405</span>
+                        </td>
+                        <td class="num" data-value="12960">۱۲٬۹۶۰</td>
+                        <td class="muted">۰۴:۰۵</td>
+                        <td data-value="41.7">
+                          <div class="row">
+                            <div class="progress progress--sm" style="inline-size: 5rem"><span style="--value: 83.4%"></span></div>
+                            <span class="xs">۴۱٫۷٪</span>
+                          </div>
+                        </td>
+                        <td style="inline-size: 8rem">
+                          <div
+                            class="chart"
+                            data-chart='{"type":"sparkline","height":32,"series":[{"name":"بهترین ساعت‌های هوشمند ۱۴۰۵","data":[68,64,69,63,66,59,52,55,49,54,50,56]}]}'
+                          ></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span class="person__name">سبد خرید</span><span class="person__meta ltr">/cart</span></td>
+                        <td class="num" data-value="9820">۹٬۸۲۰</td>
+                        <td class="muted">۰۱:۱۲</td>
+                        <td data-value="12.3">
+                          <div class="row">
+                            <div class="progress progress--sm" style="inline-size: 5rem"><span style="--value: 24.6%"></span></div>
+                            <span class="xs">۱۲٫۳٪</span>
+                          </div>
+                        </td>
+                        <td style="inline-size: 8rem">
+                          <div
+                            class="chart"
+                            data-chart='{"type":"sparkline","height":32,"series":[{"name":"سبد خرید","data":[69,65,61,65,60,54,49,54,50,48,56,55]}]}'
+                          ></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span class="person__name">جشنواره مهر</span><span class="person__meta ltr">/offers/mehr</span></td>
+                        <td class="num" data-value="8710">۸٬۷۱۰</td>
+                        <td class="muted">۰۱:۵۵</td>
+                        <td data-value="28.6">
+                          <div class="row">
+                            <div class="progress progress--sm" style="inline-size: 5rem"><span style="--value: 57.2%"></span></div>
+                            <span class="xs">۲۸٫۶٪</span>
+                          </div>
+                        </td>
+                        <td style="inline-size: 8rem">
+                          <div
+                            class="chart"
+                            data-chart='{"type":"sparkline","height":32,"series":[{"name":"جشنواره مهر","data":[69,66,62,58,53,49,46,53,52,52,53,55]}]}'
+                          ></div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </article>
+          </section>
+        </main>
+
+        <footer class="app-footer">
+          <p>© ۱۴۰۵ پیشخوان. طراحی‌شده با دقت برای فروشگاه‌های ایرانی.</p>
+          <nav aria-label="پیوندهای پانویس">
+            <a href="documentation/index.html">مستندات</a>
+            <a href="settings.html">حریم خصوصی</a>
+            <a href="chat.html">پشتیبانی</a>
+          </nav>
+        </footer>
+      </div>
+    </div>
+
+    <dialog class="modal cmdk" id="cmdk" aria-label="جستجوی سریع">
+      <div class="cmdk__search">
+        <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+        <input type="search" placeholder="نام صفحه یا دستور را بنویسید…" aria-label="جستجو" data-cmdk-input autocomplete="off" />
+        <kbd>Esc</kbd>
+      </div>
+      <div class="cmdk__list" data-cmdk-list role="listbox">
+        <p class="cmdk__group">اصلی</p>
+        <a class="cmdk__item" role="option" href="index.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-layout-dashboard"></use></svg><span>داشبورد فروش</span></a
+        ><a class="cmdk__item" role="option" href="analytics.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-chart-spline"></use></svg><span>تحلیل‌ها</span></a
+        >
+        <p class="cmdk__group">فروشگاه</p>
+        <a class="cmdk__item" role="option" href="orders.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-shopping-cart"></use></svg><span>سفارش‌ها</span></a
+        ><a class="cmdk__item" role="option" href="products.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-package"></use></svg><span>محصولات</span></a
+        ><a class="cmdk__item" role="option" href="product-form.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-package-plus"></use></svg><span>افزودن محصول</span></a
+        ><a class="cmdk__item" role="option" href="customers.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg><span>مشتریان</span></a
+        ><a class="cmdk__item" role="option" href="invoice.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-receipt-text"></use></svg><span>فاکتور</span></a
+        >
+        <p class="cmdk__group">برنامه‌ها</p>
+        <a class="cmdk__item" role="option" href="chat.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-messages-square"></use></svg><span>پیام‌ها</span></a
+        ><a class="cmdk__item" role="option" href="calendar.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-calendar-days"></use></svg><span>تقویم شمسی</span></a
+        ><a class="cmdk__item" role="option" href="kanban.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-square-kanban"></use></svg><span>مدیریت پروژه</span></a
+        >
+        <p class="cmdk__group">صفحات</p>
+        <a class="cmdk__item" role="option" href="profile.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-circle-user-round"></use></svg><span>پروفایل</span></a
+        ><a class="cmdk__item" role="option" href="settings.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-settings"></use></svg><span>تنظیمات</span></a
+        ><a class="cmdk__item" role="option" href="components.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-blocks"></use></svg><span>کامپوننت‌ها</span></a
+        ><a class="cmdk__item" role="option" href="404.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-file-question"></use></svg><span>صفحه ۴۰۴</span></a
+        ><a class="cmdk__item" role="option" href="documentation/index.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-book-open"></use></svg><span>مستندات</span></a
+        >
+        <p class="cmdk__group">دستورها</p>
+        <button type="button" class="cmdk__item" role="option" data-cmdk-item data-theme-toggle>
+          <svg class="icon" aria-hidden="true"><use href="#i-sun-moon"></use></svg><span>تغییر حالت روشن/تاریک</span>
+        </button>
+        <a class="cmdk__item" role="option" href="product-form.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg><span>افزودن محصول جدید</span><kbd>N</kbd></a
+        >
+      </div>
+      <div class="cmdk__foot">
+        <span><kbd>↑</kbd> <kbd>↓</kbd> جابه‌جایی</span><span><kbd>Enter</kbd> انتخاب</span><span><kbd>Esc</kbd> بستن</span>
+      </div>
+    </dialog>
+  </body>
+</html>

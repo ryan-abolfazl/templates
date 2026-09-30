@@ -60,6 +60,8 @@
         if (UI.toast) UI.toast(form.getAttribute('data-success'), 'success');
         if (form.getAttribute('data-redirect')) location.href = form.getAttribute('data-redirect');
         else form.reset();
+        var dlg = form.closest('dialog');
+        if (dlg && dlg.open) dlg.close();
       }, 700);
     }
   });

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>تأیید کد | پیشخوان</title>
+    <meta name="description" content="وارد کردن کد یکبارمصرف پیامکی" />
+    <meta name="theme-color" content="#4f46e5" />
+    <meta property="og:title" content="تأیید کد | پیشخوان" />
+    <meta property="og:description" content="وارد کردن کد یکبارمصرف پیامکی" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function (d) {
+        d.classList.add("js");
+        try {
+          var t = JSON.parse(localStorage.getItem("theme"));
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          d.setAttribute("data-theme", t);
+          if (JSON.parse(localStorage.getItem("pishkhan-sidebar"))) d.classList.add("sidebar-collapsed");
+        } catch (e) {}
+      })(document.documentElement);
+    </script>
+    <link rel="preload" href="assets/fonts/vazirmatn/Vazirmatn-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/core.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body class="">
+    <script src="assets/js/icons.js"></script>
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+
+    <main id="main" class="auth">
+      <section class="auth__panel">
+        <a href="index.html" class="auth__brand row"
+          ><span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 20V10l8-6 8 6v10" />
+              <path d="M9 20v-5.5a3 3 0 0 1 6 0V20" />
+            </svg> </span
+          ><span class="brand-name">پیشخوان</span></a
+        >
+        <div class="auth__form">
+          <h1>کد تأیید را وارد کنید</h1>
+          <p class="muted">کد ۵ رقمی به شماره ۰۹۱۲ ۳۴۵ ****۸۹ پیامک شد.</p>
+
+          <form class="stack" style="--gap: 1.25rem" data-success="شماره موبایل تأیید شد" data-validate data-redirect="index.html">
+            <div class="otp" data-otp role="group" aria-label="کد یکبارمصرف">
+              <input inputmode="numeric" maxlength="1" required aria-label="رقم 1" autocomplete="one-time-code" /><input
+                inputmode="numeric"
+                maxlength="1"
+                required
+                aria-label="رقم 2"
+                autocomplete="off"
+              /><input inputmode="numeric" maxlength="1" required aria-label="رقم 3" autocomplete="off" /><input
+                inputmode="numeric"
+                maxlength="1"
+                required
+                aria-label="رقم 4"
+                autocomplete="off"
+              /><input inputmode="numeric" maxlength="1" required aria-label="رقم 5" autocomplete="off" />
+            </div>
+            <button class="btn btn--primary btn--lg btn--block" type="submit">تأیید و ادامه</button>
+          </form>
+          <p class="small muted" style="text-align: center" data-countdown data-hours="0.0333">
+            ارسال دوباره کد تا <b data-unit="m">۰۲</b>:<b data-unit="s">۰۰</b> دیگر
+          </p>
+          <a class="btn btn--ghost btn--block" href="login.html"
+            ><svg class="icon" aria-hidden="true"><use href="#i-pencil"></use></svg> ویرایش شماره موبایل</a
+          >
+        </div>
+        <p class="auth__foot xs faint">© ۱۴۰۵ پیشخوان · <a href="documentation/index.html">راهنما</a></p>
+      </section>
+      <aside class="auth__art" aria-hidden="true">
+        <div class="auth__art-inner">
+          <div class="auth__quote">
+            <p>«از روزی که فروشگاهمان را با پیشخوان مدیریت می‌کنیم، گزارش‌های فروش را به‌جای یک روز، در یک نگاه می‌بینیم.»</p>
+            <div class="person">
+              <span class="avatar avatar--sm" style="--h: 232" aria-hidden="true">ن‌ک</span>
+              <div><span class="person__name">نیما کاظمی</span><span class="person__meta">مدیر فروشگاه آنلاین آوا</span></div>
+            </div>
+          </div>
+          <div class="auth__cards">
+            <div class="auth__mini card">
+              <span class="kpi__label">فروش امروز</span><strong class="kpi__value">۴۸٫۲ <small>میلیون</small></strong
+              ><span class="delta delta--up"
+                ><svg class="icon" aria-hidden="true"><use href="#i-trending-up"></use></svg> ۱۲٪</span
+              >
+            </div>
+            <div class="auth__mini card">
+              <span class="kpi__label">سفارش جدید</span><strong class="kpi__value">۱۲۶</strong>
+              <div class="progress progress--sm"><span style="--value: 72%"></span></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </body>
+</html>

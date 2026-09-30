@@ -20,6 +20,7 @@
   }
 
   function closeDrawer(drawer) {
+    if (!drawer.classList.contains('is-open')) return;
     drawer.classList.remove('is-open');
     drawer.setAttribute('aria-hidden', 'true');
     drawer.setAttribute('inert', '');
@@ -30,12 +31,27 @@
     if (lastTrigger && lastTrigger.focus) lastTrigger.focus();
   }
 
+  // data-drawer-media="(max-width: 1024px)": only a drawer while the query matches
+  // (e.g. an app sidebar that is static on desktop).
+  function syncDrawer(d) {
+    var media = d.getAttribute('data-drawer-media');
+    var active = !media || window.matchMedia(media).matches;
+    if (!active) {
+      d.classList.remove('is-open');
+      d.removeAttribute('inert');
+      d.removeAttribute('aria-hidden');
+      if (!UI.$('[data-drawer].is-open')) document.body.classList.remove('is-locked');
+    } else if (!d.classList.contains('is-open')) {
+      d.setAttribute('aria-hidden', 'true');
+      d.setAttribute('inert', '');
+    }
+  }
+
   UI.ready(function () {
     UI.$$('[data-drawer]').forEach(function (d) {
-      if (!d.classList.contains('is-open')) {
-        d.setAttribute('aria-hidden', 'true');
-        d.setAttribute('inert', '');
-      }
+      syncDrawer(d);
+      var media = d.getAttribute('data-drawer-media');
+      if (media) window.matchMedia(media).addEventListener('change', function () { syncDrawer(d); });
     });
   });
 

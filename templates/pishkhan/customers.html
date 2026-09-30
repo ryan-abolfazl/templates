@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>مشتریان | پیشخوان</title>
+    <meta name="description" content="فهرست مشتریان با سطح وفاداری و میزان خرید" />
+    <meta name="theme-color" content="#4f46e5" />
+    <meta property="og:title" content="مشتریان | پیشخوان" />
+    <meta property="og:description" content="فهرست مشتریان با سطح وفاداری و میزان خرید" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function (d) {
+        d.classList.add("js");
+        try {
+          var t = JSON.parse(localStorage.getItem("theme"));
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          d.setAttribute("data-theme", t);
+          if (JSON.parse(localStorage.getItem("pishkhan-sidebar"))) d.classList.add("sidebar-collapsed");
+        } catch (e) {}
+      })(document.documentElement);
+    </script>
+    <link rel="preload" href="assets/fonts/vazirmatn/Vazirmatn-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/core.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body class="">
+    <script src="assets/js/icons.js"></script>
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+    <div class="app">
+      <aside class="sidebar" id="sidebar" data-drawer data-drawer-media="(max-width: 1100px)" aria-label="منوی اصلی">
+        <div class="sidebar__brand">
+          <a href="index.html" class="row" aria-label="پیشخوان، صفحه اصلی">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 20V10l8-6 8 6v10" />
+                <path d="M9 20v-5.5a3 3 0 0 1 6 0V20" />
+              </svg>
+            </span>
+            <span class="brand-name">پیشخوان<small>پنل مدیریت فروشگاه</small></span>
+          </a>
+          <button class="icon-btn sidebar__close" type="button" data-drawer-close aria-label="بستن منو">
+            <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+          </button>
+        </div>
+        <nav class="sidebar__scroll">
+          <div class="nav-group">
+            <p class="nav-group__title">اصلی</p>
+            <a class="nav-link" href="index.html" title="داشبورد فروش">
+              <svg class="icon" aria-hidden="true"><use href="#i-layout-dashboard"></use></svg><span>داشبورد فروش</span> </a
+            ><a class="nav-link" href="analytics.html" title="تحلیل‌ها">
+              <svg class="icon" aria-hidden="true"><use href="#i-chart-spline"></use></svg><span>تحلیل‌ها</span>
+            </a>
+          </div>
+          <div class="nav-group">
+            <p class="nav-group__title">فروشگاه</p>
+            <a class="nav-link" href="orders.html" title="سفارش‌ها">
+              <svg class="icon" aria-hidden="true"><use href="#i-shopping-cart"></use></svg><span>سفارش‌ها</span>
+              <span class="badge badge--count badge--solid t-primary">۱۲</span> </a
+            ><a class="nav-link" href="products.html" title="محصولات">
+              <svg class="icon" aria-hidden="true"><use href="#i-package"></use></svg><span>محصولات</span> </a
+            ><a class="nav-link" href="product-form.html" title="افزودن محصول">
+              <svg class="icon" aria-hidden="true"><use href="#i-package-plus"></use></svg><span>افزودن محصول</span> </a
+            ><a class="nav-link is-active" aria-current="page" href="customers.html" title="مشتریان">
+              <svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg><span>مشتریان</span> </a
+            ><a class="nav-link" href="invoice.html" title="فاکتور">
+              <svg class="icon" aria-hidden="true"><use href="#i-receipt-text"></use></svg><span>فاکتور</span>
+            </a>
+          </div>
+          <div class="nav-group">
+            <p class="nav-group__title">برنامه‌ها</p>
+            <a class="nav-link" href="chat.html" title="پیام‌ها">
+              <svg class="icon" aria-hidden="true"><use href="#i-messages-square"></use></svg><span>پیام‌ها</span>
+              <span class="badge badge--count badge--solid t-accent">۳</span> </a
+            ><a class="nav-link" href="calendar.html" title="تقویم شمسی">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar-days"></use></svg><span>تقویم شمسی</span> </a
+            ><a class="nav-link" href="kanban.html" title="مدیریت پروژه">
+              <svg class="icon" aria-hidden="true"><use href="#i-square-kanban"></use></svg><span>مدیریت پروژه</span>
+            </a>
+          </div>
+          <div class="nav-group">
+            <p class="nav-group__title">صفحات</p>
+            <a class="nav-link" href="profile.html" title="پروفایل">
+              <svg class="icon" aria-hidden="true"><use href="#i-circle-user-round"></use></svg><span>پروفایل</span> </a
+            ><a class="nav-link" href="settings.html" title="تنظیمات">
+              <svg class="icon" aria-hidden="true"><use href="#i-settings"></use></svg><span>تنظیمات</span>
+            </a>
+            <details class="nav-sub">
+              <summary title="احراز هویت">
+                <svg class="icon" aria-hidden="true"><use href="#i-lock-keyhole"></use></svg><span>احراز هویت</span
+                ><svg class="icon chev" aria-hidden="true"><use href="#i-chevron-left"></use></svg>
+              </summary>
+              <div class="nav-sub__list">
+                <a href="login.html">ورود</a><a href="register.html">ثبت‌نام</a><a href="forgot-password.html">فراموشی رمز عبور</a
+                ><a href="verify.html">تأیید کد یکبارمصرف</a>
+              </div>
+            </details>
+            <a class="nav-link" href="components.html" title="کامپوننت‌ها">
+              <svg class="icon" aria-hidden="true"><use href="#i-blocks"></use></svg><span>کامپوننت‌ها</span> </a
+            ><a class="nav-link" href="404.html" title="صفحه ۴۰۴">
+              <svg class="icon" aria-hidden="true"><use href="#i-file-question"></use></svg><span>صفحه ۴۰۴</span> </a
+            ><a class="nav-link" href="documentation/index.html" title="مستندات">
+              <svg class="icon" aria-hidden="true"><use href="#i-book-open"></use></svg><span>مستندات</span>
+            </a>
+          </div>
+          <div class="sidebar__promo">
+            <strong>نسخه حرفه‌ای</strong>
+            <p>گزارش‌های پیشرفته، چند انبار و دسترسی تیمی.</p>
+            <a class="btn btn--sm" href="settings.html">ارتقای حساب</a>
+          </div>
+        </nav>
+        <div class="sidebar__user">
+          <span class="avatar avatar--sm" style="--h: 315" aria-hidden="true">س‌م<span class="status"></span></span>
+          <div><strong>سارا محمدی</strong><span>مدیر فروشگاه</span></div>
+          <a class="icon-btn icon-btn--sm" href="login.html" aria-label="خروج"
+            ><svg class="icon icon-flip" aria-hidden="true"><use href="#i-log-out"></use></svg
+          ></a>
+        </div>
+      </aside>
+      <div class="sidebar-backdrop" data-drawer-open="sidebar" aria-hidden="true"></div>
+      <div class="app__main">
+        <header class="topbar" data-sticky-header>
+          <button
+            class="icon-btn topbar__menu"
+            type="button"
+            data-drawer-open="sidebar"
+            aria-controls="sidebar"
+            aria-expanded="false"
+            aria-label="باز کردن منو"
+          >
+            <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+          </button>
+          <button class="icon-btn topbar__collapse" type="button" data-sidebar-collapse aria-label="جمع کردن منوی کناری">
+            <svg class="icon" aria-hidden="true"><use href="#i-panel-right"></use></svg>
+          </button>
+          <button class="search-trigger" type="button" data-modal-open="cmdk" aria-label="جستجو در پنل">
+            <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg><span>جستجو در پنل…</span><kbd>Ctrl K</kbd>
+          </button>
+          <div class="topbar__actions">
+            <button class="icon-btn" type="button" data-theme-toggle aria-label="تغییر حالت روشن و تاریک" aria-pressed="false">
+              <svg class="icon theme-icon-light" aria-hidden="true"><use href="#i-moon"></use></svg
+              ><svg class="icon theme-icon-dark" aria-hidden="true"><use href="#i-sun"></use></svg>
+            </button>
+            <div data-dropdown class="hide-sm">
+              <button class="icon-btn" type="button" data-dropdown-toggle aria-expanded="false" aria-label="زبان">
+                <svg class="icon" aria-hidden="true"><use href="#i-languages"></use></svg>
+              </button>
+              <div class="dropdown-menu" data-dropdown-menu>
+                <button type="button">
+                  <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> فارسی
+                </button>
+                <button type="button"><span class="icon"></span> English</button>
+                <button type="button"><span class="icon"></span> العربية</button>
+              </div>
+            </div>
+            <div data-dropdown>
+              <button class="icon-btn" type="button" data-dropdown-toggle aria-expanded="false" aria-label="اعلان‌ها، ۲ مورد خوانده‌نشده">
+                <svg class="icon" aria-hidden="true"><use href="#i-bell"></use></svg><span class="dot"></span>
+              </button>
+              <div class="dropdown-menu notif-menu" data-dropdown-menu>
+                <div class="notif-menu__head"><strong>اعلان‌ها</strong><span class="badge t-primary">۲ جدید</span></div>
+                <div class="notif-list">
+                  <a href="orders.html" class="notif is-unread">
+                    <span class="thumb t-primary" style="inline-size: 2.25rem; block-size: 2.25rem"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-shopping-bag"></use></svg
+                    ></span>
+                    <span
+                      ><p>سفارش جدید <b>#۴۸۲۱</b> از علی رضایی ثبت شد.</p>
+                      <time>۲ دقیقه پیش</time></span
+                    > </a
+                  ><a href="orders.html" class="notif is-unread">
+                    <span class="thumb t-warning" style="inline-size: 2.25rem; block-size: 2.25rem"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-triangle-alert"></use></svg
+                    ></span>
+                    <span
+                      ><p>موجودی «هدفون بی‌سیم نوا» به ۳ عدد رسید.</p>
+                      <time>۱ ساعت پیش</time></span
+                    > </a
+                  ><a href="orders.html" class="notif">
+                    <span class="thumb t-info" style="inline-size: 2.25rem; block-size: 2.25rem"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-message-circle"></use></svg
+                    ></span>
+                    <span
+                      ><p>مریم احمدی به تیکت پشتیبانی پاسخ داد.</p>
+                      <time>۳ ساعت پیش</time></span
+                    > </a
+                  ><a href="orders.html" class="notif">
+                    <span class="thumb t-success" style="inline-size: 2.25rem; block-size: 2.25rem"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-circle-check"></use></svg
+                    ></span>
+                    <span
+                      ><p>تسویه‌حساب هفتگی با موفقیت واریز شد.</p>
+                      <time>دیروز</time></span
+                    >
+                  </a>
+                </div>
+                <a class="notif-menu__foot" href="settings.html">مشاهده همه اعلان‌ها</a>
+              </div>
+            </div>
+            <div data-dropdown>
+              <button class="topbar__profile" type="button" data-dropdown-toggle aria-expanded="false">
+                <span class="avatar avatar--sm" style="--h: 315" aria-hidden="true">س‌م</span><span>سارا محمدی</span
+                ><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg>
+              </button>
+              <div class="dropdown-menu" data-dropdown-menu>
+                <div class="dropdown-head"><strong>سارا محمدی</strong><span class="ltr">sara@pishkhan.ir</span></div>
+                <hr />
+                <a href="profile.html"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-circle-user-round"></use></svg> پروفایل من</a
+                >
+                <a href="settings.html"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-settings"></use></svg> تنظیمات حساب</a
+                >
+                <a href="invoice.html"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-credit-card"></use></svg> صورتحساب‌ها</a
+                >
+                <a href="documentation/index.html"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-life-buoy"></use></svg> راهنما و پشتیبانی</a
+                >
+                <hr />
+                <a href="login.html" class="danger"
+                  ><svg class="icon icon-flip" aria-hidden="true"><use href="#i-log-out"></use></svg> خروج از حساب</a
+                >
+              </div>
+            </div>
+          </div>
+        </header>
+        <main id="main" class="page">
+          <div class="page-head">
+            <div>
+              <nav class="breadcrumb" aria-label="مسیر صفحه">
+                <a href="index.html">پیشخوان</a>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg><span aria-current="page">فروشگاه</span
+                ><svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg><span aria-current="page">مشتریان</span>
+              </nav>
+              <h1>مشتریان</h1>
+              <p>۲٬۸۴۷ مشتری ثبت‌نام‌شده · ۱۲۶ مشتری جدید این ماه</p>
+            </div>
+            <div class="page-head__actions">
+              <button class="btn" type="button" data-toast="فایل CSV دانلود شد">
+                <svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg> خروجی CSV
+              </button>
+              <button class="btn btn--primary" type="button" data-modal-open="add-customer">
+                <svg class="icon" aria-hidden="true"><use href="#i-user-plus"></use></svg> مشتری جدید
+              </button>
+            </div>
+          </div>
+
+          <section class="card card--flush" data-table data-page-size="8" aria-label="جدول مشتریان">
+            <div class="table-toolbar">
+              <div class="input-icon">
+                <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg
+                ><input
+                  class="input"
+                  type="search"
+                  placeholder="جستجوی نام، ایمیل یا شهر…"
+                  data-table-search
+                  aria-label="جستجو در مشتریان"
+                />
+              </div>
+              <div class="table-toolbar__end">
+                <select class="select" data-table-filter="4" aria-label="فیلتر سطح" style="inline-size: auto">
+                  <option value="">همه سطح‌ها</option>
+                  <option>ویژه</option>
+                  <option>طلایی</option>
+                  <option>نقره‌ای</option>
+                  <option>جدید</option>
+                </select>
+              </div>
+            </div>
+            <div class="table-wrap" data-overflow-ok>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      <button class="th-sort" type="button" data-sort>
+                        مشتری <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+                      </button>
+                    </th>
+                    <th scope="col">تماس</th>
+                    <th scope="col">
+                      <button class="th-sort" type="button" data-sort>
+                        شهر <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+                      </button>
+                    </th>
+                    <th scope="col">
+                      <button class="th-sort" type="button" data-sort>
+                        سفارش‌ها <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+                      </button>
+                    </th>
+                    <th scope="col">سطح</th>
+                    <th scope="col">
+                      <button class="th-sort" type="button" data-sort>
+                        مجموع خرید <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+                      </button>
+                    </th>
+                    <th scope="col">عضویت</th>
+                    <th scope="col"><span class="sr-only">عملیات</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-value="علی رضایی">
+                      <div class="person">
+                        <span class="avatar avatar--sm" style="--h: 276" aria-hidden="true">ع‌ر</span>
+                        <div>
+                          <span class="person__name">علی رضایی</span
+                          ><span class="person__meta"><span class="ltr">ali.rezaei@gmail.com</span></span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="muted">۰۹۱۲ ۴۵۶ ۷۸۹۰</td>
+                    <td data-value="تهران">تهران</td>
+                    <td class="num" data-value="18">۱۸</td>
+                    <td data-value="ویژه"><span class="badge t-accent">ویژه</span></td>
+                    <td class="num" data-value="42850000">۴۲٬۸۵۰٬۰۰۰ تومان</td>
+                    <td class="muted">۱۲ فروردین ۱۴۰۴</td>
+                    <td>
+                      <div class="row" style="gap: 0.25rem">
+                        <a class="icon-btn icon-btn--sm" href="profile.html" aria-label="پروفایل علی رضایی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg
+                        ></a>
+                        <a class="icon-btn icon-btn--sm" href="chat.html" aria-label="پیام به علی رضایی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-message-circle"></use></svg
+                        ></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-value="مریم احمدی">
+                      <div class="person">
+                        <span class="avatar avatar--sm" style="--h: 168" aria-hidden="true">م‌ا</span>
+                        <div>
+                          <span class="person__name">مریم احمدی</span
+                          ><span class="person__meta"><span class="ltr">maryam.ahmadi@yahoo.com</span></span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="muted">۰۹۱۳ ۲۲۱ ۴۵۶۷</td>
+                    <td data-value="اصفهان">اصفهان</td>
+                    <td class="num" data-value="11">۱۱</td>
+                    <td data-value="طلایی"><span class="badge t-warning">طلایی</span></td>
+                    <td class="num" data-value="23600000">۲۳٬۶۰۰٬۰۰۰ تومان</td>
+                    <td class="muted">۳ اردیبهشت ۱۴۰۴</td>
+                    <td>
+                      <div class="row" style="gap: 0.25rem">
+                        <a class="icon-btn icon-btn--sm" href="profile.html" aria-label="پروفایل مریم احمدی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg
+                        ></a>
+                        <a class="icon-btn icon-btn--sm" href="chat.html" aria-label="پیام به مریم احمدی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-message-circle"></use></svg
+                        ></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-value="رضا کریمی">
+                      <div class="person">
+                        <span class="avatar avatar--sm" style="--h: 54" aria-hidden="true">ر‌ک</span>
+                        <div>
+                          <span class="person__name">رضا کریمی</span
+                          ><span class="person__meta"><span class="ltr">reza.karimi@outlook.com</span></span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="muted">۰۹۱۷ ۸۸۰ ۱۲۳۴</td>
+                    <td data-value="شیراز">شیراز</td>
+                    <td class="num" data-value="7">۷</td>
+                    <td data-value="نقره‌ای"><span class="badge t-info">نقره‌ای</span></td>
+                    <td class="num" data-value="11240000">۱۱٬۲۴۰٬۰۰۰ تومان</td>
+                    <td class="muted">۲۰ خرداد ۱۴۰۴</td>
+                    <td>
+                      <div class="row" style="gap: 0.25rem">
+                        <a class="icon-btn icon-btn--sm" href="profile.html" aria-label="پروفایل رضا کریمی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg
+                        ></a>
+                        <a class="icon-btn icon-btn--sm" href="chat.html" aria-label="پیام به رضا کریمی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-message-circle"></use></svg
+                        ></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-value="زهرا حسینی">
+                      <div class="person">
+                        <span class="avatar avatar--sm" style="--h: 126" aria-hidden="true">ز‌ح</span>
+                        <div>
+                          <span class="person__name">زهرا حسینی</span
+                          ><span class="person__meta"><span class="ltr">zahra.hosseini@gmail.com</span></span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="muted">۰۹۱۵ ۳۳۴ ۹۸۷۶</td>
+                    <td data-value="مشهد">مشهد</td>
+                    <td class="num" data-value="24">۲۴</td>
+                    <td data-value="ویژه"><span class="badge t-accent">ویژه</span></td>
+                    <td class="num" data-value="61900000">۶۱٬۹۰۰٬۰۰۰ تومان</td>
+                    <td class="muted">۵ دی ۱۴۰۳</td>
+                    <td>
+                      <div class="row" style="gap: 0.25rem">
+                        <a class="icon-btn icon-btn--sm" href="profile.html" aria-label="پروفایل زهرا حسینی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg
+                        ></a>
+                        <a class="icon-btn icon-btn--sm" href="chat.html" aria-label="پیام به زهرا حسینی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-message-circle"></use></svg
+                        ></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-value="امیر نوروزی">
+                      <div class="person">
+                        <span class="avatar avatar--sm" style="--h: 17" aria-hidden="true">ا‌ن</span>
+                        <div>
+                          <span class="person__name">امیر نوروزی</span
+                          ><span class="person__meta"><span class="ltr">amir.nowruzi@gmail.com</span></span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="muted">۰۹۱۴ ۵۶۷ ۱۱۲۲</td>
+                    <td data-value="تبریز">تبریز</td>
+                    <td class="num" data-value="3">۳</td>
+                    <td data-value="جدید"><span class="badge t-success">جدید</span></td>
+                    <td class="num" data-value="4380000">۴٬۳۸۰٬۰۰۰ تومان</td>
+                    <td class="muted">۲ مرداد ۱۴۰۴</td>
+                    <td>
+                      <div class="row" style="gap: 0.25rem">
+                        <a class="icon-btn icon-btn--sm" href="profile.html" aria-label="پروفایل امیر نوروزی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg
+                        ></a>
+                        <a class="icon-btn icon-btn--sm" href="chat.html" aria-label="پیام به امیر نوروزی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-message-circle"></use></svg
+                        ></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-value="نگار صادقی">
+                      <div class="person">
+                        <span class="avatar avatar--sm" style="--h: 145" aria-hidden="true">ن‌ص</span>
+                        <div>
+                          <span class="person__name">نگار صادقی</span
+                          ><span class="person__meta"><span class="ltr">negar.sadeghi@gmail.com</span></span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="muted">۰۹۱۲ ۹۹۰ ۳۳۴۴</td>
+                    <td data-value="کرج">کرج</td>
+                    <td class="num" data-value="9">۹</td>
+                    <td data-value="طلایی"><span class="badge t-warning">طلایی</span></td>
+                    <td class="num" data-value="15720000">۱۵٬۷۲۰٬۰۰۰ تومان</td>
+                    <td class="muted">۱۸ بهمن ۱۴۰۳</td>
+                    <td>
+                      <div class="row" style="gap: 0.25rem">
+                        <a class="icon-btn icon-btn--sm" href="profile.html" aria-label="پروفایل نگار صادقی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg
+                        ></a>
+                        <a class="icon-btn icon-btn--sm" href="chat.html" aria-label="پیام به نگار صادقی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-message-circle"></use></svg
+                        ></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-value="حسین مرادی">
+                      <div class="person">
+                        <span class="avatar avatar--sm" style="--h: 271" aria-hidden="true">ح‌م</span>
+                        <div>
+                          <span class="person__name">حسین مرادی</span
+                          ><span class="person__meta"><span class="ltr">hossein.moradi@yahoo.com</span></span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="muted">۰۹۱۶ ۲۱۰ ۵۵۶۶</td>
+                    <td data-value="اهواز">اهواز</td>
+                    <td class="num" data-value="5">۵</td>
+                    <td data-value="نقره‌ای"><span class="badge t-info">نقره‌ای</span></td>
+                    <td class="num" data-value="7650000">۷٬۶۵۰٬۰۰۰ تومان</td>
+                    <td class="muted">۹ تیر ۱۴۰۴</td>
+                    <td>
+                      <div class="row" style="gap: 0.25rem">
+                        <a class="icon-btn icon-btn--sm" href="profile.html" aria-label="پروفایل حسین مرادی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg
+                        ></a>
+                        <a class="icon-btn icon-btn--sm" href="chat.html" aria-label="پیام به حسین مرادی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-message-circle"></use></svg
+                        ></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-value="فاطمه جعفری">
+                      <div class="person">
+                        <span class="avatar avatar--sm" style="--h: 67" aria-hidden="true">ف‌ج</span>
+                        <div>
+                          <span class="person__name">فاطمه جعفری</span
+                          ><span class="person__meta"><span class="ltr">fatemeh.jafari@gmail.com</span></span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="muted">۰۹۱۹ ۱۲۳ ۴۴۵۵</td>
+                    <td data-value="قم">قم</td>
+                    <td class="num" data-value="14">۱۴</td>
+                    <td data-value="طلایی"><span class="badge t-warning">طلایی</span></td>
+                    <td class="num" data-value="28300000">۲۸٬۳۰۰٬۰۰۰ تومان</td>
+                    <td class="muted">۲۷ آبان ۱۴۰۳</td>
+                    <td>
+                      <div class="row" style="gap: 0.25rem">
+                        <a class="icon-btn icon-btn--sm" href="profile.html" aria-label="پروفایل فاطمه جعفری"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg
+                        ></a>
+                        <a class="icon-btn icon-btn--sm" href="chat.html" aria-label="پیام به فاطمه جعفری"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-message-circle"></use></svg
+                        ></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-value="محمد شریفی">
+                      <div class="person">
+                        <span class="avatar avatar--sm" style="--h: 147" aria-hidden="true">م‌ش</span>
+                        <div>
+                          <span class="person__name">محمد شریفی</span
+                          ><span class="person__meta"><span class="ltr">m.sharifi@outlook.com</span></span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="muted">۰۹۱۱ ۸۷۶ ۵۴۳۲</td>
+                    <td data-value="رشت">رشت</td>
+                    <td class="num" data-value="2">۲</td>
+                    <td data-value="جدید"><span class="badge t-success">جدید</span></td>
+                    <td class="num" data-value="2190000">۲٬۱۹۰٬۰۰۰ تومان</td>
+                    <td class="muted">۱ شهریور ۱۴۰۴</td>
+                    <td>
+                      <div class="row" style="gap: 0.25rem">
+                        <a class="icon-btn icon-btn--sm" href="profile.html" aria-label="پروفایل محمد شریفی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg
+                        ></a>
+                        <a class="icon-btn icon-btn--sm" href="chat.html" aria-label="پیام به محمد شریفی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-message-circle"></use></svg
+                        ></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-value="سمیرا قاسمی">
+                      <div class="person">
+                        <span class="avatar avatar--sm" style="--h: 70" aria-hidden="true">س‌ق</span>
+                        <div>
+                          <span class="person__name">سمیرا قاسمی</span
+                          ><span class="person__meta"><span class="ltr">samira.ghasemi@gmail.com</span></span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="muted">۰۹۱۳ ۶۵۴ ۷۸۹۰</td>
+                    <td data-value="یزد">یزد</td>
+                    <td class="num" data-value="16">۱۶</td>
+                    <td data-value="ویژه"><span class="badge t-accent">ویژه</span></td>
+                    <td class="num" data-value="33480000">۳۳٬۴۸۰٬۰۰۰ تومان</td>
+                    <td class="muted">۱۴ مهر ۱۴۰۳</td>
+                    <td>
+                      <div class="row" style="gap: 0.25rem">
+                        <a class="icon-btn icon-btn--sm" href="profile.html" aria-label="پروفایل سمیرا قاسمی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg
+                        ></a>
+                        <a class="icon-btn icon-btn--sm" href="chat.html" aria-label="پیام به سمیرا قاسمی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-message-circle"></use></svg
+                        ></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-value="پویا عباسی">
+                      <div class="person">
+                        <span class="avatar avatar--sm" style="--h: 85" aria-hidden="true">پ‌ع</span>
+                        <div>
+                          <span class="person__name">پویا عباسی</span
+                          ><span class="person__meta"><span class="ltr">pouya.abbasi@gmail.com</span></span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="muted">۰۹۱۳ ۴۴۵ ۶۶۷۷</td>
+                    <td data-value="کرمان">کرمان</td>
+                    <td class="num" data-value="6">۶</td>
+                    <td data-value="نقره‌ای"><span class="badge t-info">نقره‌ای</span></td>
+                    <td class="num" data-value="9120000">۹٬۱۲۰٬۰۰۰ تومان</td>
+                    <td class="muted">۲۲ فروردین ۱۴۰۴</td>
+                    <td>
+                      <div class="row" style="gap: 0.25rem">
+                        <a class="icon-btn icon-btn--sm" href="profile.html" aria-label="پروفایل پویا عباسی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg
+                        ></a>
+                        <a class="icon-btn icon-btn--sm" href="chat.html" aria-label="پیام به پویا عباسی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-message-circle"></use></svg
+                        ></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-value="الهام رحیمی">
+                      <div class="person">
+                        <span class="avatar avatar--sm" style="--h: 296" aria-hidden="true">ا‌ر</span>
+                        <div>
+                          <span class="person__name">الهام رحیمی</span
+                          ><span class="person__meta"><span class="ltr">elham.rahimi@yahoo.com</span></span>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="muted">۰۹۱۸ ۳۲۱ ۰۹۸۷</td>
+                    <td data-value="همدان">همدان</td>
+                    <td class="num" data-value="4">۴</td>
+                    <td data-value="جدید"><span class="badge t-success">جدید</span></td>
+                    <td class="num" data-value="5540000">۵٬۵۴۰٬۰۰۰ تومان</td>
+                    <td class="muted">۷ خرداد ۱۴۰۴</td>
+                    <td>
+                      <div class="row" style="gap: 0.25rem">
+                        <a class="icon-btn icon-btn--sm" href="profile.html" aria-label="پروفایل الهام رحیمی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg
+                        ></a>
+                        <a class="icon-btn icon-btn--sm" href="chat.html" aria-label="پیام به الهام رحیمی"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-message-circle"></use></svg
+                        ></a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="empty" data-table-empty hidden>
+                <svg class="icon" aria-hidden="true"><use href="#i-user-x"></use></svg><strong>مشتری‌ای پیدا نشد</strong>
+              </div>
+            </div>
+            <div class="card__foot">
+              <span>۱۲ از ۲٬۸۴۷ مشتری</span>
+              <nav class="pager" data-table-pager aria-label="صفحه‌بندی"></nav>
+            </div>
+          </section>
+
+          <dialog class="modal" id="add-customer" aria-labelledby="ac-title">
+            <form data-validate data-success="مشتری جدید اضافه شد">
+              <div class="modal__head">
+                <h2 id="ac-title">افزودن مشتری</h2>
+                <button class="icon-btn" type="button" data-modal-close aria-label="بستن">
+                  <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+                </button>
+              </div>
+              <div class="modal__body form-grid">
+                <div class="field">
+                  <label class="label" for="ac-first">نام <span class="req">*</span></label
+                  ><input class="input" id="ac-first" required />
+                </div>
+                <div class="field">
+                  <label class="label" for="ac-last">نام خانوادگی <span class="req">*</span></label
+                  ><input class="input" id="ac-last" required />
+                </div>
+                <div class="field full">
+                  <label class="label" for="ac-email">ایمیل</label><input class="input ltr" id="ac-email" type="email" />
+                </div>
+                <div class="field">
+                  <label class="label" for="ac-phone">موبایل <span class="req">*</span></label
+                  ><input
+                    class="input"
+                    id="ac-phone"
+                    type="tel"
+                    required
+                    pattern="09[0-9]{9}"
+                    data-msg="شماره موبایل ۱۱ رقمی و با ۰۹ شروع شود"
+                  />
+                </div>
+                <div class="field"><label class="label" for="ac-city">شهر</label><input class="input" id="ac-city" /></div>
+              </div>
+              <div class="modal__foot">
+                <button class="btn" type="button" data-modal-close>انصراف</button
+                ><button class="btn btn--primary" type="submit">ذخیره</button>
+              </div>
+            </form>
+          </dialog>
+        </main>
+
+        <footer class="app-footer">
+          <p>© ۱۴۰۵ پیشخوان. طراحی‌شده با دقت برای فروشگاه‌های ایرانی.</p>
+          <nav aria-label="پیوندهای پانویس">
+            <a href="documentation/index.html">مستندات</a>
+            <a href="settings.html">حریم خصوصی</a>
+            <a href="chat.html">پشتیبانی</a>
+          </nav>
+        </footer>
+      </div>
+    </div>
+
+    <dialog class="modal cmdk" id="cmdk" aria-label="جستجوی سریع">
+      <div class="cmdk__search">
+        <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+        <input type="search" placeholder="نام صفحه یا دستور را بنویسید…" aria-label="جستجو" data-cmdk-input autocomplete="off" />
+        <kbd>Esc</kbd>
+      </div>
+      <div class="cmdk__list" data-cmdk-list role="listbox">
+        <p class="cmdk__group">اصلی</p>
+        <a class="cmdk__item" role="option" href="index.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-layout-dashboard"></use></svg><span>داشبورد فروش</span></a
+        ><a class="cmdk__item" role="option" href="analytics.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-chart-spline"></use></svg><span>تحلیل‌ها</span></a
+        >
+        <p class="cmdk__group">فروشگاه</p>
+        <a class="cmdk__item" role="option" href="orders.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-shopping-cart"></use></svg><span>سفارش‌ها</span></a
+        ><a class="cmdk__item" role="option" href="products.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-package"></use></svg><span>محصولات</span></a
+        ><a class="cmdk__item" role="option" href="product-form.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-package-plus"></use></svg><span>افزودن محصول</span></a
+        ><a class="cmdk__item" role="option" href="customers.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg><span>مشتریان</span></a
+        ><a class="cmdk__item" role="option" href="invoice.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-receipt-text"></use></svg><span>فاکتور</span></a
+        >
+        <p class="cmdk__group">برنامه‌ها</p>
+        <a class="cmdk__item" role="option" href="chat.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-messages-square"></use></svg><span>پیام‌ها</span></a
+        ><a class="cmdk__item" role="option" href="calendar.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-calendar-days"></use></svg><span>تقویم شمسی</span></a
+        ><a class="cmdk__item" role="option" href="kanban.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-square-kanban"></use></svg><span>مدیریت پروژه</span></a
+        >
+        <p class="cmdk__group">صفحات</p>
+        <a class="cmdk__item" role="option" href="profile.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-circle-user-round"></use></svg><span>پروفایل</span></a
+        ><a class="cmdk__item" role="option" href="settings.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-settings"></use></svg><span>تنظیمات</span></a
+        ><a class="cmdk__item" role="option" href="components.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-blocks"></use></svg><span>کامپوننت‌ها</span></a
+        ><a class="cmdk__item" role="option" href="404.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-file-question"></use></svg><span>صفحه ۴۰۴</span></a
+        ><a class="cmdk__item" role="option" href="documentation/index.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-book-open"></use></svg><span>مستندات</span></a
+        >
+        <p class="cmdk__group">دستورها</p>
+        <button type="button" class="cmdk__item" role="option" data-cmdk-item data-theme-toggle>
+          <svg class="icon" aria-hidden="true"><use href="#i-sun-moon"></use></svg><span>تغییر حالت روشن/تاریک</span>
+        </button>
+        <a class="cmdk__item" role="option" href="product-form.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg><span>افزودن محصول جدید</span><kbd>N</kbd></a
+        >
+      </div>
+      <div class="cmdk__foot">
+        <span><kbd>↑</kbd> <kbd>↓</kbd> جابه‌جایی</span><span><kbd>Enter</kbd> انتخاب</span><span><kbd>Esc</kbd> بستن</span>
+      </div>
+    </dialog>
+  </body>
+</html>

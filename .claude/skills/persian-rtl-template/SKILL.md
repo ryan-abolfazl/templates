@@ -31,6 +31,10 @@ export default (ctx) => html`
 - `icon('name', 'extra-class', 'optional label')` emits `<svg class="icon"><use href="#i-name">`. Names are Lucide names (see `vendor/lucide/icons.json`). The build bundles only used icons and fails on unknown names.
 - In runtime JS strings, write icon refs literally (`'#i-check'`) so the build's scan finds them.
 - `fa(1250000)` gives `۱٬۲۵۰٬۰۰۰`; `toman(n)` gives `… تومان`. Never type Latin digits in visible Persian copy.
+- Years, codes and phone numbers must not get thousands separators: pass them as strings (`fa('1405')`, `UI.fa(String(jy))`).
+- Themes: use `themeBoot(defaultTheme, extraJs)` from `tools/lib/html.mjs` in the `<head>`. It applies the saved theme, else the OS preference.
+- Docs page: `pages/docs.mjs` with `out: 'documentation/index.html'` calling `docsPage(ctx, {...})` from `tools/lib/docs.mjs`.
+- Brand logos are not in Lucide (no instagram/telegram icons). Use generic icons (camera, send) or hand-drawn SVGs.
 
 ## 2. Layout / head boilerplate (inside `site.mjs` layouts)
 

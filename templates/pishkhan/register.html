@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ثبت‌نام | پیشخوان</title>
+    <meta name="description" content="ساخت حساب جدید در پیشخوان" />
+    <meta name="theme-color" content="#4f46e5" />
+    <meta property="og:title" content="ثبت‌نام | پیشخوان" />
+    <meta property="og:description" content="ساخت حساب جدید در پیشخوان" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function (d) {
+        d.classList.add("js");
+        try {
+          var t = JSON.parse(localStorage.getItem("theme"));
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          d.setAttribute("data-theme", t);
+          if (JSON.parse(localStorage.getItem("pishkhan-sidebar"))) d.classList.add("sidebar-collapsed");
+        } catch (e) {}
+      })(document.documentElement);
+    </script>
+    <link rel="preload" href="assets/fonts/vazirmatn/Vazirmatn-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/core.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body class="">
+    <script src="assets/js/icons.js"></script>
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+
+    <main id="main" class="auth">
+      <section class="auth__panel">
+        <a href="index.html" class="auth__brand row"
+          ><span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 20V10l8-6 8 6v10" />
+              <path d="M9 20v-5.5a3 3 0 0 1 6 0V20" />
+            </svg> </span
+          ><span class="brand-name">پیشخوان</span></a
+        >
+        <div class="auth__form">
+          <h1>ساخت حساب جدید</h1>
+          <p class="muted">۱۴ روز استفاده رایگان از همه امکانات؛ بدون نیاز به کارت بانکی.</p>
+
+          <form class="stack" style="--gap: 1rem" data-validate data-success="حساب شما ساخته شد" data-redirect="verify.html">
+            <div class="form-grid">
+              <div class="field">
+                <label class="label" for="r-first">نام</label><input class="input" id="r-first" required autocomplete="given-name" />
+              </div>
+              <div class="field">
+                <label class="label" for="r-last">نام خانوادگی</label
+                ><input class="input" id="r-last" required autocomplete="family-name" />
+              </div>
+            </div>
+            <div class="field">
+              <label class="label" for="r-shop">نام فروشگاه</label>
+              <div class="input-icon">
+                <svg class="icon" aria-hidden="true"><use href="#i-store"></use></svg><input class="input" id="r-shop" required />
+              </div>
+            </div>
+            <div class="field">
+              <label class="label" for="r-phone">شماره موبایل</label>
+              <div class="input-icon">
+                <svg class="icon" aria-hidden="true"><use href="#i-smartphone"></use></svg
+                ><input
+                  class="input"
+                  id="r-phone"
+                  type="tel"
+                  required
+                  pattern="09[0-9]{9}"
+                  data-msg="شماره موبایل را به شکل ۰۹۱۲۳۴۵۶۷۸۹ وارد کنید"
+                  placeholder="۰۹۱۲۳۴۵۶۷۸۹"
+                />
+              </div>
+            </div>
+            <div class="field">
+              <label class="label" for="r-pw">رمز عبور</label>
+              <div class="input-icon">
+                <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg
+                ><input class="input" id="r-pw" type="password" required minlength="8" autocomplete="new-password" data-pw-meter />
+                <button
+                  class="icon-btn icon-btn--sm input-action"
+                  type="button"
+                  data-password-toggle
+                  aria-label="نمایش رمز"
+                  aria-pressed="false"
+                >
+                  <svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg>
+                </button>
+              </div>
+              <div class="pw-meter" data-score="0" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+              <span class="field__hint">حداقل ۸ کاراکتر، ترکیبی از حروف، عدد و نماد</span>
+            </div>
+            <label class="check"
+              ><input type="checkbox" required />
+              <span><a class="text-primary" href="documentation/index.html">قوانین و حریم خصوصی</a> را می‌پذیرم</span></label
+            >
+            <button class="btn btn--primary btn--lg btn--block" type="submit">
+              ساخت حساب <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg>
+            </button>
+          </form>
+          <p class="small muted" style="text-align: center">
+            قبلاً ثبت‌نام کرده‌اید؟ <a class="text-primary bold" href="login.html">وارد شوید</a>
+          </p>
+          <script>
+            document.addEventListener("input", function (e) {
+              if (!e.target.matches("[data-pw-meter]")) return;
+              var v = e.target.value,
+                s = 0;
+              if (v.length >= 8) s++;
+              if (/[0-9]/.test(v)) s++;
+              if (/[A-Za-z؀-ۿ]/.test(v) && v.length >= 10) s++;
+              if (/[^A-Za-z0-9؀-ۿ]/.test(v)) s++;
+              e.target
+                .closest(".field")
+                .querySelector(".pw-meter")
+                .setAttribute("data-score", v ? Math.max(1, s) : 0);
+            });
+          </script>
+        </div>
+        <p class="auth__foot xs faint">© ۱۴۰۵ پیشخوان · <a href="documentation/index.html">راهنما</a></p>
+      </section>
+      <aside class="auth__art" aria-hidden="true">
+        <div class="auth__art-inner">
+          <div class="auth__quote">
+            <p>«از روزی که فروشگاهمان را با پیشخوان مدیریت می‌کنیم، گزارش‌های فروش را به‌جای یک روز، در یک نگاه می‌بینیم.»</p>
+            <div class="person">
+              <span class="avatar avatar--sm" style="--h: 232" aria-hidden="true">ن‌ک</span>
+              <div><span class="person__name">نیما کاظمی</span><span class="person__meta">مدیر فروشگاه آنلاین آوا</span></div>
+            </div>
+          </div>
+          <div class="auth__cards">
+            <div class="auth__mini card">
+              <span class="kpi__label">فروش امروز</span><strong class="kpi__value">۴۸٫۲ <small>میلیون</small></strong
+              ><span class="delta delta--up"
+                ><svg class="icon" aria-hidden="true"><use href="#i-trending-up"></use></svg> ۱۲٪</span
+              >
+            </div>
+            <div class="auth__mini card">
+              <span class="kpi__label">سفارش جدید</span><strong class="kpi__value">۱۲۶</strong>
+              <div class="progress progress--sm"><span style="--value: 72%"></span></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </body>
+</html>

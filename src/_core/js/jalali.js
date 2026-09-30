@@ -107,7 +107,7 @@
     var html =
       '<div class="dp__head">' +
       '<button type="button" class="dp__nav" data-dp="-1" aria-label="ماه قبل"><svg class="icon"><use href="#i-chevron-right"></use></svg></button>' +
-      '<strong>' + J.MONTHS[view.jm - 1] + ' ' + UI.fa(view.jy) + '</strong>' +
+      '<strong>' + J.MONTHS[view.jm - 1] + ' ' + UI.fa(String(view.jy)) + '</strong>' +
       '<button type="button" class="dp__nav" data-dp="1" aria-label="ماه بعد"><svg class="icon"><use href="#i-chevron-left"></use></svg></button>' +
       '</div><div class="dp__grid" role="grid">';
     J.WEEKDAYS.forEach(function (w, i) {

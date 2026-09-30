@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>مستندات | پیشخوان</title>
+    <meta name="description" content="راهنمای فارسی نصب و شخصی‌سازی قالب" />
+    <meta name="theme-color" content="#4f46e5" />
+    <meta property="og:title" content="مستندات | پیشخوان" />
+    <meta property="og:description" content="راهنمای فارسی نصب و شخصی‌سازی قالب" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function (d) {
+        d.classList.add("js");
+        try {
+          var t = JSON.parse(localStorage.getItem("theme"));
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          d.setAttribute("data-theme", t);
+          if (JSON.parse(localStorage.getItem("pishkhan-sidebar"))) d.classList.add("sidebar-collapsed");
+        } catch (e) {}
+      })(document.documentElement);
+    </script>
+    <link rel="preload" href="../assets/fonts/vazirmatn/Vazirmatn-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/tokens.css" />
+    <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/pages.css" />
+    <script src="../assets/js/core.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
+  </head>
+  <body class="">
+    <script src="../assets/js/icons.js"></script>
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+
+    <link rel="stylesheet" href="../assets/css/docs.css" />
+    <div class="docs">
+      <nav class="docs__nav" aria-label="فهرست مستندات">
+        <a href="../index.html"><b>← مشاهده قالب</b></a>
+        <a href="#intro">معرفی</a><a href="#start">شروع سریع</a><a href="#structure">ساختار فایل‌ها</a><a href="#pages">فهرست صفحات</a
+        ><a href="#colors">رنگ‌ها و ظاهر</a><a href="#fonts">فونت‌ها</a><a href="#js">کامپوننت‌های جاوااسکریپت</a
+        ><a href="#icons">آیکن‌ها و تصاویر</a><a href="#source">توسعه با سورس</a><a href="#browsers">سازگاری</a
+        ><a href="#credits">منابع و لایسنس</a><a href="#changelog">تغییرات نسخه‌ها</a><a href="#support">پشتیبانی</a>
+      </nav>
+      <main id="main" class="docs__body">
+        <section id="intro">
+          <p class="docs__kicker">راهنمای استفاده · نسخه ۱.۰.۰</p>
+          <h1>مستندات قالب پیشخوان</h1>
+          <p>
+            پیشخوان یک قالب HTML پنل مدیریت فروشگاهی است که با تمرکز بر خوانایی داده، سرعت و تجربه کاربری فارسی طراحی شده است. همه صفحات
+            راست‌چین، واکنش‌گرا و دارای حالت تاریک هستند و با HTML، CSS و جاوااسکریپت خالص نوشته شده‌اند تا به‌راحتی به وردپرس، لاراول، جنگو
+            یا هر بک‌اند دیگری متصل شوند.
+          </p>
+          <ul>
+            <li>
+              بیش از ۲۰ صفحه آماده: داشبورد، تحلیل‌ها، سفارش‌ها، محصولات، مشتریان، فاکتور، پیام‌رسان، تقویم، کانبان، پروفایل، تنظیمات، احراز
+              هویت و…
+            </li>
+            <li>نمودارهای SVG سبک و تعاملی بدون کتابخانه خارجی</li>
+            <li>تقویم و انتخابگر تاریخ شمسی (جلالی)</li>
+            <li>جدول داده با جستجو، فیلتر، مرتب‌سازی، انتخاب گروهی و صفحه‌بندی</li>
+            <li>جستجوی سریع (Command Palette) با کلید Ctrl+K</li>
+            <li>حالت تاریک طراحی‌شده (نه صرفاً معکوس) با ذخیره انتخاب کاربر</li>
+            <li>منوی کناری جمع‌شونده و کشوی موبایل</li>
+            <li>دسترس‌پذیر: پشتیبانی کامل صفحه‌کلید و صفحه‌خوان</li>
+          </ul>
+        </section>
+
+        <section id="start">
+          <h2>شروع سریع</h2>
+          <ol>
+            <li>فایل فشرده را از حالت فشرده خارج کنید.</li>
+            <li>
+              پوشه <code>html</code> شامل همه صفحات است. فایل <code>html/index.html</code> را در مرورگر باز کنید؛ قالب بدون نیاز به سرور و
+              حتی آفلاین کار می‌کند.
+            </li>
+            <li>برای انتشار، محتوای پوشه <code>html</code> را در هاست خود (پوشه <code>public_html</code>) بارگذاری کنید.</li>
+            <li>متن‌ها، تصاویر و رنگ‌ها را مطابق بخش‌های زیر شخصی‌سازی کنید.</li>
+          </ol>
+          <p>قالب هیچ درخواستی به سرورهای خارجی (CDN، گوگل فونت و…) ارسال نمی‌کند؛ بنابراین در ایران سریع و بدون مشکل بارگذاری می‌شود.</p>
+        </section>
+
+        <section id="structure">
+          <h2>ساختار فایل‌ها</h2>
+          <pre>
+html/
+├── *.html                 صفحات قالب
+├── assets/
+│   ├── css/
+│   │   ├── fonts.css      تعریف فونت‌ها (@font-face)
+│   │   ├── base.css       ریست و ابزارهای دسترس‌پذیری
+│   │   ├── tokens.css     ← رنگ‌ها، فونت، فاصله‌ها (اینجا را ویرایش کنید)
+│   │   ├── components.css دکمه، کارت، فرم، جدول و…
+│   │   └── pages.css      استایل‌های اختصاصی صفحات
+│   ├── js/
+│   │   ├── icons.js       اسپرایت آیکن‌ها
+│   │   ├── core.js        کامپوننت‌های مشترک (بدون وابستگی)
+│   │   └── main.js        رفتارهای اختصاصی قالب
+│   ├── fonts/             فونت‌های woff2
+│   └── img/               تصاویر و طرح‌های SVG
+└── licenses/              مجوز فونت‌ها و آیکن‌ها
+documentation/             همین راهنما
+source/                    سورس صفحات و ابزار ساخت (برای توسعه‌دهندگان)</pre
+          >
+        </section>
+
+        <section id="pages">
+          <h2>فهرست صفحات (۱۸ صفحه)</h2>
+          <div class="table-wrap" data-overflow-ok>
+            <table class="table docs__table">
+              <thead>
+                <tr>
+                  <th scope="col">صفحه</th>
+                  <th scope="col">فایل</th>
+                  <th scope="col">توضیح</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="../404.html">صفحه پیدا نشد</a></td>
+                  <td><code>404.html</code></td>
+                  <td>خطای ۴۰۴</td>
+                </tr>
+                <tr>
+                  <td><a href="../analytics.html">تحلیل‌ها</a></td>
+                  <td><code>analytics.html</code></td>
+                  <td>تحلیل ترافیک، منابع ورودی و رفتار کاربران</td>
+                </tr>
+                <tr>
+                  <td><a href="../calendar.html">تقویم شمسی</a></td>
+                  <td><code>calendar.html</code></td>
+                  <td>تقویم جلالی با رویدادها و جلسات</td>
+                </tr>
+                <tr>
+                  <td><a href="../chat.html">پیام‌ها</a></td>
+                  <td><code>chat.html</code></td>
+                  <td>گفتگو با مشتریان و اعضای تیم</td>
+                </tr>
+                <tr>
+                  <td><a href="../components.html">کامپوننت‌ها</a></td>
+                  <td><code>components.html</code></td>
+                  <td>کیت رابط کاربری پیشخوان: رنگ‌ها، تایپوگرافی و اجزا</td>
+                </tr>
+                <tr>
+                  <td><a href="../customers.html">مشتریان</a></td>
+                  <td><code>customers.html</code></td>
+                  <td>فهرست مشتریان با سطح وفاداری و میزان خرید</td>
+                </tr>
+                <tr>
+                  <td><a href="../forgot-password.html">فراموشی رمز عبور</a></td>
+                  <td><code>forgot-password.html</code></td>
+                  <td>بازیابی رمز عبور حساب پیشخوان</td>
+                </tr>
+                <tr>
+                  <td><a href="../index.html">داشبورد فروش</a></td>
+                  <td><code>index.html</code></td>
+                  <td>نمای کلی فروش، سفارش‌ها و عملکرد فروشگاه</td>
+                </tr>
+                <tr>
+                  <td><a href="../invoice.html">فاکتور #۴۸۲۱</a></td>
+                  <td><code>invoice.html</code></td>
+                  <td>فاکتور فروش قابل چاپ</td>
+                </tr>
+                <tr>
+                  <td><a href="../kanban.html">مدیریت پروژه</a></td>
+                  <td><code>kanban.html</code></td>
+                  <td>بُرد کانبان با کشیدن و رها کردن کارها</td>
+                </tr>
+                <tr>
+                  <td><a href="../login.html">ورود</a></td>
+                  <td><code>login.html</code></td>
+                  <td>ورود به پنل مدیریت پیشخوان</td>
+                </tr>
+                <tr>
+                  <td><a href="../orders.html">سفارش‌ها</a></td>
+                  <td><code>orders.html</code></td>
+                  <td>مدیریت سفارش‌ها با جستجو، فیلتر و مرتب‌سازی</td>
+                </tr>
+                <tr>
+                  <td><a href="../product-form.html">افزودن محصول</a></td>
+                  <td><code>product-form.html</code></td>
+                  <td>فرم کامل افزودن محصول با تصاویر، قیمت و موجودی</td>
+                </tr>
+                <tr>
+                  <td><a href="../products.html">محصولات</a></td>
+                  <td><code>products.html</code></td>
+                  <td>فهرست محصولات با فیلتر دسته و نمای شبکه/فهرست</td>
+                </tr>
+                <tr>
+                  <td><a href="../profile.html">پروفایل</a></td>
+                  <td><code>profile.html</code></td>
+                  <td>پروفایل کاربر با فعالیت‌ها و اطلاعات تماس</td>
+                </tr>
+                <tr>
+                  <td><a href="../register.html">ثبت‌نام</a></td>
+                  <td><code>register.html</code></td>
+                  <td>ساخت حساب جدید در پیشخوان</td>
+                </tr>
+                <tr>
+                  <td><a href="../settings.html">تنظیمات</a></td>
+                  <td><code>settings.html</code></td>
+                  <td>تنظیمات حساب، امنیت، اعلان‌ها و اشتراک</td>
+                </tr>
+                <tr>
+                  <td><a href="../verify.html">تأیید کد</a></td>
+                  <td><code>verify.html</code></td>
+                  <td>وارد کردن کد یکبارمصرف پیامکی</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="colors">
+          <h2>رنگ‌ها و ظاهر</h2>
+          <p>
+            همه تصمیم‌های طراحی به‌صورت متغیرهای CSS در فایل <code>assets/css/tokens.css</code> تعریف شده‌اند. کافی است مقدار متغیر را عوض
+            کنید تا همه صفحات به‌روز شوند. مقادیر حالت تاریک زیر انتخابگر <code>[data-theme='dark']</code> قرار دارند.
+          </p>
+          <div class="docs__swatches">
+            <div class="docs__swatch">
+              <i style="background: #4f46e5"></i><span><b>اصلی</b><code>--primary</code><code>#4f46e5</code></span>
+            </div>
+            <div class="docs__swatch">
+              <i style="background: #f26b5b"></i><span><b>تأکیدی</b><code>--accent</code><code>#f26b5b</code></span>
+            </div>
+            <div class="docs__swatch">
+              <i style="background: #16a34a"></i><span><b>موفق</b><code>--success</code><code>#16a34a</code></span>
+            </div>
+            <div class="docs__swatch">
+              <i style="background: #d97706"></i><span><b>هشدار</b><code>--warning</code><code>#d97706</code></span>
+            </div>
+            <div class="docs__swatch">
+              <i style="background: #e11d48"></i><span><b>خطا</b><code>--danger</code><code>#e11d48</code></span>
+            </div>
+            <div class="docs__swatch">
+              <i style="background: #f3f5f9"></i><span><b>پس‌زمینه</b><code>--bg</code><code>#f3f5f9</code></span>
+            </div>
+            <div class="docs__swatch">
+              <i style="background: #0f1729"></i><span><b>متن</b><code>--text</code><code>#0f1729</code></span>
+            </div>
+          </div>
+          <pre>
+:root {
+  --primary: #4f46e5;   /* رنگ اصلی برند */
+}</pre
+          >
+          <p>
+            حالت پیش‌فرض (روشن یا تاریک) با ویژگی <code>data-theme</code> روی تگ <code>&lt;html&gt;</code> تعیین می‌شود و انتخاب کاربر در
+            مرورگر ذخیره می‌شود.
+          </p>
+        </section>
+
+        <section id="fonts">
+          <h2>فونت‌ها</h2>
+          <p>فونت‌های قالب رایگان و دارای مجوز آزاد SIL OFL هستند و استفاده تجاری از آن‌ها مجاز است:</p>
+          <ul>
+            <li><b>وزیرمتن (Vazirmatn)</b>: فونت متغیر برای همه متن‌ها، وزن ۱۰۰ تا ۹۰۰</li>
+          </ul>
+          <p>
+            برای استفاده از فونت دیگر (مثلاً فونت تجاری که لایسنس آن را خریده‌اید)، فایل woff2 را در <code>assets/fonts</code> قرار دهید، در
+            <code>fonts.css</code> یک <code>@font-face</code> بسازید و متغیر <code>--font-body</code> را در <code>tokens.css</code> تغییر
+            دهید.
+          </p>
+        </section>
+
+        <section id="js">
+          <h2>کامپوننت‌های جاوااسکریپت</h2>
+          <p>
+            همه تعاملات با جاوااسکریپت خالص و بدون jQuery یا Bootstrap نوشته شده‌اند و از طریق ویژگی‌های <code>data-*</code> فعال می‌شوند؛
+            کافی است ساختار HTML را کپی کنید.
+          </p>
+          <div class="table-wrap" data-overflow-ok>
+            <table class="table docs__table">
+              <thead>
+                <tr>
+                  <th scope="col">کامپوننت</th>
+                  <th scope="col">نحوه استفاده</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>حالت تاریک</b></td>
+                  <td><code>[data-theme-toggle]</code> روی هر دکمه‌ای، حالت روشن/تاریک را عوض می‌کند و انتخاب کاربر ذخیره می‌شود.</td>
+                </tr>
+                <tr>
+                  <td><b>منو و کشوها</b></td>
+                  <td>
+                    کشوی موبایل: <code>data-drawer-open="id"</code> و <code>data-drawer</code>؛ منوی کشویی: <code>data-dropdown</code>؛ هدر
+                    چسبان: <code>data-sticky-header</code>.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>تب‌ها</b></td>
+                  <td>
+                    ساختار استاندارد <code>role="tablist/tab/tabpanel"</code> داخل <code>[data-tabs]</code> با پشتیبانی کامل صفحه‌کلید.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>آکاردئون</b></td>
+                  <td>بر پایه <code>&lt;details&gt;</code>؛ با <code>data-accordion="single"</code> فقط یک مورد باز می‌ماند.</td>
+                </tr>
+                <tr>
+                  <td><b>مودال</b></td>
+                  <td>
+                    عنصر <code>&lt;dialog&gt;</code> با <code>data-modal-open="id"</code> باز و با <code>data-modal-close</code> بسته
+                    می‌شود.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>اعلان</b></td>
+                  <td><code>UI.toast("پیام", "success")</code> یا ویژگی <code>data-toast="پیام"</code> روی دکمه.</td>
+                </tr>
+                <tr>
+                  <td><b>شمارنده</b></td>
+                  <td><code>data-count-to="1200"</code> عدد را با ارقام فارسی می‌شمارد.</td>
+                </tr>
+                <tr>
+                  <td><b>نمودار</b></td>
+                  <td>
+                    <code>data-chart='{"type":"area","labels":[...],"series":[...]}'</code>؛ انواع: area, line, bar, donut, sparkline. بدون
+                    کتابخانه خارجی.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>تقویم شمسی</b></td>
+                  <td>
+                    ورودی با <code>data-datepicker</code> انتخابگر تاریخ جلالی می‌گیرد؛ تاریخ میلادی معادل در
+                    <code>data-gregorian</code> ذخیره می‌شود. API: <code>UI.jalali</code>.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>جدول داده</b></td>
+                  <td>
+                    <code>data-table</code> با جستجو (<code>data-table-search</code>)، فیلتر، مرتب‌سازی (<code>data-sort</code>)، انتخاب
+                    گروهی و صفحه‌بندی.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>فیلتر شبکه</b></td>
+                  <td>
+                    <code>data-filter</code> با دکمه‌های <code>data-filter-btn</code> و آیتم‌های <code>data-filter-item data-tags</code>.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>اعتبارسنجی فرم</b></td>
+                  <td>
+                    <code>form[data-validate]</code> پیام‌های خطای فارسی نشان می‌دهد؛ <code>data-success</code> پیام موفقیت. نمایش رمز و
+                    ورودی کد یکبارمصرف هم دارد.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>فروشگاهی</b></td>
+                  <td>
+                    انتخاب تعداد (<code>data-qty</code>)، بازه قیمت (<code>data-range</code>)، شمارش معکوس (<code>data-countdown</code>)،
+                    افزودن به سبد (<code>data-add-to-cart</code>).
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            توابع کمکی سراسری: <code>UI.fa(1250000)</code> ارقام فارسی با جداکننده، <code>UI.toman(n)</code> قیمت،
+            <code>UI.jdate(date)</code> تاریخ شمسی.
+          </p>
+          <h3>منوی کناری و جستجوی سریع</h3>
+          <p>
+            دکمه <code>[data-sidebar-collapse]</code> منو را جمع می‌کند و وضعیت آن ذخیره می‌شود. پنجره جستجو (<code>#cmdk</code>) با Ctrl+K
+            یا ⌘K باز می‌شود؛ برای افزودن مورد جدید، یک لینک با کلاس <code>cmdk__item</code> و ویژگی <code>data-cmdk-item</code> اضافه کنید.
+          </p>
+        </section>
+
+        <section id="icons">
+          <h2>آیکن‌ها و تصاویر</h2>
+          <p>
+            آیکن‌ها از مجموعه آزاد <b>Lucide</b> هستند و به شکل اسپرایت SVG در <code>assets/js/icons.js</code> قرار دارند. نمونه استفاده:
+          </p>
+          <pre>&lt;svg class="icon"&gt;&lt;use href="#i-heart"&gt;&lt;/use&gt;&lt;/svg&gt;</pre>
+          <p>برای افزودن آیکن جدید از نسخه سورس استفاده کنید (بخش بعد) یا کد SVG آیکن را مستقیماً از سایت lucide.dev کپی کنید.</p>
+          <p>
+            تصاویر نمایشی قالب طرح‌های SVG اختصاصی هستند. برای جایگزینی، تصویر خود را به‌جای عناصر دارای کلاس <code>ph</code> یا فایل‌های
+            پوشه <code>assets/img</code> قرار دهید.
+          </p>
+        </section>
+
+        <section id="source">
+          <h2>توسعه با سورس (اختیاری)</h2>
+          <p>
+            صفحات از ماژول‌های جاوااسکریپت در پوشه <code>source/src</code> ساخته می‌شوند تا هدر، منو و فوتر فقط یک‌بار نوشته شوند. اگر
+            می‌خواهید تغییرات گسترده بدهید:
+          </p>
+          <pre>
+cd source
+npm i -g prettier          # یک‌بار
+node tools/build.mjs pishkhan   # خروجی در templates/pishkhan</pre
+          >
+          <p>برای ویرایش‌های ساده نیازی به این مرحله نیست؛ فایل‌های HTML پوشه <code>html</code> را مستقیم ویرایش کنید.</p>
+        </section>
+
+        <section id="browsers">
+          <h2>سازگاری</h2>
+          <p>
+            آخرین دو نسخه Chrome، Edge، Firefox، Safari و مرورگرهای موبایل (Chrome اندروید و Safari آی‌اواس). طراحی از ۳۶۰ تا ۱۹۲۰ پیکسل
+            واکنش‌گراست و با صفحه‌خوان‌ها و صفحه‌کلید قابل استفاده است (WCAG 2.2 AA).
+          </p>
+        </section>
+
+        <section id="credits">
+          <h2>منابع و لایسنس</h2>
+          <ul>
+            <li>فونت وزیرمتن (Vazirmatn): SIL Open Font License 1.1</li>
+            <li>آیکن‌ها: Lucide، مجوز ISC</li>
+            <li>تبدیل تاریخ شمسی: الگوریتم jalaali-js، مجوز MIT</li>
+            <li>همه تصاویر و طرح‌ها اختصاصی همین قالب هستند؛ هیچ عکس استوکی همراه قالب نیست.</li>
+          </ul>
+          <p>متن کامل مجوزها در پوشه <code>licenses</code> قرار دارد.</p>
+        </section>
+
+        <section id="changelog">
+          <h2>تغییرات نسخه‌ها</h2>
+          <p><b>نسخه ۱.۰.۰</b> (مهر ۱۴۰۵): انتشار اولیه.</p>
+        </section>
+
+        <section id="support">
+          <h2>پشتیبانی</h2>
+          <p>
+            پرسش‌ها و گزارش مشکلات را از طریق بخش پشتیبانی صفحه محصول در راست‌چین ارسال کنید. پشتیبانی شامل رفع اشکال و راهنمایی در استفاده
+            از قالب است؛ سفارشی‌سازی اختصاصی جداگانه انجام می‌شود.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -43,6 +43,7 @@ async function build(slug) {
 
   // Core CSS + JS (classic scripts, not modules, so pages also work from file://)
   if (site.coreCss !== false) fs.copyFileSync(path.join(ROOT, 'src/_core/css/base.css'), path.join(out, 'assets/css/base.css'));
+  fs.copyFileSync(path.join(ROOT, 'src/_core/css/docs.css'), path.join(out, 'assets/css/docs.css'));
   const core = ['util', ...(site.core || [])];
   const coreJs = core
     .map((m) => `/* ---- ${m}.js ---- */\n` + fs.readFileSync(path.join(ROOT, 'src/_core/js', `${m}.js`), 'utf8').trim())
@@ -53,11 +54,15 @@ async function build(slug) {
   const pagesDir = path.join(src, 'pages');
   const files = fs.readdirSync(pagesDir).filter((f) => f.endsWith('.mjs')).sort();
   const written = [];
+  const mods = [];
   for (const file of files) {
     const mod = await import(pathToFileURL(path.join(pagesDir, file)) + `?t=${Date.now()}`);
-    const meta = { layout: 'main', out: file.replace(/\.mjs$/, '.html'), ...mod.meta };
+    mods.push({ file, mod, meta: { layout: 'main', out: file.replace(/\.mjs$/, '.html'), ...mod.meta } });
+  }
+  const allPages = mods.map((m) => ({ out: m.meta.out, title: m.meta.title, description: m.meta.description || '' }));
+  for (const { file, mod, meta } of mods) {
     const depth = meta.out.split('/').length - 1;
-    const ctx = { site, page: meta, base: '../'.repeat(depth), icon, nav: (key) => (meta.active === key ? ' is-active" aria-current="page' : '') };
+    const ctx = { site, page: meta, pages: allPages, base: '../'.repeat(depth), icon, nav: (key) => (meta.active === key ? ' is-active" aria-current="page' : '') };
     const body = mod.default(ctx);
     const layout = site.layouts[meta.layout];
     if (!layout) throw new Error(`${file}: unknown layout "${meta.layout}"`);

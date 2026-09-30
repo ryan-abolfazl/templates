@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>صفحه پیدا نشد | پیشخوان</title>
+    <meta name="description" content="خطای ۴۰۴" />
+    <meta name="theme-color" content="#4f46e5" />
+    <meta property="og:title" content="صفحه پیدا نشد | پیشخوان" />
+    <meta property="og:description" content="خطای ۴۰۴" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function (d) {
+        d.classList.add("js");
+        try {
+          var t = JSON.parse(localStorage.getItem("theme"));
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          d.setAttribute("data-theme", t);
+          if (JSON.parse(localStorage.getItem("pishkhan-sidebar"))) d.classList.add("sidebar-collapsed");
+        } catch (e) {}
+      })(document.documentElement);
+    </script>
+    <link rel="preload" href="assets/fonts/vazirmatn/Vazirmatn-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/core.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body class="">
+    <script src="assets/js/icons.js"></script>
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+
+    <main id="main" class="error-page">
+      <div>
+        <p class="error-page__code" aria-hidden="true">۴۰۴</p>
+        <h1>این صفحه در پیشخوان نیست!</h1>
+        <p>ممکن است آدرس را اشتباه وارد کرده باشید یا صفحه جابه‌جا شده باشد. از جستجو یا پیوندهای زیر استفاده کنید.</p>
+        <div class="row wrap">
+          <a class="btn btn--primary btn--lg" href="index.html"
+            ><svg class="icon" aria-hidden="true"><use href="#i-house"></use></svg> بازگشت به داشبورد</a
+          >
+          <a class="btn btn--lg" href="chat.html"
+            ><svg class="icon" aria-hidden="true"><use href="#i-life-buoy"></use></svg> تماس با پشتیبانی</a
+          >
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

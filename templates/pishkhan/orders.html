@@ -1,0 +1,1759 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>سفارش‌ها | پیشخوان</title>
+    <meta name="description" content="مدیریت سفارش‌ها با جستجو، فیلتر و مرتب‌سازی" />
+    <meta name="theme-color" content="#4f46e5" />
+    <meta property="og:title" content="سفارش‌ها | پیشخوان" />
+    <meta property="og:description" content="مدیریت سفارش‌ها با جستجو، فیلتر و مرتب‌سازی" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function (d) {
+        d.classList.add("js");
+        try {
+          var t = JSON.parse(localStorage.getItem("theme"));
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          d.setAttribute("data-theme", t);
+          if (JSON.parse(localStorage.getItem("pishkhan-sidebar"))) d.classList.add("sidebar-collapsed");
+        } catch (e) {}
+      })(document.documentElement);
+    </script>
+    <link rel="preload" href="assets/fonts/vazirmatn/Vazirmatn-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/core.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body class="">
+    <script src="assets/js/icons.js"></script>
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+    <div class="app">
+      <aside class="sidebar" id="sidebar" data-drawer data-drawer-media="(max-width: 1100px)" aria-label="منوی اصلی">
+        <div class="sidebar__brand">
+          <a href="index.html" class="row" aria-label="پیشخوان، صفحه اصلی">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 20V10l8-6 8 6v10" />
+                <path d="M9 20v-5.5a3 3 0 0 1 6 0V20" />
+              </svg>
+            </span>
+            <span class="brand-name">پیشخوان<small>پنل مدیریت فروشگاه</small></span>
+          </a>
+          <button class="icon-btn sidebar__close" type="button" data-drawer-close aria-label="بستن منو">
+            <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+          </button>
+        </div>
+        <nav class="sidebar__scroll">
+          <div class="nav-group">
+            <p class="nav-group__title">اصلی</p>
+            <a class="nav-link" href="index.html" title="داشبورد فروش">
+              <svg class="icon" aria-hidden="true"><use href="#i-layout-dashboard"></use></svg><span>داشبورد فروش</span> </a
+            ><a class="nav-link" href="analytics.html" title="تحلیل‌ها">
+              <svg class="icon" aria-hidden="true"><use href="#i-chart-spline"></use></svg><span>تحلیل‌ها</span>
+            </a>
+          </div>
+          <div class="nav-group">
+            <p class="nav-group__title">فروشگاه</p>
+            <a class="nav-link is-active" aria-current="page" href="orders.html" title="سفارش‌ها">
+              <svg class="icon" aria-hidden="true"><use href="#i-shopping-cart"></use></svg><span>سفارش‌ها</span>
+              <span class="badge badge--count badge--solid t-primary">۱۲</span> </a
+            ><a class="nav-link" href="products.html" title="محصولات">
+              <svg class="icon" aria-hidden="true"><use href="#i-package"></use></svg><span>محصولات</span> </a
+            ><a class="nav-link" href="product-form.html" title="افزودن محصول">
+              <svg class="icon" aria-hidden="true"><use href="#i-package-plus"></use></svg><span>افزودن محصول</span> </a
+            ><a class="nav-link" href="customers.html" title="مشتریان">
+              <svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg><span>مشتریان</span> </a
+            ><a class="nav-link" href="invoice.html" title="فاکتور">
+              <svg class="icon" aria-hidden="true"><use href="#i-receipt-text"></use></svg><span>فاکتور</span>
+            </a>
+          </div>
+          <div class="nav-group">
+            <p class="nav-group__title">برنامه‌ها</p>
+            <a class="nav-link" href="chat.html" title="پیام‌ها">
+              <svg class="icon" aria-hidden="true"><use href="#i-messages-square"></use></svg><span>پیام‌ها</span>
+              <span class="badge badge--count badge--solid t-accent">۳</span> </a
+            ><a class="nav-link" href="calendar.html" title="تقویم شمسی">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar-days"></use></svg><span>تقویم شمسی</span> </a
+            ><a class="nav-link" href="kanban.html" title="مدیریت پروژه">
+              <svg class="icon" aria-hidden="true"><use href="#i-square-kanban"></use></svg><span>مدیریت پروژه</span>
+            </a>
+          </div>
+          <div class="nav-group">
+            <p class="nav-group__title">صفحات</p>
+            <a class="nav-link" href="profile.html" title="پروفایل">
+              <svg class="icon" aria-hidden="true"><use href="#i-circle-user-round"></use></svg><span>پروفایل</span> </a
+            ><a class="nav-link" href="settings.html" title="تنظیمات">
+              <svg class="icon" aria-hidden="true"><use href="#i-settings"></use></svg><span>تنظیمات</span>
+            </a>
+            <details class="nav-sub">
+              <summary title="احراز هویت">
+                <svg class="icon" aria-hidden="true"><use href="#i-lock-keyhole"></use></svg><span>احراز هویت</span
+                ><svg class="icon chev" aria-hidden="true"><use href="#i-chevron-left"></use></svg>
+              </summary>
+              <div class="nav-sub__list">
+                <a href="login.html">ورود</a><a href="register.html">ثبت‌نام</a><a href="forgot-password.html">فراموشی رمز عبور</a
+                ><a href="verify.html">تأیید کد یکبارمصرف</a>
+              </div>
+            </details>
+            <a class="nav-link" href="components.html" title="کامپوننت‌ها">
+              <svg class="icon" aria-hidden="true"><use href="#i-blocks"></use></svg><span>کامپوننت‌ها</span> </a
+            ><a class="nav-link" href="404.html" title="صفحه ۴۰۴">
+              <svg class="icon" aria-hidden="true"><use href="#i-file-question"></use></svg><span>صفحه ۴۰۴</span> </a
+            ><a class="nav-link" href="documentation/index.html" title="مستندات">
+              <svg class="icon" aria-hidden="true"><use href="#i-book-open"></use></svg><span>مستندات</span>
+            </a>
+          </div>
+          <div class="sidebar__promo">
+            <strong>نسخه حرفه‌ای</strong>
+            <p>گزارش‌های پیشرفته، چند انبار و دسترسی تیمی.</p>
+            <a class="btn btn--sm" href="settings.html">ارتقای حساب</a>
+          </div>
+        </nav>
+        <div class="sidebar__user">
+          <span class="avatar avatar--sm" style="--h: 315" aria-hidden="true">س‌م<span class="status"></span></span>
+          <div><strong>سارا محمدی</strong><span>مدیر فروشگاه</span></div>
+          <a class="icon-btn icon-btn--sm" href="login.html" aria-label="خروج"
+            ><svg class="icon icon-flip" aria-hidden="true"><use href="#i-log-out"></use></svg
+          ></a>
+        </div>
+      </aside>
+      <div class="sidebar-backdrop" data-drawer-open="sidebar" aria-hidden="true"></div>
+      <div class="app__main">
+        <header class="topbar" data-sticky-header>
+          <button
+            class="icon-btn topbar__menu"
+            type="button"
+            data-drawer-open="sidebar"
+            aria-controls="sidebar"
+            aria-expanded="false"
+            aria-label="باز کردن منو"
+          >
+            <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+          </button>
+          <button class="icon-btn topbar__collapse" type="button" data-sidebar-collapse aria-label="جمع کردن منوی کناری">
+            <svg class="icon" aria-hidden="true"><use href="#i-panel-right"></use></svg>
+          </button>
+          <button class="search-trigger" type="button" data-modal-open="cmdk" aria-label="جستجو در پنل">
+            <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg><span>جستجو در پنل…</span><kbd>Ctrl K</kbd>
+          </button>
+          <div class="topbar__actions">
+            <button class="icon-btn" type="button" data-theme-toggle aria-label="تغییر حالت روشن و تاریک" aria-pressed="false">
+              <svg class="icon theme-icon-light" aria-hidden="true"><use href="#i-moon"></use></svg
+              ><svg class="icon theme-icon-dark" aria-hidden="true"><use href="#i-sun"></use></svg>
+            </button>
+            <div data-dropdown class="hide-sm">
+              <button class="icon-btn" type="button" data-dropdown-toggle aria-expanded="false" aria-label="زبان">
+                <svg class="icon" aria-hidden="true"><use href="#i-languages"></use></svg>
+              </button>
+              <div class="dropdown-menu" data-dropdown-menu>
+                <button type="button">
+                  <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> فارسی
+                </button>
+                <button type="button"><span class="icon"></span> English</button>
+                <button type="button"><span class="icon"></span> العربية</button>
+              </div>
+            </div>
+            <div data-dropdown>
+              <button class="icon-btn" type="button" data-dropdown-toggle aria-expanded="false" aria-label="اعلان‌ها، ۲ مورد خوانده‌نشده">
+                <svg class="icon" aria-hidden="true"><use href="#i-bell"></use></svg><span class="dot"></span>
+              </button>
+              <div class="dropdown-menu notif-menu" data-dropdown-menu>
+                <div class="notif-menu__head"><strong>اعلان‌ها</strong><span class="badge t-primary">۲ جدید</span></div>
+                <div class="notif-list">
+                  <a href="orders.html" class="notif is-unread">
+                    <span class="thumb t-primary" style="inline-size: 2.25rem; block-size: 2.25rem"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-shopping-bag"></use></svg
+                    ></span>
+                    <span
+                      ><p>سفارش جدید <b>#۴۸۲۱</b> از علی رضایی ثبت شد.</p>
+                      <time>۲ دقیقه پیش</time></span
+                    > </a
+                  ><a href="orders.html" class="notif is-unread">
+                    <span class="thumb t-warning" style="inline-size: 2.25rem; block-size: 2.25rem"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-triangle-alert"></use></svg
+                    ></span>
+                    <span
+                      ><p>موجودی «هدفون بی‌سیم نوا» به ۳ عدد رسید.</p>
+                      <time>۱ ساعت پیش</time></span
+                    > </a
+                  ><a href="orders.html" class="notif">
+                    <span class="thumb t-info" style="inline-size: 2.25rem; block-size: 2.25rem"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-message-circle"></use></svg
+                    ></span>
+                    <span
+                      ><p>مریم احمدی به تیکت پشتیبانی پاسخ داد.</p>
+                      <time>۳ ساعت پیش</time></span
+                    > </a
+                  ><a href="orders.html" class="notif">
+                    <span class="thumb t-success" style="inline-size: 2.25rem; block-size: 2.25rem"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-circle-check"></use></svg
+                    ></span>
+                    <span
+                      ><p>تسویه‌حساب هفتگی با موفقیت واریز شد.</p>
+                      <time>دیروز</time></span
+                    >
+                  </a>
+                </div>
+                <a class="notif-menu__foot" href="settings.html">مشاهده همه اعلان‌ها</a>
+              </div>
+            </div>
+            <div data-dropdown>
+              <button class="topbar__profile" type="button" data-dropdown-toggle aria-expanded="false">
+                <span class="avatar avatar--sm" style="--h: 315" aria-hidden="true">س‌م</span><span>سارا محمدی</span
+                ><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg>
+              </button>
+              <div class="dropdown-menu" data-dropdown-menu>
+                <div class="dropdown-head"><strong>سارا محمدی</strong><span class="ltr">sara@pishkhan.ir</span></div>
+                <hr />
+                <a href="profile.html"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-circle-user-round"></use></svg> پروفایل من</a
+                >
+                <a href="settings.html"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-settings"></use></svg> تنظیمات حساب</a
+                >
+                <a href="invoice.html"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-credit-card"></use></svg> صورتحساب‌ها</a
+                >
+                <a href="documentation/index.html"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-life-buoy"></use></svg> راهنما و پشتیبانی</a
+                >
+                <hr />
+                <a href="login.html" class="danger"
+                  ><svg class="icon icon-flip" aria-hidden="true"><use href="#i-log-out"></use></svg> خروج از حساب</a
+                >
+              </div>
+            </div>
+          </div>
+        </header>
+        <main id="main" class="page">
+          <div class="page-head">
+            <div>
+              <nav class="breadcrumb" aria-label="مسیر صفحه">
+                <a href="index.html">پیشخوان</a>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg><span aria-current="page">فروشگاه</span
+                ><svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg><span aria-current="page">سفارش‌ها</span>
+              </nav>
+              <h1>سفارش‌ها</h1>
+              <p>۲۴ سفارش در ۳۰ روز گذشته</p>
+            </div>
+            <div class="page-head__actions">
+              <button class="btn" type="button" data-toast="فایل اکسل سفارش‌ها دانلود شد">
+                <svg class="icon" aria-hidden="true"><use href="#i-sheet"></use></svg> خروجی اکسل
+              </button>
+              <button class="btn btn--primary" type="button" data-modal-open="new-order">
+                <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg> ثبت سفارش دستی
+              </button>
+            </div>
+          </div>
+
+          <div class="grid mb-2">
+            <div class="sm-6 xl-3">
+              <div class="card row">
+                <span class="kpi__icon t-primary"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-shopping-bag"></use></svg
+                ></span>
+                <div>
+                  <p class="kpi__label">همه سفارش‌ها</p>
+                  <p class="bold" style="font-size: var(--text-xl)">۲۴</p>
+                </div>
+              </div>
+            </div>
+            <div class="sm-6 xl-3">
+              <div class="card row">
+                <span class="kpi__icon t-warning"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-loader"></use></svg
+                ></span>
+                <div>
+                  <p class="kpi__label">در حال پردازش</p>
+                  <p class="bold" style="font-size: var(--text-xl)">۴</p>
+                </div>
+              </div>
+            </div>
+            <div class="sm-6 xl-3">
+              <div class="card row">
+                <span class="kpi__icon t-info"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-truck"></use></svg
+                ></span>
+                <div>
+                  <p class="kpi__label">در حال ارسال</p>
+                  <p class="bold" style="font-size: var(--text-xl)">۶</p>
+                </div>
+              </div>
+            </div>
+            <div class="sm-6 xl-3">
+              <div class="card row">
+                <span class="kpi__icon t-success"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-package-check"></use></svg
+                ></span>
+                <div>
+                  <p class="kpi__label">تحویل‌شده</p>
+                  <p class="bold" style="font-size: var(--text-xl)">۱۰</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="card card--flush" data-table data-page-size="10" aria-label="جدول سفارش‌ها">
+            <div class="table-toolbar">
+              <div class="input-icon">
+                <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg
+                ><input
+                  class="input"
+                  type="search"
+                  placeholder="جستجوی شماره سفارش، مشتری یا محصول…"
+                  data-table-search
+                  aria-label="جستجو در سفارش‌ها"
+                />
+              </div>
+              <div class="table-toolbar__end">
+                <select class="select" data-table-filter="6" aria-label="فیلتر وضعیت" style="inline-size: auto">
+                  <option value="">همه وضعیت‌ها</option>
+                  <option value="تحویل‌شده">تحویل‌شده</option>
+                  <option value="در حال ارسال">در حال ارسال</option>
+                  <option value="در حال پردازش">در حال پردازش</option>
+                  <option value="لغوشده">لغوشده</option>
+                  <option value="در انتظار پرداخت">در انتظار پرداخت</option>
+                </select>
+                <select class="select" data-table-filter="5" aria-label="فیلتر روش پرداخت" style="inline-size: auto">
+                  <option value="">همه روش‌های پرداخت</option>
+                  <option>درگاه زرین‌پال</option>
+                  <option>کارت به کارت</option>
+                  <option>درگاه سامان</option>
+                  <option>پرداخت در محل</option>
+                  <option>کیف پول</option>
+                </select>
+              </div>
+            </div>
+            <div class="bulk-bar" data-table-bulk hidden>
+              <span><span data-bulk-count>۰</span> سفارش انتخاب شد</span>
+              <button class="btn btn--sm" type="button" data-toast="وضعیت سفارش‌های انتخابی به «در حال ارسال» تغییر کرد">
+                <svg class="icon" aria-hidden="true"><use href="#i-truck"></use></svg> تغییر به در حال ارسال
+              </button>
+              <button class="btn btn--sm btn--danger" type="button" data-toast="سفارش‌ها حذف شدند" data-toast-type="error">
+                <svg class="icon" aria-hidden="true"><use href="#i-trash-2"></use></svg> حذف
+              </button>
+            </div>
+            <div class="table-wrap" data-overflow-ok>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" style="inline-size: 1%">
+                      <label class="check"><input type="checkbox" data-select-all aria-label="انتخاب همه" /></label>
+                    </th>
+                    <th scope="col">
+                      <button class="th-sort" type="button" data-sort>
+                        سفارش <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+                      </button>
+                    </th>
+                    <th scope="col">
+                      <button class="th-sort" type="button" data-sort>
+                        مشتری <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+                      </button>
+                    </th>
+                    <th scope="col">محصول</th>
+                    <th scope="col">
+                      <button class="th-sort" type="button" data-sort>
+                        مبلغ <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+                      </button>
+                    </th>
+                    <th scope="col">پرداخت</th>
+                    <th scope="col">وضعیت</th>
+                    <th scope="col"><span class="sr-only">عملیات</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۲۱" /></label>
+                    </td>
+                    <td data-value="4821">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۲۱</a><span class="person__meta">۸ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="علی رضایی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 276" aria-hidden="true">ع‌ر</span>
+                        <div><span class="person__name">علی رضایی</span><span class="person__meta">تهران</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-primary" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-headphones"></use></svg></span
+                        ><span class="muted">هدفون بی‌سیم نوا</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="3890000">۳٬۸۹۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="درگاه زرین‌پال">درگاه زرین‌پال</td>
+                    <td data-value="در حال پردازش"><span class="badge badge--dot t-warning">در حال پردازش</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۲۱"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۲۰" /></label>
+                    </td>
+                    <td data-value="4820">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۲۰</a><span class="person__meta">۸ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="نگار صادقی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 145" aria-hidden="true">ن‌ص</span>
+                        <div><span class="person__name">نگار صادقی</span><span class="person__meta">کرج</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-warning" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-battery-charging"></use></svg></span
+                        ><span class="muted">پاوربانک ۲۰ هزار نیرو × ۲</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="3050000">۳٬۰۵۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="کارت به کارت">کارت به کارت</td>
+                    <td data-value="در حال ارسال"><span class="badge badge--dot t-info">در حال ارسال</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۲۰"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۱۹" /></label>
+                    </td>
+                    <td data-value="4819">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۱۹</a><span class="person__meta">۷ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="پویا عباسی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 85" aria-hidden="true">پ‌ع</span>
+                        <div><span class="person__name">پویا عباسی</span><span class="person__meta">کرمان</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-success" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-speaker"></use></svg></span
+                        ><span class="muted">اسپیکر همراه طنین × ۳</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="6750000">۶٬۷۵۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="درگاه سامان">درگاه سامان</td>
+                    <td data-value="تحویل‌شده"><span class="badge badge--dot t-success">تحویل‌شده</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۱۹"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۱۸" /></label>
+                    </td>
+                    <td data-value="4818">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۱۸</a><span class="person__meta">۷ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="زهرا حسینی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 126" aria-hidden="true">ز‌ح</span>
+                        <div><span class="person__name">زهرا حسینی</span><span class="person__meta">مشهد</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-info" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-tablet"></use></svg></span
+                        ><span class="muted">تبلت آموزشی دانا</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="12750000">۱۲٬۷۵۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="پرداخت در محل">پرداخت در محل</td>
+                    <td data-value="تحویل‌شده"><span class="badge badge--dot t-success">تحویل‌شده</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۱۸"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۱۷" /></label>
+                    </td>
+                    <td data-value="4817">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۱۷</a><span class="person__meta">۶ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="محمد شریفی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 147" aria-hidden="true">م‌ش</span>
+                        <div><span class="person__name">محمد شریفی</span><span class="person__meta">رشت</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-info" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-laptop"></use></svg></span
+                        ><span class="muted">لپ‌تاپ سبک آسمان ۱۴ × ۲</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="97000000">۹۷٬۰۰۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="کیف پول">کیف پول</td>
+                    <td data-value="در انتظار پرداخت"><span class="badge badge--dot">در انتظار پرداخت</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۱۷"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۱۶" /></label>
+                    </td>
+                    <td data-value="4816">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۱۶</a><span class="person__meta">۵ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="مریم احمدی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 168" aria-hidden="true">م‌ا</span>
+                        <div><span class="person__name">مریم احمدی</span><span class="person__meta">اصفهان</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-primary" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-monitor"></use></svg></span
+                        ><span class="muted">مانیتور ۲۷ اینچ افق × ۳</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="56850000">۵۶٬۸۵۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="درگاه زرین‌پال">درگاه زرین‌پال</td>
+                    <td data-value="در حال ارسال"><span class="badge badge--dot t-info">در حال ارسال</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۱۶"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۱۵" /></label>
+                    </td>
+                    <td data-value="4815">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۱۵</a><span class="person__meta">۵ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="حسین مرادی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 271" aria-hidden="true">ح‌م</span>
+                        <div><span class="person__name">حسین مرادی</span><span class="person__meta">اهواز</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-success" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-mouse"></use></svg></span
+                        ><span class="muted">ماوس بی‌صدا نسیم</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="1190000">۱٬۱۹۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="کارت به کارت">کارت به کارت</td>
+                    <td data-value="تحویل‌شده"><span class="badge badge--dot t-success">تحویل‌شده</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۱۵"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۱۴" /></label>
+                    </td>
+                    <td data-value="4814">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۱۴</a><span class="person__meta">۴ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="الهام رحیمی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 296" aria-hidden="true">ا‌ر</span>
+                        <div><span class="person__name">الهام رحیمی</span><span class="person__meta">همدان</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-accent" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-watch"></use></svg></span
+                        ><span class="muted">ساعت هوشمند آرکا × ۲</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="13350000">۱۳٬۳۵۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="درگاه سامان">درگاه سامان</td>
+                    <td data-value="لغوشده"><span class="badge badge--dot t-danger">لغوشده</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۱۴"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۱۳" /></label>
+                    </td>
+                    <td data-value="4813">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۱۳</a><span class="person__meta">۳ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="امیر نوروزی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 17" aria-hidden="true">ا‌ن</span>
+                        <div><span class="person__name">امیر نوروزی</span><span class="person__meta">تبریز</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-accent" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-smartphone"></use></svg></span
+                        ><span class="muted">گوشی هوشمند پارس X × ۳</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="83700000">۸۳٬۷۰۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="پرداخت در محل">پرداخت در محل</td>
+                    <td data-value="تحویل‌شده"><span class="badge badge--dot t-success">تحویل‌شده</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۱۳"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۱۲" /></label>
+                    </td>
+                    <td data-value="4812">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۱۲</a><span class="person__meta">۲ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="سمیرا قاسمی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 70" aria-hidden="true">س‌ق</span>
+                        <div><span class="person__name">سمیرا قاسمی</span><span class="person__meta">یزد</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-warning" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg></span
+                        ><span class="muted">دوربین ورزشی پرواز</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="9950000">۹٬۹۵۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="کیف پول">کیف پول</td>
+                    <td data-value="در حال پردازش"><span class="badge badge--dot t-warning">در حال پردازش</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۱۲"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۱۱" /></label>
+                    </td>
+                    <td data-value="4811">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۱۱</a><span class="person__meta">۱ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="رضا کریمی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 54" aria-hidden="true">ر‌ک</span>
+                        <div><span class="person__name">رضا کریمی</span><span class="person__meta">شیراز</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-danger" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-mic"></use></svg></span
+                        ><span class="muted">میکروفون استودیو صدا × ۲</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="9800000">۹٬۸۰۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="درگاه زرین‌پال">درگاه زرین‌پال</td>
+                    <td data-value="تحویل‌شده"><span class="badge badge--dot t-success">تحویل‌شده</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۱۱"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۱۰" /></label>
+                    </td>
+                    <td data-value="4810">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۱۰</a><span class="person__meta">۳۱ شهریور ۱۴۰۵</span>
+                    </td>
+                    <td data-value="فاطمه جعفری">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 67" aria-hidden="true">ف‌ج</span>
+                        <div><span class="person__name">فاطمه جعفری</span><span class="person__meta">قم</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-primary" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-keyboard"></use></svg></span
+                        ><span class="muted">کیبورد مکانیکی کلید × ۳</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="10200000">۱۰٬۲۰۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="کارت به کارت">کارت به کارت</td>
+                    <td data-value="در حال ارسال"><span class="badge badge--dot t-info">در حال ارسال</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۱۰"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۰۹" /></label>
+                    </td>
+                    <td data-value="4809">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۰۹</a><span class="person__meta">۸ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="علی رضایی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 276" aria-hidden="true">ع‌ر</span>
+                        <div><span class="person__name">علی رضایی</span><span class="person__meta">تهران</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-primary" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-headphones"></use></svg></span
+                        ><span class="muted">هدفون بی‌سیم نوا</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="3890000">۳٬۸۹۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="درگاه سامان">درگاه سامان</td>
+                    <td data-value="در حال پردازش"><span class="badge badge--dot t-warning">در حال پردازش</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۰۹"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۰۸" /></label>
+                    </td>
+                    <td data-value="4808">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۰۸</a><span class="person__meta">۸ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="نگار صادقی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 145" aria-hidden="true">ن‌ص</span>
+                        <div><span class="person__name">نگار صادقی</span><span class="person__meta">کرج</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-warning" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-battery-charging"></use></svg></span
+                        ><span class="muted">پاوربانک ۲۰ هزار نیرو × ۲</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="3050000">۳٬۰۵۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="پرداخت در محل">پرداخت در محل</td>
+                    <td data-value="در حال ارسال"><span class="badge badge--dot t-info">در حال ارسال</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۰۸"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۰۷" /></label>
+                    </td>
+                    <td data-value="4807">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۰۷</a><span class="person__meta">۷ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="پویا عباسی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 85" aria-hidden="true">پ‌ع</span>
+                        <div><span class="person__name">پویا عباسی</span><span class="person__meta">کرمان</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-success" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-speaker"></use></svg></span
+                        ><span class="muted">اسپیکر همراه طنین × ۳</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="6750000">۶٬۷۵۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="کیف پول">کیف پول</td>
+                    <td data-value="تحویل‌شده"><span class="badge badge--dot t-success">تحویل‌شده</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۰۷"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۰۶" /></label>
+                    </td>
+                    <td data-value="4806">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۰۶</a><span class="person__meta">۷ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="زهرا حسینی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 126" aria-hidden="true">ز‌ح</span>
+                        <div><span class="person__name">زهرا حسینی</span><span class="person__meta">مشهد</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-info" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-tablet"></use></svg></span
+                        ><span class="muted">تبلت آموزشی دانا</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="12750000">۱۲٬۷۵۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="درگاه زرین‌پال">درگاه زرین‌پال</td>
+                    <td data-value="تحویل‌شده"><span class="badge badge--dot t-success">تحویل‌شده</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۰۶"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۰۵" /></label>
+                    </td>
+                    <td data-value="4805">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۰۵</a><span class="person__meta">۶ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="محمد شریفی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 147" aria-hidden="true">م‌ش</span>
+                        <div><span class="person__name">محمد شریفی</span><span class="person__meta">رشت</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-info" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-laptop"></use></svg></span
+                        ><span class="muted">لپ‌تاپ سبک آسمان ۱۴ × ۲</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="97000000">۹۷٬۰۰۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="کارت به کارت">کارت به کارت</td>
+                    <td data-value="در انتظار پرداخت"><span class="badge badge--dot">در انتظار پرداخت</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۰۵"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۰۴" /></label>
+                    </td>
+                    <td data-value="4804">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۰۴</a><span class="person__meta">۵ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="مریم احمدی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 168" aria-hidden="true">م‌ا</span>
+                        <div><span class="person__name">مریم احمدی</span><span class="person__meta">اصفهان</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-primary" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-monitor"></use></svg></span
+                        ><span class="muted">مانیتور ۲۷ اینچ افق × ۳</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="56850000">۵۶٬۸۵۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="درگاه سامان">درگاه سامان</td>
+                    <td data-value="در حال ارسال"><span class="badge badge--dot t-info">در حال ارسال</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۰۴"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۰۳" /></label>
+                    </td>
+                    <td data-value="4803">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۰۳</a><span class="person__meta">۵ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="حسین مرادی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 271" aria-hidden="true">ح‌م</span>
+                        <div><span class="person__name">حسین مرادی</span><span class="person__meta">اهواز</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-success" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-mouse"></use></svg></span
+                        ><span class="muted">ماوس بی‌صدا نسیم</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="1190000">۱٬۱۹۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="پرداخت در محل">پرداخت در محل</td>
+                    <td data-value="تحویل‌شده"><span class="badge badge--dot t-success">تحویل‌شده</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۰۳"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۰۲" /></label>
+                    </td>
+                    <td data-value="4802">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۰۲</a><span class="person__meta">۴ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="الهام رحیمی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 296" aria-hidden="true">ا‌ر</span>
+                        <div><span class="person__name">الهام رحیمی</span><span class="person__meta">همدان</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-accent" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-watch"></use></svg></span
+                        ><span class="muted">ساعت هوشمند آرکا × ۲</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="13350000">۱۳٬۳۵۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="کیف پول">کیف پول</td>
+                    <td data-value="لغوشده"><span class="badge badge--dot t-danger">لغوشده</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۰۲"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۰۱" /></label>
+                    </td>
+                    <td data-value="4801">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۰۱</a><span class="person__meta">۳ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="امیر نوروزی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 17" aria-hidden="true">ا‌ن</span>
+                        <div><span class="person__name">امیر نوروزی</span><span class="person__meta">تبریز</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-accent" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-smartphone"></use></svg></span
+                        ><span class="muted">گوشی هوشمند پارس X × ۳</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="83700000">۸۳٬۷۰۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="درگاه زرین‌پال">درگاه زرین‌پال</td>
+                    <td data-value="تحویل‌شده"><span class="badge badge--dot t-success">تحویل‌شده</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۰۱"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۸۰۰" /></label>
+                    </td>
+                    <td data-value="4800">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۸۰۰</a><span class="person__meta">۲ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="سمیرا قاسمی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 70" aria-hidden="true">س‌ق</span>
+                        <div><span class="person__name">سمیرا قاسمی</span><span class="person__meta">یزد</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-warning" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg></span
+                        ><span class="muted">دوربین ورزشی پرواز</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="9950000">۹٬۹۵۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="کارت به کارت">کارت به کارت</td>
+                    <td data-value="در حال پردازش"><span class="badge badge--dot t-warning">در حال پردازش</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۸۰۰"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۷۹۹" /></label>
+                    </td>
+                    <td data-value="4799">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۷۹۹</a><span class="person__meta">۱ مهر ۱۴۰۵</span>
+                    </td>
+                    <td data-value="رضا کریمی">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 54" aria-hidden="true">ر‌ک</span>
+                        <div><span class="person__name">رضا کریمی</span><span class="person__meta">شیراز</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-danger" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-mic"></use></svg></span
+                        ><span class="muted">میکروفون استودیو صدا × ۲</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="9800000">۹٬۸۰۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="درگاه سامان">درگاه سامان</td>
+                    <td data-value="تحویل‌شده"><span class="badge badge--dot t-success">تحویل‌شده</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۷۹۹"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="check"><input type="checkbox" data-select-row aria-label="انتخاب سفارش ۴٬۷۹۸" /></label>
+                    </td>
+                    <td data-value="4798">
+                      <a class="bold text-primary" href="invoice.html">#۴٬۷۹۸</a><span class="person__meta">۳۱ شهریور ۱۴۰۵</span>
+                    </td>
+                    <td data-value="فاطمه جعفری">
+                      <div class="person">
+                        <span class="avatar avatar--xs" style="--h: 67" aria-hidden="true">ف‌ج</span>
+                        <div><span class="person__name">فاطمه جعفری</span><span class="person__meta">قم</span></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="row">
+                        <span class="thumb t-primary" style="inline-size: 2.25rem; block-size: 2.25rem"
+                          ><svg class="icon" aria-hidden="true"><use href="#i-keyboard"></use></svg></span
+                        ><span class="muted">کیبورد مکانیکی کلید × ۳</span>
+                      </div>
+                    </td>
+                    <td class="num" data-value="10200000">۱۰٬۲۰۰٬۰۰۰ تومان</td>
+                    <td class="muted" data-value="پرداخت در محل">پرداخت در محل</td>
+                    <td data-value="در حال ارسال"><span class="badge badge--dot t-info">در حال ارسال</span></td>
+                    <td>
+                      <div data-dropdown>
+                        <button
+                          class="icon-btn icon-btn--sm"
+                          type="button"
+                          data-dropdown-toggle
+                          aria-expanded="false"
+                          aria-label="عملیات سفارش ۴٬۷۹۸"
+                        >
+                          <svg class="icon" aria-hidden="true"><use href="#i-ellipsis-vertical"></use></svg>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-menu>
+                          <a href="invoice.html"
+                            ><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg> مشاهده فاکتور</a
+                          >
+                          <button type="button" data-toast="کد رهگیری برای مشتری پیامک شد">
+                            <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ارسال کد رهگیری
+                          </button>
+                          <button type="button" onclick="window.print()">
+                            <svg class="icon" aria-hidden="true"><use href="#i-printer"></use></svg> چاپ برچسب پستی
+                          </button>
+                          <hr />
+                          <button type="button" class="danger" data-modal-open="cancel-order">
+                            <svg class="icon" aria-hidden="true"><use href="#i-circle-x"></use></svg> لغو سفارش
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="empty" data-table-empty hidden>
+                <svg class="icon" aria-hidden="true"><use href="#i-search-x"></use></svg><strong>سفارشی پیدا نشد</strong
+                ><span class="small">عبارت جستجو یا فیلترها را تغییر دهید.</span>
+              </div>
+            </div>
+            <div class="card__foot">
+              <span>نمایش <b data-table-count>۲۴</b> سفارش</span>
+              <nav class="pager" data-table-pager aria-label="صفحه‌بندی"></nav>
+            </div>
+          </section>
+
+          <dialog class="modal" id="cancel-order" aria-labelledby="cancel-title">
+            <div class="modal__body" style="text-align: center; display: grid; gap: 0.75rem; justify-items: center; padding-block: 2rem">
+              <span class="kpi__icon t-danger" style="inline-size: 3.5rem; block-size: 3.5rem"
+                ><svg class="icon" aria-hidden="true"><use href="#i-triangle-alert"></use></svg
+              ></span>
+              <h2 id="cancel-title" style="font-size: var(--text-lg)">سفارش لغو شود؟</h2>
+              <p class="muted small">مبلغ پرداختی ظرف ۷۲ ساعت به حساب مشتری بازگردانده می‌شود. این کار قابل بازگشت نیست.</p>
+            </div>
+            <div class="modal__foot">
+              <button class="btn" type="button" data-modal-close>انصراف</button>
+              <button class="btn btn--danger" type="button" data-modal-close data-toast="سفارش لغو شد" data-toast-type="error">
+                بله، لغو شود
+              </button>
+            </div>
+          </dialog>
+
+          <dialog class="modal" id="new-order" aria-labelledby="new-order-title">
+            <form data-validate data-success="سفارش با موفقیت ثبت شد">
+              <div class="modal__head">
+                <h2 id="new-order-title">ثبت سفارش دستی</h2>
+                <button class="icon-btn" type="button" data-modal-close aria-label="بستن">
+                  <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+                </button>
+              </div>
+              <div class="modal__body form-grid">
+                <div class="field full">
+                  <label class="label" for="no-customer">نام مشتری <span class="req">*</span></label
+                  ><input class="input" id="no-customer" required />
+                </div>
+                <div class="field">
+                  <label class="label" for="no-phone">موبایل <span class="req">*</span></label
+                  ><input
+                    class="input"
+                    id="no-phone"
+                    type="tel"
+                    required
+                    pattern="09[0-9]{9}"
+                    data-msg="شماره موبایل را به شکل ۰۹۱۲۳۴۵۶۷۸۹ وارد کنید"
+                    placeholder="۰۹۱۲۳۴۵۶۷۸۹"
+                  />
+                </div>
+                <div class="field">
+                  <label class="label" for="no-date">تاریخ تحویل</label
+                  ><input class="input" id="no-date" data-datepicker readonly placeholder="انتخاب تاریخ" />
+                </div>
+                <div class="field full">
+                  <label class="label" for="no-address">آدرس</label><textarea class="textarea" id="no-address" rows="2"></textarea>
+                </div>
+              </div>
+              <div class="modal__foot">
+                <button class="btn" type="button" data-modal-close>انصراف</button
+                ><button class="btn btn--primary" type="submit">ثبت سفارش</button>
+              </div>
+            </form>
+          </dialog>
+        </main>
+
+        <footer class="app-footer">
+          <p>© ۱۴۰۵ پیشخوان. طراحی‌شده با دقت برای فروشگاه‌های ایرانی.</p>
+          <nav aria-label="پیوندهای پانویس">
+            <a href="documentation/index.html">مستندات</a>
+            <a href="settings.html">حریم خصوصی</a>
+            <a href="chat.html">پشتیبانی</a>
+          </nav>
+        </footer>
+      </div>
+    </div>
+
+    <dialog class="modal cmdk" id="cmdk" aria-label="جستجوی سریع">
+      <div class="cmdk__search">
+        <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+        <input type="search" placeholder="نام صفحه یا دستور را بنویسید…" aria-label="جستجو" data-cmdk-input autocomplete="off" />
+        <kbd>Esc</kbd>
+      </div>
+      <div class="cmdk__list" data-cmdk-list role="listbox">
+        <p class="cmdk__group">اصلی</p>
+        <a class="cmdk__item" role="option" href="index.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-layout-dashboard"></use></svg><span>داشبورد فروش</span></a
+        ><a class="cmdk__item" role="option" href="analytics.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-chart-spline"></use></svg><span>تحلیل‌ها</span></a
+        >
+        <p class="cmdk__group">فروشگاه</p>
+        <a class="cmdk__item" role="option" href="orders.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-shopping-cart"></use></svg><span>سفارش‌ها</span></a
+        ><a class="cmdk__item" role="option" href="products.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-package"></use></svg><span>محصولات</span></a
+        ><a class="cmdk__item" role="option" href="product-form.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-package-plus"></use></svg><span>افزودن محصول</span></a
+        ><a class="cmdk__item" role="option" href="customers.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg><span>مشتریان</span></a
+        ><a class="cmdk__item" role="option" href="invoice.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-receipt-text"></use></svg><span>فاکتور</span></a
+        >
+        <p class="cmdk__group">برنامه‌ها</p>
+        <a class="cmdk__item" role="option" href="chat.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-messages-square"></use></svg><span>پیام‌ها</span></a
+        ><a class="cmdk__item" role="option" href="calendar.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-calendar-days"></use></svg><span>تقویم شمسی</span></a
+        ><a class="cmdk__item" role="option" href="kanban.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-square-kanban"></use></svg><span>مدیریت پروژه</span></a
+        >
+        <p class="cmdk__group">صفحات</p>
+        <a class="cmdk__item" role="option" href="profile.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-circle-user-round"></use></svg><span>پروفایل</span></a
+        ><a class="cmdk__item" role="option" href="settings.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-settings"></use></svg><span>تنظیمات</span></a
+        ><a class="cmdk__item" role="option" href="components.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-blocks"></use></svg><span>کامپوننت‌ها</span></a
+        ><a class="cmdk__item" role="option" href="404.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-file-question"></use></svg><span>صفحه ۴۰۴</span></a
+        ><a class="cmdk__item" role="option" href="documentation/index.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-book-open"></use></svg><span>مستندات</span></a
+        >
+        <p class="cmdk__group">دستورها</p>
+        <button type="button" class="cmdk__item" role="option" data-cmdk-item data-theme-toggle>
+          <svg class="icon" aria-hidden="true"><use href="#i-sun-moon"></use></svg><span>تغییر حالت روشن/تاریک</span>
+        </button>
+        <a class="cmdk__item" role="option" href="product-form.html" data-cmdk-item
+          ><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg><span>افزودن محصول جدید</span><kbd>N</kbd></a
+        >
+      </div>
+      <div class="cmdk__foot">
+        <span><kbd>↑</kbd> <kbd>↓</kbd> جابه‌جایی</span><span><kbd>Enter</kbd> انتخاب</span><span><kbd>Esc</kbd> بستن</span>
+      </div>
+    </dialog>
+  </body>
+</html>

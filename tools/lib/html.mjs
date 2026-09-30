@@ -50,3 +50,17 @@ export function seeded(seed = 1) {
     return (s - 1) / 2147483646;
   };
 }
+
+// Inline <head> script: adds .js, then applies the saved theme, else the OS preference.
+// `extra` is raw JS run inside the same try block (e.g. restoring a collapsed sidebar).
+export const themeBoot = (defaultTheme = 'light', extra = '') => `<script>
+      (function (d) {
+        d.classList.add('js');
+        try {
+          var t = JSON.parse(localStorage.getItem('theme'));
+          if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : '${defaultTheme}';
+          d.setAttribute('data-theme', t);
+          ${extra}
+        } catch (e) {}
+      })(document.documentElement);
+    </script>`;

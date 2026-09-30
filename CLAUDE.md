@@ -73,7 +73,7 @@ Always rebuild after editing `src/`, then run QA and **look at the screenshots**
 
 | slug | niche | status |
 |------|-------|--------|
-| `pishkhan` | admin dashboard (پیشخوان) | planned |
+| `pishkhan` | admin dashboard (پیشخوان) | v1.0.0, 18 pages + docs |
 | `danesh` | online course / LMS academy | planned |
 | `vitrin` | fashion e-shop | planned |
 | `labkhand` | dental clinic | planned |

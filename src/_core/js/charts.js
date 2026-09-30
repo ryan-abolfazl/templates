@@ -12,7 +12,11 @@
 
   function svg(tag, attrs, parent) {
     var el = document.createElementNS(NS, tag);
-    for (var k in attrs) el.setAttribute(k, attrs[k]);
+    for (var k in attrs) {
+      // SVG presentation attributes can't resolve var(); set those as CSS instead
+      if ((k === 'fill' || k === 'stroke' || k === 'stop-color') && String(attrs[k]).indexOf('var(') !== -1) el.style.setProperty(k, attrs[k]);
+      else el.setAttribute(k, attrs[k]);
+    }
     if (parent) parent.appendChild(el);
     return el;
   }
@@ -116,7 +120,7 @@
     };
     var Y = function (v) { return pad.t + ih - ((v - lo) / (hi - lo)) * ih; };
 
-    var root = svg('svg', { viewBox: '0 0 ' + W + ' ' + H, width: W, height: H, role: 'img', 'aria-label': cfg.title || 'نمودار', class: 'chart__svg' });
+    var root = svg('svg', { viewBox: '0 0 ' + W + ' ' + H, width: W, height: H, role: 'img', 'aria-label': cfg.title || 'نمودار', class: 'chart__svg', direction: rtl ? 'rtl' : 'ltr' });
     var defs = svg('defs', {}, root);
 
     if (!spark) {
@@ -124,7 +128,8 @@
       ticks.forEach(function (t) {
         var y = Y(t);
         svg('line', { x1: pad.l, x2: pad.l + iw, y1: y, y2: y }, grid);
-        var tx = svg('text', { x: rtl ? W - 4 : 4, y: y + 4, 'text-anchor': rtl ? 'end' : 'start', class: 'chart__axis' }, grid);
+        // text-anchor "start" = the inline-start side in both directions (right edge in RTL)
+        var tx = svg('text', { x: rtl ? W - 4 : 4, y: y + 4, 'text-anchor': 'start', class: 'chart__axis' }, grid);
         tx.textContent = fmt(t, cfg);
       });
       if (cfg.labels) {
