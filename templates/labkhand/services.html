@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>خدمات دندانپزشکی | کلینیک لبخند</title>
+    <meta name="description" content="همه خدمات کلینیک لبخند با زمان و هزینه تقریبی" />
+    <meta name="theme-color" content="#1f9a93" />
+    <meta property="og:title" content="خدمات دندانپزشکی | کلینیک لبخند" />
+    <meta property="og:description" content="همه خدمات کلینیک لبخند با زمان و هزینه تقریبی" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function (d) {
+        d.classList.add("js");
+        try {
+          var t = JSON.parse(localStorage.getItem("theme"));
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          d.setAttribute("data-theme", t);
+        } catch (e) {}
+      })(document.documentElement);
+    </script>
+    <link rel="preload" href="assets/fonts/vazirmatn/Vazirmatn-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/core.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body class="">
+    <script src="assets/js/icons.js"></script>
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+
+    <header class="header" data-sticky-header>
+      <div class="header__bar">
+        <button
+          class="icon-btn menu-btn"
+          type="button"
+          data-drawer-open="menu"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="باز کردن منو"
+        >
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+        </button>
+        <a class="logo" href="index.html" aria-label="کلینیک لبخند، صفحه اصلی"
+          ><span class="logo__mark"
+            ><svg class="" viewBox="0 0 32 32" aria-hidden="true">
+              <path
+                d="M9.5 4C6 4 4 7 4 10.5c0 3 1.2 5 2 7.5.9 2.8 1 9 3.6 9 2.2 0 2.1-5.6 3.6-7.6.7-.9 2.9-.9 3.6 0 1.5 2 1.4 7.6 3.6 7.6 2.6 0 2.7-6.2 3.6-9 .8-2.5 2-4.5 2-7.5C28 7 26 4 22.5 4c-2.6 0-4.3 1.6-6.5 1.6S12.1 4 9.5 4Z"
+                fill="currentColor"
+              /></svg></span
+          ><span>لبخند<small>کلینیک تخصصی دندانپزشکی</small></span></a
+        >
+        <nav class="nav" aria-label="منوی اصلی">
+          <a class="" href="index.html">خانه</a><a class="is-active" href="services.html" aria-current="page">خدمات</a
+          ><a class="" href="doctors.html">پزشکان</a><a class="" href="gallery.html">نمونه کارها</a
+          ><a class="" href="pricing.html">تعرفه و بیمه</a><a class="" href="blog.html">مجله سلامت</a
+          ><a class="" href="contact.html">تماس</a>
+        </nav>
+        <div class="header__actions">
+          <a class="header__phone" href="tel:02188776655"
+            ><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg><span>۰۲۱-۸۸۷۷۶۶۵۵</span></a
+          >
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="تغییر حالت روشن و تاریک" aria-pressed="false">
+            <svg class="icon theme-icon-light" aria-hidden="true"><use href="#i-moon"></use></svg
+            ><svg class="icon theme-icon-dark" aria-hidden="true"><use href="#i-sun"></use></svg>
+          </button>
+          <a class="btn btn--primary btn--sm" href="booking.html"
+            ><svg class="icon" aria-hidden="true"><use href="#i-calendar-plus"></use></svg> رزرو نوبت</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <div class="drawer" id="menu" data-drawer>
+      <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="منو">
+        <div class="row-between">
+          <a class="logo" href="index.html" aria-label="کلینیک لبخند، صفحه اصلی"
+            ><span class="logo__mark"
+              ><svg class="" viewBox="0 0 32 32" aria-hidden="true">
+                <path
+                  d="M9.5 4C6 4 4 7 4 10.5c0 3 1.2 5 2 7.5.9 2.8 1 9 3.6 9 2.2 0 2.1-5.6 3.6-7.6.7-.9 2.9-.9 3.6 0 1.5 2 1.4 7.6 3.6 7.6 2.6 0 2.7-6.2 3.6-9 .8-2.5 2-4.5 2-7.5C28 7 26 4 22.5 4c-2.6 0-4.3 1.6-6.5 1.6S12.1 4 9.5 4Z"
+                  fill="currentColor"
+                /></svg></span
+            ><span>لبخند<small>کلینیک تخصصی دندانپزشکی</small></span></a
+          ><button class="icon-btn" type="button" data-drawer-close aria-label="بستن">
+            <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+          </button>
+        </div>
+        <nav class="drawer__nav" aria-label="منوی موبایل">
+          <a class="" href="index.html">خانه</a><a class="is-active" href="services.html">خدمات</a><a class="" href="doctors.html">پزشکان</a
+          ><a class="" href="gallery.html">نمونه کارها</a><a class="" href="pricing.html">تعرفه و بیمه</a
+          ><a class="" href="blog.html">مجله سلامت</a><a class="" href="contact.html">تماس</a>
+        </nav>
+        <a class="btn btn--primary btn--block" href="booking.html"
+          ><svg class="icon" aria-hidden="true"><use href="#i-calendar-plus"></use></svg> رزرو آنلاین نوبت</a
+        >
+        <a class="btn btn--block" href="tel:02188776655"
+          ><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg> ۰۲۱-۸۸۷۷۶۶۵۵</a
+        >
+      </div>
+    </div>
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="مسیر صفحه">
+            <a href="index.html">خانه</a><svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg
+            ><span aria-current="page">خدمات</span>
+          </nav>
+
+          <h1>خدمات <b>تخصصی</b> دندانپزشکی</h1>
+          <p>درمان‌های زیبایی، ترمیمی و جراحی با تجهیزات دیجیتال؛ هزینه‌ها تقریبی است و پس از معاینه دقیق اعلام می‌شود.</p>
+        </div>
+      </section>
+      <section class="section section--tight">
+        <div class="container services-list">
+          <article class="card card--hover svc-row" data-reveal>
+            <span class="icon-bubble"
+              ><svg class="icon" aria-hidden="true"><use href="#i-sparkles"></use></svg
+            ></span>
+            <div class="svc-row__main">
+              <h2>لمینت و کامپوزیت</h2>
+              <p class="muted small">لبخندی یکدست و طبیعی در ۲ جلسه، با طراحی دیجیتال پیش از درمان.</p>
+            </div>
+            <dl class="svc-row__meta">
+              <div>
+                <dt>مدت درمان</dt>
+                <dd>۲ جلسه</dd>
+              </div>
+              <div>
+                <dt>شروع قیمت از</dt>
+                <dd>۳٬۵۰۰٬۰۰۰ <small>تومان</small></dd>
+              </div>
+            </dl>
+            <div class="row">
+              <a class="btn btn--soft btn--sm" href="service.html">جزئیات</a
+              ><a class="btn btn--primary btn--sm" href="booking.html">نوبت</a>
+            </div>
+          </article>
+          <article class="card card--hover svc-row" data-reveal>
+            <span class="icon-bubble"
+              ><svg class="icon" aria-hidden="true"><use href="#i-hammer"></use></svg
+            ></span>
+            <div class="svc-row__main">
+              <h2>ایمپلنت دندان</h2>
+              <p class="muted small">جایگزینی دائمی دندان از دست‌رفته با ایمپلنت‌های سوئیسی و کره‌ای.</p>
+            </div>
+            <dl class="svc-row__meta">
+              <div>
+                <dt>مدت درمان</dt>
+                <dd>۳ تا ۶ ماه</dd>
+              </div>
+              <div>
+                <dt>شروع قیمت از</dt>
+                <dd>۱۸٬۰۰۰٬۰۰۰ <small>تومان</small></dd>
+              </div>
+            </dl>
+            <div class="row">
+              <a class="btn btn--soft btn--sm" href="service.html">جزئیات</a
+              ><a class="btn btn--primary btn--sm" href="booking.html">نوبت</a>
+            </div>
+          </article>
+          <article class="card card--hover svc-row" data-reveal>
+            <span class="icon-bubble"
+              ><svg class="icon" aria-hidden="true"><use href="#i-align-horizontal-space-around"></use></svg
+            ></span>
+            <div class="svc-row__main">
+              <h2>ارتودنسی نامرئی</h2>
+              <p class="muted small">صاف کردن دندان‌ها با الاینرهای شفاف، بدون براکت و سیم.</p>
+            </div>
+            <dl class="svc-row__meta">
+              <div>
+                <dt>مدت درمان</dt>
+                <dd>۶ تا ۱۸ ماه</dd>
+              </div>
+              <div>
+                <dt>شروع قیمت از</dt>
+                <dd>۴۵٬۰۰۰٬۰۰۰ <small>تومان</small></dd>
+              </div>
+            </dl>
+            <div class="row">
+              <a class="btn btn--soft btn--sm" href="service.html">جزئیات</a
+              ><a class="btn btn--primary btn--sm" href="booking.html">نوبت</a>
+            </div>
+          </article>
+          <article class="card card--hover svc-row" data-reveal>
+            <span class="icon-bubble"
+              ><svg class="icon" aria-hidden="true"><use href="#i-sun"></use></svg
+            ></span>
+            <div class="svc-row__main">
+              <h2>بلیچینگ (سفید کردن)</h2>
+              <p class="muted small">تا ۸ درجه سفیدتر در یک جلسه ۶۰ دقیقه‌ای، بدون حساسیت.</p>
+            </div>
+            <dl class="svc-row__meta">
+              <div>
+                <dt>مدت درمان</dt>
+                <dd>۱ جلسه</dd>
+              </div>
+              <div>
+                <dt>شروع قیمت از</dt>
+                <dd>۴٬۲۰۰٬۰۰۰ <small>تومان</small></dd>
+              </div>
+            </dl>
+            <div class="row">
+              <a class="btn btn--soft btn--sm" href="service.html">جزئیات</a
+              ><a class="btn btn--primary btn--sm" href="booking.html">نوبت</a>
+            </div>
+          </article>
+          <article class="card card--hover svc-row" data-reveal>
+            <span class="icon-bubble"
+              ><svg class="icon" aria-hidden="true"><use href="#i-shield-plus"></use></svg
+            ></span>
+            <div class="svc-row__main">
+              <h2>عصب‌کشی بدون درد</h2>
+              <p class="muted small">درمان ریشه با روتاری و میکروسکوپ؛ دقیق، سریع و راحت.</p>
+            </div>
+            <dl class="svc-row__meta">
+              <div>
+                <dt>مدت درمان</dt>
+                <dd>۱ تا ۲ جلسه</dd>
+              </div>
+              <div>
+                <dt>شروع قیمت از</dt>
+                <dd>۳٬۸۰۰٬۰۰۰ <small>تومان</small></dd>
+              </div>
+            </dl>
+            <div class="row">
+              <a class="btn btn--soft btn--sm" href="service.html">جزئیات</a
+              ><a class="btn btn--primary btn--sm" href="booking.html">نوبت</a>
+            </div>
+          </article>
+          <article class="card card--hover svc-row" data-reveal>
+            <span class="icon-bubble"
+              ><svg class="icon" aria-hidden="true"><use href="#i-baby"></use></svg
+            ></span>
+            <div class="svc-row__main">
+              <h2>دندانپزشکی کودکان</h2>
+              <p class="muted small">فضایی شاد و بدون استرس برای اولین تجربه‌های دندانپزشکی.</p>
+            </div>
+            <dl class="svc-row__meta">
+              <div>
+                <dt>مدت درمان</dt>
+                <dd>ویزیت ۳۰ دقیقه</dd>
+              </div>
+              <div>
+                <dt>شروع قیمت از</dt>
+                <dd>۹۰۰٬۰۰۰ <small>تومان</small></dd>
+              </div>
+            </dl>
+            <div class="row">
+              <a class="btn btn--soft btn--sm" href="service.html">جزئیات</a
+              ><a class="btn btn--primary btn--sm" href="booking.html">نوبت</a>
+            </div>
+          </article>
+          <article class="card card--hover svc-row" data-reveal>
+            <span class="icon-bubble"
+              ><svg class="icon" aria-hidden="true"><use href="#i-scan-face"></use></svg
+            ></span>
+            <div class="svc-row__main">
+              <h2>جراحی لثه و دندان عقل</h2>
+              <p class="muted small">جراحی کم‌تهاجمی با بی‌حسی کامل و بهبود سریع.</p>
+            </div>
+            <dl class="svc-row__meta">
+              <div>
+                <dt>مدت درمان</dt>
+                <dd>۱ جلسه</dd>
+              </div>
+              <div>
+                <dt>شروع قیمت از</dt>
+                <dd>۲٬۵۰۰٬۰۰۰ <small>تومان</small></dd>
+              </div>
+            </dl>
+            <div class="row">
+              <a class="btn btn--soft btn--sm" href="service.html">جزئیات</a
+              ><a class="btn btn--primary btn--sm" href="booking.html">نوبت</a>
+            </div>
+          </article>
+          <article class="card card--hover svc-row" data-reveal>
+            <span class="icon-bubble"
+              ><svg class="icon" aria-hidden="true"><use href="#i-stethoscope"></use></svg
+            ></span>
+            <div class="svc-row__main">
+              <h2>چکاپ و جرم‌گیری</h2>
+              <p class="muted small">معاینه کامل، عکس دیجیتال و جرم‌گیری با اولتراسونیک.</p>
+            </div>
+            <dl class="svc-row__meta">
+              <div>
+                <dt>مدت درمان</dt>
+                <dd>۴۵ دقیقه</dd>
+              </div>
+              <div>
+                <dt>شروع قیمت از</dt>
+                <dd>۸۵۰٬۰۰۰ <small>تومان</small></dd>
+              </div>
+            </dl>
+            <div class="row">
+              <a class="btn btn--soft btn--sm" href="service.html">جزئیات</a
+              ><a class="btn btn--primary btn--sm" href="booking.html">نوبت</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container">
+          <div class="cta glass">
+            <div>
+              <h2>اولین مشاوره <b>رایگان</b> است</h2>
+              <p class="muted">نوبت آنلاین بگیرید؛ کمتر از یک دقیقه طول می‌کشد.</p>
+            </div>
+            <div class="row wrap">
+              <a class="btn btn--primary btn--lg" href="booking.html"
+                ><svg class="icon" aria-hidden="true"><use href="#i-calendar-plus"></use></svg> رزرو نوبت</a
+              ><a class="btn btn--lg" href="tel:02188776655"
+                ><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg> تماس تلفنی</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a class="logo" href="index.html" aria-label="کلینیک لبخند، صفحه اصلی"
+              ><span class="logo__mark"
+                ><svg class="" viewBox="0 0 32 32" aria-hidden="true">
+                  <path
+                    d="M9.5 4C6 4 4 7 4 10.5c0 3 1.2 5 2 7.5.9 2.8 1 9 3.6 9 2.2 0 2.1-5.6 3.6-7.6.7-.9 2.9-.9 3.6 0 1.5 2 1.4 7.6 3.6 7.6 2.6 0 2.7-6.2 3.6-9 .8-2.5 2-4.5 2-7.5C28 7 26 4 22.5 4c-2.6 0-4.3 1.6-6.5 1.6S12.1 4 9.5 4Z"
+                    fill="currentColor"
+                  /></svg></span
+              ><span>لبخند<small>کلینیک تخصصی دندانپزشکی</small></span></a
+            >
+            <p class="footer__about">
+              کلینیک لبخند با ۱۵ سال سابقه و تیمی از متخصصان، خدمات دندانپزشکی زیبایی، ایمپلنت، ارتودنسی و درمان‌های تخصصی را با جدیدترین
+              تجهیزات دیجیتال ارائه می‌دهد.
+            </p>
+            <div class="footer__social">
+              <a href="#" aria-label="اینستاگرام"
+                ><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg></a
+              ><a href="#" aria-label="تلگرام"
+                ><svg class="icon" aria-hidden="true"><use href="#i-send"></use></svg></a
+              ><a href="#" aria-label="واتس‌اپ"
+                ><svg class="icon" aria-hidden="true"><use href="#i-message-circle"></use></svg
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h3>خدمات</h3>
+            <ul class="list-plain">
+              <li><a href="service.html">لمینت و کامپوزیت</a></li>
+              <li><a href="service.html">ایمپلنت دندان</a></li>
+              <li><a href="service.html">ارتودنسی نامرئی</a></li>
+              <li><a href="service.html">بلیچینگ (سفید کردن)</a></li>
+              <li><a href="service.html">عصب‌کشی بدون درد</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>کلینیک</h3>
+            <ul class="list-plain">
+              <li><a href="doctors.html">پزشکان</a></li>
+              <li><a href="gallery.html">نمونه کارها</a></li>
+              <li><a href="pricing.html">تعرفه و بیمه</a></li>
+              <li><a href="blog.html">مجله سلامت دهان</a></li>
+              <li><a href="contact.html">تماس با ما</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>ساعات کاری</h3>
+            <div class="footer__hours">
+              <div><span>شنبه تا چهارشنبه</span><span>۹ تا ۲۱</span></div>
+              <div><span>پنجشنبه</span><span>۹ تا ۱۵</span></div>
+              <div><span>جمعه</span><span>اورژانس</span></div>
+            </div>
+            <p class="small mt-2">تهران، خیابان ولیعصر، بالاتر از میدان ونک، کوچه شهید قبادیان، پلاک ۱۸</p>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© ۱۴۰۵ کلینیک دندانپزشکی لبخند · پروانه بهره‌برداری ۱۴۰۲/۴۵۸۲</span
+          ><a href="documentation/index.html">حریم خصوصی بیماران</a>
+        </div>
+      </div>
+    </footer>
+    <a class="scroll-top" href="#main" data-scroll-top aria-label="بازگشت به بالا"
+      ><svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg
+    ></a>
+  </body>
+</html>

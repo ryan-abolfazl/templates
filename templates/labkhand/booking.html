@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>رزرو آنلاین نوبت | کلینیک لبخند</title>
+    <meta name="description" content="رزرو نوبت در ۴ مرحله: خدمت، پزشک، زمان و مشخصات" />
+    <meta name="theme-color" content="#1f9a93" />
+    <meta property="og:title" content="رزرو آنلاین نوبت | کلینیک لبخند" />
+    <meta property="og:description" content="رزرو نوبت در ۴ مرحله: خدمت، پزشک، زمان و مشخصات" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function (d) {
+        d.classList.add("js");
+        try {
+          var t = JSON.parse(localStorage.getItem("theme"));
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          d.setAttribute("data-theme", t);
+        } catch (e) {}
+      })(document.documentElement);
+    </script>
+    <link rel="preload" href="assets/fonts/vazirmatn/Vazirmatn-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/core.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body class="">
+    <script src="assets/js/icons.js"></script>
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+
+    <header class="header" data-sticky-header>
+      <div class="header__bar">
+        <button
+          class="icon-btn menu-btn"
+          type="button"
+          data-drawer-open="menu"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="باز کردن منو"
+        >
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+        </button>
+        <a class="logo" href="index.html" aria-label="کلینیک لبخند، صفحه اصلی"
+          ><span class="logo__mark"
+            ><svg class="" viewBox="0 0 32 32" aria-hidden="true">
+              <path
+                d="M9.5 4C6 4 4 7 4 10.5c0 3 1.2 5 2 7.5.9 2.8 1 9 3.6 9 2.2 0 2.1-5.6 3.6-7.6.7-.9 2.9-.9 3.6 0 1.5 2 1.4 7.6 3.6 7.6 2.6 0 2.7-6.2 3.6-9 .8-2.5 2-4.5 2-7.5C28 7 26 4 22.5 4c-2.6 0-4.3 1.6-6.5 1.6S12.1 4 9.5 4Z"
+                fill="currentColor"
+              /></svg></span
+          ><span>لبخند<small>کلینیک تخصصی دندانپزشکی</small></span></a
+        >
+        <nav class="nav" aria-label="منوی اصلی">
+          <a class="" href="index.html">خانه</a><a class="" href="services.html">خدمات</a><a class="" href="doctors.html">پزشکان</a
+          ><a class="" href="gallery.html">نمونه کارها</a><a class="" href="pricing.html">تعرفه و بیمه</a
+          ><a class="" href="blog.html">مجله سلامت</a><a class="" href="contact.html">تماس</a>
+        </nav>
+        <div class="header__actions">
+          <a class="header__phone" href="tel:02188776655"
+            ><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg><span>۰۲۱-۸۸۷۷۶۶۵۵</span></a
+          >
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="تغییر حالت روشن و تاریک" aria-pressed="false">
+            <svg class="icon theme-icon-light" aria-hidden="true"><use href="#i-moon"></use></svg
+            ><svg class="icon theme-icon-dark" aria-hidden="true"><use href="#i-sun"></use></svg>
+          </button>
+          <a class="btn btn--primary btn--sm" href="booking.html"
+            ><svg class="icon" aria-hidden="true"><use href="#i-calendar-plus"></use></svg> رزرو نوبت</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <div class="drawer" id="menu" data-drawer>
+      <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="منو">
+        <div class="row-between">
+          <a class="logo" href="index.html" aria-label="کلینیک لبخند، صفحه اصلی"
+            ><span class="logo__mark"
+              ><svg class="" viewBox="0 0 32 32" aria-hidden="true">
+                <path
+                  d="M9.5 4C6 4 4 7 4 10.5c0 3 1.2 5 2 7.5.9 2.8 1 9 3.6 9 2.2 0 2.1-5.6 3.6-7.6.7-.9 2.9-.9 3.6 0 1.5 2 1.4 7.6 3.6 7.6 2.6 0 2.7-6.2 3.6-9 .8-2.5 2-4.5 2-7.5C28 7 26 4 22.5 4c-2.6 0-4.3 1.6-6.5 1.6S12.1 4 9.5 4Z"
+                  fill="currentColor"
+                /></svg></span
+            ><span>لبخند<small>کلینیک تخصصی دندانپزشکی</small></span></a
+          ><button class="icon-btn" type="button" data-drawer-close aria-label="بستن">
+            <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+          </button>
+        </div>
+        <nav class="drawer__nav" aria-label="منوی موبایل">
+          <a class="" href="index.html">خانه</a><a class="" href="services.html">خدمات</a><a class="" href="doctors.html">پزشکان</a
+          ><a class="" href="gallery.html">نمونه کارها</a><a class="" href="pricing.html">تعرفه و بیمه</a
+          ><a class="" href="blog.html">مجله سلامت</a><a class="" href="contact.html">تماس</a>
+        </nav>
+        <a class="btn btn--primary btn--block" href="booking.html"
+          ><svg class="icon" aria-hidden="true"><use href="#i-calendar-plus"></use></svg> رزرو آنلاین نوبت</a
+        >
+        <a class="btn btn--block" href="tel:02188776655"
+          ><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg> ۰۲۱-۸۸۷۷۶۶۵۵</a
+        >
+      </div>
+    </div>
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="مسیر صفحه">
+            <a href="index.html">خانه</a><svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg
+            ><span aria-current="page">رزرو نوبت</span>
+          </nav>
+
+          <h1>رزرو <b>آنلاین</b> نوبت</h1>
+          <p>در کمتر از یک دقیقه نوبت بگیرید. تأیید نوبت و یادآوری، پیامک می‌شود.</p>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container booking">
+          <form class="card glass wizard" data-wizard data-validate novalidate>
+            <ol class="wizard__steps list-plain" aria-label="مراحل رزرو">
+              <li data-step-dot><span>۱</span>خدمت</li>
+              <li data-step-dot><span>۲</span>پزشک</li>
+              <li data-step-dot><span>۳</span>زمان</li>
+              <li data-step-dot><span>۴</span>مشخصات</li>
+            </ol>
+
+            <fieldset data-step data-need="service">
+              <legend class="h-sm">چه خدمتی نیاز دارید؟</legend>
+              <div class="opt-grid">
+                <label class="opt"
+                  ><input type="radio" name="service" value="لمینت و کامپوزیت" checked /><span class="icon-bubble"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-sparkles"></use></svg></span
+                  ><b>لمینت و کامپوزیت</b><span class="xs muted">۲ جلسه</span></label
+                ><label class="opt"
+                  ><input type="radio" name="service" value="ایمپلنت دندان" /><span class="icon-bubble"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-hammer"></use></svg></span
+                  ><b>ایمپلنت دندان</b><span class="xs muted">۳ تا ۶ ماه</span></label
+                ><label class="opt"
+                  ><input type="radio" name="service" value="ارتودنسی نامرئی" /><span class="icon-bubble"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-align-horizontal-space-around"></use></svg></span
+                  ><b>ارتودنسی نامرئی</b><span class="xs muted">۶ تا ۱۸ ماه</span></label
+                ><label class="opt"
+                  ><input type="radio" name="service" value="بلیچینگ (سفید کردن)" /><span class="icon-bubble"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-sun"></use></svg></span
+                  ><b>بلیچینگ (سفید کردن)</b><span class="xs muted">۱ جلسه</span></label
+                ><label class="opt"
+                  ><input type="radio" name="service" value="عصب‌کشی بدون درد" /><span class="icon-bubble"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-shield-plus"></use></svg></span
+                  ><b>عصب‌کشی بدون درد</b><span class="xs muted">۱ تا ۲ جلسه</span></label
+                ><label class="opt"
+                  ><input type="radio" name="service" value="دندانپزشکی کودکان" /><span class="icon-bubble"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-baby"></use></svg></span
+                  ><b>دندانپزشکی کودکان</b><span class="xs muted">ویزیت ۳۰ دقیقه</span></label
+                ><label class="opt"
+                  ><input type="radio" name="service" value="جراحی لثه و دندان عقل" /><span class="icon-bubble"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-scan-face"></use></svg></span
+                  ><b>جراحی لثه و دندان عقل</b><span class="xs muted">۱ جلسه</span></label
+                ><label class="opt"
+                  ><input type="radio" name="service" value="چکاپ و جرم‌گیری" /><span class="icon-bubble"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-stethoscope"></use></svg></span
+                  ><b>چکاپ و جرم‌گیری</b><span class="xs muted">۴۵ دقیقه</span></label
+                >
+              </div>
+            </fieldset>
+
+            <fieldset data-step hidden>
+              <legend class="h-sm">پزشک مورد نظر</legend>
+              <div class="opt-grid opt-grid--docs">
+                <label class="opt"
+                  ><input type="radio" name="doctor" value="اولین پزشک در دسترس" checked /><span class="icon-bubble"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-zap"></use></svg></span
+                  ><b>اولین پزشک در دسترس</b><span class="xs muted">سریع‌ترین نوبت</span></label
+                >
+                <label class="opt"
+                  ><input type="radio" name="doctor" value="دکتر مهسا رضوانی" /><span
+                    class="mini-portrait"
+                    style="inline-size: 3.5rem; block-size: 3.5rem"
+                    ><svg class="portrait" viewBox="0 0 240 240" aria-hidden="true">
+                      <rect width="240" height="240" fill="#dff3ef" />
+                      <circle cx="190" cy="54" r="30" fill="#fff" opacity=".55" />
+                      <path d="M48 206q4-74 72-76 68 2 72 76Z" fill="#2d3a4a" />
+                      <path d="M40 240q4-78 80-80 76 2 80 80Z" fill="#1c8a86" />
+                      <path d="M96 164l24 34 24-34" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round" opacity=".7" />
+                      <path d="M150 176q16 10 12 34" fill="none" stroke="#dfe7ea" stroke-width="4" stroke-linecap="round" />
+                      <circle cx="162" cy="214" r="6" fill="#dfe7ea" />
+                      <rect x="108" y="126" width="24" height="30" rx="10" fill="#efc2a6" />
+                      <ellipse cx="120" cy="92" rx="36" ry="42" fill="#efc2a6" />
+                      <path d="M62 158q-8-118 58-122 66 4 58 122-12-4-22-26 0-66-36-68-36 2-36 68-8 22-22 26Z" fill="#2d3a4a" />
+                      <path d="M86 118q34 34 68 0l10 50H76Z" fill="#2d3a4a" />
+                      <path d="M84 66q36-20 72 0" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width="3" /></svg></span
+                  ><b>دکتر مهسا رضوانی</b><span class="xs muted">متخصص پروتزهای دندانی و زیبایی</span></label
+                ><label class="opt"
+                  ><input type="radio" name="doctor" value="دکتر آرمان صدری" /><span
+                    class="mini-portrait"
+                    style="inline-size: 3.5rem; block-size: 3.5rem"
+                    ><svg class="portrait" viewBox="0 0 240 240" aria-hidden="true">
+                      <rect width="240" height="240" fill="#e4eef8" />
+                      <circle cx="190" cy="54" r="30" fill="#fff" opacity=".55" />
+
+                      <path d="M40 240q4-78 80-80 76 2 80 80Z" fill="#2f5d8a" />
+                      <path d="M96 164l24 34 24-34" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round" opacity=".7" />
+                      <path d="M150 176q16 10 12 34" fill="none" stroke="#dfe7ea" stroke-width="4" stroke-linecap="round" />
+                      <circle cx="162" cy="214" r="6" fill="#dfe7ea" />
+                      <rect x="108" y="126" width="24" height="30" rx="10" fill="#d9a584" />
+                      <ellipse cx="120" cy="92" rx="36" ry="42" fill="#d9a584" />
+                      <path d="M78 70q2-34 42-36 40 2 42 36-8-14-42-16-34 2-42 16Z" fill="#2b2220" />
+                      <path d="M88 106q4 28 32 30 28-2 32-30-8 10-32 11-24-1-32-11Z" fill="#2b2220" />
+                      <path d="M106 112q14-6 28 0-14 5-28 0Z" fill="#2b2220" /></svg></span
+                  ><b>دکتر آرمان صدری</b><span class="xs muted">جراح و متخصص ایمپلنت</span></label
+                ><label class="opt"
+                  ><input type="radio" name="doctor" value="دکتر نگین امیری" /><span
+                    class="mini-portrait"
+                    style="inline-size: 3.5rem; block-size: 3.5rem"
+                    ><svg class="portrait" viewBox="0 0 240 240" aria-hidden="true">
+                      <rect width="240" height="240" fill="#efe8f8" />
+                      <circle cx="190" cy="54" r="30" fill="#fff" opacity=".55" />
+                      <path d="M48 206q4-74 72-76 68 2 72 76Z" fill="#3b2f4a" />
+                      <path d="M40 240q4-78 80-80 76 2 80 80Z" fill="#8b5fbf" />
+                      <path d="M96 164l24 34 24-34" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round" opacity=".7" />
+                      <path d="M150 176q16 10 12 34" fill="none" stroke="#dfe7ea" stroke-width="4" stroke-linecap="round" />
+                      <circle cx="162" cy="214" r="6" fill="#dfe7ea" />
+                      <rect x="108" y="126" width="24" height="30" rx="10" fill="#e8b596" />
+                      <ellipse cx="120" cy="92" rx="36" ry="42" fill="#e8b596" />
+                      <path d="M62 158q-8-118 58-122 66 4 58 122-12-4-22-26 0-66-36-68-36 2-36 68-8 22-22 26Z" fill="#3b2f4a" />
+                      <path d="M86 118q34 34 68 0l10 50H76Z" fill="#3b2f4a" />
+                      <path d="M84 66q36-20 72 0" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width="3" /></svg></span
+                  ><b>دکتر نگین امیری</b><span class="xs muted">متخصص ارتودنسی</span></label
+                ><label class="opt"
+                  ><input type="radio" name="doctor" value="دکتر کیان مقدم" /><span
+                    class="mini-portrait"
+                    style="inline-size: 3.5rem; block-size: 3.5rem"
+                    ><svg class="portrait" viewBox="0 0 240 240" aria-hidden="true">
+                      <rect width="240" height="240" fill="#e7f5ee" />
+                      <circle cx="190" cy="54" r="30" fill="#fff" opacity=".55" />
+
+                      <path d="M40 240q4-78 80-80 76 2 80 80Z" fill="#1c8a86" />
+                      <path d="M96 164l24 34 24-34" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round" opacity=".7" />
+                      <path d="M150 176q16 10 12 34" fill="none" stroke="#dfe7ea" stroke-width="4" stroke-linecap="round" />
+                      <circle cx="162" cy="214" r="6" fill="#dfe7ea" />
+                      <rect x="108" y="126" width="24" height="30" rx="10" fill="#e2b08f" />
+                      <ellipse cx="120" cy="92" rx="36" ry="42" fill="#e2b08f" />
+                      <path d="M78 70q2-34 42-36 40 2 42 36-8-14-42-16-34 2-42 16Z" fill="#4a3426" /></svg></span
+                  ><b>دکتر کیان مقدم</b><span class="xs muted">متخصص درمان ریشه (اندودنتیست)</span></label
+                >
+              </div>
+            </fieldset>
+
+            <fieldset data-step data-need="time" hidden>
+              <legend class="h-sm">روز و ساعت مراجعه</legend>
+              <div class="field">
+                <label class="label" for="b-date">روز مراجعه</label>
+                <div class="input-icon">
+                  <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg
+                  ><input class="input" id="b-date" data-datepicker readonly placeholder="روی این قسمت بزنید تا تقویم باز شود" />
+                </div>
+              </div>
+              <p class="small muted" data-slots-hint>
+                <svg class="icon" aria-hidden="true"><use href="#i-info"></use></svg> ابتدا روز را انتخاب کنید تا ساعت‌های خالی نمایش داده
+                شوند.
+              </p>
+              <div class="slots" data-slots hidden role="radiogroup" aria-label="ساعت مراجعه">
+                <label class="slot"><input type="radio" name="slot" value="۰۹:۰۰" /><span>۰۹:۰۰</span></label
+                ><label class="slot"><input type="radio" name="slot" value="۰۹:۳۰" /><span>۰۹:۳۰</span></label
+                ><label class="slot"><input type="radio" name="slot" value="۱۰:۰۰" /><span>۱۰:۰۰</span></label
+                ><label class="slot"><input type="radio" name="slot" value="۱۰:۳۰" /><span>۱۰:۳۰</span></label
+                ><label class="slot"><input type="radio" name="slot" value="۱۱:۰۰" /><span>۱۱:۰۰</span></label
+                ><label class="slot"><input type="radio" name="slot" value="۱۱:۳۰" /><span>۱۱:۳۰</span></label
+                ><label class="slot"><input type="radio" name="slot" value="۱۴:۰۰" /><span>۱۴:۰۰</span></label
+                ><label class="slot"><input type="radio" name="slot" value="۱۴:۳۰" /><span>۱۴:۳۰</span></label
+                ><label class="slot"><input type="radio" name="slot" value="۱۵:۰۰" /><span>۱۵:۰۰</span></label
+                ><label class="slot"><input type="radio" name="slot" value="۱۶:۳۰" /><span>۱۶:۳۰</span></label
+                ><label class="slot"><input type="radio" name="slot" value="۱۷:۰۰" /><span>۱۷:۰۰</span></label
+                ><label class="slot"><input type="radio" name="slot" value="۱۸:۳۰" /><span>۱۸:۳۰</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset data-step hidden>
+              <legend class="h-sm">مشخصات بیمار</legend>
+              <div class="form-grid">
+                <div class="field">
+                  <label class="label" for="b-name">نام و نام خانوادگی</label
+                  ><input class="input" id="b-name" required autocomplete="name" />
+                </div>
+                <div class="field">
+                  <label class="label" for="b-phone">شماره موبایل</label
+                  ><input
+                    class="input"
+                    id="b-phone"
+                    type="tel"
+                    required
+                    pattern="09[0-9]{9}"
+                    data-msg="شماره موبایل را به شکل ۰۹۱۲۳۴۵۶۷۸۹ وارد کنید"
+                    autocomplete="tel"
+                    placeholder="۰۹۱۲۳۴۵۶۷۸۹"
+                  />
+                </div>
+                <div class="field">
+                  <label class="label" for="b-nid">کد ملی</label
+                  ><input class="input ltr" id="b-nid" inputmode="numeric" pattern="[0-9]{10}" data-msg="کد ملی ۱۰ رقمی است" />
+                </div>
+                <div class="field">
+                  <label class="label" for="b-ins">بیمه تکمیلی</label
+                  ><select class="select" id="b-ins">
+                    <option>ندارم</option>
+                    <option>بیمه دی</option>
+                    <option>بیمه ایران</option>
+                    <option>بیمه آسیا</option>
+                    <option>بیمه البرز</option>
+                    <option>سایر</option>
+                  </select>
+                </div>
+                <div class="field full">
+                  <label class="label" for="b-note">توضیحات (اختیاری)</label
+                  ><textarea class="textarea" id="b-note" rows="3" placeholder="مثلاً: حساسیت دارویی، ترس از دندانپزشکی…"></textarea>
+                </div>
+                <label class="check full"
+                  ><input type="checkbox" required />
+                  <span
+                    >با <a class="link" href="documentation/index.html">شرایط لغو نوبت</a> موافقم (لغو رایگان تا ۲۴ ساعت قبل)</span
+                  ></label
+                >
+              </div>
+            </fieldset>
+
+            <div class="wizard__nav" data-step-nav>
+              <button class="btn" type="button" data-prev>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg> قبلی
+              </button>
+              <button class="btn btn--primary" type="button" data-next>
+                بعدی <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg>
+              </button>
+            </div>
+
+            <div class="wizard__done" data-done hidden>
+              <span class="done-mark"
+                ><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg
+              ></span>
+              <h2 class="h-md">نوبت شما ثبت شد!</h2>
+              <p class="muted">کد پیگیری: <b class="ltr" data-code>LB-0000</b></p>
+              <p class="small muted">پیامک تأیید و یادآوری ۲۴ ساعت قبل از نوبت برایتان ارسال می‌شود.</p>
+              <a class="btn btn--primary" href="index.html">بازگشت به صفحه اصلی</a>
+            </div>
+          </form>
+
+          <aside class="card booking__sum stack" aria-live="polite">
+            <h2 class="h-sm">خلاصه نوبت</h2>
+            <dl class="sum-list">
+              <div>
+                <dt>
+                  <svg class="icon" aria-hidden="true"><use href="#i-stethoscope"></use></svg> خدمت
+                </dt>
+                <dd data-sum="service">—</dd>
+              </div>
+              <div>
+                <dt>
+                  <svg class="icon" aria-hidden="true"><use href="#i-user-round"></use></svg> پزشک
+                </dt>
+                <dd data-sum="doctor">—</dd>
+              </div>
+              <div>
+                <dt>
+                  <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg> زمان
+                </dt>
+                <dd data-sum="when">—</dd>
+              </div>
+              <div>
+                <dt>
+                  <svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg> مکان
+                </dt>
+                <dd>تهران، ونک، کوچه قبادیان، پلاک ۱۸</dd>
+              </div>
+            </dl>
+            <p class="xs muted">
+              <svg class="icon" aria-hidden="true"><use href="#i-shield-check"></use></svg> مشاوره اول رایگان است و هزینه‌ای برای رزرو
+              دریافت نمی‌شود.
+            </p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a class="logo" href="index.html" aria-label="کلینیک لبخند، صفحه اصلی"
+              ><span class="logo__mark"
+                ><svg class="" viewBox="0 0 32 32" aria-hidden="true">
+                  <path
+                    d="M9.5 4C6 4 4 7 4 10.5c0 3 1.2 5 2 7.5.9 2.8 1 9 3.6 9 2.2 0 2.1-5.6 3.6-7.6.7-.9 2.9-.9 3.6 0 1.5 2 1.4 7.6 3.6 7.6 2.6 0 2.7-6.2 3.6-9 .8-2.5 2-4.5 2-7.5C28 7 26 4 22.5 4c-2.6 0-4.3 1.6-6.5 1.6S12.1 4 9.5 4Z"
+                    fill="currentColor"
+                  /></svg></span
+              ><span>لبخند<small>کلینیک تخصصی دندانپزشکی</small></span></a
+            >
+            <p class="footer__about">
+              کلینیک لبخند با ۱۵ سال سابقه و تیمی از متخصصان، خدمات دندانپزشکی زیبایی، ایمپلنت، ارتودنسی و درمان‌های تخصصی را با جدیدترین
+              تجهیزات دیجیتال ارائه می‌دهد.
+            </p>
+            <div class="footer__social">
+              <a href="#" aria-label="اینستاگرام"
+                ><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg></a
+              ><a href="#" aria-label="تلگرام"
+                ><svg class="icon" aria-hidden="true"><use href="#i-send"></use></svg></a
+              ><a href="#" aria-label="واتس‌اپ"
+                ><svg class="icon" aria-hidden="true"><use href="#i-message-circle"></use></svg
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h3>خدمات</h3>
+            <ul class="list-plain">
+              <li><a href="service.html">لمینت و کامپوزیت</a></li>
+              <li><a href="service.html">ایمپلنت دندان</a></li>
+              <li><a href="service.html">ارتودنسی نامرئی</a></li>
+              <li><a href="service.html">بلیچینگ (سفید کردن)</a></li>
+              <li><a href="service.html">عصب‌کشی بدون درد</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>کلینیک</h3>
+            <ul class="list-plain">
+              <li><a href="doctors.html">پزشکان</a></li>
+              <li><a href="gallery.html">نمونه کارها</a></li>
+              <li><a href="pricing.html">تعرفه و بیمه</a></li>
+              <li><a href="blog.html">مجله سلامت دهان</a></li>
+              <li><a href="contact.html">تماس با ما</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>ساعات کاری</h3>
+            <div class="footer__hours">
+              <div><span>شنبه تا چهارشنبه</span><span>۹ تا ۲۱</span></div>
+              <div><span>پنجشنبه</span><span>۹ تا ۱۵</span></div>
+              <div><span>جمعه</span><span>اورژانس</span></div>
+            </div>
+            <p class="small mt-2">تهران، خیابان ولیعصر، بالاتر از میدان ونک، کوچه شهید قبادیان، پلاک ۱۸</p>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© ۱۴۰۵ کلینیک دندانپزشکی لبخند · پروانه بهره‌برداری ۱۴۰۲/۴۵۸۲</span
+          ><a href="documentation/index.html">حریم خصوصی بیماران</a>
+        </div>
+      </div>
+    </footer>
+    <a class="scroll-top" href="#main" data-scroll-top aria-label="بازگشت به بالا"
+      ><svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg
+    ></a>
+  </body>
+</html>

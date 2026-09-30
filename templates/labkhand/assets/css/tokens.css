@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Labkhand | design tokens
+   Direction: calm clinical, air and glass. White + mint, deep teal ink,
+   light-weight display type, large soft radii, frosted surfaces.
+   ========================================================================== */
+
+:root {
+  --teal-900: #0b3b3c;
+  --teal-700: #125e5c;
+  --teal-600: #167774;
+  --teal-500: #1f9a93;
+  --mint-300: #9fe3d5;
+  --mint-100: #dff5ef;
+  --mint-50: #f1fbf8;
+  --sky-100: #e4f1fb;
+  --peach: #f7c9b6;
+  --sun: #ffd98a;
+
+  --primary: var(--teal-600);
+  --primary-strong: var(--teal-700);
+  --primary-soft: var(--mint-100);
+  --primary-contrast: #ffffff;
+  --accent: #ff8b6b;
+  --success: #1e9e6a;
+  --danger: #d9434b;
+
+  --bg: #fbfdfc;
+  --surface: #ffffff;
+  --surface-2: var(--mint-50);
+  --glass: rgb(255 255 255 / 0.62);
+  --glass-border: rgb(255 255 255 / 0.75);
+  --line: #e1ece9;
+  --text: var(--teal-900);
+  --text-muted: #557674;
+  --text-faint: #8aa6a3;
+  --overlay: rgb(11 59 60 / 0.35);
+
+  --font-body: 'Vazirmatn', system-ui, -apple-system, 'Segoe UI', Tahoma, sans-serif;
+  --font-display: var(--font-body);
+  --text-xs: 0.78rem;
+  --text-sm: 0.9rem;
+  --text-base: 1.0625rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.3rem;
+  --text-xl: 1.6rem;
+  --text-2xl: clamp(1.7rem, 1.3rem + 1.2vw, 2.25rem);
+  --text-3xl: clamp(2.1rem, 1.5rem + 2.2vw, 3.2rem);
+  --text-4xl: clamp(2.6rem, 1.6rem + 3.6vw, 4.6rem);
+  --leading: 1.95;
+  --leading-tight: 1.35;
+
+  --radius-sm: 14px;
+  --radius: 22px;
+  --radius-lg: 32px;
+  --radius-xl: 44px;
+  --radius-full: 999px;
+  --shadow-sm: 0 2px 8px -2px rgb(11 59 60 / 0.08);
+  --shadow: 0 20px 50px -24px rgb(11 59 60 / 0.25);
+  --shadow-lg: 0 40px 80px -30px rgb(11 59 60 / 0.35);
+  --blur: saturate(1.6) blur(18px);
+
+  --container: 1200px;
+  --header-h: 80px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 0.25s;
+  --focus: var(--teal-500);
+  --scroll-offset: calc(var(--header-h) + 1rem);
+}
+
+[data-theme='dark'] {
+  --primary: #3cc7b8;
+  --primary-strong: #5fd6c9;
+  --primary-soft: #0f3432;
+  --primary-contrast: #042221;
+  --accent: #ff9f84;
+  --bg: #071b1c;
+  --surface: #0c2728;
+  --surface-2: #0e2d2e;
+  --glass: rgb(12 39 40 / 0.6);
+  --glass-border: rgb(95 214 201 / 0.12);
+  --line: #173f3f;
+  --text: #e6f5f2;
+  --text-muted: #9bbfba;
+  --text-faint: #6b8f8b;
+  --overlay: rgb(0 0 0 / 0.6);
+  --shadow: 0 20px 50px -24px rgb(0 0 0 / 0.7);
+  --shadow-lg: 0 40px 80px -30px rgb(0 0 0 / 0.8);
+}
