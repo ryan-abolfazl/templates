@@ -1,0 +1,919 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>جاوااسکریپت از صفر تا حرفه‌ای | آکادمی دانش</title>
+    <meta name="description" content="صفحه جزئیات دوره با سرفصل‌ها، مدرس و نظرات" />
+    <meta name="theme-color" content="#c8f53c" />
+    <meta property="og:title" content="جاوااسکریپت از صفر تا حرفه‌ای | آکادمی دانش" />
+    <meta property="og:description" content="صفحه جزئیات دوره با سرفصل‌ها، مدرس و نظرات" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function (d) {
+        d.classList.add("js");
+        try {
+          var t = JSON.parse(localStorage.getItem("theme"));
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          d.setAttribute("data-theme", t);
+        } catch (e) {}
+      })(document.documentElement);
+    </script>
+    <link rel="preload" href="assets/fonts/vazirmatn/Vazirmatn-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/core.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body class="">
+    <script src="assets/js/icons.js"></script>
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+
+    <div class="announce">
+      🎓 جشنواره مهر: <b>۴۰٪ تخفیف</b> همه دوره‌ها تا
+      <b data-countdown data-hours="70"
+        ><span data-unit="d">۰۲</span> روز و <span data-unit="h">۲۲</span>:<span data-unit="m">۰۰</span>:<span data-unit="s">۰۰</span></b
+      >
+      دیگر · <a href="courses.html">مشاهده دوره‌ها</a>
+    </div>
+    <header class="header" data-sticky-header>
+      <div class="container header__inner">
+        <button
+          class="icon-btn menu-btn"
+          type="button"
+          data-drawer-open="menu"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="باز کردن منو"
+        >
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+        </button>
+        <a class="logo" href="index.html" aria-label="آکادمی دانش، صفحه اصلی"
+          ><span class="logo__mark" aria-hidden="true"
+            ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 4 2 9l10 5 10-5-10-5Z" />
+              <path d="M6 11.5V16c3 2.5 9 2.5 12 0v-4.5" />
+              <path d="M22 9v6" /></svg></span
+          ><span>دانش<small>آکادمی آنلاین</small></span></a
+        >
+        <nav class="nav" aria-label="منوی اصلی">
+          <div data-dropdown>
+            <button class="nav__link is-active" aria-current="page" type="button" data-dropdown-toggle aria-expanded="false">
+              دسته‌بندی‌ها <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg>
+            </button>
+            <div class="mega" data-dropdown-menu>
+              <div class="mega__cats">
+                <a class="mega__cat" href="courses.html"
+                  ><span class="avatar tone-lime" style="border-radius: 12px"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-code-xml"></use></svg></span
+                  ><span><b>برنامه‌نویسی وب</b><span>۶۴ دوره</span></span></a
+                ><a class="mega__cat" href="courses.html"
+                  ><span class="avatar tone-pink" style="border-radius: 12px"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-pen-tool"></use></svg></span
+                  ><span><b>طراحی UI/UX</b><span>۳۸ دوره</span></span></a
+                ><a class="mega__cat" href="courses.html"
+                  ><span class="avatar tone-violet" style="border-radius: 12px"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-brain-circuit"></use></svg></span
+                  ><span><b>هوش مصنوعی و داده</b><span>۴۲ دوره</span></span></a
+                ><a class="mega__cat" href="courses.html"
+                  ><span class="avatar tone-coral" style="border-radius: 12px"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-megaphone"></use></svg></span
+                  ><span><b>بازاریابی دیجیتال</b><span>۲۹ دوره</span></span></a
+                ><a class="mega__cat" href="courses.html"
+                  ><span class="avatar tone-sky" style="border-radius: 12px"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-languages"></use></svg></span
+                  ><span><b>زبان انگلیسی</b><span>۵۱ دوره</span></span></a
+                ><a class="mega__cat" href="courses.html"
+                  ><span class="avatar tone-amber" style="border-radius: 12px"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-briefcase-business"></use></svg></span
+                  ><span><b>مدیریت و کسب‌وکار</b><span>۳۳ دوره</span></span></a
+                ><a class="mega__cat" href="courses.html"
+                  ><span class="avatar tone-mint" style="border-radius: 12px"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-clapperboard"></use></svg></span
+                  ><span><b>عکاسی و تدوین</b><span>۲۴ دوره</span></span></a
+                ><a class="mega__cat" href="courses.html"
+                  ><span class="avatar tone-ink" style="border-radius: 12px"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-shield-check"></use></svg></span
+                  ><span><b>شبکه و امنیت</b><span>۱۹ دوره</span></span></a
+                >
+              </div>
+              <div class="mega__promo">
+                <span class="badge tone-lime" style="align-self: flex-start"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-crown"></use></svg> اشتراک دانش پلاس</span
+                >
+                <h3>دسترسی نامحدود به بیش از ۳۰۰ دوره با یک اشتراک</h3>
+                <a class="btn btn--primary btn--sm" href="pricing.html"
+                  >مشاهده طرح‌ها <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg
+                ></a>
+              </div>
+            </div>
+          </div>
+          <a class="nav__link is-active" aria-current="page" href="courses.html">دوره‌ها</a
+          ><a class="nav__link" href="index.html#paths">مسیرهای یادگیری</a><a class="nav__link" href="pricing.html">اشتراک ویژه</a
+          ><a class="nav__link" href="blog.html">مجله</a><a class="nav__link" href="contact.html">تماس با ما</a>
+        </nav>
+        <div class="header__actions">
+          <button class="icon-btn hide-md" type="button" data-modal-open="search" aria-label="جستجو">
+            <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+          </button>
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="تغییر حالت روشن و تاریک" aria-pressed="false">
+            <svg class="icon theme-icon-light" aria-hidden="true"><use href="#i-moon"></use></svg
+            ><svg class="icon theme-icon-dark" aria-hidden="true"><use href="#i-sun"></use></svg>
+          </button>
+          <a class="icon-btn" href="cart.html" aria-label="سبد خرید"
+            ><svg class="icon" aria-hidden="true"><use href="#i-shopping-bag"></use></svg><span class="count" data-cart-count>۲</span></a
+          >
+          <a class="btn btn--ink btn--sm hide-md" href="login.html"
+            ><svg class="icon icon-flip" aria-hidden="true"><use href="#i-log-in"></use></svg> ورود | ثبت‌نام</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <div class="drawer" id="menu" data-drawer>
+      <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="منوی موبایل">
+        <div class="row-between">
+          <a class="logo" href="index.html" aria-label="آکادمی دانش، صفحه اصلی"
+            ><span class="logo__mark" aria-hidden="true"
+              ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 4 2 9l10 5 10-5-10-5Z" />
+                <path d="M6 11.5V16c3 2.5 9 2.5 12 0v-4.5" />
+                <path d="M22 9v6" /></svg></span
+            ><span>دانش<small>آکادمی آنلاین</small></span></a
+          ><button class="icon-btn" type="button" data-drawer-close aria-label="بستن منو">
+            <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+          </button>
+        </div>
+        <form class="input-icon" action="courses.html">
+          <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg
+          ><input class="input" type="search" placeholder="جستجوی دوره…" aria-label="جستجوی دوره" />
+        </form>
+        <nav class="drawer__nav" aria-label="منوی موبایل">
+          <a href="index.html" class=""
+            ><svg class="icon" aria-hidden="true"><use href="#i-house"></use></svg> خانه</a
+          >
+          <a href="courses.html"
+            ><svg class="icon" aria-hidden="true"><use href="#i-library-big"></use></svg> همه دوره‌ها</a
+          >
+          <a href="dashboard.html"
+            ><svg class="icon" aria-hidden="true"><use href="#i-layout-dashboard"></use></svg> داشبورد من</a
+          >
+          <a href="pricing.html"
+            ><svg class="icon" aria-hidden="true"><use href="#i-crown"></use></svg> اشتراک ویژه</a
+          >
+          <a href="blog.html"
+            ><svg class="icon" aria-hidden="true"><use href="#i-newspaper"></use></svg> مجله</a
+          >
+          <a href="contact.html"
+            ><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg> تماس با ما</a
+          >
+        </nav>
+        <a class="btn btn--primary btn--block" href="login.html">ورود یا ثبت‌نام</a>
+      </div>
+    </div>
+
+    <dialog class="modal" id="search" aria-label="جستجو">
+      <form class="modal__body stack" action="courses.html">
+        <div class="input-icon">
+          <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg
+          ><input class="input" type="search" name="q" placeholder="چه چیزی می‌خواهید یاد بگیرید؟" aria-label="جستجوی دوره" autofocus />
+        </div>
+        <div class="row wrap">
+          <a class="chip" href="courses.html">جاوااسکریپت</a><a class="chip" href="courses.html">فیگما</a
+          ><a class="chip" href="courses.html">آیلتس</a><a class="chip" href="courses.html">پایتون</a
+          ><a class="chip" href="courses.html">سئو</a>
+        </div>
+      </form>
+    </dialog>
+    <main id="main">
+      <section class="course-hero">
+        <div class="container course-hero__grid">
+          <div class="course-hero__info">
+            <nav class="breadcrumb" aria-label="مسیر صفحه">
+              <a href="index.html">خانه</a><svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg
+              ><a href="courses.html">دوره‌ها</a><svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg
+              ><span aria-current="page">برنامه‌نویسی وب</span>
+            </nav>
+            <div class="row wrap">
+              <span class="badge tone-lime"
+                ><svg class="icon" aria-hidden="true"><use href="#i-flame"></use></svg> پرفروش</span
+              ><span class="badge"
+                ><svg class="icon" aria-hidden="true"><use href="#i-refresh-cw"></use></svg> به‌روزرسانی مهر ۱۴۰۵</span
+              >
+            </div>
+            <h1>جاوااسکریپت از صفر تا حرفه‌ای</h1>
+            <p class="lead">
+              جامع‌ترین دوره فارسی جاوااسکریپت؛ از مفاهیم پایه تا برنامه‌نویسی ناهمگام، همراه با ۸ پروژه واقعی که مستقیم به رزومه‌تان اضافه
+              می‌شوند.
+            </p>
+            <div class="course-hero__meta">
+              <span class="rating"
+                ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg> ۴٫۹ <small>(۸۱۲ نظر)</small></span
+              >
+              <span
+                ><svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg> ۶٬۲۴۰ دانشجو</span
+              >
+              <span
+                ><svg class="icon" aria-hidden="true"><use href="#i-play-circle"></use></svg> ۱۴۲ جلسه</span
+              >
+              <span
+                ><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> ۳۸ ساعت</span
+              >
+              <span
+                ><svg class="icon" aria-hidden="true"><use href="#i-signal"></use></svg> مقدماتی</span
+              >
+            </div>
+            <a class="person" href="instructor.html"
+              ><span class="avatar avatar--lg tone-lime" aria-hidden="true">آ</span
+              ><span><b>مدرس: آرش کاظمی</b><span>توسعه‌دهنده ارشد فرانت‌اند</span></span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container course-layout">
+          <div class="course-main">
+            <div class="card learn">
+              <h2>در این دوره یاد می‌گیرید</h2>
+              <ul class="list-plain learn__list">
+                <li>
+                  <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> مبانی و سینتکس مدرن ES2024
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> کار با DOM و رویدادها
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Promise، async/await و Fetch
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> ماژول‌ها و ساختاردهی کد
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> دیباگ حرفه‌ای در مرورگر
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> ساخت ۸ پروژه واقعی برای رزومه
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> الگوهای رایج مصاحبه‌های فنی
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> آمادگی برای یادگیری ری‌اکت
+                </li>
+              </ul>
+            </div>
+
+            <div data-tabs class="mt-4">
+              <div class="tabs tabs--line" role="tablist" aria-label="اطلاعات دوره">
+                <button role="tab" id="ct-1" aria-controls="cp-1" aria-selected="true" type="button">سرفصل‌ها</button>
+                <button role="tab" id="ct-2" aria-controls="cp-2" aria-selected="false" type="button">توضیحات</button>
+                <button role="tab" id="ct-3" aria-controls="cp-3" aria-selected="false" type="button">مدرس</button>
+                <button role="tab" id="ct-4" aria-controls="cp-4" aria-selected="false" type="button">نظرات (۸۱۲)</button>
+              </div>
+
+              <div role="tabpanel" id="cp-1" aria-labelledby="ct-1" class="tab-body">
+                <div class="row-between small mb-2"><span>۶ فصل · ۲۰ درس نمونه · ۳۸ ساعت</span></div>
+                <div class="accordion syllabus">
+                  <details open>
+                    <summary>
+                      <span class="syllabus__num">۱</span
+                      ><span
+                        >شروع کار و آشنایی با ابزارها<small class="xs muted" style="display: block; font-weight: 500">۴ درس</small></span
+                      ><span class="plus"
+                        ><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg
+                      ></span>
+                    </summary>
+                    <ul class="list-plain syllabus__lessons">
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-circle-play"></use></svg
+                        ><a href="lesson.html">خوش آمدید! نقشه راه دوره</a><span class="badge tone-lime">پیش‌نمایش</span
+                        ><span class="xs muted">۰۴:۱۲</span>
+                      </li>
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-circle-play"></use></svg
+                        ><a href="lesson.html">نصب VS Code و افزونه‌ها</a><span class="badge tone-lime">پیش‌نمایش</span
+                        ><span class="xs muted">۰۹:۳۵</span>
+                      </li>
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg
+                        ><a href="lesson.html">اولین برنامه: سلام دنیا</a><span class="xs muted">۱۲:۰۸</span>
+                      </li>
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg><a href="lesson.html">کنسول مرورگر و دیباگ</a
+                        ><span class="xs muted">۱۴:۲۰</span>
+                      </li>
+                    </ul>
+                  </details>
+                  <details>
+                    <summary>
+                      <span class="syllabus__num">۲</span
+                      ><span>مبانی زبان<small class="xs muted" style="display: block; font-weight: 500">۴ درس</small></span
+                      ><span class="plus"
+                        ><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg
+                      ></span>
+                    </summary>
+                    <ul class="list-plain syllabus__lessons">
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg><a href="lesson.html">متغیرها و انواع داده</a
+                        ><span class="xs muted">۱۸:۴۴</span>
+                      </li>
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg><a href="lesson.html">عملگرها و عبارات</a
+                        ><span class="xs muted">۱۵:۱۰</span>
+                      </li>
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg><a href="lesson.html">شرط‌ها و حلقه‌ها</a
+                        ><span class="xs muted">۲۲:۳۰</span>
+                      </li>
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg><a href="lesson.html">تمرین: ماشین‌حساب ساده</a
+                        ><span class="xs muted">۲۵:۰۰</span>
+                      </li>
+                    </ul>
+                  </details>
+                  <details>
+                    <summary>
+                      <span class="syllabus__num">۳</span
+                      ><span>توابع و محدوده<small class="xs muted" style="display: block; font-weight: 500">۳ درس</small></span
+                      ><span class="plus"
+                        ><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg
+                      ></span>
+                    </summary>
+                    <ul class="list-plain syllabus__lessons">
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg><a href="lesson.html">تعریف تابع و پارامترها</a
+                        ><span class="xs muted">۱۹:۵۵</span>
+                      </li>
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg><a href="lesson.html">Arrow Function و this</a
+                        ><span class="xs muted">۲۱:۱۲</span>
+                      </li>
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg><a href="lesson.html">Closure به زبان ساده</a
+                        ><span class="xs muted">۱۷:۴۰</span>
+                      </li>
+                    </ul>
+                  </details>
+                  <details>
+                    <summary>
+                      <span class="syllabus__num">۴</span
+                      ><span>آرایه‌ها و آبجکت‌ها<small class="xs muted" style="display: block; font-weight: 500">۳ درس</small></span
+                      ><span class="plus"
+                        ><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg
+                      ></span>
+                    </summary>
+                    <ul class="list-plain syllabus__lessons">
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg><a href="lesson.html">متدهای کاربردی آرایه</a
+                        ><span class="xs muted">۲۴:۱۸</span>
+                      </li>
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg><a href="lesson.html">Destructuring و Spread</a
+                        ><span class="xs muted">۱۶:۲۲</span>
+                      </li>
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg><a href="lesson.html">پروژه: لیست کارها</a
+                        ><span class="xs muted">۳۸:۰۵</span>
+                      </li>
+                    </ul>
+                  </details>
+                  <details>
+                    <summary>
+                      <span class="syllabus__num">۵</span
+                      ><span>DOM و رویدادها<small class="xs muted" style="display: block; font-weight: 500">۳ درس</small></span
+                      ><span class="plus"
+                        ><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg
+                      ></span>
+                    </summary>
+                    <ul class="list-plain syllabus__lessons">
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg><a href="lesson.html">انتخاب و تغییر عناصر</a
+                        ><span class="xs muted">۲۰:۳۰</span>
+                      </li>
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg><a href="lesson.html">مدیریت رویدادها</a
+                        ><span class="xs muted">۱۸:۴۰</span>
+                      </li>
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg><a href="lesson.html">پروژه: گالری تصاویر</a
+                        ><span class="xs muted">۴۲:۱۵</span>
+                      </li>
+                    </ul>
+                  </details>
+                  <details>
+                    <summary>
+                      <span class="syllabus__num">۶</span
+                      ><span>برنامه‌نویسی ناهمگام<small class="xs muted" style="display: block; font-weight: 500">۳ درس</small></span
+                      ><span class="plus"
+                        ><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg
+                      ></span>
+                    </summary>
+                    <ul class="list-plain syllabus__lessons">
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg><a href="lesson.html">Promise و async/await</a
+                        ><span class="xs muted">۲۶:۱۰</span>
+                      </li>
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg><a href="lesson.html">کار با Fetch API</a
+                        ><span class="xs muted">۲۲:۴۵</span>
+                      </li>
+                      <li>
+                        <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg
+                        ><a href="lesson.html">پروژه پایانی: اپ آب‌وهوا</a><span class="xs muted">۵۵:۳۰</span>
+                      </li>
+                    </ul>
+                  </details>
+                </div>
+              </div>
+
+              <div role="tabpanel" id="cp-2" aria-labelledby="ct-2" class="tab-body prose" hidden>
+                <p>
+                  جاوااسکریپت زبان وب است؛ تقریباً هر سایت و اپلیکیشن مدرنی که می‌بینید با آن ساخته شده. در این دوره، به‌جای حفظ کردن
+                  سینتکس، یاد می‌گیرید مثل یک برنامه‌نویس فکر کنید.
+                </p>
+                <h3>این دوره برای چه کسانی است؟</h3>
+                <ul>
+                  <li>کسانی که می‌خواهند برنامه‌نویسی را از صفر شروع کنند</li>
+                  <li>طراحانی که می‌خواهند ایده‌هایشان را خودشان پیاده کنند</li>
+                  <li>برنامه‌نویسان زبان‌های دیگر که می‌خواهند وارد وب شوند</li>
+                </ul>
+                <h3>پیش‌نیازها</h3>
+                <p>فقط یک کامپیوتر و علاقه به یادگیری! آشنایی اولیه با HTML و CSS مفید است؛ دوره رایگان آن را هم در سایت داریم.</p>
+              </div>
+
+              <div role="tabpanel" id="cp-3" aria-labelledby="ct-3" class="tab-body" hidden>
+                <div class="card row wrap" style="align-items: flex-start; gap: 1.5rem">
+                  <span class="avatar avatar--xl tone-lime" aria-hidden="true">آ</span>
+                  <div class="stack" style="flex: 1; min-inline-size: 14rem">
+                    <h3 style="font-size: var(--text-xl)">آرش کاظمی</h3>
+                    <p class="muted small">توسعه‌دهنده ارشد فرانت‌اند · ۱۲ سال تجربه در شرکت‌های بزرگ فناوری ایران و اروپا</p>
+                    <div class="row wrap small">
+                      <span class="rating"
+                        ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg> ۴٫۹</span
+                      ><span>۱۸٬۴۰۰ دانشجو</span><span>۹ دوره</span>
+                    </div>
+                    <p class="small">
+                      آرش عاشق ساده کردن مفاهیم پیچیده است. قبل از تدریس، تیم فرانت‌اند چند استارتاپ موفق را رهبری کرده و هنوز هم هر روز کد
+                      می‌نویسد.
+                    </p>
+                    <a class="link-arrow" href="instructor.html"
+                      >مشاهده پروفایل <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div role="tabpanel" id="cp-4" aria-labelledby="ct-4" class="tab-body" hidden>
+                <div class="reviews-summary card">
+                  <div class="center">
+                    <b class="tile__big">۴٫۹</b
+                    ><span class="stars" role="img" aria-label="۵ از ۵ ستاره"
+                      ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg
+                      ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg
+                      ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg
+                      ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg
+                      ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg
+                    ></span>
+                    <p class="xs muted">۸۱۲ نظر</p>
+                  </div>
+                  <div class="stack" style="--gap: 0.4rem; flex: 1">
+                    <div class="row xs">
+                      <span style="inline-size: 3rem">۵ ستاره</span>
+                      <div class="progress" style="flex: 1"><span style="--value: 86%"></span></div>
+                      <span style="inline-size: 2.5rem">۸۶٪</span>
+                    </div>
+                    <div class="row xs">
+                      <span style="inline-size: 3rem">۴ ستاره</span>
+                      <div class="progress" style="flex: 1"><span style="--value: 10%"></span></div>
+                      <span style="inline-size: 2.5rem">۱۰٪</span>
+                    </div>
+                    <div class="row xs">
+                      <span style="inline-size: 3rem">۳ ستاره</span>
+                      <div class="progress" style="flex: 1"><span style="--value: 3%"></span></div>
+                      <span style="inline-size: 2.5rem">۳٪</span>
+                    </div>
+                    <div class="row xs">
+                      <span style="inline-size: 3rem">۲ ستاره</span>
+                      <div class="progress" style="flex: 1"><span style="--value: 1%"></span></div>
+                      <span style="inline-size: 2.5rem">۱٪</span>
+                    </div>
+                    <div class="row xs">
+                      <span style="inline-size: 3rem">۱ ستاره</span>
+                      <div class="progress" style="flex: 1"><span style="--value: 0%"></span></div>
+                      <span style="inline-size: 2.5rem">۰٪</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="stack mt-3">
+                  <article class="review">
+                    <div class="row-between">
+                      <div class="person">
+                        <span class="avatar tone-coral" aria-hidden="true">پ</span><span><b>پریسا نادری</b><span>۳ هفته پیش</span></span>
+                      </div>
+                      <span class="stars" role="img" aria-label="۵ از ۵ ستاره"
+                        ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg
+                        ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg
+                        ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg
+                        ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg
+                        ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg
+                      ></span>
+                    </div>
+                    <p>بهترین دوره فارسی جاوااسکریپت که دیده‌ام. پروژه‌ها عالی و کاربردی هستند.</p>
+                  </article>
+                  <article class="review">
+                    <div class="row-between">
+                      <div class="person">
+                        <span class="avatar tone-sky" aria-hidden="true">م</span><span><b>محمد رضوانی</b><span>۱ ماه پیش</span></span>
+                      </div>
+                      <span class="stars" role="img" aria-label="۵ از ۵ ستاره"
+                        ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg
+                        ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg
+                        ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg
+                        ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg
+                        ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg
+                      ></span>
+                    </div>
+                    <p>توضیح Closure و async بی‌نظیر بود. پشتیبانی هم خیلی سریع جواب می‌داد.</p>
+                  </article>
+                  <article class="review">
+                    <div class="row-between">
+                      <div class="person">
+                        <span class="avatar tone-mint" aria-hidden="true">ا</span><span><b>الهام شاکری</b><span>۲ ماه پیش</span></span>
+                      </div>
+                      <span class="stars" role="img" aria-label="۴ از ۵ ستاره"
+                        ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg
+                        ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg
+                        ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg
+                        ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg
+                        ><svg class="icon off" aria-hidden="true"><use href="#i-star"></use></svg
+                      ></span>
+                    </div>
+                    <p>محتوا خیلی خوب است؛ فقط کاش تمرین‌های بیشتری برای بخش DOM داشت.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="buy">
+            <div class="buy__card">
+              <a class="buy__preview" href="lesson.html" aria-label="پخش ویدیوی معرفی"
+                ><div class="cover c-lime">
+                  <span class="badge tone-ink cover__tag">پرفروش</span>
+                  <span class="cover__icon"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-braces"></use></svg
+                  ></span>
+                  <span class="cover__code">JS-101</span>
+                </div>
+                <span class="buy__play"
+                  ><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg></span
+              ></a>
+              <div class="buy__price">
+                <b>۱٬۸۹۰٬۰۰۰ <small>تومان</small></b>
+                <del>۲٬۹۰۰٬۰۰۰</del>
+                <span class="badge tone-coral">۳۵٪ تخفیف</span>
+              </div>
+              <p class="xs bold buy__timer" data-countdown data-hours="46">
+                <svg class="icon" aria-hidden="true"><use href="#i-alarm-clock"></use></svg> فقط <span data-unit="h">۴۶</span>:<span
+                  data-unit="m"
+                  >۰۰</span
+                >:<span data-unit="s">۰۰</span> تا پایان تخفیف
+              </p>
+              <button class="btn btn--primary btn--lg btn--block" type="button" data-add-to-cart="دوره به سبد خرید اضافه شد">
+                <svg class="icon" aria-hidden="true"><use href="#i-shopping-bag"></use></svg> افزودن به سبد خرید
+              </button>
+              <a class="btn btn--block" href="checkout.html">خرید سریع</a>
+              <p class="xs muted center">
+                <svg class="icon" aria-hidden="true"><use href="#i-shield-check"></use></svg> ۷ روز ضمانت بازگشت وجه
+              </p>
+              <ul class="list-plain buy__includes">
+                <li>
+                  <svg class="icon" aria-hidden="true"><use href="#i-monitor-play"></use></svg> ۳۸ ساعت ویدیو با کیفیت ۱۰۸۰
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true"><use href="#i-file-code"></use></svg> سورس کامل پروژه‌ها
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true"><use href="#i-infinity"></use></svg> دسترسی مادام‌العمر
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true"><use href="#i-smartphone"></use></svg> مشاهده آفلاین در اپلیکیشن
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true"><use href="#i-award"></use></svg> گواهی پایان دوره
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true"><use href="#i-messages-square"></use></svg> پشتیبانی منتور
+                </li>
+              </ul>
+              <div class="row" style="justify-content: center; gap: 0.25rem">
+                <button class="btn btn--ghost btn--sm" type="button" data-wishlist aria-pressed="false">
+                  <svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg> علاقه‌مندی
+                </button>
+                <button class="btn btn--ghost btn--sm" type="button" data-copy="https://danesh.academy/course/js-101">
+                  <svg class="icon" aria-hidden="true"><use href="#i-share-2"></use></svg> اشتراک
+                </button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section--cream">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow"
+                ><i
+                  ><svg class="icon" aria-hidden="true"><use href="#i-layers"></use></svg
+                ></i>
+                ادامه مسیر</span
+              >
+              <h2>دانشجوهای این دوره این‌ها را هم خریدند</h2>
+            </div>
+          </div>
+          <div class="course-grid">
+            <article class="course-card" data-filter-item data-tags="web paid">
+              <div class="cover-wrap" style="position: relative">
+                <div class="cover c-mint">
+                  <span class="cover__icon"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-atom"></use></svg
+                  ></span>
+                  <span class="cover__code">RE-401</span>
+                </div>
+                <button
+                  class="course-card__wish"
+                  type="button"
+                  data-wishlist
+                  aria-pressed="false"
+                  aria-label="افزودن ری‌اکت و نکست‌جی‌اس پیشرفته به علاقه‌مندی‌ها"
+                >
+                  <svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg>
+                </button>
+              </div>
+              <div class="course-card__body">
+                <div class="row-between">
+                  <span class="badge tone-lime">برنامه‌نویسی وب</span
+                  ><span class="rating"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg> ۴٫۸ <small>(۴۰۲)</small></span
+                  >
+                </div>
+                <h3><a href="course.html">ری‌اکت و نکست‌جی‌اس پیشرفته</a></h3>
+                <div class="course-card__meta">
+                  <span
+                    ><svg class="icon" aria-hidden="true"><use href="#i-play-circle"></use></svg> ۱۰۴ جلسه</span
+                  ><span
+                    ><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> ۲۹ ساعت</span
+                  ><span
+                    ><svg class="icon" aria-hidden="true"><use href="#i-signal"></use></svg> پیشرفته</span
+                  >
+                </div>
+                <div class="course-card__foot">
+                  <div class="person"><span class="avatar avatar--sm tone-lime" aria-hidden="true">آ</span><span>آرش کاظمی</span></div>
+                  <div class="price">
+                    <b>۲٬۱۹۰٬۰۰۰ <small>تومان</small></b>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="course-card" data-filter-item data-tags="web free">
+              <div class="cover-wrap" style="position: relative">
+                <div class="cover c-ink">
+                  <span class="badge tone-ink cover__tag">رایگان</span>
+                  <span class="cover__icon"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-code-xml"></use></svg
+                  ></span>
+                  <span class="cover__code">WEB-000</span>
+                </div>
+                <button
+                  class="course-card__wish"
+                  type="button"
+                  data-wishlist
+                  aria-pressed="false"
+                  aria-label="افزودن آموزش رایگان HTML و CSS به علاقه‌مندی‌ها"
+                >
+                  <svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg>
+                </button>
+              </div>
+              <div class="course-card__body">
+                <div class="row-between">
+                  <span class="badge tone-lime">برنامه‌نویسی وب</span
+                  ><span class="rating"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg> ۴٫۸ <small>(۱٬۸۹۰)</small></span
+                  >
+                </div>
+                <h3><a href="course.html">آموزش رایگان HTML و CSS</a></h3>
+                <div class="course-card__meta">
+                  <span
+                    ><svg class="icon" aria-hidden="true"><use href="#i-play-circle"></use></svg> ۴۰ جلسه</span
+                  ><span
+                    ><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> ۹ ساعت</span
+                  ><span
+                    ><svg class="icon" aria-hidden="true"><use href="#i-signal"></use></svg> مقدماتی</span
+                  >
+                </div>
+                <div class="course-card__foot">
+                  <div class="person"><span class="avatar avatar--sm tone-lime" aria-hidden="true">آ</span><span>آرش کاظمی</span></div>
+                  <div class="price price--free"><b>رایگان</b></div>
+                </div>
+              </div>
+            </article>
+            <article class="course-card" data-filter-item data-tags="ai paid">
+              <div class="cover-wrap" style="position: relative">
+                <div class="cover c-lime">
+                  <span class="badge tone-ink cover__tag">داغ</span>
+                  <span class="cover__icon"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-sparkles"></use></svg
+                  ></span>
+                  <span class="cover__code">AI-GEN</span>
+                </div>
+                <button
+                  class="course-card__wish"
+                  type="button"
+                  data-wishlist
+                  aria-pressed="false"
+                  aria-label="افزودن هوش مصنوعی مولد برای همه به علاقه‌مندی‌ها"
+                >
+                  <svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg>
+                </button>
+              </div>
+              <div class="course-card__body">
+                <div class="row-between">
+                  <span class="badge tone-violet">هوش مصنوعی و داده</span
+                  ><span class="rating"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg> ۴٫۹ <small>(۱٬۰۲۲)</small></span
+                  >
+                </div>
+                <h3><a href="course.html">هوش مصنوعی مولد برای همه</a></h3>
+                <div class="course-card__meta">
+                  <span
+                    ><svg class="icon" aria-hidden="true"><use href="#i-play-circle"></use></svg> ۳۶ جلسه</span
+                  ><span
+                    ><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> ۸ ساعت</span
+                  ><span
+                    ><svg class="icon" aria-hidden="true"><use href="#i-signal"></use></svg> مقدماتی</span
+                  >
+                </div>
+                <div class="course-card__foot">
+                  <div class="person"><span class="avatar avatar--sm tone-violet" aria-hidden="true">ک</span><span>کاوه صدری</span></div>
+                  <div class="price">
+                    <del>۹۹۰٬۰۰۰</del><b>۶۹۰٬۰۰۰ <small>تومان</small></b>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="course-card" data-filter-item data-tags="design paid">
+              <div class="cover-wrap" style="position: relative">
+                <div class="cover c-pink">
+                  <span class="cover__icon"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-layout-template"></use></svg
+                  ></span>
+                  <span class="cover__code">UI-201</span>
+                </div>
+                <button
+                  class="course-card__wish"
+                  type="button"
+                  data-wishlist
+                  aria-pressed="false"
+                  aria-label="افزودن طراحی رابط کاربری با فیگما به علاقه‌مندی‌ها"
+                >
+                  <svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg>
+                </button>
+              </div>
+              <div class="course-card__body">
+                <div class="row-between">
+                  <span class="badge tone-pink">طراحی UI/UX</span
+                  ><span class="rating"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg> ۴٫۸ <small>(۵۳۰)</small></span
+                  >
+                </div>
+                <h3><a href="course.html">طراحی رابط کاربری با فیگما</a></h3>
+                <div class="course-card__meta">
+                  <span
+                    ><svg class="icon" aria-hidden="true"><use href="#i-play-circle"></use></svg> ۷۶ جلسه</span
+                  ><span
+                    ><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg> ۲۱ ساعت</span
+                  ><span
+                    ><svg class="icon" aria-hidden="true"><use href="#i-signal"></use></svg> مقدماتی</span
+                  >
+                </div>
+                <div class="course-card__foot">
+                  <div class="person"><span class="avatar avatar--sm tone-pink" aria-hidden="true">ن</span><span>نیلوفر رحمانی</span></div>
+                  <div class="price">
+                    <b>۱٬۲۹۰٬۰۰۰ <small>تومان</small></b>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <a class="logo" href="index.html" aria-label="آکادمی دانش، صفحه اصلی"
+              ><span class="logo__mark" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 4 2 9l10 5 10-5-10-5Z" />
+                  <path d="M6 11.5V16c3 2.5 9 2.5 12 0v-4.5" />
+                  <path d="M22 9v6" /></svg></span
+              ><span>دانش<small>آکادمی آنلاین</small></span></a
+            >
+            <p class="footer__about">
+              دانش، آکادمی آنلاین مهارت‌های آینده است. با دوره‌های پروژه‌محور، مدرسان باتجربه و پشتیبانی واقعی، مسیر یادگیری تا استخدام را
+              کوتاه‌تر می‌کنیم.
+            </p>
+            <div class="footer__social">
+              <a href="#" aria-label="اینستاگرام"
+                ><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg
+              ></a>
+              <a href="#" aria-label="تلگرام"
+                ><svg class="icon" aria-hidden="true"><use href="#i-send"></use></svg
+              ></a>
+              <a href="#" aria-label="یوتیوب"
+                ><svg class="icon" aria-hidden="true"><use href="#i-tv-minimal-play"></use></svg
+              ></a>
+              <a href="#" aria-label="لینکدین"
+                ><svg class="icon" aria-hidden="true"><use href="#i-briefcase-business"></use></svg
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h3>دوره‌ها</h3>
+            <ul class="list-plain">
+              <li><a href="courses.html">برنامه‌نویسی وب</a></li>
+              <li><a href="courses.html">طراحی UI/UX</a></li>
+              <li><a href="courses.html">هوش مصنوعی و داده</a></li>
+              <li><a href="courses.html">بازاریابی دیجیتال</a></li>
+              <li><a href="courses.html">زبان انگلیسی</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>دانش</h3>
+            <ul class="list-plain">
+              <li><a href="instructor.html">مدرسان</a></li>
+              <li><a href="pricing.html">اشتراک ویژه</a></li>
+              <li><a href="blog.html">مجله دانش</a></li>
+              <li><a href="certificate.html">استعلام گواهی</a></li>
+              <li><a href="contact.html">همکاری با ما</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>پشتیبانی</h3>
+            <ul class="list-plain">
+              <li><a href="contact.html">تماس با ما</a></li>
+              <li><a href="pricing.html#faq">پرسش‌های متداول</a></li>
+              <li><a href="documentation/index.html">قوانین و مقررات</a></li>
+              <li>۰۲۱-۹۱۰۰۲۰۳۰</li>
+            </ul>
+          </div>
+          <div class="footer__news">
+            <h3>خبرنامه</h3>
+            <p class="small">هر هفته یک نکته یادگیری و تخفیف‌های اختصاصی.</p>
+            <form class="newsletter" data-validate data-success="عضویت شما در خبرنامه ثبت شد">
+              <label class="sr-only" for="nl">ایمیل</label
+              ><input class="input ltr" id="nl" type="email" required placeholder="email@example.com" /><button
+                class="btn btn--primary btn--icon"
+                type="submit"
+                aria-label="عضویت"
+              >
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg>
+              </button>
+            </form>
+            <div class="trust mt-2">
+              <div class="trust__badge">
+                <svg class="icon" aria-hidden="true"><use href="#i-badge-check"></use></svg>جای نماد اعتماد الکترونیکی
+              </div>
+              <div class="trust__badge">
+                <svg class="icon" aria-hidden="true"><use href="#i-shield-check"></use></svg>جای نشان ساماندهی
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>© ۱۴۰۵ آکادمی دانش. تمامی حقوق محفوظ است.</p>
+          <p>ساخته‌شده با ☕ و ❤️ در تهران</p>
+        </div>
+      </div>
+    </footer>
+    <button class="btn btn--icon scroll-top" type="button" data-scroll-top aria-label="بازگشت به بالا">
+      <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+    </button>
+  </body>
+</html>

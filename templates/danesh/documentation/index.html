@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>مستندات | آکادمی دانش</title>
+    <meta name="description" content="راهنمای فارسی نصب و شخصی‌سازی قالب" />
+    <meta name="theme-color" content="#c8f53c" />
+    <meta property="og:title" content="مستندات | آکادمی دانش" />
+    <meta property="og:description" content="راهنمای فارسی نصب و شخصی‌سازی قالب" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function (d) {
+        d.classList.add("js");
+        try {
+          var t = JSON.parse(localStorage.getItem("theme"));
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          d.setAttribute("data-theme", t);
+        } catch (e) {}
+      })(document.documentElement);
+    </script>
+    <link rel="preload" href="../assets/fonts/vazirmatn/Vazirmatn-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/tokens.css" />
+    <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/pages.css" />
+    <script src="../assets/js/core.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
+  </head>
+  <body class="">
+    <script src="../assets/js/icons.js"></script>
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+
+    <link rel="stylesheet" href="../assets/css/docs.css" />
+    <div class="docs">
+      <nav class="docs__nav" aria-label="فهرست مستندات">
+        <a href="../index.html"><b>← مشاهده قالب</b></a>
+        <a href="#intro">معرفی</a><a href="#start">شروع سریع</a><a href="#structure">ساختار فایل‌ها</a><a href="#pages">فهرست صفحات</a
+        ><a href="#colors">رنگ‌ها و ظاهر</a><a href="#fonts">فونت‌ها</a><a href="#js">کامپوننت‌های جاوااسکریپت</a
+        ><a href="#icons">آیکن‌ها و تصاویر</a><a href="#source">توسعه با سورس</a><a href="#browsers">سازگاری</a
+        ><a href="#credits">منابع و لایسنس</a><a href="#changelog">تغییرات نسخه‌ها</a><a href="#support">پشتیبانی</a>
+      </nav>
+      <main id="main" class="docs__body">
+        <section id="intro">
+          <p class="docs__kicker">راهنمای استفاده · نسخه ۱.۰.۰</p>
+          <h1>مستندات قالب آکادمی دانش</h1>
+          <p>
+            دانش یک قالب HTML سایت آموزش آنلاین و فروش دوره است با طراحی بنتو و سبک نئوبروتالیسم نرم: رنگ‌های جسور، سایه‌های تیز و
+            تایپوگرافی درشت فارسی. همه صفحاتِ یک آکادمی آنلاین را دارد، از فهرست دوره و پلیر درس تا داشبورد دانشجو، سبد خرید و استعلام
+            گواهی.
+          </p>
+          <ul>
+            <li>
+              ۱۷ صفحه آماده: خانه، دوره‌ها، جزئیات دوره، پلیر درس، مدرس، سبد خرید، پرداخت، داشبورد دانشجو، مجله، مقاله، اشتراک، تماس، ورود،
+              ثبت‌نام، استعلام گواهی و ۴۰۴
+            </li>
+            <li>کاورهای رنگی ساخته‌شده با CSS برای دوره‌ها (بدون نیاز به عکس)</li>
+            <li>فیلتر زنده دوره‌ها بر اساس دسته، جستجو و رایگان/پولی</li>
+            <li>پلیر درس با فهرست جلسات، پیشرفت، یادداشت و پرسش و پاسخ</li>
+            <li>سبد خرید با حذف آیتم و کد تخفیف (کد نمونه: MEHR40)</li>
+            <li>شمارش معکوس تخفیف، اسلایدر نظرات، منوی مگا، جستجوی سریع</li>
+            <li>حالت تاریک کامل و ذخیره انتخاب کاربر</li>
+          </ul>
+        </section>
+
+        <section id="start">
+          <h2>شروع سریع</h2>
+          <ol>
+            <li>فایل فشرده را از حالت فشرده خارج کنید.</li>
+            <li>
+              پوشه <code>html</code> شامل همه صفحات است. فایل <code>html/index.html</code> را در مرورگر باز کنید؛ قالب بدون نیاز به سرور و
+              حتی آفلاین کار می‌کند.
+            </li>
+            <li>برای انتشار، محتوای پوشه <code>html</code> را در هاست خود (پوشه <code>public_html</code>) بارگذاری کنید.</li>
+            <li>متن‌ها، تصاویر و رنگ‌ها را مطابق بخش‌های زیر شخصی‌سازی کنید.</li>
+          </ol>
+          <p>قالب هیچ درخواستی به سرورهای خارجی (CDN، گوگل فونت و…) ارسال نمی‌کند؛ بنابراین در ایران سریع و بدون مشکل بارگذاری می‌شود.</p>
+        </section>
+
+        <section id="structure">
+          <h2>ساختار فایل‌ها</h2>
+          <pre>
+html/
+├── *.html                 صفحات قالب
+├── assets/
+│   ├── css/
+│   │   ├── fonts.css      تعریف فونت‌ها (@font-face)
+│   │   ├── base.css       ریست و ابزارهای دسترس‌پذیری
+│   │   ├── tokens.css     ← رنگ‌ها، فونت، فاصله‌ها (اینجا را ویرایش کنید)
+│   │   ├── components.css دکمه، کارت، فرم، جدول و…
+│   │   └── pages.css      استایل‌های اختصاصی صفحات
+│   ├── js/
+│   │   ├── icons.js       اسپرایت آیکن‌ها
+│   │   ├── core.js        کامپوننت‌های مشترک (بدون وابستگی)
+│   │   └── main.js        رفتارهای اختصاصی قالب
+│   ├── fonts/             فونت‌های woff2
+│   └── img/               تصاویر و طرح‌های SVG
+└── licenses/              مجوز فونت‌ها و آیکن‌ها
+documentation/             همین راهنما
+source/                    سورس صفحات و ابزار ساخت (برای توسعه‌دهندگان)</pre
+          >
+        </section>
+
+        <section id="pages">
+          <h2>فهرست صفحات (۱۶ صفحه)</h2>
+          <div class="table-wrap" data-overflow-ok>
+            <table class="table docs__table">
+              <thead>
+                <tr>
+                  <th scope="col">صفحه</th>
+                  <th scope="col">فایل</th>
+                  <th scope="col">توضیح</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="../404.html">صفحه پیدا نشد</a></td>
+                  <td><code>404.html</code></td>
+                  <td>خطای ۴۰۴</td>
+                </tr>
+                <tr>
+                  <td><a href="../blog.html">مجله دانش</a></td>
+                  <td><code>blog.html</code></td>
+                  <td>مقاله‌های آموزشی، نقشه راه و نکات بازار کار</td>
+                </tr>
+                <tr>
+                  <td><a href="../cart.html">سبد خرید</a></td>
+                  <td><code>cart.html</code></td>
+                  <td>سبد خرید دوره‌ها با کد تخفیف</td>
+                </tr>
+                <tr>
+                  <td><a href="../certificate.html">استعلام گواهی</a></td>
+                  <td><code>certificate.html</code></td>
+                  <td>بررسی اعتبار گواهی پایان دوره با کد رهگیری</td>
+                </tr>
+                <tr>
+                  <td><a href="../checkout.html">تکمیل خرید</a></td>
+                  <td><code>checkout.html</code></td>
+                  <td>فرم پرداخت و انتخاب درگاه</td>
+                </tr>
+                <tr>
+                  <td><a href="../contact.html">تماس با ما</a></td>
+                  <td><code>contact.html</code></td>
+                  <td>راه‌های ارتباط با پشتیبانی آکادمی دانش</td>
+                </tr>
+                <tr>
+                  <td><a href="../course.html">جاوااسکریپت از صفر تا حرفه‌ای</a></td>
+                  <td><code>course.html</code></td>
+                  <td>صفحه جزئیات دوره با سرفصل‌ها، مدرس و نظرات</td>
+                </tr>
+                <tr>
+                  <td><a href="../courses.html">همه دوره‌ها</a></td>
+                  <td><code>courses.html</code></td>
+                  <td>فهرست دوره‌های آنلاین با فیلتر دسته، سطح و قیمت</td>
+                </tr>
+                <tr>
+                  <td><a href="../dashboard.html">داشبورد من</a></td>
+                  <td><code>dashboard.html</code></td>
+                  <td>داشبورد دانشجو: پیشرفت، دوره‌های فعال، گواهی‌ها و کلاس‌های زنده</td>
+                </tr>
+                <tr>
+                  <td><a href="../index.html">آموزش آنلاین مهارت‌های آینده</a></td>
+                  <td><code>index.html</code></td>
+                  <td>آکادمی آنلاین دانش؛ دوره‌های پروژه‌محور برنامه‌نویسی، طراحی، هوش مصنوعی، زبان و کسب‌وکار</td>
+                </tr>
+                <tr>
+                  <td><a href="../instructor.html">آرش کاظمی، مدرس</a></td>
+                  <td><code>instructor.html</code></td>
+                  <td>پروفایل مدرس با دوره‌ها، آمار و بیوگرافی</td>
+                </tr>
+                <tr>
+                  <td><a href="../lesson.html">پخش درس: Closure به زبان ساده</a></td>
+                  <td><code>lesson.html</code></td>
+                  <td>پلیر درس با فهرست جلسات، یادداشت و پرسش و پاسخ</td>
+                </tr>
+                <tr>
+                  <td><a href="../login.html">ورود</a></td>
+                  <td><code>login.html</code></td>
+                  <td>ورود به حساب کاربری آکادمی دانش</td>
+                </tr>
+                <tr>
+                  <td><a href="../post.html">نقشه راه فرانت‌اند در ۱۴۰۵</a></td>
+                  <td><code>post.html</code></td>
+                  <td>مقاله: از کجا فرانت‌اند را شروع کنیم؟</td>
+                </tr>
+                <tr>
+                  <td><a href="../pricing.html">اشتراک دانش پلاس</a></td>
+                  <td><code>pricing.html</code></td>
+                  <td>طرح‌های اشتراک برای دسترسی نامحدود به دوره‌ها</td>
+                </tr>
+                <tr>
+                  <td><a href="../register.html">ثبت‌نام</a></td>
+                  <td><code>register.html</code></td>
+                  <td>ساخت حساب رایگان در آکادمی دانش</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="colors">
+          <h2>رنگ‌ها و ظاهر</h2>
+          <p>
+            همه تصمیم‌های طراحی به‌صورت متغیرهای CSS در فایل <code>assets/css/tokens.css</code> تعریف شده‌اند. کافی است مقدار متغیر را عوض
+            کنید تا همه صفحات به‌روز شوند. مقادیر حالت تاریک زیر انتخابگر <code>[data-theme='dark']</code> قرار دارند.
+          </p>
+          <div class="docs__swatches">
+            <div class="docs__swatch">
+              <i style="background: #c8f53c"></i><span><b>لیمویی (اصلی)</b><code>--lime</code><code>#c8f53c</code></span>
+            </div>
+            <div class="docs__swatch">
+              <i style="background: #10143a"></i><span><b>جوهری</b><code>--ink</code><code>#10143a</code></span>
+            </div>
+            <div class="docs__swatch">
+              <i style="background: #7b61ff"></i><span><b>بنفش</b><code>--violet</code><code>#7b61ff</code></span>
+            </div>
+            <div class="docs__swatch">
+              <i style="background: #ff7a59"></i><span><b>مرجانی</b><code>--coral</code><code>#ff7a59</code></span>
+            </div>
+            <div class="docs__swatch">
+              <i style="background: #4cc3ff"></i><span><b>آسمانی</b><code>--sky</code><code>#4cc3ff</code></span>
+            </div>
+            <div class="docs__swatch">
+              <i style="background: #ffc53d"></i><span><b>کهربایی</b><code>--amber</code><code>#ffc53d</code></span>
+            </div>
+            <div class="docs__swatch">
+              <i style="background: #faf7f0"></i><span><b>پس‌زمینه</b><code>--bg</code><code>#faf7f0</code></span>
+            </div>
+          </div>
+          <pre>
+:root {
+  --primary: #c8f53c;   /* رنگ اصلی برند */
+}</pre
+          >
+          <p>
+            حالت پیش‌فرض (روشن یا تاریک) با ویژگی <code>data-theme</code> روی تگ <code>&lt;html&gt;</code> تعیین می‌شود و انتخاب کاربر در
+            مرورگر ذخیره می‌شود.
+          </p>
+        </section>
+
+        <section id="fonts">
+          <h2>فونت‌ها</h2>
+          <p>فونت‌های قالب رایگان و دارای مجوز آزاد SIL OFL هستند و استفاده تجاری از آن‌ها مجاز است:</p>
+          <ul>
+            <li><b>استعداد (Estedad)</b>: تیترها و اعداد درشت</li>
+            <li><b>وزیرمتن (Vazirmatn)</b>: متن‌ها و رابط کاربری</li>
+          </ul>
+          <p>
+            برای استفاده از فونت دیگر (مثلاً فونت تجاری که لایسنس آن را خریده‌اید)، فایل woff2 را در <code>assets/fonts</code> قرار دهید، در
+            <code>fonts.css</code> یک <code>@font-face</code> بسازید و متغیر <code>--font-body</code> را در <code>tokens.css</code> تغییر
+            دهید.
+          </p>
+        </section>
+
+        <section id="js">
+          <h2>کامپوننت‌های جاوااسکریپت</h2>
+          <p>
+            همه تعاملات با جاوااسکریپت خالص و بدون jQuery یا Bootstrap نوشته شده‌اند و از طریق ویژگی‌های <code>data-*</code> فعال می‌شوند؛
+            کافی است ساختار HTML را کپی کنید.
+          </p>
+          <div class="table-wrap" data-overflow-ok>
+            <table class="table docs__table">
+              <thead>
+                <tr>
+                  <th scope="col">کامپوننت</th>
+                  <th scope="col">نحوه استفاده</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>حالت تاریک</b></td>
+                  <td><code>[data-theme-toggle]</code> روی هر دکمه‌ای، حالت روشن/تاریک را عوض می‌کند و انتخاب کاربر ذخیره می‌شود.</td>
+                </tr>
+                <tr>
+                  <td><b>منو و کشوها</b></td>
+                  <td>
+                    کشوی موبایل: <code>data-drawer-open="id"</code> و <code>data-drawer</code>؛ منوی کشویی: <code>data-dropdown</code>؛ هدر
+                    چسبان: <code>data-sticky-header</code>.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>تب‌ها</b></td>
+                  <td>
+                    ساختار استاندارد <code>role="tablist/tab/tabpanel"</code> داخل <code>[data-tabs]</code> با پشتیبانی کامل صفحه‌کلید.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>آکاردئون</b></td>
+                  <td>بر پایه <code>&lt;details&gt;</code>؛ با <code>data-accordion="single"</code> فقط یک مورد باز می‌ماند.</td>
+                </tr>
+                <tr>
+                  <td><b>مودال</b></td>
+                  <td>
+                    عنصر <code>&lt;dialog&gt;</code> با <code>data-modal-open="id"</code> باز و با <code>data-modal-close</code> بسته
+                    می‌شود.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>اعلان</b></td>
+                  <td><code>UI.toast("پیام", "success")</code> یا ویژگی <code>data-toast="پیام"</code> روی دکمه.</td>
+                </tr>
+                <tr>
+                  <td><b>انیمیشن اسکرول</b></td>
+                  <td>
+                    <code>data-reveal</code> روی هر عنصر؛ با <code>data-reveal-stagger</code> روی والد، فرزندان پشت‌سرهم ظاهر می‌شوند.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>شمارنده</b></td>
+                  <td><code>data-count-to="1200"</code> عدد را با ارقام فارسی می‌شمارد.</td>
+                </tr>
+                <tr>
+                  <td><b>اسلایدر</b></td>
+                  <td>
+                    <code>data-carousel</code> + <code>data-carousel-track</code> و دکمه‌های <code>data-carousel-prev/next</code>؛ لمسی و
+                    راست‌چین.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>نمودار</b></td>
+                  <td>
+                    <code>data-chart='{"type":"area","labels":[...],"series":[...]}'</code>؛ انواع: area, line, bar, donut, sparkline. بدون
+                    کتابخانه خارجی.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>فیلتر شبکه</b></td>
+                  <td>
+                    <code>data-filter</code> با دکمه‌های <code>data-filter-btn</code> و آیتم‌های <code>data-filter-item data-tags</code>.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>اعتبارسنجی فرم</b></td>
+                  <td>
+                    <code>form[data-validate]</code> پیام‌های خطای فارسی نشان می‌دهد؛ <code>data-success</code> پیام موفقیت. نمایش رمز و
+                    ورودی کد یکبارمصرف هم دارد.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>فروشگاهی</b></td>
+                  <td>
+                    انتخاب تعداد (<code>data-qty</code>)، بازه قیمت (<code>data-range</code>)، شمارش معکوس (<code>data-countdown</code>)،
+                    افزودن به سبد (<code>data-add-to-cart</code>).
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            توابع کمکی سراسری: <code>UI.fa(1250000)</code> ارقام فارسی با جداکننده، <code>UI.toman(n)</code> قیمت،
+            <code>UI.jdate(date)</code> تاریخ شمسی.
+          </p>
+          <h3>سایه‌های تیز</h3>
+          <p>
+            متغیرهای <code>--hard</code> و <code>--hard-lg</code> سایه‌های نئوبروتال را کنترل می‌کنند. اگر ظاهر نرم‌تری می‌خواهید، مقدار
+            آن‌ها را به <code>var(--soft)</code> تغییر دهید.
+          </p>
+        </section>
+
+        <section id="icons">
+          <h2>آیکن‌ها و تصاویر</h2>
+          <p>
+            آیکن‌ها از مجموعه آزاد <b>Lucide</b> هستند و به شکل اسپرایت SVG در <code>assets/js/icons.js</code> قرار دارند. نمونه استفاده:
+          </p>
+          <pre>&lt;svg class="icon"&gt;&lt;use href="#i-heart"&gt;&lt;/use&gt;&lt;/svg&gt;</pre>
+          <p>برای افزودن آیکن جدید از نسخه سورس استفاده کنید (بخش بعد) یا کد SVG آیکن را مستقیماً از سایت lucide.dev کپی کنید.</p>
+          <p>
+            کاور دوره‌ها با کلاس‌های <code>cover c-lime</code>، <code>c-violet</code> و… ساخته می‌شوند و آیکن وسط آن قابل تغییر است. برای
+            استفاده از تصویر واقعی، یک <code>&lt;img&gt;</code> داخل <code>.cover</code> قرار دهید و به آن
+            <code>object-fit: cover</code> بدهید.
+          </p>
+        </section>
+
+        <section id="source">
+          <h2>توسعه با سورس (اختیاری)</h2>
+          <p>
+            صفحات از ماژول‌های جاوااسکریپت در پوشه <code>source/src</code> ساخته می‌شوند تا هدر، منو و فوتر فقط یک‌بار نوشته شوند. اگر
+            می‌خواهید تغییرات گسترده بدهید:
+          </p>
+          <pre>
+cd source
+npm i -g prettier          # یک‌بار
+node tools/build.mjs danesh   # خروجی در templates/danesh</pre
+          >
+          <p>برای ویرایش‌های ساده نیازی به این مرحله نیست؛ فایل‌های HTML پوشه <code>html</code> را مستقیم ویرایش کنید.</p>
+        </section>
+
+        <section id="browsers">
+          <h2>سازگاری</h2>
+          <p>
+            آخرین دو نسخه Chrome، Edge، Firefox، Safari و مرورگرهای موبایل (Chrome اندروید و Safari آی‌اواس). طراحی از ۳۶۰ تا ۱۹۲۰ پیکسل
+            واکنش‌گراست و با صفحه‌خوان‌ها و صفحه‌کلید قابل استفاده است (WCAG 2.2 AA).
+          </p>
+        </section>
+
+        <section id="credits">
+          <h2>منابع و لایسنس</h2>
+          <ul>
+            <li>فونت استعداد (Estedad): SIL Open Font License 1.1</li>
+            <li>فونت وزیرمتن (Vazirmatn): SIL Open Font License 1.1</li>
+            <li>آیکن‌ها: Lucide، مجوز ISC</li>
+            <li>تبدیل تاریخ شمسی: الگوریتم jalaali-js، مجوز MIT</li>
+            <li>همه تصاویر و طرح‌ها اختصاصی همین قالب هستند؛ هیچ عکس استوکی همراه قالب نیست.</li>
+          </ul>
+          <p>متن کامل مجوزها در پوشه <code>licenses</code> قرار دارد.</p>
+        </section>
+
+        <section id="changelog">
+          <h2>تغییرات نسخه‌ها</h2>
+          <p><b>نسخه ۱.۰.۰</b> (مهر ۱۴۰۵): انتشار اولیه.</p>
+        </section>
+
+        <section id="support">
+          <h2>پشتیبانی</h2>
+          <p>
+            پرسش‌ها و گزارش مشکلات را از طریق بخش پشتیبانی صفحه محصول در راست‌چین ارسال کنید. پشتیبانی شامل رفع اشکال و راهنمایی در استفاده
+            از قالب است؛ سفارشی‌سازی اختصاصی جداگانه انجام می‌شود.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

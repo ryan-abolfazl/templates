@@ -355,7 +355,7 @@
 }
 
 [data-layout='list'] {
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 [data-layout='list'] .product-card {
@@ -549,7 +549,7 @@
 
 @media (max-width: 640px) {
   .invoice__parties {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -856,7 +856,7 @@
 
 @media (max-width: 1100px) {
   .cal {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -1207,7 +1207,7 @@
 
 @media (max-width: 860px) {
   .chat {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .chat__main {
@@ -1252,7 +1252,7 @@
 
 @media (max-width: 900px) {
   .settings-section {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -1608,7 +1608,7 @@
 
 @media (max-width: 960px) {
   .auth {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .auth__art {

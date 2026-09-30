@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>پخش درس: Closure به زبان ساده | آکادمی دانش</title>
+    <meta name="description" content="پلیر درس با فهرست جلسات، یادداشت و پرسش و پاسخ" />
+    <meta name="theme-color" content="#c8f53c" />
+    <meta property="og:title" content="پخش درس: Closure به زبان ساده | آکادمی دانش" />
+    <meta property="og:description" content="پلیر درس با فهرست جلسات، یادداشت و پرسش و پاسخ" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function (d) {
+        d.classList.add("js");
+        try {
+          var t = JSON.parse(localStorage.getItem("theme"));
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          d.setAttribute("data-theme", t);
+        } catch (e) {}
+      })(document.documentElement);
+    </script>
+    <link rel="preload" href="assets/fonts/vazirmatn/Vazirmatn-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/core.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body class="lesson-page">
+    <script src="assets/js/icons.js"></script>
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+
+    <header class="lesson-top">
+      <a class="icon-btn" href="course.html" aria-label="بازگشت به صفحه دوره"
+        ><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg
+      ></a>
+      <a class="logo" href="index.html" aria-label="آکادمی دانش، صفحه اصلی"
+        ><span class="logo__mark" aria-hidden="true"
+          ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 4 2 9l10 5 10-5-10-5Z" />
+            <path d="M6 11.5V16c3 2.5 9 2.5 12 0v-4.5" />
+            <path d="M22 9v6" /></svg></span
+        ><span>دانش<small>آکادمی آنلاین</small></span></a
+      >
+      <div class="lesson-top__title">
+        <b>جاوااسکریپت از صفر تا حرفه‌ای</b>
+        <div class="row xs">
+          <div class="progress" style="inline-size: 8rem"><span style="--value: 34%"></span></div>
+          ۳۴٪ تکمیل
+        </div>
+      </div>
+      <div class="row" style="margin-inline-start: auto">
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="تغییر حالت روشن و تاریک" aria-pressed="false">
+          <svg class="icon theme-icon-light" aria-hidden="true"><use href="#i-moon"></use></svg
+          ><svg class="icon theme-icon-dark" aria-hidden="true"><use href="#i-sun"></use></svg>
+        </button>
+        <a class="btn btn--sm hide-sm" href="dashboard.html"
+          ><svg class="icon" aria-hidden="true"><use href="#i-layout-dashboard"></use></svg> داشبورد</a
+        >
+      </div>
+    </header>
+
+    <main id="main" class="lesson">
+      <section class="lesson__main">
+        <div class="player" data-player>
+          <button class="player__screen" type="button" data-player-screen aria-label="پخش یا توقف">
+            <div class="player__code" aria-hidden="true">
+              <pre class="ltr"><span class="k">function</span> <span class="f">makeCounter</span>() {
+  <span class="k">let</span> count = <span class="n">0</span>;
+  <span class="k">return</span> () => ++count;
+}
+
+<span class="k">const</span> next = <span class="f">makeCounter</span>();
+next(); <span class="c">// 1</span>
+next(); <span class="c">// 2  ← <bdi dir="rtl">count هنوز زنده است!</bdi></span></pre>
+            </div>
+            <span class="player__big"
+              ><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg
+            ></span>
+          </button>
+          <div class="player__bar">
+            <button class="icon-btn" type="button" data-player-play aria-label="پخش">
+              <svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>
+            </button>
+            <button class="icon-btn" type="button" aria-label="۱۰ ثانیه جلو">
+              <svg class="icon" aria-hidden="true"><use href="#i-rotate-ccw"></use></svg>
+            </button>
+            <div
+              class="player__track"
+              data-player-track
+              role="slider"
+              aria-label="پیشرفت ویدیو"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              tabindex="0"
+            >
+              <span data-player-progress></span>
+            </div>
+            <span class="player__time" data-player-time>۱۱:۱۶ / ۱۷:۴۰</span>
+            <button class="btn btn--sm btn--ghost" type="button" data-speed>۱×</button>
+            <button class="icon-btn" type="button" aria-label="زیرنویس">
+              <svg class="icon" aria-hidden="true"><use href="#i-captions"></use></svg>
+            </button>
+            <button class="icon-btn" type="button" aria-label="تمام‌صفحه">
+              <svg class="icon" aria-hidden="true"><use href="#i-maximize"></use></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="lesson__head">
+          <div>
+            <span class="xs muted">فصل ۳ · درس ۱۱</span>
+            <h1 data-lesson-title>Closure به زبان ساده</h1>
+          </div>
+          <div class="row wrap">
+            <a class="btn btn--sm" href="lesson.html"
+              ><svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg> درس قبل</a
+            >
+            <button class="btn btn--sm btn--primary" type="button" data-complete>
+              <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> تکمیل و درس بعد
+            </button>
+          </div>
+        </div>
+
+        <div data-tabs>
+          <div class="tabs tabs--line" role="tablist" aria-label="بخش‌های درس">
+            <button role="tab" id="lt-1" aria-controls="lp-1" aria-selected="true" type="button">
+              <svg class="icon" aria-hidden="true"><use href="#i-message-circle-question"></use></svg> پرسش و پاسخ
+            </button>
+            <button role="tab" id="lt-2" aria-controls="lp-2" aria-selected="false" type="button">
+              <svg class="icon" aria-hidden="true"><use href="#i-notebook-pen"></use></svg> یادداشت‌های من
+            </button>
+            <button role="tab" id="lt-3" aria-controls="lp-3" aria-selected="false" type="button">
+              <svg class="icon" aria-hidden="true"><use href="#i-paperclip"></use></svg> فایل‌ها
+            </button>
+          </div>
+          <div role="tabpanel" id="lp-1" aria-labelledby="lt-1" class="tab-body stack">
+            <form class="row" data-validate data-success="سؤال شما ثبت شد؛ منتور به‌زودی پاسخ می‌دهد">
+              <label class="sr-only" for="q">سؤال</label
+              ><input class="input" id="q" required placeholder="سؤالت درباره این درس را بپرس…" /><button
+                class="btn btn--ink"
+                type="submit"
+              >
+                ارسال
+              </button>
+            </form>
+            <article class="qa">
+              <div class="person">
+                <span class="avatar avatar--sm tone-coral" aria-hidden="true">ن</span><span><b>نگار صادقی</b><span>۲ روز پیش</span></span>
+              </div>
+              <p>چرا count بعد از اجرای makeCounter از بین نمی‌رود؟</p>
+              <div class="qa__answer">
+                <div class="person">
+                  <span class="avatar avatar--sm tone-lime" aria-hidden="true">آ</span
+                  ><span
+                    ><b>آرش کاظمی <span class="badge tone-violet">مدرس</span></b></span
+                  >
+                </div>
+                <p>چون تابع برگشتی هنوز به آن ارجاع دارد؛ تا وقتی next وجود دارد، محیط لغوی (Lexical Environment) هم زنده می‌ماند.</p>
+              </div>
+            </article>
+            <article class="qa">
+              <div class="person">
+                <span class="avatar avatar--sm tone-sky" aria-hidden="true">ر</span><span><b>رضا امینی</b><span>۲ روز پیش</span></span>
+              </div>
+              <p>Closure در ری‌اکت کجا به کار می‌آید؟</p>
+              <div class="qa__answer">
+                <div class="person">
+                  <span class="avatar avatar--sm tone-lime" aria-hidden="true">م</span
+                  ><span
+                    ><b>منتور دانش <span class="badge tone-violet">مدرس</span></b></span
+                  >
+                </div>
+                <p>تقریباً همه‌جا! هر هندلر رویدادی که به state دسترسی دارد یک closure است. در فصل «Stale Closure» مفصل بررسی می‌کنیم.</p>
+              </div>
+            </article>
+          </div>
+          <div role="tabpanel" id="lp-2" aria-labelledby="lt-2" class="tab-body" hidden>
+            <div class="field">
+              <label class="label" for="note">یادداشت در زمان ۱۱:۱۶</label
+              ><textarea class="textarea" id="note" placeholder="نکته مهم این بخش را بنویس…"></textarea>
+            </div>
+            <button class="btn btn--primary mt-2" type="button" data-toast="یادداشت ذخیره شد">ذخیره یادداشت</button>
+          </div>
+          <div role="tabpanel" id="lp-3" aria-labelledby="lt-3" class="tab-body" hidden>
+            <ul class="list-plain stack">
+              <li class="file">
+                <svg class="icon" aria-hidden="true"><use href="#i-file-code"></use></svg
+                ><span>closure-examples.zip<small class="xs muted" style="display: block">۱۲ کیلوبایت</small></span
+                ><button class="btn btn--sm" type="button" data-toast="دانلود شروع شد">
+                  <svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg> دانلود
+                </button>
+              </li>
+              <li class="file">
+                <svg class="icon" aria-hidden="true"><use href="#i-file-text"></use></svg
+                ><span>خلاصه درس.pdf<small class="xs muted" style="display: block">۳۴۰ کیلوبایت</small></span
+                ><button class="btn btn--sm" type="button" data-toast="دانلود شروع شد">
+                  <svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg> دانلود
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <aside class="lesson__side" aria-label="فهرست جلسات">
+        <div class="lesson__side-head"><b>محتوای دوره</b><span class="xs muted">۴۸ از ۱۴۲ جلسه</span></div>
+        <div class="accordion">
+          <details>
+            <summary>
+              <span>۱. شروع کار و آشنایی با ابزارها</span
+              ><span class="plus"
+                ><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg
+              ></span>
+            </summary>
+            <ul class="list-plain chapter">
+              <li>
+                <a href="lesson.html" data-lesson="خوش آمدید! نقشه راه دوره" class="is-done"
+                  ><span class="chapter__state"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span
+                  ><span>خوش آمدید! نقشه راه دوره</span><small>۰۴:۱۲</small></a
+                >
+              </li>
+              <li>
+                <a href="lesson.html" data-lesson="نصب VS Code و افزونه‌ها" class="is-done"
+                  ><span class="chapter__state"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span
+                  ><span>نصب VS Code و افزونه‌ها</span><small>۰۹:۳۵</small></a
+                >
+              </li>
+              <li>
+                <a href="lesson.html" data-lesson="اولین برنامه: سلام دنیا" class="is-done"
+                  ><span class="chapter__state"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span
+                  ><span>اولین برنامه: سلام دنیا</span><small>۱۲:۰۸</small></a
+                >
+              </li>
+              <li>
+                <a href="lesson.html" data-lesson="کنسول مرورگر و دیباگ" class="is-done"
+                  ><span class="chapter__state"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span
+                  ><span>کنسول مرورگر و دیباگ</span><small>۱۴:۲۰</small></a
+                >
+              </li>
+            </ul>
+          </details>
+          <details>
+            <summary>
+              <span>۲. مبانی زبان</span
+              ><span class="plus"
+                ><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg
+              ></span>
+            </summary>
+            <ul class="list-plain chapter">
+              <li>
+                <a href="lesson.html" data-lesson="متغیرها و انواع داده" class="is-done"
+                  ><span class="chapter__state"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span
+                  ><span>متغیرها و انواع داده</span><small>۱۸:۴۴</small></a
+                >
+              </li>
+              <li>
+                <a href="lesson.html" data-lesson="عملگرها و عبارات" class="is-done"
+                  ><span class="chapter__state"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span
+                  ><span>عملگرها و عبارات</span><small>۱۵:۱۰</small></a
+                >
+              </li>
+              <li>
+                <a href="lesson.html" data-lesson="شرط‌ها و حلقه‌ها" class="is-done"
+                  ><span class="chapter__state"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span
+                  ><span>شرط‌ها و حلقه‌ها</span><small>۲۲:۳۰</small></a
+                >
+              </li>
+              <li>
+                <a href="lesson.html" data-lesson="تمرین: ماشین‌حساب ساده" class="is-done"
+                  ><span class="chapter__state"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span
+                  ><span>تمرین: ماشین‌حساب ساده</span><small>۲۵:۰۰</small></a
+                >
+              </li>
+            </ul>
+          </details>
+          <details open>
+            <summary>
+              <span>۳. توابع و محدوده</span
+              ><span class="plus"
+                ><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg
+              ></span>
+            </summary>
+            <ul class="list-plain chapter">
+              <li>
+                <a href="lesson.html" data-lesson="تعریف تابع و پارامترها" class="is-done"
+                  ><span class="chapter__state"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span
+                  ><span>تعریف تابع و پارامترها</span><small>۱۹:۵۵</small></a
+                >
+              </li>
+              <li>
+                <a href="lesson.html" data-lesson="Arrow Function و this" class="is-current"
+                  ><span class="chapter__state"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg></span
+                  ><span>Arrow Function و this</span><small>۲۱:۱۲</small></a
+                >
+              </li>
+              <li>
+                <a href="lesson.html" data-lesson="Closure به زبان ساده" class=" "
+                  ><span class="chapter__state"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg></span
+                  ><span>Closure به زبان ساده</span><small>۱۷:۴۰</small></a
+                >
+              </li>
+            </ul>
+          </details>
+          <details>
+            <summary>
+              <span>۴. آرایه‌ها و آبجکت‌ها</span
+              ><span class="plus"
+                ><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg
+              ></span>
+            </summary>
+            <ul class="list-plain chapter">
+              <li>
+                <a href="lesson.html" data-lesson="متدهای کاربردی آرایه" class=" "
+                  ><span class="chapter__state"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg></span
+                  ><span>متدهای کاربردی آرایه</span><small>۲۴:۱۸</small></a
+                >
+              </li>
+              <li>
+                <a href="lesson.html" data-lesson="Destructuring و Spread" class=" "
+                  ><span class="chapter__state"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg></span
+                  ><span>Destructuring و Spread</span><small>۱۶:۲۲</small></a
+                >
+              </li>
+              <li>
+                <a href="lesson.html" data-lesson="پروژه: لیست کارها" class=" "
+                  ><span class="chapter__state"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg></span
+                  ><span>پروژه: لیست کارها</span><small>۳۸:۰۵</small></a
+                >
+              </li>
+            </ul>
+          </details>
+          <details>
+            <summary>
+              <span>۵. DOM و رویدادها</span
+              ><span class="plus"
+                ><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg
+              ></span>
+            </summary>
+            <ul class="list-plain chapter">
+              <li>
+                <a href="lesson.html" data-lesson="انتخاب و تغییر عناصر" class=" "
+                  ><span class="chapter__state"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg></span
+                  ><span>انتخاب و تغییر عناصر</span><small>۲۰:۳۰</small></a
+                >
+              </li>
+              <li>
+                <a href="lesson.html" data-lesson="مدیریت رویدادها" class=" "
+                  ><span class="chapter__state"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg></span
+                  ><span>مدیریت رویدادها</span><small>۱۸:۴۰</small></a
+                >
+              </li>
+              <li>
+                <a href="lesson.html" data-lesson="پروژه: گالری تصاویر" class=" "
+                  ><span class="chapter__state"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg></span
+                  ><span>پروژه: گالری تصاویر</span><small>۴۲:۱۵</small></a
+                >
+              </li>
+            </ul>
+          </details>
+          <details>
+            <summary>
+              <span>۶. برنامه‌نویسی ناهمگام</span
+              ><span class="plus"
+                ><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg
+              ></span>
+            </summary>
+            <ul class="list-plain chapter">
+              <li>
+                <a href="lesson.html" data-lesson="Promise و async/await" class=" "
+                  ><span class="chapter__state"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg></span
+                  ><span>Promise و async/await</span><small>۲۶:۱۰</small></a
+                >
+              </li>
+              <li>
+                <a href="lesson.html" data-lesson="کار با Fetch API" class=" "
+                  ><span class="chapter__state"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg></span
+                  ><span>کار با Fetch API</span><small>۲۲:۴۵</small></a
+                >
+              </li>
+              <li>
+                <a href="lesson.html" data-lesson="پروژه پایانی: اپ آب‌وهوا" class=" "
+                  ><span class="chapter__state"
+                    ><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg></span
+                  ><span>پروژه پایانی: اپ آب‌وهوا</span><small>۵۵:۳۰</small></a
+                >
+              </li>
+            </ul>
+          </details>
+        </div>
+      </aside>
+    </main>
+  </body>
+</html>

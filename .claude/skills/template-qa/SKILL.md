@@ -12,6 +12,7 @@ node tools/build.mjs <slug>
 node tools/qa.mjs <slug>                         # all pages at 1440 + 390
 node tools/qa.mjs <slug> --dark                  # dark theme pass
 node tools/qa.mjs <slug> --pages=index --full    # full-page desktop screenshot of one page
+node tools/qa.mjs <slug> --pages=index --tiles=8  # 900px slices down the page, readable at full size
 ```
 
 Fails on: console errors, JS exceptions, failed/4xx requests, any request outside the local server

@@ -76,6 +76,15 @@ for (const rel of pages) {
     });
     await page.goto(`${origin}/${rel}`, { waitUntil: 'networkidle' });
     await page.evaluate(() => document.fonts.ready);
+    // Scroll through once so scroll-triggered reveals/counters run, then return to top
+    await page.evaluate(async () => {
+      for (let y = 0; y < document.documentElement.scrollHeight; y += 700) {
+        window.scrollTo(0, y);
+        await new Promise((r) => setTimeout(r, 40));
+      }
+      window.scrollTo(0, 0);
+    });
+    await page.waitForTimeout(700);
     // Let reveal animations settle, then force them visible for the screenshot.
     await page.addStyleTag({ content: '[data-reveal]{opacity:1!important;transform:none!important;transition:none!important}' });
     await page.waitForTimeout(300);
@@ -112,6 +121,13 @@ for (const rel of pages) {
     }
     const shot = path.join(outDir, `${rel.replace(/[\\/]/g, '__').replace(/\.html$/, '')}-${width}${opt.dark ? '-dark' : ''}.png`);
     await page.screenshot({ path: shot, fullPage: !!opt.full || width < 800 });
+    // --tiles=N: also save N viewport-height slices down the page (easier to inspect than one tall image)
+    if (opt.tiles) {
+      const h = await page.evaluate(() => document.documentElement.scrollHeight);
+      for (let i = 0; i < Number(opt.tiles) && i * 900 < h; i++) {
+        await page.screenshot({ path: shot.replace(/\.png$/, `-t${i}.png`), fullPage: true, clip: { x: 0, y: i * 900, width, height: Math.min(900, h - i * 900) } });
+      }
+    }
     await ctx.close();
   }
 }

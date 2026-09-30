@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ورود | آکادمی دانش</title>
+    <meta name="description" content="ورود به حساب کاربری آکادمی دانش" />
+    <meta name="theme-color" content="#c8f53c" />
+    <meta property="og:title" content="ورود | آکادمی دانش" />
+    <meta property="og:description" content="ورود به حساب کاربری آکادمی دانش" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function (d) {
+        d.classList.add("js");
+        try {
+          var t = JSON.parse(localStorage.getItem("theme"));
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          d.setAttribute("data-theme", t);
+        } catch (e) {}
+      })(document.documentElement);
+    </script>
+    <link rel="preload" href="assets/fonts/vazirmatn/Vazirmatn-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/core.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body class="">
+    <script src="assets/js/icons.js"></script>
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+
+    <main id="main" class="auth">
+      <section class="auth__form">
+        <a class="logo" href="index.html" aria-label="آکادمی دانش، صفحه اصلی"
+          ><span class="logo__mark" aria-hidden="true"
+            ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 4 2 9l10 5 10-5-10-5Z" />
+              <path d="M6 11.5V16c3 2.5 9 2.5 12 0v-4.5" />
+              <path d="M22 9v6" /></svg></span
+          ><span>دانش<small>آکادمی آنلاین</small></span></a
+        >
+        <div class="stack" style="--gap: 1.25rem; inline-size: min(100%, 25rem); margin-block: auto">
+          <h1>خوش برگشتی!</h1>
+          <p class="muted" style="margin-block-start: -0.75rem">برای ادامه یادگیری وارد حسابت شو.</p>
+          <form class="stack" style="--gap: 1rem" data-validate data-success="خوش آمدی! در حال انتقال…" data-redirect="dashboard.html">
+            <div class="field">
+              <label class="label" for="l-phone">شماره موبایل یا ایمیل</label>
+              <div class="input-icon">
+                <svg class="icon" aria-hidden="true"><use href="#i-smartphone"></use></svg
+                ><input class="input" id="l-phone" required autocomplete="username" />
+              </div>
+            </div>
+            <div class="field">
+              <div class="row-between">
+                <label class="label" for="l-pw">رمز عبور</label><a class="xs bold" href="register.html">فراموش کردی؟</a>
+              </div>
+              <div class="input-icon">
+                <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg
+                ><input class="input" id="l-pw" type="password" required minlength="6" autocomplete="current-password" /><button
+                  class="icon-btn input-action"
+                  type="button"
+                  data-password-toggle
+                  aria-label="نمایش رمز"
+                  aria-pressed="false"
+                >
+                  <svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg>
+                </button>
+              </div>
+            </div>
+            <label class="check"><input type="checkbox" checked /> مرا به خاطر بسپار</label>
+            <button class="btn btn--primary btn--lg btn--block" type="submit">
+              ورود <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg>
+            </button>
+            <button class="btn btn--block" type="button" data-toast="کد ورود پیامک شد" data-toast-type="info">
+              <svg class="icon" aria-hidden="true"><use href="#i-message-square-text"></use></svg> ورود با کد یکبارمصرف
+            </button>
+          </form>
+          <p class="small center">حساب نداری؟ <a class="bold" href="register.html">رایگان ثبت‌نام کن</a></p>
+        </div>
+        <a class="small muted" href="index.html"
+          ><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg> بازگشت به صفحه اصلی</a
+        >
+      </section>
+      <aside class="auth__art" aria-hidden="true">
+        <div class="auth__stack">
+          <div class="cover c-violet auth__c1">
+            <span class="badge tone-ink cover__tag">جدید</span>
+            <span class="cover__icon"
+              ><svg class="icon" aria-hidden="true"><use href="#i-brain-circuit"></use></svg
+            ></span>
+            <span class="cover__code">ML-310</span>
+          </div>
+          <div class="cover c-lime auth__c2">
+            <span class="badge tone-ink cover__tag">پرفروش</span>
+            <span class="cover__icon"
+              ><svg class="icon" aria-hidden="true"><use href="#i-braces"></use></svg
+            ></span>
+            <span class="cover__code">JS-101</span>
+          </div>
+          <div class="cover c-sky auth__c3">
+            <span class="cover__icon"
+              ><svg class="icon" aria-hidden="true"><use href="#i-languages"></use></svg
+            ></span>
+            <span class="cover__code">EN-IELTS</span>
+          </div>
+        </div>
+        <p class="auth__quote">«هر روز فقط ۳۰ دقیقه؛<br />یک سال بعد، آدم دیگری هستی.»</p>
+      </aside>
+    </main>
+  </body>
+</html>
