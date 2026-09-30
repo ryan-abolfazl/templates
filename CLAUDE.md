@@ -10,7 +10,8 @@ polished states, clean code, and full documentation.
 ```
 src/_core/          shared base.css + vanilla JS modules (util, theme, nav, tabs, charts, jalali, table, form, …)
 src/<slug>/         SOURCE of one template
-  site.mjs          name, version, fonts, core JS modules, layouts (functions returning HTML)
+  site.mjs          name, version, fonts, core JS modules, layouts (functions returning HTML),
+                    optional generate(outDir) hook for generated assets (e.g. SVG images)
   partials.mjs      header/footer/sidebar/card helpers (JS template literals)
   data.mjs          demo content (Persian)
   pages/*.mjs       one module per page: export const meta = {…}; export default (ctx) => html`…`
@@ -30,6 +31,7 @@ node tools/build.mjs <slug>          # build src/<slug> -> templates/<slug> (run
 node tools/build.mjs --all
 node tools/qa.mjs <slug>             # headless Chromium: overflow, console errors, 404s, external requests, broken links
 node tools/qa.mjs <slug> --pages=index,login --widths=1440,390 --dark --full
+node tools/qa.mjs <slug> --pages=index --tiles=8   # 900px slices, easier to inspect
 tools/serve.sh <slug> [port]         # python http.server on templates/<slug>
 tools/package.sh <slug>              # dist/<slug>-v<version>.zip (html/ + documentation/ + source/)
 ```
@@ -77,7 +79,7 @@ Always rebuild after editing `src/`, then run QA and **look at the screenshots**
 | `danesh` | online course / LMS academy | v1.0.0, 16 pages + docs |
 | `vitrin` | fashion e-shop | v1.0.0, 14 pages + docs |
 | `labkhand` | dental clinic | v1.0.0, 11 pages + docs |
-| `zaferan` | Persian restaurant | planned |
+| `zaferan` | Persian restaurant | v1.0.0, 9 pages + docs |
 
 ## Git
 

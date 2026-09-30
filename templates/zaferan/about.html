@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>داستان ما | رستوران زعفران</title>
+    <meta name="description" content="تاریخچه رستوران زعفران، سرآشپز و ارزش‌های ما" />
+    <meta name="theme-color" content="#150d11" />
+    <meta property="og:title" content="داستان ما | رستوران زعفران" />
+    <meta property="og:description" content="تاریخچه رستوران زعفران، سرآشپز و ارزش‌های ما" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="restaurant" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function (d) {
+        d.classList.add("js");
+        try {
+          var t = JSON.parse(localStorage.getItem("theme"));
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "dark";
+          d.setAttribute("data-theme", t);
+        } catch (e) {}
+      })(document.documentElement);
+    </script>
+    <link rel="preload" href="assets/fonts/vazirmatn/Vazirmatn-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/core.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body class="">
+    <script src="assets/js/icons.js"></script>
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+
+    <header class="header" data-sticky-header>
+      <div class="container header__inner">
+        <nav class="nav" aria-label="منوی اصلی">
+          <a class="" href="index.html">خانه</a><a class="" href="menu.html">منو</a
+          ><a class="is-active" href="about.html" aria-current="page">داستان ما</a><a class="" href="gallery.html">گالری</a>
+        </nav>
+        <button
+          class="icon-btn menu-btn"
+          type="button"
+          data-drawer-open="menu"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="باز کردن منو"
+        >
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+        </button>
+        <a class="logo" href="index.html" aria-label="رستوران زعفران، صفحه اصلی"><b>زعفران</b><span>رستوران ایرانی · از ۱۳۶۸</span></a>
+        <div class="header__tools">
+          <nav class="nav nav--end" aria-label="منوی دوم">
+            <a class="" href="events.html">مراسم و کترینگ</a><a class="" href="contact.html">تماس</a>
+          </nav>
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="تغییر حالت روشن و تاریک" aria-pressed="false">
+            <svg class="icon theme-icon-dark" aria-hidden="true"><use href="#i-sun"></use></svg
+            ><svg class="icon theme-icon-light" aria-hidden="true"><use href="#i-moon"></use></svg>
+          </button>
+          <a class="btn btn--gold btn--sm" href="reservation.html">رزرو میز</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="drawer" id="menu" data-drawer>
+      <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="منو">
+        <div class="row-between">
+          <a class="logo" href="index.html" aria-label="رستوران زعفران، صفحه اصلی"><b>زعفران</b><span>رستوران ایرانی · از ۱۳۶۸</span></a
+          ><button class="icon-btn" type="button" data-drawer-close aria-label="بستن">
+            <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+          </button>
+        </div>
+        <nav class="drawer__nav" aria-label="منوی موبایل">
+          <a class="" href="index.html">خانه</a><a class="" href="menu.html">منو</a><a class="is-active" href="about.html">داستان ما</a
+          ><a class="" href="gallery.html">گالری</a><a class="" href="events.html">مراسم و کترینگ</a><a class="" href="contact.html">تماس</a
+          ><a class="" href="qr-menu.html">منوی دیجیتال (QR)</a>
+        </nav>
+        <a class="btn btn--gold btn--block" href="reservation.html"
+          ><svg class="icon" aria-hidden="true"><use href="#i-calendar-heart"></use></svg> رزرو میز</a
+        >
+        <p class="small muted">
+          <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg> ۰۲۱-۲۲۶۶۳۳۴۴
+        </p>
+      </div>
+    </div>
+    <main id="main">
+      <section class="page-hero">
+        <div
+          class="pattern"
+          style="
+            background-image: url(&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2780%27%20height%3D%2780%27%20viewBox%3D%270%200%2080%2080%27%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%23e3a33b%27%20stroke-opacity%3D%270.18%27%20stroke-width%3D%271.2%27%3E%3Cpath%20d%3D%27M40%208l9%2023%2023%209-23%209-9%2023-9-23-23-9%2023-9z%27%2F%3E%3Cpath%20d%3D%27M17.4%2017.4%2040%2026.8l22.6-9.4L53.2%2040l9.4%2022.6L40%2053.2l-22.6%209.4L26.8%2040z%27%2F%3E%3Ccircle%20cx%3D%2740%27%20cy%3D%2740%27%20r%3D%277%27%2F%3E%3Cpath%20d%3D%27M0%200l8%208M80%200l-8%208M0%2080l8-8M80%2080l-8-8%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E&quot;);
+          "
+        ></div>
+        <div class="container center stack" style="justify-items: center; --gap: 0.75rem">
+          <nav class="breadcrumb" aria-label="مسیر صفحه">
+            <a href="index.html">خانه</a><svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg
+            ><span aria-current="page">داستان ما</span>
+          </nav>
+          <p class="callig" style="font-size: var(--text-xl)">سه نسل، یک سفره</p>
+          <h1>داستان زعفران</h1>
+          <svg class="ornament" viewBox="0 0 160 20" aria-hidden="true">
+            <path d="M0 10h60M100 10h60" stroke="currentColor" stroke-width="1" />
+            <path d="M80 2l4 8-4 8-4-8z" fill="currentColor" />
+            <circle cx="68" cy="10" r="2" fill="currentColor" />
+            <circle cx="92" cy="10" r="2" fill="currentColor" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container about">
+          <div
+            class="arch arch--tile about__arch"
+            style="
+              background-image: url(&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2780%27%20height%3D%2780%27%20viewBox%3D%270%200%2080%2080%27%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%23e9c46a%27%20stroke-opacity%3D%270.22%27%20stroke-width%3D%271.2%27%3E%3Cpath%20d%3D%27M40%208l9%2023%2023%209-23%209-9%2023-9-23-23-9%2023-9z%27%2F%3E%3Cpath%20d%3D%27M17.4%2017.4%2040%2026.8l22.6-9.4L53.2%2040l9.4%2022.6L40%2053.2l-22.6%209.4L26.8%2040z%27%2F%3E%3Ccircle%20cx%3D%2740%27%20cy%3D%2740%27%20r%3D%277%27%2F%3E%3Cpath%20d%3D%27M0%200l8%208M80%200l-8%208M0%2080l8-8M80%2080l-8-8%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E&quot;);
+            "
+          >
+            <div class="dish-stage">
+              <svg class="dish" viewBox="0 0 200 200" aria-hidden="true">
+                <circle cx="100" cy="100" r="96" fill="#e9dfcc" />
+                <circle cx="100" cy="100" r="92" fill="#fbf7ef" />
+                <circle cx="100" cy="100" r="74" fill="#fbf7ef" />
+                <circle cx="100" cy="100" r="84" fill="none" stroke="#1f8a8a" stroke-width="2" stroke-dasharray="2 6" opacity=".55" />
+                <circle cx="100" cy="100" r="66" fill="#d98a22" />
+                <circle cx="100" cy="100" r="66" fill="none" stroke="#9e5a0e" stroke-width="3" />
+                <path d="M100 34L100 166" stroke="#b86e14" stroke-width="2.4" opacity=".7" />
+                <path d="M34 100L166 100" stroke="#b86e14" stroke-width="2.4" opacity=".7" />
+                <path d="M54 54L146 146" stroke="#b86e14" stroke-width="2.4" opacity=".7" />
+                <path d="M146 54L54 146" stroke="#b86e14" stroke-width="2.4" opacity=".7" />
+                <circle cx="100" cy="100" r="44" fill="#e9a33a" />
+                <circle cx="100.0" cy="100.0" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="98.3" cy="112.9" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="74.9" cy="93.4" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="114.7" cy="63.9" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="145.2" cy="125.7" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="95.8" cy="105.6" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="85.7" cy="86.0" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="125.9" cy="79.6" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="123.5" cy="139.5" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="99.1" cy="100.4" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="96.1" cy="86.5" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="126.7" cy="96.0" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="100.8" cy="140.0" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="47.3" cy="94.2" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="101.9" cy="92.2" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="119.6" cy="107.5" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="83.8" cy="129.9" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="61.9" cy="72.5" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="101.4" cy="98.5" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="109.5" cy="111.6" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="76.2" cy="114.8" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="83.0" cy="62.7" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="151.6" cy="84.1" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="101.5" cy="108.9" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="78.0" cy="100.9" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="103.1" cy="65.1" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="146.9" cy="110.4" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="99.0" cy="102.8" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="85.8" cy="92.7" r="1.8" fill="#8f4f0a" opacity=".5" />
+                <circle cx="116.5" cy="76.2" r="1.8" fill="#8f4f0a" opacity=".5" />
+              </svg>
+            </div>
+          </div>
+          <div class="stack" style="--gap: 1.25rem">
+            <h2 class="h-lg">آشپزی ما از <span class="gold">دیگ مسی</span> مادربزرگ شروع شد</h2>
+            <p class="muted">
+              در زعفران، برنج را هنوز آبکش می‌کنیم، خورش‌ها را روی شعله ملایم ساعت‌ها می‌پزیم و زعفران را با سنگ می‌ساییم. ما باور داریم
+              غذای ایرانی عجله برنمی‌دارد.
+            </p>
+            <p class="muted">
+              مواد اولیه‌مان را مستقیم از کشاورزان می‌خریم: برنج طارم از آمل، زعفران از قائنات، انار از ساوه و گردو از گیلان.
+            </p>
+            <dl class="stats">
+              <div>
+                <dt>سال تجربه</dt>
+                <dd>۳۶</dd>
+              </div>
+              <div>
+                <dt>دستور اصیل</dt>
+                <dd>۴۸</dd>
+              </div>
+              <div>
+                <dt>مهمان در سال</dt>
+                <dd>۹۰هزار</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt">
+        <div
+          class="pattern"
+          style="
+            background-image: url(&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2780%27%20height%3D%2780%27%20viewBox%3D%270%200%2080%2080%27%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%23e3a33b%27%20stroke-opacity%3D%270.18%27%20stroke-width%3D%271.2%27%3E%3Cpath%20d%3D%27M40%208l9%2023%2023%209-23%209-9%2023-9-23-23-9%2023-9z%27%2F%3E%3Cpath%20d%3D%27M17.4%2017.4%2040%2026.8l22.6-9.4L53.2%2040l9.4%2022.6L40%2053.2l-22.6%209.4L26.8%2040z%27%2F%3E%3Ccircle%20cx%3D%2740%27%20cy%3D%2740%27%20r%3D%277%27%2F%3E%3Cpath%20d%3D%27M0%200l8%208M80%200l-8%208M0%2080l8-8M80%2080l-8-8%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E&quot;);
+          "
+        ></div>
+        <div class="container">
+          <div class="section-head">
+            <p class="callig">مسیر ما</p>
+            <h2>از تجریش تا الهیه</h2>
+            <svg class="ornament" viewBox="0 0 160 20" aria-hidden="true">
+              <path d="M0 10h60M100 10h60" stroke="currentColor" stroke-width="1" />
+              <path d="M80 2l4 8-4 8-4-8z" fill="currentColor" />
+              <circle cx="68" cy="10" r="2" fill="currentColor" />
+              <circle cx="92" cy="10" r="2" fill="currentColor" />
+            </svg>
+          </div>
+          <ol class="timeline list-plain">
+            <li class="timeline__item" data-reveal>
+              <span class="timeline__year">۱۳۶۸</span>
+              <div>
+                <h3>اولین چلوکبابی</h3>
+                <p class="small muted">حاج رضا رستگار با یک منقل در بازار تجریش شروع کرد.</p>
+              </div>
+            </li>
+            <li class="timeline__item" data-reveal>
+              <span class="timeline__year">۱۳۸۲</span>
+              <div>
+                <h3>خانه‌ای در الهیه</h3>
+                <p class="small muted">انتقال به یک خانه قدیمی با حوض و شاه‌نشین.</p>
+              </div>
+            </li>
+            <li class="timeline__item" data-reveal>
+              <span class="timeline__year">۱۳۹۵</span>
+              <div>
+                <h3>شب‌های موسیقی</h3>
+                <p class="small muted">آغاز اجراهای زنده موسیقی سنتی آخر هفته‌ها.</p>
+              </div>
+            </li>
+            <li class="timeline__item" data-reveal>
+              <span class="timeline__year">۱۴۰۳</span>
+              <div>
+                <h3>نسل سوم</h3>
+                <p class="small muted">سارا رستگار سرآشپز شد و منو را با احترام به سنت نو کرد.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container chef">
+          <div class="stack" style="--gap: 1.25rem">
+            <p class="callig" style="font-size: var(--text-xl)">سرآشپز</p>
+            <h2 class="h-lg">سارا رستگار</h2>
+            <blockquote class="chef__quote">
+              «هر غذا را طوری می‌پزم که پدربزرگم اگر بود، به آن افتخار کند؛ و طوری سرو می‌کنم که نسل امروز هم عاشقش شود.»
+            </blockquote>
+            <p class="muted small">دانش‌آموخته آشپزی از مدرسه لوکوردن‌بلو پاریس و برنده جایزه بهترین آشپز ایرانی ۱۴۰۴.</p>
+          </div>
+          <div class="chef__plates" aria-hidden="true">
+            <div class="chef__plate">
+              <svg class="dish" viewBox="0 0 200 200" aria-hidden="true">
+                <circle cx="100" cy="100" r="96" fill="#1f6f78" />
+                <circle cx="100" cy="100" r="90" fill="none" stroke="#e9c46a" stroke-width="2" stroke-dasharray="1 7" />
+                <circle cx="100" cy="100" r="80" fill="#f4ecdc" />
+                <circle cx="100" cy="100" r="72" fill="#4a2419" />
+                <path d="M50 96q50-30 100 0" stroke="#6a3526" stroke-width="10" fill="none" opacity=".6" />
+                <circle cx="84" cy="90" r="11" fill="#6f3a22" />
+                <circle cx="110" cy="104" r="11" fill="#6f3a22" />
+                <circle cx="92" cy="122" r="11" fill="#6f3a22" />
+                <circle cx="124" cy="84" r="11" fill="#6f3a22" />
+                <circle cx="114" cy="100" r="3.2" fill="#d6243f" />
+                <circle cx="87.64147653763774" cy="116.97842448021139" r="3.2" fill="#d6243f" />
+                <circle cx="91.39467964060425" cy="73.35514193109356" r="3.2" fill="#d6243f" />
+                <circle cx="133.25814071854853" cy="110.90394772296825" r="3.2" fill="#d6243f" />
+                <circle cx="65.93409340941045" cy="124.56652210145398" r="3.2" fill="#d6243f" />
+                <circle cx="100.2168592014145" cy="51.00047987901553" r="3.2" fill="#d6243f" />
+                <circle cx="145.12950162786518" cy="133.15611682360458" r="3.2" fill="#d6243f" />
+                <circle cx="83.79980041291793" cy="105.15301206467691" r="3.2" fill="#d6243f" />
+                <circle cx="107.57785011806185" cy="77.22773204996503" r="3.2" fill="#d6243f" />
+                <circle cx="118.02097616624751" cy="125.22388586272027" r="3.2" fill="#d6243f" />
+                <circle cx="62.00148859700379" cy="99.66365024696465" r="3.2" fill="#d6243f" />
+                <circle cx="126.80354418738452" cy="63.85349229877213" r="3.2" fill="#d6243f" />
+                <circle cx="115.54269113095235" cy="149.6228249136203" r="3.2" fill="#d6243f" />
+                <circle cx="44.1011686815513" cy="81.12354224883231" r="3.2" fill="#d6243f" />
+                <circle cx="116.32477047215144" cy="88.44569911108542" r="3.2" fill="#d6243f" />
+                <circle cx="99.64152782497739" cy="126.99762022289622" r="3.2" fill="#d6243f" />
+                <circle cx="72.77920007639422" cy="79.62776272671498" r="3.2" fill="#d6243f" />
+                <circle cx="139.17954180512652" cy="87.91846433848971" r="3.2" fill="#d6243f" />
+                <circle cx="84.44176469355695" cy="145.4086039660916" r="3.2" fill="#d6243f" />
+                <circle cx="68.42466712129315" cy="54.96669728302338" r="3.2" fill="#d6243f" />
+                <circle cx="115.99749293836305" cy="100.28323080168661" r="3.2" fill="#d6243f" />
+                <circle cx="86.1374205188192" cy="118.35289868462051" r="3.2" fill="#d6243f" />
+                <path d="M70 70q6-8 12 0q-6 8-12 0Z" fill="#c9a36a" />
+                <path d="M132 128q6-8 12 0q-6 8-12 0Z" fill="#c9a36a" />
+                <path d="M66 128q6-8 12 0q-6 8-12 0Z" fill="#c9a36a" />
+              </svg>
+            </div>
+            <div class="chef__plate">
+              <svg class="dish" viewBox="0 0 200 200" aria-hidden="true">
+                <circle cx="100" cy="100" r="96" fill="#1f6f78" />
+                <circle cx="100" cy="100" r="90" fill="none" stroke="#e9c46a" stroke-width="2" stroke-dasharray="1 7" />
+                <circle cx="100" cy="100" r="80" fill="#f4ecdc" />
+                <circle cx="100" cy="100" r="72" fill="#f2c230" />
+                <g stroke="#8a4b1c" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85">
+                  <path d="M100 50q20 20 0 40q-20-20 0-40Z" />
+                  <path d="M100 110q20 20 0 40q-20-20 0-40Z" />
+                  <path d="M50 100q20-20 40 0q-20 20-40 0Z" />
+                  <path d="M110 100q20-20 40 0q-20 20-40 0Z" />
+                  <circle cx="100" cy="100" r="6" />
+                </g>
+                <circle cx="80" cy="70" r="3.2" fill="#6a9f3a" />
+                <circle cx="122" cy="74" r="3.2" fill="#6a9f3a" />
+                <circle cx="76" cy="128" r="3.2" fill="#6a9f3a" />
+                <circle cx="126" cy="128" r="3.2" fill="#6a9f3a" />
+                <circle cx="86" cy="64" r="2.4" fill="#c43a52" />
+                <circle cx="116" cy="136" r="2.4" fill="#c43a52" />
+              </svg>
+            </div>
+            <div class="chef__plate">
+              <svg class="dish" viewBox="0 0 200 200" aria-hidden="true">
+                <circle cx="100" cy="100" r="96" fill="#1f6f78" />
+                <circle cx="100" cy="100" r="90" fill="none" stroke="#e9c46a" stroke-width="2" stroke-dasharray="1 7" />
+                <circle cx="100" cy="100" r="80" fill="#f4ecdc" />
+                <circle cx="100" cy="100" r="72" fill="#3f5a26" />
+                <circle cx="112.0" cy="100.0" r="2" fill="#2c4418" />
+                <circle cx="83.0" cy="115.5" r="3" fill="#2c4418" />
+                <circle cx="103.0" cy="66.1" r="4" fill="#2c4418" />
+                <circle cx="127.4" cy="135.7" r="2" fill="#2c4418" />
+                <circle cx="44.9" cy="90.2" r="3" fill="#2c4418" />
+                <circle cx="114.3" cy="90.9" r="4" fill="#2c4418" />
+                <circle cx="92.7" cy="127.0" r="2" fill="#2c4418" />
+                <circle cx="82.0" cy="65.4" r="3" fill="#2c4418" />
+                <circle cx="147.0" cy="117.2" r="4" fill="#2c4418" />
+                <circle cx="43.6" cy="123.3" r="2" fill="#2c4418" />
+                <circle cx="109.3" cy="80.1" r="3" fill="#2c4418" />
+                <circle cx="109.9" cy="131.5" r="4" fill="#2c4418" />
+                <circle cx="61.9" cy="77.9" r="2" fill="#2c4418" />
+                <circle cx="153.7" cy="88.2" r="3" fill="#2c4418" />
+                <circle cx="90.8" cy="113.1" r="4" fill="#2c4418" />
+                <circle cx="96.5" cy="73.2" r="2" fill="#2c4418" />
+                <circle cx="129.0" cy="124.5" r="3" fill="#2c4418" />
+                <circle cx="51.0" cy="102.0" r="4" fill="#2c4418" />
+                <rect x="80" y="86" width="16" height="13" rx="4" fill="#7a3f22" />
+                <rect x="112" y="80" width="16" height="13" rx="4" fill="#7a3f22" />
+                <rect x="98" y="118" width="16" height="13" rx="4" fill="#7a3f22" />
+                <rect x="128" y="112" width="16" height="13" rx="4" fill="#7a3f22" />
+                <rect x="72" y="120" width="16" height="13" rx="4" fill="#7a3f22" />
+                <ellipse cx="92" cy="70" rx="5" ry="3.4" fill="#9c2f25" />
+                <ellipse cx="120" cy="132" rx="5" ry="3.4" fill="#9c2f25" />
+                <ellipse cx="66" cy="104" rx="5" ry="3.4" fill="#9c2f25" />
+                <ellipse cx="136" cy="92" rx="5" ry="3.4" fill="#9c2f25" />
+                <ellipse cx="104" cy="98" rx="5" ry="3.4" fill="#9c2f25" />
+                <ellipse cx="84" cy="138" rx="5" ry="3.4" fill="#9c2f25" />
+                <circle cx="140" cy="70" r="7" fill="#e7cf7a" />
+                <path d="M137 70h6" stroke="#b08a2a" stroke-width="1.5" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div
+        class="pattern"
+        style="
+          background-image: url(&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2780%27%20height%3D%2780%27%20viewBox%3D%270%200%2080%2080%27%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%23e3a33b%27%20stroke-opacity%3D%270.08%27%20stroke-width%3D%271.2%27%3E%3Cpath%20d%3D%27M40%208l9%2023%2023%209-23%209-9%2023-9-23-23-9%2023-9z%27%2F%3E%3Cpath%20d%3D%27M17.4%2017.4%2040%2026.8l22.6-9.4L53.2%2040l9.4%2022.6L40%2053.2l-22.6%209.4L26.8%2040z%27%2F%3E%3Ccircle%20cx%3D%2740%27%20cy%3D%2740%27%20r%3D%277%27%2F%3E%3Cpath%20d%3D%27M0%200l8%208M80%200l-8%208M0%2080l8-8M80%2080l-8-8%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E&quot;);
+        "
+      ></div>
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand stack">
+            <a class="logo" href="index.html" aria-label="رستوران زعفران، صفحه اصلی"><b>زعفران</b><span>رستوران ایرانی · از ۱۳۶۸</span></a>
+            <p>از سال ۱۳۶۸، طعم آشپزخانه‌های قدیمی ایران را با همان دستورهای مادربزرگ‌ها و زعفران قائنات سر میز شما می‌آوریم.</p>
+            <p class="callig" style="font-size: var(--text-lg)">سفره‌ای به رنگ زعفران</p>
+          </div>
+          <div>
+            <h3>ساعات کاری</h3>
+            <ul class="list-plain">
+              <li>شنبه تا چهارشنبه<br /><span class="gold">۱۲:۰۰ تا ۲۳:۳۰</span></li>
+              <li>پنجشنبه و جمعه<br /><span class="gold">۱۲:۰۰ تا ۰۰:۳۰</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3>دسترسی سریع</h3>
+            <ul class="list-plain">
+              <li><a href="menu.html">منوی کامل</a></li>
+              <li><a href="qr-menu.html">منوی دیجیتال QR</a></li>
+              <li><a href="reservation.html">رزرو میز</a></li>
+              <li><a href="events.html">مراسم و کترینگ</a></li>
+              <li><a href="gallery.html">گالری</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>تماس</h3>
+            <ul class="list-plain">
+              <li>تهران، الهیه، خیابان فرشته، کوچه نیلوفر، پلاک ۹</li>
+              <li><a href="tel:02122663344">۰۲۱-۲۲۶۶۳۳۴۴</a></li>
+              <li><a href="contact.html">مسیریابی و پارکینگ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© ۱۴۰۵ رستوران زعفران · همه حقوق محفوظ است.</span><a href="documentation/index.html">قوانین و حریم خصوصی</a>
+        </div>
+      </div>
+    </footer>
+    <a class="scroll-top" href="#main" data-scroll-top aria-label="بازگشت به بالا"
+      ><svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg
+    ></a>
+  </body>
+</html>

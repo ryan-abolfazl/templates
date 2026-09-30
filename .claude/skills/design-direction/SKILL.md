@@ -24,7 +24,7 @@ executed with precision. Bold maximalism and refined minimalism both work; lukew
   - Vazirmatn (neutral, excellent UI body; variable 100–900)
   - Estedad (geometric, modern and friendly, great for headings and UI)
   - Noto Kufi Arabic (geometric Kufi, architectural, fashion/luxury)
-  - Reem Kufi (decorative Kufi, brand/display only)
+  - Reem Kufi (decorative Kufi, Latin/Arabic brand marks only: it renders Persian final ی and ک in Arabic forms, so avoid it for Persian words)
   - Lalezar (heavy poster display, playful/food/retail)
   - Noto Nastaliq Urdu (calligraphic Nastaliq, accents only: short phrases, never body text)
   - Markazi Text (Naskh serif, literary/editorial body or pull quotes)
@@ -72,7 +72,7 @@ executed with precision. Bold maximalism and refined minimalism both work; lukew
 | LMS / courses | energetic, optimistic, bento | deep ink navy + lime/chartreuse accent + warm white | Estedad 800 display + Vazirmatn body |
 | fashion e-shop | editorial, high contrast, big type | near-black + bone/ecru + one clay/terracotta accent | Noto Kufi Arabic display + Vazirmatn |
 | dental / medical | soft clinical calm, glass & air | white + mint/teal + deep teal text, soft sky tint | Vazirmatn light/regular, generous size |
-| Persian restaurant | Qajar/Safavid warmth, night & gold | charcoal-plum + saffron gold + pomegranate red, tile patterns | Lalezar or Reem Kufi display, Nastaliq accents, Vazirmatn body |
+| Persian restaurant | Qajar/Safavid warmth, night & gold | charcoal-plum + saffron gold + pomegranate red, tile patterns | Lalezar display, Nastaliq accents, Vazirmatn body |
 | real estate | architectural, confident | stone + forest/olive + brass | Noto Kufi Arabic + Vazirmatn |
 | agency / portfolio | bold experimental | black + acid accent | Estedad 900 huge + Vazirmatn |
 

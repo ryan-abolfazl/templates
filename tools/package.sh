@@ -15,7 +15,7 @@ mkdir -p "$stage/$slug"
 cp -r "$root/templates/$slug" "$stage/$slug/html"
 if [ -d "$stage/$slug/html/documentation" ]; then mv "$stage/$slug/html/documentation" "$stage/$slug/documentation"; fi
 # Keep the documentation link working from html/ after the move
-grep -rl 'documentation/index.html' "$stage/$slug/html" --include='*.html' | xargs -r sed -i 's#"documentation/index.html"#"../documentation/index.html"#g'
+{ grep -rl 'documentation/index.html' "$stage/$slug/html" --include='*.html' || true; } | xargs -r sed -i 's#"documentation/index.html"#"../documentation/index.html"#g'
 if [ -d "$stage/$slug/documentation" ]; then sed -i 's#"\.\./assets/#"../html/assets/#g; s#"\.\./\([a-z0-9-]*\.html\)"#"../html/\1"#g' "$stage/$slug/documentation/index.html"; fi
 mkdir -p "$stage/$slug/source/src" "$stage/$slug/source/tools" "$stage/$slug/source/vendor"
 cp -r "$root/src/$slug" "$root/src/_core" "$stage/$slug/source/src/"

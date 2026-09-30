@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>رزرو میز | رستوران زعفران</title>
+    <meta name="description" content="رزرو آنلاین میز با انتخاب تاریخ شمسی، ساعت، تعداد نفرات و فضای دلخواه" />
+    <meta name="theme-color" content="#150d11" />
+    <meta property="og:title" content="رزرو میز | رستوران زعفران" />
+    <meta property="og:description" content="رزرو آنلاین میز با انتخاب تاریخ شمسی، ساعت، تعداد نفرات و فضای دلخواه" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="restaurant" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function (d) {
+        d.classList.add("js");
+        try {
+          var t = JSON.parse(localStorage.getItem("theme"));
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "dark";
+          d.setAttribute("data-theme", t);
+        } catch (e) {}
+      })(document.documentElement);
+    </script>
+    <link rel="preload" href="assets/fonts/vazirmatn/Vazirmatn-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+    <script src="assets/js/core.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body class="">
+    <script src="assets/js/icons.js"></script>
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+
+    <header class="header" data-sticky-header>
+      <div class="container header__inner">
+        <nav class="nav" aria-label="منوی اصلی">
+          <a class="" href="index.html">خانه</a><a class="" href="menu.html">منو</a><a class="" href="about.html">داستان ما</a
+          ><a class="" href="gallery.html">گالری</a>
+        </nav>
+        <button
+          class="icon-btn menu-btn"
+          type="button"
+          data-drawer-open="menu"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="باز کردن منو"
+        >
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+        </button>
+        <a class="logo" href="index.html" aria-label="رستوران زعفران، صفحه اصلی"><b>زعفران</b><span>رستوران ایرانی · از ۱۳۶۸</span></a>
+        <div class="header__tools">
+          <nav class="nav nav--end" aria-label="منوی دوم">
+            <a class="" href="events.html">مراسم و کترینگ</a><a class="" href="contact.html">تماس</a>
+          </nav>
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="تغییر حالت روشن و تاریک" aria-pressed="false">
+            <svg class="icon theme-icon-dark" aria-hidden="true"><use href="#i-sun"></use></svg
+            ><svg class="icon theme-icon-light" aria-hidden="true"><use href="#i-moon"></use></svg>
+          </button>
+          <a class="btn btn--gold btn--sm" href="reservation.html">رزرو میز</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="drawer" id="menu" data-drawer>
+      <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="منو">
+        <div class="row-between">
+          <a class="logo" href="index.html" aria-label="رستوران زعفران، صفحه اصلی"><b>زعفران</b><span>رستوران ایرانی · از ۱۳۶۸</span></a
+          ><button class="icon-btn" type="button" data-drawer-close aria-label="بستن">
+            <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+          </button>
+        </div>
+        <nav class="drawer__nav" aria-label="منوی موبایل">
+          <a class="" href="index.html">خانه</a><a class="" href="menu.html">منو</a><a class="" href="about.html">داستان ما</a
+          ><a class="" href="gallery.html">گالری</a><a class="" href="events.html">مراسم و کترینگ</a><a class="" href="contact.html">تماس</a
+          ><a class="" href="qr-menu.html">منوی دیجیتال (QR)</a>
+        </nav>
+        <a class="btn btn--gold btn--block" href="reservation.html"
+          ><svg class="icon" aria-hidden="true"><use href="#i-calendar-heart"></use></svg> رزرو میز</a
+        >
+        <p class="small muted">
+          <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg> ۰۲۱-۲۲۶۶۳۳۴۴
+        </p>
+      </div>
+    </div>
+    <main id="main">
+      <section class="page-hero">
+        <div
+          class="pattern"
+          style="
+            background-image: url(&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2780%27%20height%3D%2780%27%20viewBox%3D%270%200%2080%2080%27%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%23e3a33b%27%20stroke-opacity%3D%270.18%27%20stroke-width%3D%271.2%27%3E%3Cpath%20d%3D%27M40%208l9%2023%2023%209-23%209-9%2023-9-23-23-9%2023-9z%27%2F%3E%3Cpath%20d%3D%27M17.4%2017.4%2040%2026.8l22.6-9.4L53.2%2040l9.4%2022.6L40%2053.2l-22.6%209.4L26.8%2040z%27%2F%3E%3Ccircle%20cx%3D%2740%27%20cy%3D%2740%27%20r%3D%277%27%2F%3E%3Cpath%20d%3D%27M0%200l8%208M80%200l-8%208M0%2080l8-8M80%2080l-8-8%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E&quot;);
+          "
+        ></div>
+        <div class="container center stack" style="justify-items: center; --gap: 0.75rem">
+          <nav class="breadcrumb" aria-label="مسیر صفحه">
+            <a href="index.html">خانه</a><svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg
+            ><span aria-current="page">رزرو میز</span>
+          </nav>
+          <p class="callig" style="font-size: var(--text-xl)">قدمتان روی چشم</p>
+          <h1>رزرو میز</h1>
+          <svg class="ornament" viewBox="0 0 160 20" aria-hidden="true">
+            <path d="M0 10h60M100 10h60" stroke="currentColor" stroke-width="1" />
+            <path d="M80 2l4 8-4 8-4-8z" fill="currentColor" />
+            <circle cx="68" cy="10" r="2" fill="currentColor" />
+            <circle cx="92" cy="10" r="2" fill="currentColor" />
+          </svg>
+          <p class="muted" style="max-inline-size: 36rem">
+            رزرو تا ۳۰ روز آینده امکان‌پذیر است. برای بیش از ۱۰ نفر، سالن خصوصی پیشنهاد می‌شود.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container reserve">
+          <form class="card reserve__form" data-reserve data-validate novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label class="label" for="r-date">تاریخ</label>
+                <div class="input-icon">
+                  <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg
+                  ><input
+                    class="input"
+                    id="r-date"
+                    data-datepicker
+                    readonly
+                    required
+                    placeholder="انتخاب روز"
+                    data-msg="لطفاً تاریخ را انتخاب کنید"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label" for="r-time">ساعت</label
+                ><select class="select" id="r-time" required>
+                  <option>۱۲:۳۰</option>
+                  <option>۱۳:۰۰</option>
+                  <option>۱۳:۳۰</option>
+                  <option>۱۴:۰۰</option>
+                  <option>۱۴:۳۰</option>
+                  <option>۱۹:۳۰</option>
+                  <option selected>۲۰:۰۰</option>
+                  <option>۲۰:۳۰</option>
+                  <option>۲۱:۰۰</option>
+                  <option>۲۱:۳۰</option>
+                  <option>۲۲:۰۰</option>
+                </select>
+              </div>
+              <div class="field">
+                <label class="label" for="r-guests">تعداد نفرات</label>
+                <div class="stepper" data-stepper>
+                  <button type="button" data-step-btn="1" aria-label="افزایش">
+                    <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg></button
+                  ><input id="r-guests" value="۴" inputmode="numeric" aria-live="polite" /><button
+                    type="button"
+                    data-step-btn="-1"
+                    aria-label="کاهش"
+                  >
+                    <svg class="icon" aria-hidden="true"><use href="#i-minus"></use></svg>
+                  </button>
+                </div>
+                <p class="xs gold" data-guests-note hidden>
+                  <svg class="icon" aria-hidden="true"><use href="#i-info"></use></svg> برای ۱۰ نفر و بیشتر،
+                  <a class="link" href="events.html">سالن خصوصی</a> را ببینید.
+                </p>
+              </div>
+              <div class="field">
+                <label class="label" for="r-occasion">مناسبت (اختیاری)</label
+                ><select class="select" id="r-occasion">
+                  <option>بدون مناسبت</option>
+                  <option>تولد</option>
+                  <option>سالگرد ازدواج</option>
+                  <option>قرار کاری</option>
+                  <option>خواستگاری</option>
+                </select>
+              </div>
+              <fieldset class="full areas">
+                <legend class="label">فضای دلخواه</legend>
+                <label class="area"
+                  ><input type="radio" name="area" value="تالار اصلی" checked /><span
+                    ><svg class="icon" aria-hidden="true"><use href="#i-music"></use></svg><b>تالار اصلی</b
+                    ><small>زیر گنبد، نزدیک صحنه موسیقی</small></span
+                  ></label
+                ><label class="area"
+                  ><input type="radio" name="area" value="حیاط و حوض" /><span
+                    ><svg class="icon" aria-hidden="true"><use href="#i-trees"></use></svg><b>حیاط و حوض</b
+                    ><small>فضای باز با تخت‌های سنتی</small></span
+                  ></label
+                ><label class="area"
+                  ><input type="radio" name="area" value="شاه‌نشین" /><span
+                    ><svg class="icon" aria-hidden="true"><use href="#i-sofa"></use></svg><b>شاه‌نشین</b
+                    ><small>دنج و آرام، مناسب قرارهای دونفره</small></span
+                  ></label
+                >
+              </fieldset>
+              <div class="field">
+                <label class="label" for="r-name">نام و نام خانوادگی</label><input class="input" id="r-name" required autocomplete="name" />
+              </div>
+              <div class="field">
+                <label class="label" for="r-phone">شماره موبایل</label
+                ><input
+                  class="input"
+                  id="r-phone"
+                  type="tel"
+                  required
+                  pattern="09[0-9]{9}"
+                  data-msg="شماره موبایل را به شکل ۰۹۱۲۳۴۵۶۷۸۹ وارد کنید"
+                  autocomplete="tel"
+                />
+              </div>
+              <div class="field full">
+                <label class="label" for="r-note">درخواست ویژه</label
+                ><textarea class="textarea" id="r-note" rows="3" placeholder="صندلی کودک، کیک تولد، رژیم غذایی خاص…"></textarea>
+              </div>
+            </div>
+            <button class="btn btn--gold btn--lg btn--block mt-3" type="submit">
+              <span
+                ><svg class="icon" aria-hidden="true"><use href="#i-calendar-heart"></use></svg> تأیید رزرو</span
+              >
+            </button>
+          </form>
+
+          <div class="card reserve__done" data-reserve-done hidden>
+            <div class="center stack" style="justify-items: center; --gap: 0.5rem">
+              <div class="reserve__plate">
+                <svg class="dish" viewBox="0 0 200 200" aria-hidden="true">
+                  <circle cx="100" cy="100" r="92" fill="#1f6f78" />
+                  <circle cx="100" cy="100" r="86" fill="none" stroke="#e9c46a" stroke-width="2.5" stroke-dasharray="3 5" />
+                  <circle cx="100" cy="100" r="54" fill="#f4ecdc" opacity=".25" />
+                  <circle cx="100" cy="100" r="42" fill="#fbf7ef" />
+                  <circle cx="100" cy="100" r="36" fill="#a33b12" />
+                  <circle cx="100" cy="100" r="36" fill="url(#cs62)" />
+                  <defs>
+                    <radialGradient id="cs62" cx=".35" cy=".35" r=".7">
+                      <stop offset="0" stop-color="#e06a2c" />
+                      <stop offset="1" stop-color="#7a1f08" stop-opacity="0" />
+                    </radialGradient>
+                  </defs>
+                  <rect x="148" y="64" width="12" height="54" rx="4" fill="#f2c94c" transform="rotate(24 154 91)" />
+                  <rect x="46" y="62" width="14" height="12" rx="3" fill="#fffaf0" transform="rotate(12 53 68)" />
+                  <rect x="40" y="136" width="14" height="12" rx="3" fill="#fffaf0" transform="rotate(12 47 142)" />
+                  <rect x="150" y="146" width="14" height="12" rx="3" fill="#fffaf0" transform="rotate(12 157 152)" />
+                </svg>
+              </div>
+              <p class="callig" style="font-size: var(--text-xl)">منتظر دیدارتان هستیم</p>
+              <h2 class="h-md">رزرو شما ثبت شد</h2>
+            </div>
+            <dl class="ticket">
+              <div>
+                <dt>کد رزرو</dt>
+                <dd class="ltr" data-r-code>ZF-0000</dd>
+              </div>
+              <div>
+                <dt>به نام</dt>
+                <dd data-r-name>—</dd>
+              </div>
+              <div>
+                <dt>زمان</dt>
+                <dd data-r-when>—</dd>
+              </div>
+              <div>
+                <dt>نفرات</dt>
+                <dd data-r-guests>—</dd>
+              </div>
+              <div>
+                <dt>فضا</dt>
+                <dd data-r-area>—</dd>
+              </div>
+            </dl>
+            <p class="xs muted center">میز تا ۲۰ دقیقه پس از زمان رزرو نگه داشته می‌شود. برای لغو، کد رزرو را به ۳۰۰۰۱۴۵ پیامک کنید.</p>
+          </div>
+
+          <aside class="stack reserve__side">
+            <div class="card">
+              <h2 class="h-sm">ساعات کاری</h2>
+              <ul class="list-plain hours">
+                <li><span>شنبه تا چهارشنبه</span><b class="gold">۱۲:۰۰ تا ۲۳:۳۰</b></li>
+                <li><span>پنجشنبه و جمعه</span><b class="gold">۱۲:۰۰ تا ۰۰:۳۰</b></li>
+                <li><span>ناهار</span><b class="gold">۱۲:۰۰ تا ۱۶:۰۰</b></li>
+                <li><span>شام و موسیقی زنده</span><b class="gold">۱۹:۰۰ تا ۲۳:۰۰</b></li>
+              </ul>
+            </div>
+            <div class="card">
+              <h2 class="h-sm">رزرو تلفنی</h2>
+              <p class="small muted">برای رزرو فوری یا گروهی تماس بگیرید.</p>
+              <a class="btn btn--block mt-2" href="tel:02122663344"
+                ><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg> ۰۲۱-۲۲۶۶۳۳۴۴</a
+              >
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div
+        class="pattern"
+        style="
+          background-image: url(&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2780%27%20height%3D%2780%27%20viewBox%3D%270%200%2080%2080%27%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%23e3a33b%27%20stroke-opacity%3D%270.08%27%20stroke-width%3D%271.2%27%3E%3Cpath%20d%3D%27M40%208l9%2023%2023%209-23%209-9%2023-9-23-23-9%2023-9z%27%2F%3E%3Cpath%20d%3D%27M17.4%2017.4%2040%2026.8l22.6-9.4L53.2%2040l9.4%2022.6L40%2053.2l-22.6%209.4L26.8%2040z%27%2F%3E%3Ccircle%20cx%3D%2740%27%20cy%3D%2740%27%20r%3D%277%27%2F%3E%3Cpath%20d%3D%27M0%200l8%208M80%200l-8%208M0%2080l8-8M80%2080l-8-8%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E&quot;);
+        "
+      ></div>
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand stack">
+            <a class="logo" href="index.html" aria-label="رستوران زعفران، صفحه اصلی"><b>زعفران</b><span>رستوران ایرانی · از ۱۳۶۸</span></a>
+            <p>از سال ۱۳۶۸، طعم آشپزخانه‌های قدیمی ایران را با همان دستورهای مادربزرگ‌ها و زعفران قائنات سر میز شما می‌آوریم.</p>
+            <p class="callig" style="font-size: var(--text-lg)">سفره‌ای به رنگ زعفران</p>
+          </div>
+          <div>
+            <h3>ساعات کاری</h3>
+            <ul class="list-plain">
+              <li>شنبه تا چهارشنبه<br /><span class="gold">۱۲:۰۰ تا ۲۳:۳۰</span></li>
+              <li>پنجشنبه و جمعه<br /><span class="gold">۱۲:۰۰ تا ۰۰:۳۰</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3>دسترسی سریع</h3>
+            <ul class="list-plain">
+              <li><a href="menu.html">منوی کامل</a></li>
+              <li><a href="qr-menu.html">منوی دیجیتال QR</a></li>
+              <li><a href="reservation.html">رزرو میز</a></li>
+              <li><a href="events.html">مراسم و کترینگ</a></li>
+              <li><a href="gallery.html">گالری</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>تماس</h3>
+            <ul class="list-plain">
+              <li>تهران، الهیه، خیابان فرشته، کوچه نیلوفر، پلاک ۹</li>
+              <li><a href="tel:02122663344">۰۲۱-۲۲۶۶۳۳۴۴</a></li>
+              <li><a href="contact.html">مسیریابی و پارکینگ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© ۱۴۰۵ رستوران زعفران · همه حقوق محفوظ است.</span><a href="documentation/index.html">قوانین و حریم خصوصی</a>
+        </div>
+      </div>
+    </footer>
+    <a class="scroll-top" href="#main" data-scroll-top aria-label="بازگشت به بالا"
+      ><svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg
+    ></a>
+  </body>
+</html>

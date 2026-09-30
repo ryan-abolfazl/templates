@@ -32,6 +32,8 @@ async function build(slug) {
 
   copyDir(path.join(src, 'assets'), path.join(out, 'assets'));
   copyDir(path.join(src, 'static'), out);
+  // Optional hook: site.generate(outDir, { fs, path }) writes generated assets (e.g. SVG images)
+  if (site.generate) await site.generate(out, { fs, path });
 
   // Fonts + licenses
   for (const key of site.fonts) {

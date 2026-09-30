@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>مستندات | رستوران زعفران</title>
+    <meta name="description" content="راهنمای فارسی نصب و شخصی‌سازی قالب" />
+    <meta name="theme-color" content="#150d11" />
+    <meta property="og:title" content="مستندات | رستوران زعفران" />
+    <meta property="og:description" content="راهنمای فارسی نصب و شخصی‌سازی قالب" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="restaurant" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function (d) {
+        d.classList.add("js");
+        try {
+          var t = JSON.parse(localStorage.getItem("theme"));
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "dark";
+          d.setAttribute("data-theme", t);
+        } catch (e) {}
+      })(document.documentElement);
+    </script>
+    <link rel="preload" href="../assets/fonts/vazirmatn/Vazirmatn-wght.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/tokens.css" />
+    <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/pages.css" />
+    <script src="../assets/js/core.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
+  </head>
+  <body class="">
+    <script src="../assets/js/icons.js"></script>
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+
+    <link rel="stylesheet" href="../assets/css/docs.css" />
+    <div class="docs">
+      <nav class="docs__nav" aria-label="فهرست مستندات">
+        <a href="../index.html"><b>← مشاهده قالب</b></a>
+        <a href="#intro">معرفی</a><a href="#start">شروع سریع</a><a href="#structure">ساختار فایل‌ها</a><a href="#pages">فهرست صفحات</a
+        ><a href="#colors">رنگ‌ها و ظاهر</a><a href="#fonts">فونت‌ها</a><a href="#js">کامپوننت‌های جاوااسکریپت</a
+        ><a href="#icons">آیکن‌ها و تصاویر</a><a href="#source">توسعه با سورس</a><a href="#browsers">سازگاری</a
+        ><a href="#credits">منابع و لایسنس</a><a href="#changelog">تغییرات نسخه‌ها</a><a href="#support">پشتیبانی</a>
+      </nav>
+      <main id="main" class="docs__body">
+        <section id="intro">
+          <p class="docs__kicker">راهنمای استفاده · نسخه ۱.۰.۰</p>
+          <h1>مستندات قالب رستوران زعفران</h1>
+          <p>
+            زعفران یک قالب HTML برای رستوران‌های ایرانی، سفره‌خانه‌ها و کافه‌های سنتی است. پوسته شبانه با طلایی زعفرانی، نقوش گره‌چینی،
+            قاب‌های طاق‌دار و خوشنویسی نستعلیق، حس یک خانه اعیانی قاجاری را زنده می‌کند. حالت روز (کرم) هم با یک کلیک در دسترس است.
+          </p>
+          <ul>
+            <li>۹ صفحه آماده: خانه، منو، منوی دیجیتال QR، رزرو میز، گالری، داستان ما، مراسم و کترینگ، تماس و ۴۰۴</li>
+            <li>منوی تعاملی با فیلتر دسته و جستجوی زنده</li>
+            <li>منوی دیجیتال موبایلی برای QR روی میز، با ناوبری چسبان دسته‌ها و دکمه صدا زدن پیشخدمت</li>
+            <li>رزرو میز با تقویم شمسی، انتخاب فضا، تعداد نفرات و کارت تأیید رزرو</li>
+            <li>گالری با لایت‌باکس و فیلتر</li>
+            <li>تصویرسازی اختصاصی ۱۰ غذای ایرانی (کباب، قورمه‌سبزی، فسنجان، ته‌دیگ، آش، شله‌زرد، چای و…)</li>
+            <li>پوسته پیش‌فرض تاریک + پوسته روشن؛ فونت‌های لاله‌زار، نستعلیق و وزیرمتن</li>
+          </ul>
+        </section>
+
+        <section id="start">
+          <h2>شروع سریع</h2>
+          <ol>
+            <li>فایل فشرده را از حالت فشرده خارج کنید.</li>
+            <li>
+              پوشه <code>html</code> شامل همه صفحات است. فایل <code>html/index.html</code> را در مرورگر باز کنید؛ قالب بدون نیاز به سرور و
+              حتی آفلاین کار می‌کند.
+            </li>
+            <li>برای انتشار، محتوای پوشه <code>html</code> را در هاست خود (پوشه <code>public_html</code>) بارگذاری کنید.</li>
+            <li>متن‌ها، تصاویر و رنگ‌ها را مطابق بخش‌های زیر شخصی‌سازی کنید.</li>
+          </ol>
+          <p>قالب هیچ درخواستی به سرورهای خارجی (CDN، گوگل فونت و…) ارسال نمی‌کند؛ بنابراین در ایران سریع و بدون مشکل بارگذاری می‌شود.</p>
+        </section>
+
+        <section id="structure">
+          <h2>ساختار فایل‌ها</h2>
+          <pre>
+html/
+├── *.html                 صفحات قالب
+├── assets/
+│   ├── css/
+│   │   ├── fonts.css      تعریف فونت‌ها (@font-face)
+│   │   ├── base.css       ریست و ابزارهای دسترس‌پذیری
+│   │   ├── tokens.css     ← رنگ‌ها، فونت، فاصله‌ها (اینجا را ویرایش کنید)
+│   │   ├── components.css دکمه، کارت، فرم، جدول و…
+│   │   └── pages.css      استایل‌های اختصاصی صفحات
+│   ├── js/
+│   │   ├── icons.js       اسپرایت آیکن‌ها
+│   │   ├── core.js        کامپوننت‌های مشترک (بدون وابستگی)
+│   │   └── main.js        رفتارهای اختصاصی قالب
+│   ├── fonts/             فونت‌های woff2
+│   └── img/               تصاویر و طرح‌های SVG
+└── licenses/              مجوز فونت‌ها و آیکن‌ها
+documentation/             همین راهنما
+source/                    سورس صفحات و ابزار ساخت (برای توسعه‌دهندگان)</pre
+          >
+        </section>
+
+        <section id="pages">
+          <h2>فهرست صفحات (۹ صفحه)</h2>
+          <div class="table-wrap" data-overflow-ok>
+            <table class="table docs__table">
+              <thead>
+                <tr>
+                  <th scope="col">صفحه</th>
+                  <th scope="col">فایل</th>
+                  <th scope="col">توضیح</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="../404.html">صفحه پیدا نشد</a></td>
+                  <td><code>404.html</code></td>
+                  <td>خطای ۴۰۴</td>
+                </tr>
+                <tr>
+                  <td><a href="../about.html">داستان ما</a></td>
+                  <td><code>about.html</code></td>
+                  <td>تاریخچه رستوران زعفران، سرآشپز و ارزش‌های ما</td>
+                </tr>
+                <tr>
+                  <td><a href="../contact.html">تماس و مسیریابی</a></td>
+                  <td><code>contact.html</code></td>
+                  <td>آدرس، تلفن، ساعات کاری و راه‌های دسترسی به رستوران زعفران</td>
+                </tr>
+                <tr>
+                  <td><a href="../events.html">مراسم و کترینگ</a></td>
+                  <td><code>events.html</code></td>
+                  <td>سالن‌های خصوصی، منوی مراسم و کترینگ ایرانی</td>
+                </tr>
+                <tr>
+                  <td><a href="../gallery.html">گالری</a></td>
+                  <td><code>gallery.html</code></td>
+                  <td>گالری غذاها و فضای رستوران زعفران</td>
+                </tr>
+                <tr>
+                  <td><a href="../index.html">رستوران ایرانی</a></td>
+                  <td><code>index.html</code></td>
+                  <td>رستوران زعفران؛ غذاهای اصیل ایرانی، کباب زغالی، خورش‌های خانگی و موسیقی زنده سنتی در تهران</td>
+                </tr>
+                <tr>
+                  <td><a href="../menu.html">منوی رستوران</a></td>
+                  <td><code>menu.html</code></td>
+                  <td>منوی کامل رستوران زعفران با قیمت و توضیحات</td>
+                </tr>
+                <tr>
+                  <td><a href="../qr-menu.html">منوی دیجیتال</a></td>
+                  <td><code>qr-menu.html</code></td>
+                  <td>منوی موبایلی رستوران برای اسکن QR روی میز</td>
+                </tr>
+                <tr>
+                  <td><a href="../reservation.html">رزرو میز</a></td>
+                  <td><code>reservation.html</code></td>
+                  <td>رزرو آنلاین میز با انتخاب تاریخ شمسی، ساعت، تعداد نفرات و فضای دلخواه</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="colors">
+          <h2>رنگ‌ها و ظاهر</h2>
+          <p>
+            همه تصمیم‌های طراحی به‌صورت متغیرهای CSS در فایل <code>assets/css/tokens.css</code> تعریف شده‌اند. کافی است مقدار متغیر را عوض
+            کنید تا همه صفحات به‌روز شوند. مقادیر حالت تاریک زیر انتخابگر <code>[data-theme='dark']</code> قرار دارند.
+          </p>
+          <div class="docs__swatches">
+            <div class="docs__swatch">
+              <i style="background: #e3a33b"></i><span><b>زعفرانی (اصلی)</b><code>--saffron</code><code>#e3a33b</code></span>
+            </div>
+            <div class="docs__swatch">
+              <i style="background: #d4455d"></i><span><b>اناری</b><code>--pomegranate</code><code>#d4455d</code></span>
+            </div>
+            <div class="docs__swatch">
+              <i style="background: #2aa3a3"></i><span><b>فیروزه‌ای</b><code>--turquoise</code><code>#2aa3a3</code></span>
+            </div>
+            <div class="docs__swatch">
+              <i style="background: #7d9b3a"></i><span><b>پسته‌ای</b><code>--pistachio</code><code>#7d9b3a</code></span>
+            </div>
+            <div class="docs__swatch">
+              <i style="background: #150d11"></i><span><b>زمینه شب</b><code>--bg (dark)</code><code>#150d11</code></span>
+            </div>
+            <div class="docs__swatch">
+              <i style="background: #f7f0e3"></i><span><b>زمینه روز</b><code>--bg (light)</code><code>#f7f0e3</code></span>
+            </div>
+          </div>
+          <pre>
+:root {
+  --primary: #e3a33b;   /* رنگ اصلی برند */
+}</pre
+          >
+          <p>
+            حالت پیش‌فرض (روشن یا تاریک) با ویژگی <code>data-theme</code> روی تگ <code>&lt;html&gt;</code> تعیین می‌شود و انتخاب کاربر در
+            مرورگر ذخیره می‌شود.
+          </p>
+        </section>
+
+        <section id="fonts">
+          <h2>فونت‌ها</h2>
+          <p>فونت‌های قالب رایگان و دارای مجوز آزاد SIL OFL هستند و استفاده تجاری از آن‌ها مجاز است:</p>
+          <ul>
+            <li><b>لاله‌زار (Lalezar)</b>: تیترها و قیمت‌ها</li>
+            <li><b>نوتو نستعلیق (Noto Nastaliq Urdu)</b>: عبارت‌های خوشنویسی و لوگو (فقط جمله‌های کوتاه)</li>
+            <li><b>وزیرمتن (Vazirmatn)</b>: متن‌ها و رابط کاربری</li>
+          </ul>
+          <p>
+            برای استفاده از فونت دیگر (مثلاً فونت تجاری که لایسنس آن را خریده‌اید)، فایل woff2 را در <code>assets/fonts</code> قرار دهید، در
+            <code>fonts.css</code> یک <code>@font-face</code> بسازید و متغیر <code>--font-body</code> را در <code>tokens.css</code> تغییر
+            دهید.
+          </p>
+        </section>
+
+        <section id="js">
+          <h2>کامپوننت‌های جاوااسکریپت</h2>
+          <p>
+            همه تعاملات با جاوااسکریپت خالص و بدون jQuery یا Bootstrap نوشته شده‌اند و از طریق ویژگی‌های <code>data-*</code> فعال می‌شوند؛
+            کافی است ساختار HTML را کپی کنید.
+          </p>
+          <div class="table-wrap" data-overflow-ok>
+            <table class="table docs__table">
+              <thead>
+                <tr>
+                  <th scope="col">کامپوننت</th>
+                  <th scope="col">نحوه استفاده</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>حالت تاریک</b></td>
+                  <td><code>[data-theme-toggle]</code> روی هر دکمه‌ای، حالت روشن/تاریک را عوض می‌کند و انتخاب کاربر ذخیره می‌شود.</td>
+                </tr>
+                <tr>
+                  <td><b>منو و کشوها</b></td>
+                  <td>
+                    کشوی موبایل: <code>data-drawer-open="id"</code> و <code>data-drawer</code>؛ منوی کشویی: <code>data-dropdown</code>؛ هدر
+                    چسبان: <code>data-sticky-header</code>.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>تب‌ها</b></td>
+                  <td>
+                    ساختار استاندارد <code>role="tablist/tab/tabpanel"</code> داخل <code>[data-tabs]</code> با پشتیبانی کامل صفحه‌کلید.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>آکاردئون</b></td>
+                  <td>بر پایه <code>&lt;details&gt;</code>؛ با <code>data-accordion="single"</code> فقط یک مورد باز می‌ماند.</td>
+                </tr>
+                <tr>
+                  <td><b>مودال</b></td>
+                  <td>
+                    عنصر <code>&lt;dialog&gt;</code> با <code>data-modal-open="id"</code> باز و با <code>data-modal-close</code> بسته
+                    می‌شود.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>اعلان</b></td>
+                  <td><code>UI.toast("پیام", "success")</code> یا ویژگی <code>data-toast="پیام"</code> روی دکمه.</td>
+                </tr>
+                <tr>
+                  <td><b>انیمیشن اسکرول</b></td>
+                  <td>
+                    <code>data-reveal</code> روی هر عنصر؛ با <code>data-reveal-stagger</code> روی والد، فرزندان پشت‌سرهم ظاهر می‌شوند.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>شمارنده</b></td>
+                  <td><code>data-count-to="1200"</code> عدد را با ارقام فارسی می‌شمارد.</td>
+                </tr>
+                <tr>
+                  <td><b>اسلایدر</b></td>
+                  <td>
+                    <code>data-carousel</code> + <code>data-carousel-track</code> و دکمه‌های <code>data-carousel-prev/next</code>؛ لمسی و
+                    راست‌چین.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>لایت‌باکس</b></td>
+                  <td>لینک تصویر با <code>data-lightbox="گروه"</code> و <code>data-caption</code>.</td>
+                </tr>
+                <tr>
+                  <td><b>تقویم شمسی</b></td>
+                  <td>
+                    ورودی با <code>data-datepicker</code> انتخابگر تاریخ جلالی می‌گیرد؛ تاریخ میلادی معادل در
+                    <code>data-gregorian</code> ذخیره می‌شود. API: <code>UI.jalali</code>.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>فیلتر شبکه</b></td>
+                  <td>
+                    <code>data-filter</code> با دکمه‌های <code>data-filter-btn</code> و آیتم‌های <code>data-filter-item data-tags</code>.
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>اعتبارسنجی فرم</b></td>
+                  <td>
+                    <code>form[data-validate]</code> پیام‌های خطای فارسی نشان می‌دهد؛ <code>data-success</code> پیام موفقیت. نمایش رمز و
+                    ورودی کد یکبارمصرف هم دارد.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            توابع کمکی سراسری: <code>UI.fa(1250000)</code> ارقام فارسی با جداکننده، <code>UI.toman(n)</code> قیمت،
+            <code>UI.jdate(date)</code> تاریخ شمسی.
+          </p>
+          <h3>پوسته پیش‌فرض</h3>
+          <p>
+            برای شروع با پوسته روشن، در تگ <code>&lt;html&gt;</code> مقدار <code>data-theme="light"</code> بگذارید و در اسکریپت ابتدای
+            <code>&lt;head&gt;</code> مقدار پیش‌فرض را به <code>light</code> تغییر دهید. نقش گره‌چینی با تابع <code>girih()</code> در سورس
+            ساخته می‌شود و رنگ آن قابل تغییر است.
+          </p>
+        </section>
+
+        <section id="icons">
+          <h2>آیکن‌ها و تصاویر</h2>
+          <p>
+            آیکن‌ها از مجموعه آزاد <b>Lucide</b> هستند و به شکل اسپرایت SVG در <code>assets/js/icons.js</code> قرار دارند. نمونه استفاده:
+          </p>
+          <pre>&lt;svg class="icon"&gt;&lt;use href="#i-heart"&gt;&lt;/use&gt;&lt;/svg&gt;</pre>
+          <p>برای افزودن آیکن جدید از نسخه سورس استفاده کنید (بخش بعد) یا کد SVG آیکن را مستقیماً از سایت lucide.dev کپی کنید.</p>
+          <p>
+            تصاویر غذاها طرح‌های SVG اختصاصی هستند که در پوشه <code>assets/img/dishes</code> هم به‌صورت فایل جداگانه قرار دارند. برای عکس
+            واقعی، فایل‌های این پوشه را با عکس‌های خودتان (مربعی) جایگزین کنید و در صفحات، بخش <code>.menu-item__img</code> را با
+            <code>&lt;img&gt;</code> عوض کنید.
+          </p>
+        </section>
+
+        <section id="source">
+          <h2>توسعه با سورس (اختیاری)</h2>
+          <p>
+            صفحات از ماژول‌های جاوااسکریپت در پوشه <code>source/src</code> ساخته می‌شوند تا هدر، منو و فوتر فقط یک‌بار نوشته شوند. اگر
+            می‌خواهید تغییرات گسترده بدهید:
+          </p>
+          <pre>
+cd source
+npm i -g prettier          # یک‌بار
+node tools/build.mjs zaferan   # خروجی در templates/zaferan</pre
+          >
+          <p>برای ویرایش‌های ساده نیازی به این مرحله نیست؛ فایل‌های HTML پوشه <code>html</code> را مستقیم ویرایش کنید.</p>
+        </section>
+
+        <section id="browsers">
+          <h2>سازگاری</h2>
+          <p>
+            آخرین دو نسخه Chrome، Edge، Firefox، Safari و مرورگرهای موبایل (Chrome اندروید و Safari آی‌اواس). طراحی از ۳۶۰ تا ۱۹۲۰ پیکسل
+            واکنش‌گراست و با صفحه‌خوان‌ها و صفحه‌کلید قابل استفاده است (WCAG 2.2 AA).
+          </p>
+        </section>
+
+        <section id="credits">
+          <h2>منابع و لایسنس</h2>
+          <ul>
+            <li>فونت لاله‌زار (Lalezar): SIL Open Font License 1.1</li>
+            <li>فونت نوتو نستعلیق (Noto Nastaliq Urdu): SIL Open Font License 1.1</li>
+            <li>فونت وزیرمتن (Vazirmatn): SIL Open Font License 1.1</li>
+            <li>آیکن‌ها: Lucide، مجوز ISC</li>
+            <li>تبدیل تاریخ شمسی: الگوریتم jalaali-js، مجوز MIT</li>
+            <li>همه تصاویر و طرح‌ها اختصاصی همین قالب هستند؛ هیچ عکس استوکی همراه قالب نیست.</li>
+          </ul>
+          <p>متن کامل مجوزها در پوشه <code>licenses</code> قرار دارد.</p>
+        </section>
+
+        <section id="changelog">
+          <h2>تغییرات نسخه‌ها</h2>
+          <p><b>نسخه ۱.۰.۰</b> (مهر ۱۴۰۵): انتشار اولیه.</p>
+        </section>
+
+        <section id="support">
+          <h2>پشتیبانی</h2>
+          <p>
+            پرسش‌ها و گزارش مشکلات را از طریق بخش پشتیبانی صفحه محصول در راست‌چین ارسال کنید. پشتیبانی شامل رفع اشکال و راهنمایی در استفاده
+            از قالب است؛ سفارشی‌سازی اختصاصی جداگانه انجام می‌شود.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
