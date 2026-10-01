@@ -9,7 +9,7 @@ const t = instructors[0];
 export default (ctx) => html`
 <section class="teacher-hero">
   <div class="container teacher-hero__grid">
-    <div class="teacher-hero__art tone-${t.tone}">${avatar(t.name, t.tone, 'xl')}<span class="badge tone-ink teacher-hero__tag">${icon('badge-check')} مدرس برتر ۱۴۰۴</span></div>
+    <div class="teacher-hero__art glass glass--lg">${avatar(t.name, t.tone, 'xl')}<span class="badge tone-accent teacher-hero__tag">${icon('badge-check')} مدرس برتر ۱۴۰۴</span></div>
     <div class="stack" style="--gap:1.25rem">
       <nav class="breadcrumb" aria-label="مسیر صفحه"><a href="${ctx.base}index.html">خانه</a>${icon('chevron-left')}<span>مدرسان</span>${icon('chevron-left')}<span aria-current="page">${t.name}</span></nav>
       <h1 style="font-size:var(--text-4xl)">${t.name}</h1>
@@ -21,7 +21,7 @@ export default (ctx) => html`
         <div><dt>نظر</dt><dd>${fa(3240)}</dd></div>
       </dl>
       <div class="row wrap">
-        <a class="btn btn--ink" href="#teacher-courses">${icon('library-big')} دوره‌های آرش</a>
+        <a class="btn btn--primary" href="#teacher-courses">${icon('library-big')} دوره‌های آرش</a>
         <a class="btn" href="${ctx.base}contact.html">${icon('calendar-clock')} رزرو جلسه منتورینگ</a>
       </div>
     </div>
@@ -35,12 +35,12 @@ export default (ctx) => html`
   </div>
 </section>
 
-<section class="section section--cream">
+<section class="section section--tight">
   <div class="container">
-    <div class="section-head"><div><span class="eyebrow"><i>${icon('users')}</i> تیم مدرسان</span><h2>دیگر مدرسان دانش</h2></div></div>
+    <div class="section-head"><div><span class="eyebrow">تیم مدرسان</span><h2>دیگر مدرسان دانش</h2></div></div>
     <div class="teachers">
       ${instructors.slice(1, 5).map(
-        (x) => html`<a class="teacher card--hover" href="${ctx.base}instructor.html"><div class="teacher__art tone-${x.tone}">${avatar(x.name, x.tone, 'xl')}</div><b>${x.name}</b><span class="xs muted">${x.role}</span><div class="row xs"><span class="rating">${icon('star')} ${fa(x.rating).replace('.', '٫')}</span><span class="muted">${fa(x.courses)} دوره</span></div></a>`
+        (x) => html`<a class="teacher card--hover" href="${ctx.base}instructor.html">${avatar(x.name, x.tone, 'xl')}<b>${x.name}</b><span class="xs muted">${x.role}</span><div class="row xs"><span class="rating">${icon('star')} ${fa(x.rating).replace('.', '٫')}</span><span class="muted">${fa(x.courses)} دوره</span></div></a>`
       )}
     </div>
   </div>

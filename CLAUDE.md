@@ -76,7 +76,7 @@ Always rebuild after editing `src/`, then run QA and **look at the screenshots**
 | slug | niche | status |
 |------|-------|--------|
 | `pishkhan` | admin dashboard (پیشخوان) | v1.0.0, 18 pages + docs |
-| `danesh` | online course / LMS academy | v1.0.0, 16 pages + docs |
+| `danesh` | online course / LMS academy | v2.0.0 (minimal Apple-style glass), 16 pages + docs |
 | `vitrin` | fashion e-shop | v1.0.0, 14 pages + docs |
 | `labkhand` | dental clinic | v1.0.0, 11 pages + docs |
 | `zaferan` | Persian restaurant | v1.0.0, 9 pages + docs |

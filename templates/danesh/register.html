@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ثبت‌نام | آکادمی دانش</title>
     <meta name="description" content="ساخت حساب رایگان در آکادمی دانش" />
-    <meta name="theme-color" content="#c8f53c" />
+    <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)" />
     <meta property="og:title" content="ثبت‌نام | آکادمی دانش" />
     <meta property="og:description" content="ساخت حساب رایگان در آکادمی دانش" />
     <meta property="og:locale" content="fa_IR" />
@@ -35,98 +36,75 @@
     <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
 
     <main id="main" class="auth">
-      <section class="auth__form">
+      <div class="auth__top">
         <a class="logo" href="index.html" aria-label="آکادمی دانش، صفحه اصلی"
           ><span class="logo__mark" aria-hidden="true"
-            ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 4 2 9l10 5 10-5-10-5Z" />
               <path d="M6 11.5V16c3 2.5 9 2.5 12 0v-4.5" />
               <path d="M22 9v6" /></svg></span
           ><span>دانش<small>آکادمی آنلاین</small></span></a
-        >
-        <div class="stack" style="--gap: 1.25rem; inline-size: min(100%, 25rem); margin-block: auto">
+        ><a class="small muted" href="index.html"
+          >بازگشت به صفحه اصلی <svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg
+        ></a>
+      </div>
+      <section class="auth__card glass glass--lg">
+        <div class="stack" style="--gap: 0.4rem">
           <h1>یادگیری را شروع کن</h1>
-          <p class="muted" style="margin-block-start: -0.75rem">ثبت‌نام رایگان است و اولین جلسه همه دوره‌ها را می‌توانی ببینی.</p>
-          <form class="stack" style="--gap: 1rem" data-validate data-success="حساب ساخته شد! خوش آمدی 🎉" data-redirect="dashboard.html">
-            <div class="field">
-              <label class="label" for="r-name">نام و نام خانوادگی</label><input class="input" id="r-name" required autocomplete="name" />
-            </div>
-            <div class="field">
-              <label class="label" for="r-phone">شماره موبایل</label
-              ><input
-                class="input"
-                id="r-phone"
-                type="tel"
-                required
-                pattern="09[0-9]{9}"
-                data-msg="شماره موبایل را به شکل ۰۹۱۲۳۴۵۶۷۸۹ وارد کنید"
-                placeholder="۰۹۱۲۳۴۵۶۷۸۹"
-              />
-            </div>
-            <div class="field">
-              <label class="label" for="r-pw">رمز عبور</label>
-              <div class="input-icon">
-                <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg
-                ><input class="input" id="r-pw" type="password" required minlength="8" autocomplete="new-password" /><button
-                  class="icon-btn input-action"
-                  type="button"
-                  data-password-toggle
-                  aria-label="نمایش رمز"
-                  aria-pressed="false"
-                >
-                  <svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg>
-                </button>
-              </div>
-              <span class="field__hint">حداقل ۸ کاراکتر</span>
-            </div>
-            <div class="field">
-              <span class="label">به چه چیزی علاقه داری؟</span>
-              <div class="row wrap">
-                <label class="check chip"><input type="checkbox" checked /> برنامه‌نویسی</label
-                ><label class="check chip"><input type="checkbox" /> طراحی</label
-                ><label class="check chip"><input type="checkbox" /> هوش مصنوعی</label
-                ><label class="check chip"><input type="checkbox" /> زبان</label
-                ><label class="check chip"><input type="checkbox" /> کسب‌وکار</label>
-              </div>
-            </div>
-            <label class="check"
-              ><input type="checkbox" required /> <span><a class="bold" href="documentation/index.html">قوانین</a> را می‌پذیرم</span></label
-            >
-            <button class="btn btn--primary btn--lg btn--block" type="submit">
-              ساخت حساب <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg>
-            </button>
-          </form>
-          <p class="small center">قبلاً ثبت‌نام کردی؟ <a class="bold" href="login.html">وارد شو</a></p>
+          <p class="muted">ثبت‌نام رایگان است و اولین جلسه همه دوره‌ها را می‌توانی ببینی.</p>
         </div>
-        <a class="small muted" href="index.html"
-          ><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg> بازگشت به صفحه اصلی</a
-        >
+        <form class="stack" style="--gap: 1rem" data-validate data-success="حساب ساخته شد. خوش آمدی!" data-redirect="dashboard.html">
+          <div class="field">
+            <label class="label" for="r-name">نام و نام خانوادگی</label><input class="input" id="r-name" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label class="label" for="r-phone">شماره موبایل</label
+            ><input
+              class="input"
+              id="r-phone"
+              type="tel"
+              required
+              pattern="09[0-9]{9}"
+              data-msg="شماره موبایل را به شکل ۰۹۱۲۳۴۵۶۷۸۹ وارد کنید"
+              placeholder="۰۹۱۲۳۴۵۶۷۸۹"
+            />
+          </div>
+          <div class="field">
+            <label class="label" for="r-pw">رمز عبور</label>
+            <div class="input-icon">
+              <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg
+              ><input class="input" id="r-pw" type="password" required minlength="8" autocomplete="new-password" /><button
+                class="icon-btn input-action"
+                type="button"
+                data-password-toggle
+                aria-label="نمایش رمز"
+                aria-pressed="false"
+              >
+                <svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg>
+              </button>
+            </div>
+            <span class="field__hint">حداقل ۸ کاراکتر</span>
+          </div>
+          <div class="field">
+            <span class="label">به چه چیزی علاقه داری؟</span>
+            <div class="row wrap">
+              <label class="check chip"><input type="checkbox" checked /> برنامه‌نویسی</label
+              ><label class="check chip"><input type="checkbox" /> طراحی</label
+              ><label class="check chip"><input type="checkbox" /> هوش مصنوعی</label
+              ><label class="check chip"><input type="checkbox" /> زبان</label
+              ><label class="check chip"><input type="checkbox" /> کسب‌وکار</label>
+            </div>
+          </div>
+          <label class="check"
+            ><input type="checkbox" required /> <span><a class="bold" href="documentation/index.html">قوانین</a> را می‌پذیرم</span></label
+          >
+          <button class="btn btn--primary btn--lg btn--block" type="submit">
+            ساخت حساب <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg>
+          </button>
+        </form>
+        <p class="small center">قبلاً ثبت‌نام کردی؟ <a class="bold" href="login.html">وارد شو</a></p>
       </section>
-      <aside class="auth__art" aria-hidden="true">
-        <div class="auth__stack">
-          <div class="cover c-violet auth__c1">
-            <span class="badge tone-ink cover__tag">جدید</span>
-            <span class="cover__icon"
-              ><svg class="icon" aria-hidden="true"><use href="#i-brain-circuit"></use></svg
-            ></span>
-            <span class="cover__code">ML-310</span>
-          </div>
-          <div class="cover c-lime auth__c2">
-            <span class="badge tone-ink cover__tag">پرفروش</span>
-            <span class="cover__icon"
-              ><svg class="icon" aria-hidden="true"><use href="#i-braces"></use></svg
-            ></span>
-            <span class="cover__code">JS-101</span>
-          </div>
-          <div class="cover c-sky auth__c3">
-            <span class="cover__icon"
-              ><svg class="icon" aria-hidden="true"><use href="#i-languages"></use></svg
-            ></span>
-            <span class="cover__code">EN-IELTS</span>
-          </div>
-        </div>
-        <p class="auth__quote">«هر روز فقط ۳۰ دقیقه؛<br />یک سال بعد، آدم دیگری هستی.»</p>
-      </aside>
+      <p class="auth__quote">«هر روز فقط ۳۰ دقیقه؛ یک سال بعد، آدم دیگری هستی.»</p>
     </main>
   </body>
 </html>

@@ -12,11 +12,11 @@ export default (ctx) => html`
   <header class="post-hero">
     <div class="container post-hero__inner">
       <nav class="breadcrumb" aria-label="مسیر صفحه"><a href="${ctx.base}index.html">خانه</a>${icon('chevron-left')}<a href="${ctx.base}blog.html">مجله</a>${icon('chevron-left')}<span aria-current="page">برنامه‌نویسی</span></nav>
-      <span class="badge tone-lime">برنامه‌نویسی</span>
+      <span class="badge tone-accent">برنامه‌نویسی</span>
       <h1>${posts[0].title}</h1>
       <div class="row wrap small muted"><div class="person">${avatar('آرش کاظمی', 'lime')}<span><b style="color:var(--text)">آرش کاظمی</b><span>${posts[0].date}</span></span></div><span>${icon('clock')} ${fa(9)} دقیقه مطالعه</span><span>${icon('eye')} ${fa(12480)} بازدید</span></div>
     </div>
-    <div class="container"><div class="post-hero__art cover c-lime"><span class="cover__icon">${icon('map')}</span></div></div>
+    <div class="container"><div class="post-hero__art cover c-blue"><span class="cover__icon">${icon('map')}</span></div></div>
   </header>
 
   <div class="container post-layout section--tight">
@@ -56,14 +56,14 @@ console.log(data.temp); // 24</code></pre>
         )}
         <form class="card stack" data-validate data-success="نظر شما پس از تأیید منتشر می‌شود">
           <div class="field"><label class="label" for="cm">دیدگاه شما</label><textarea class="textarea" id="cm" required minlength="10"></textarea></div>
-          <button class="btn btn--ink" type="submit" style="justify-self:start">ارسال دیدگاه</button>
+          <button class="btn btn--primary" type="submit" style="justify-self:start">ارسال دیدگاه</button>
         </form>
       </section>
     </div>
   </div>
 </article>
 
-<section class="section section--cream section--tight">
+<section class="section section--tight">
   <div class="container">
     <h2 style="font-size:var(--text-2xl);margin-block-end:1.5rem">دوره پیشنهادی برای شروع</h2>
     <div class="course-grid">${[courses[7], courses[0], courses[4]].map((c) => courseCard(ctx, c))}${postCard(ctx, posts[2])}</div>

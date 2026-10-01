@@ -47,7 +47,7 @@
     UI.on('click', '[data-complete]', function (e, b) {
       var cur = $('[data-lesson].is-current');
       if (cur) cur.classList.add('is-done');
-      UI.toast('آفرین! این جلسه تکمیل شد 🎉', 'success');
+      UI.toast('آفرین! این جلسه تکمیل شد', 'success');
     });
     render();
   });

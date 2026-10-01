@@ -10,7 +10,8 @@ const head = (ctx) => {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>${page.title} | ${site.name}</title>
     <meta name="description" content="${page.description || site.description}" />
-    <meta name="theme-color" content="#c8f53c" />
+    <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)" />
     <meta property="og:title" content="${page.title} | ${site.name}" />
     <meta property="og:description" content="${page.description || site.description}" />
     <meta property="og:locale" content="fa_IR" />
@@ -31,8 +32,8 @@ const head = (ctx) => {
 export default {
   name: 'آکادمی دانش',
   slug: 'danesh',
-  version: '1.0.0',
-  description: 'قالب HTML آموزش آنلاین دانش: فروش دوره، پلیر درس، داشبورد دانشجو و بلاگ با طراحی بنتو و حالت تاریک.',
+  version: '2.0.0',
+  description: 'قالب HTML آموزش آنلاین دانش: فروش دوره، پلیر درس، داشبورد دانشجو و بلاگ با طراحی مینیمال شیشه‌ای و حالت تاریک.',
   fonts: ['vazirmatn', 'estedad'],
   core: ['theme', 'nav', 'tabs', 'accordion', 'modal', 'toast', 'reveal', 'counter', 'carousel', 'charts', 'filter', 'form', 'commerce'],
   layouts: {

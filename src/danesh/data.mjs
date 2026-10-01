@@ -21,18 +21,18 @@ export const instructors = [
 ];
 
 export const courses = [
-  { id: 1, title: 'جاوااسکریپت از صفر تا حرفه‌ای', cat: 'web', level: 'مقدماتی', teacher: 0, lessons: 142, hours: 38, students: 6240, rating: 4.9, reviews: 812, price: 1890000, old: 2900000, icon: 'braces', tone: 'lime', code: 'JS-101', badge: 'پرفروش' },
-  { id: 2, title: 'طراحی رابط کاربری با فیگما', cat: 'design', level: 'مقدماتی', teacher: 1, lessons: 76, hours: 21, students: 4120, rating: 4.8, reviews: 530, price: 1290000, icon: 'layout-template', tone: 'pink', code: 'UI-201' },
-  { id: 3, title: 'پایتون برای علم داده و یادگیری ماشین', cat: 'ai', level: 'متوسط', teacher: 2, lessons: 118, hours: 34, students: 5310, rating: 4.9, reviews: 690, price: 2450000, old: 3200000, icon: 'brain-circuit', tone: 'violet', code: 'ML-310', badge: 'جدید' },
-  { id: 4, title: 'آیلتس ۷+ در ۱۲ هفته', cat: 'english', level: 'متوسط', teacher: 3, lessons: 96, hours: 30, students: 8830, rating: 4.9, reviews: 1204, price: 1650000, icon: 'languages', tone: 'sky', code: 'EN-IELTS' },
-  { id: 5, title: 'ری‌اکت و نکست‌جی‌اس پیشرفته', cat: 'web', level: 'پیشرفته', teacher: 0, lessons: 104, hours: 29, students: 3470, rating: 4.8, reviews: 402, price: 2190000, icon: 'atom', tone: 'mint', code: 'RE-401' },
-  { id: 6, title: 'دیجیتال مارکتینگ و سئو کاربردی', cat: 'marketing', level: 'مقدماتی', teacher: 4, lessons: 64, hours: 18, students: 2980, rating: 4.7, reviews: 311, price: 990000, old: 1400000, icon: 'megaphone', tone: 'coral', code: 'MK-120' },
-  { id: 7, title: 'مدیریت محصول: از ایده تا بازار', cat: 'business', level: 'متوسط', teacher: 5, lessons: 48, hours: 14, students: 1860, rating: 4.8, reviews: 207, price: 1450000, icon: 'rocket', tone: 'amber', code: 'PM-220' },
-  { id: 8, title: 'آموزش رایگان HTML و CSS', cat: 'web', level: 'مقدماتی', teacher: 0, lessons: 40, hours: 9, students: 14200, rating: 4.8, reviews: 1890, price: 0, icon: 'code-xml', tone: 'ink', code: 'WEB-000', badge: 'رایگان' },
-  { id: 9, title: 'تدوین ویدیو با پریمیر و افترافکت', cat: 'media', level: 'مقدماتی', teacher: 1, lessons: 58, hours: 17, students: 2240, rating: 4.7, reviews: 260, price: 1190000, icon: 'clapperboard', tone: 'mint', code: 'VD-150' },
-  { id: 10, title: 'امنیت شبکه و تست نفوذ مقدماتی', cat: 'security', level: 'متوسط', teacher: 2, lessons: 72, hours: 23, students: 1570, rating: 4.8, reviews: 188, price: 1990000, icon: 'shield-check', tone: 'violet', code: 'SEC-230' },
-  { id: 11, title: 'مکالمه انگلیسی برای محیط کار', cat: 'english', level: 'مقدماتی', teacher: 3, lessons: 60, hours: 16, students: 5020, rating: 4.9, reviews: 734, price: 890000, icon: 'message-circle', tone: 'sky', code: 'EN-WORK' },
-  { id: 12, title: 'هوش مصنوعی مولد برای همه', cat: 'ai', level: 'مقدماتی', teacher: 2, lessons: 36, hours: 8, students: 9320, rating: 4.9, reviews: 1022, price: 690000, old: 990000, icon: 'sparkles', tone: 'lime', code: 'AI-GEN', badge: 'داغ' },
+  { id: 1, title: 'جاوااسکریپت از صفر تا حرفه‌ای', cat: 'web', level: 'مقدماتی', teacher: 0, lessons: 142, hours: 38, students: 6240, rating: 4.9, reviews: 812, price: 1890000, old: 2900000, icon: 'braces', tone: 'blue', code: 'JS-101', badge: 'پرفروش' },
+  { id: 2, title: 'طراحی رابط کاربری با فیگما', cat: 'design', level: 'مقدماتی', teacher: 1, lessons: 76, hours: 21, students: 4120, rating: 4.8, reviews: 530, price: 1290000, icon: 'layout-template', tone: 'peach', code: 'UI-201' },
+  { id: 3, title: 'پایتون برای علم داده و یادگیری ماشین', cat: 'ai', level: 'متوسط', teacher: 2, lessons: 118, hours: 34, students: 5310, rating: 4.9, reviews: 690, price: 2450000, old: 3200000, icon: 'brain-circuit', tone: 'indigo', code: 'ML-310', badge: 'جدید' },
+  { id: 4, title: 'آیلتس ۷+ در ۱۲ هفته', cat: 'english', level: 'متوسط', teacher: 3, lessons: 96, hours: 30, students: 8830, rating: 4.9, reviews: 1204, price: 1650000, icon: 'languages', tone: 'teal', code: 'EN-IELTS' },
+  { id: 5, title: 'ری‌اکت و نکست‌جی‌اس پیشرفته', cat: 'web', level: 'پیشرفته', teacher: 0, lessons: 104, hours: 29, students: 3470, rating: 4.8, reviews: 402, price: 2190000, icon: 'atom', tone: 'blue', code: 'RE-401' },
+  { id: 6, title: 'دیجیتال مارکتینگ و سئو کاربردی', cat: 'marketing', level: 'مقدماتی', teacher: 4, lessons: 64, hours: 18, students: 2980, rating: 4.7, reviews: 311, price: 990000, old: 1400000, icon: 'megaphone', tone: 'peach', code: 'MK-120' },
+  { id: 7, title: 'مدیریت محصول: از ایده تا بازار', cat: 'business', level: 'متوسط', teacher: 5, lessons: 48, hours: 14, students: 1860, rating: 4.8, reviews: 207, price: 1450000, icon: 'rocket', tone: 'graphite', code: 'PM-220' },
+  { id: 8, title: 'آموزش رایگان HTML و CSS', cat: 'web', level: 'مقدماتی', teacher: 0, lessons: 40, hours: 9, students: 14200, rating: 4.8, reviews: 1890, price: 0, icon: 'code-xml', tone: 'indigo', code: 'WEB-000', badge: 'رایگان' },
+  { id: 9, title: 'تدوین ویدیو با پریمیر و افترافکت', cat: 'media', level: 'مقدماتی', teacher: 1, lessons: 58, hours: 17, students: 2240, rating: 4.7, reviews: 260, price: 1190000, icon: 'clapperboard', tone: 'teal', code: 'VD-150' },
+  { id: 10, title: 'امنیت شبکه و تست نفوذ مقدماتی', cat: 'security', level: 'متوسط', teacher: 2, lessons: 72, hours: 23, students: 1570, rating: 4.8, reviews: 188, price: 1990000, icon: 'shield-check', tone: 'graphite', code: 'SEC-230' },
+  { id: 11, title: 'مکالمه انگلیسی برای محیط کار', cat: 'english', level: 'مقدماتی', teacher: 3, lessons: 60, hours: 16, students: 5020, rating: 4.9, reviews: 734, price: 890000, icon: 'message-circle', tone: 'teal', code: 'EN-WORK' },
+  { id: 12, title: 'هوش مصنوعی مولد برای همه', cat: 'ai', level: 'مقدماتی', teacher: 2, lessons: 36, hours: 8, students: 9320, rating: 4.9, reviews: 1022, price: 690000, old: 990000, icon: 'sparkles', tone: 'blue', code: 'AI-GEN', badge: 'داغ' },
 ];
 
 export const catOf = (key) => categories.find((c) => c.key === key);
@@ -54,10 +54,10 @@ export const testimonials = [
 ];
 
 export const posts = [
-  { slug: 'post', title: 'نقشه راه فرانت‌اند در ۱۴۰۵: از کجا شروع کنیم؟', cat: 'برنامه‌نویسی', date: '۵ مهر ۱۴۰۵', read: 9, tone: 'lime', icon: 'map' },
-  { slug: 'post', title: '۷ عادت یادگیری که در ۳۰ روز زندگی‌تان را تغییر می‌دهد', cat: 'یادگیری', date: '۲ مهر ۱۴۰۵', read: 6, tone: 'amber', icon: 'sprout' },
-  { slug: 'post', title: 'هوش مصنوعی شغل برنامه‌نویس‌ها را می‌گیرد؟', cat: 'هوش مصنوعی', date: '۲۸ شهریور ۱۴۰۵', read: 11, tone: 'violet', icon: 'bot' },
-  { slug: 'post', title: 'راهنمای کامل ساخت رزومه برای اولین شغل', cat: 'بازار کار', date: '۲۴ شهریور ۱۴۰۵', read: 8, tone: 'coral', icon: 'file-user' },
-  { slug: 'post', title: 'چطور در آزمون آیلتس Writing نمره ۷ بگیریم', cat: 'زبان', date: '۲۰ شهریور ۱۴۰۵', read: 12, tone: 'sky', icon: 'pen-line' },
-  { slug: 'post', title: 'اصول رنگ در طراحی رابط کاربری', cat: 'طراحی', date: '۱۵ شهریور ۱۴۰۵', read: 7, tone: 'pink', icon: 'palette' },
+  { slug: 'post', title: 'نقشه راه فرانت‌اند در ۱۴۰۵: از کجا شروع کنیم؟', cat: 'برنامه‌نویسی', date: '۵ مهر ۱۴۰۵', read: 9, tone: 'blue', icon: 'map' },
+  { slug: 'post', title: '۷ عادت یادگیری که در ۳۰ روز زندگی‌تان را تغییر می‌دهد', cat: 'یادگیری', date: '۲ مهر ۱۴۰۵', read: 6, tone: 'peach', icon: 'sprout' },
+  { slug: 'post', title: 'هوش مصنوعی شغل برنامه‌نویس‌ها را می‌گیرد؟', cat: 'هوش مصنوعی', date: '۲۸ شهریور ۱۴۰۵', read: 11, tone: 'indigo', icon: 'bot' },
+  { slug: 'post', title: 'راهنمای کامل ساخت رزومه برای اولین شغل', cat: 'بازار کار', date: '۲۴ شهریور ۱۴۰۵', read: 8, tone: 'graphite', icon: 'file-user' },
+  { slug: 'post', title: 'چطور در آزمون آیلتس Writing نمره ۷ بگیریم', cat: 'زبان', date: '۲۰ شهریور ۱۴۰۵', read: 12, tone: 'teal', icon: 'pen-line' },
+  { slug: 'post', title: 'اصول رنگ در طراحی رابط کاربری', cat: 'طراحی', date: '۱۵ شهریور ۱۴۰۵', read: 7, tone: 'indigo', icon: 'palette' },
 ];

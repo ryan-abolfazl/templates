@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>پخش درس: Closure به زبان ساده | آکادمی دانش</title>
     <meta name="description" content="پلیر درس با فهرست جلسات، یادداشت و پرسش و پاسخ" />
-    <meta name="theme-color" content="#c8f53c" />
+    <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)" />
     <meta property="og:title" content="پخش درس: Closure به زبان ساده | آکادمی دانش" />
     <meta property="og:description" content="پلیر درس با فهرست جلسات، یادداشت و پرسش و پاسخ" />
     <meta property="og:locale" content="fa_IR" />
@@ -40,7 +41,7 @@
       ></a>
       <a class="logo" href="index.html" aria-label="آکادمی دانش، صفحه اصلی"
         ><span class="logo__mark" aria-hidden="true"
-          ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 4 2 9l10 5 10-5-10-5Z" />
             <path d="M6 11.5V16c3 2.5 9 2.5 12 0v-4.5" />
             <path d="M22 9v6" /></svg></span
@@ -142,7 +143,7 @@ next(); <span class="c">// 2  ← <bdi dir="rtl">count هنوز زنده است!
             <form class="row" data-validate data-success="سؤال شما ثبت شد؛ منتور به‌زودی پاسخ می‌دهد">
               <label class="sr-only" for="q">سؤال</label
               ><input class="input" id="q" required placeholder="سؤالت درباره این درس را بپرس…" /><button
-                class="btn btn--ink"
+                class="btn btn--primary"
                 type="submit"
               >
                 ارسال
@@ -150,14 +151,14 @@ next(); <span class="c">// 2  ← <bdi dir="rtl">count هنوز زنده است!
             </form>
             <article class="qa">
               <div class="person">
-                <span class="avatar avatar--sm tone-coral" aria-hidden="true">ن</span><span><b>نگار صادقی</b><span>۲ روز پیش</span></span>
+                <span class="avatar avatar--sm" aria-hidden="true">ن</span><span><b>نگار صادقی</b><span>۲ روز پیش</span></span>
               </div>
               <p>چرا count بعد از اجرای makeCounter از بین نمی‌رود؟</p>
               <div class="qa__answer">
                 <div class="person">
-                  <span class="avatar avatar--sm tone-lime" aria-hidden="true">آ</span
+                  <span class="avatar avatar--sm" aria-hidden="true">آ</span
                   ><span
-                    ><b>آرش کاظمی <span class="badge tone-violet">مدرس</span></b></span
+                    ><b>آرش کاظمی <span class="badge tone-accent">مدرس</span></b></span
                   >
                 </div>
                 <p>چون تابع برگشتی هنوز به آن ارجاع دارد؛ تا وقتی next وجود دارد، محیط لغوی (Lexical Environment) هم زنده می‌ماند.</p>
@@ -165,14 +166,14 @@ next(); <span class="c">// 2  ← <bdi dir="rtl">count هنوز زنده است!
             </article>
             <article class="qa">
               <div class="person">
-                <span class="avatar avatar--sm tone-sky" aria-hidden="true">ر</span><span><b>رضا امینی</b><span>۲ روز پیش</span></span>
+                <span class="avatar avatar--sm" aria-hidden="true">ر</span><span><b>رضا امینی</b><span>۲ روز پیش</span></span>
               </div>
               <p>Closure در ری‌اکت کجا به کار می‌آید؟</p>
               <div class="qa__answer">
                 <div class="person">
-                  <span class="avatar avatar--sm tone-lime" aria-hidden="true">م</span
+                  <span class="avatar avatar--sm" aria-hidden="true">م</span
                   ><span
-                    ><b>منتور دانش <span class="badge tone-violet">مدرس</span></b></span
+                    ><b>منتور دانش <span class="badge tone-accent">مدرس</span></b></span
                   >
                 </div>
                 <p>تقریباً همه‌جا! هر هندلر رویدادی که به state دسترسی دارد یک closure است. در فصل «Stale Closure» مفصل بررسی می‌کنیم.</p>

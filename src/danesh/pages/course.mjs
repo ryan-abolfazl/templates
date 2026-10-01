@@ -18,7 +18,7 @@ export default (ctx) => html`
   <div class="container course-hero__grid">
     <div class="course-hero__info">
       <nav class="breadcrumb" aria-label="مسیر صفحه"><a href="${ctx.base}index.html">خانه</a>${icon('chevron-left')}<a href="${ctx.base}courses.html">دوره‌ها</a>${icon('chevron-left')}<span aria-current="page">برنامه‌نویسی وب</span></nav>
-      <div class="row wrap"><span class="badge tone-lime">${icon('flame')} پرفروش</span><span class="badge">${icon('refresh-cw')} به‌روزرسانی مهر ۱۴۰۵</span></div>
+      <div class="row wrap"><span class="badge tone-accent">پرفروش</span><span class="badge">به‌روزرسانی مهر ۱۴۰۵</span></div>
       <h1>${c.title}</h1>
       <p class="lead">جامع‌ترین دوره فارسی جاوااسکریپت؛ از مفاهیم پایه تا برنامه‌نویسی ناهمگام، همراه با ۸ پروژه واقعی که مستقیم به رزومه‌تان اضافه می‌شوند.</p>
       <div class="course-hero__meta">
@@ -61,7 +61,7 @@ export default (ctx) => html`
                 <summary><span class="syllabus__num">${fa(i + 1)}</span><span>${s.title}<small class="xs muted" style="display:block;font-weight:500">${fa(s.lessons.length)} درس</small></span><span class="plus">${icon('plus')}</span></summary>
                 <ul class="list-plain syllabus__lessons">
                   ${s.lessons.map(
-                    ([name, time, free]) => html`<li>${icon(free ? 'circle-play' : 'lock')}<a href="${ctx.base}lesson.html">${name}</a>${free ? html`<span class="badge tone-lime">پیش‌نمایش</span>` : ''}<span class="xs muted">${time}</span></li>`
+                    ([name, time, free]) => html`<li>${icon(free ? 'circle-play' : 'lock')}<a href="${ctx.base}lesson.html">${name}</a>${free ? html`<span class="badge tone-accent">پیش‌نمایش</span>` : ''}<span class="xs muted">${time}</span></li>`
                   )}
                 </ul>
               </details>`
@@ -112,7 +112,7 @@ export default (ctx) => html`
         <div class="buy__price">
           <b>${fa(c.price)} <small>تومان</small></b>
           <del>${fa(c.old)}</del>
-          <span class="badge tone-coral">${fa(35)}٪ تخفیف</span>
+          <span class="badge tone-orange">${fa(35)}٪ تخفیف</span>
         </div>
         <p class="xs bold buy__timer" data-countdown data-hours="46">${icon('alarm-clock')} فقط <span data-unit="h">۴۶</span>:<span data-unit="m">۰۰</span>:<span data-unit="s">۰۰</span> تا پایان تخفیف</p>
         <button class="btn btn--primary btn--lg btn--block" type="button" data-add-to-cart="دوره به سبد خرید اضافه شد">${icon('shopping-bag')} افزودن به سبد خرید</button>
@@ -130,9 +130,9 @@ export default (ctx) => html`
   </div>
 </section>
 
-<section class="section section--cream">
+<section class="section section--tight">
   <div class="container">
-    <div class="section-head"><div><span class="eyebrow"><i>${icon('layers')}</i> ادامه مسیر</span><h2>دانشجوهای این دوره این‌ها را هم خریدند</h2></div></div>
+    <div class="section-head"><div><span class="eyebrow">ادامه مسیر</span><h2>دانشجوهای این دوره این‌ها را هم خریدند</h2></div></div>
     <div class="course-grid">${[courses[4], courses[7], courses[11], courses[1]].map((x) => courseCard(ctx, x))}</div>
   </div>
 </section>`;

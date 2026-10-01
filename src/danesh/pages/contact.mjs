@@ -10,10 +10,10 @@ ${pageHero(ctx, { title: 'بیا حرف بزنیم', sub: 'سؤال درباره
   <div class="container contact">
     <div class="stack" style="--gap:1rem">
       ${[
-        ['phone', 'tone-lime', 'تلفن پشتیبانی', '۰۲۱-۹۱۰۰۲۰۳۰', 'شنبه تا پنجشنبه، ۹ تا ۲۴'],
-        ['mail', 'tone-violet', 'ایمیل', 'support@danesh.academy', 'پاسخ در کمتر از ۴ ساعت'],
-        ['messages-square', 'tone-coral', 'چت آنلاین', 'گفتگو با پشتیبان', 'میانگین پاسخ ۲ دقیقه'],
-        ['map-pin', 'tone-sky', 'دفتر مرکزی', 'تهران، خیابان آزادی، نبش خیابان شادمان، پلاک ۴۲', 'مراجعه با هماهنگی قبلی'],
+        ['phone', '', 'تلفن پشتیبانی', '۰۲۱-۹۱۰۰۲۰۳۰', 'شنبه تا پنجشنبه، ۹ تا ۲۴'],
+        ['mail', '', 'ایمیل', 'support@danesh.academy', 'پاسخ در کمتر از ۴ ساعت'],
+        ['messages-square', '', 'چت آنلاین', 'گفتگو با پشتیبان', 'میانگین پاسخ ۲ دقیقه'],
+        ['map-pin', '', 'دفتر مرکزی', 'تهران، خیابان آزادی، نبش خیابان شادمان، پلاک ۴۲', 'مراجعه با هماهنگی قبلی'],
       ].map(([i, t, h, v, d]) => html`<div class="contact-item card"><span class="tile__icon ${t}">${icon(i)}</span><div><span class="xs muted">${h}</span><b class="${i === 'mail' ? 'ltr' : ''}" style="display:block">${v}</b><span class="xs muted">${d}</span></div></div>`)}
     </div>
     <form class="card stack" style="--gap:1.1rem" data-validate data-success="پیام شما ارسال شد؛ به‌زودی با شما تماس می‌گیریم">

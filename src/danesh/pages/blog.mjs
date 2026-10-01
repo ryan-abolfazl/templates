@@ -26,7 +26,7 @@ ${pageHero(ctx, {
     <div class="blog-grid">
       ${postCard(ctx, posts[0], true)}
       ${posts.slice(1).map((p) => postCard(ctx, p))}
-      ${posts.slice(1, 4).map((p) => postCard(ctx, { ...p, tone: ['mint', 'ink', 'lime'][posts.indexOf(p) % 3] }))}
+      ${posts.slice(1, 4).map((p) => postCard(ctx, { ...p, tone: ['teal', 'graphite', 'blue'][posts.indexOf(p) % 3] }))}
     </div>
     <nav class="pager mt-4" aria-label="صفحه‌بندی"><span class="is-active" aria-current="page">۱</span><a href="${ctx.base}blog.html">۲</a><a href="${ctx.base}blog.html">۳</a><a href="${ctx.base}blog.html" aria-label="صفحه بعد">${icon('chevron-left')}</a></nav>
   </div>

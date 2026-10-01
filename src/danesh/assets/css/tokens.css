@@ -1,96 +1,183 @@
 /* ==========================================================================
    Danesh | design tokens
-   Direction: playful neo-brutalist bento. Ink navy + lime, hard offset shadows,
-   big rounded shapes, Estedad display type.
+   Direction: minimal Apple-style glass. Apple grays, one blue accent,
+   frosted panels floating over soft sky / peach / lilac light.
+   Materials encode hierarchy: bigger surfaces = thicker glass, never glass on glass.
    ========================================================================== */
 
 :root {
-  --ink: #10143a;
-  --lime: #c8f53c;
-  --lime-600: #aee01a;
-  --violet: #7b61ff;
-  --coral: #ff7a59;
-  --sky: #4cc3ff;
-  --amber: #ffc53d;
-  --mint: #3ddc97;
-  --pink: #ff8fc7;
+  color-scheme: light;
 
-  --primary: var(--lime);
-  --primary-ink: var(--ink);
-  --accent: var(--violet);
-  --success: #16a34a;
-  --warning: #d97706;
-  --danger: #e5484d;
+  /* Accent + semantic (Apple system colors) */
+  --primary: #0066cc; /* text, links, icons */
+  --primary-fill: #0071e3; /* solid fills under white text */
+  --primary-hover: #0077ed;
+  --primary-soft: rgb(0 113 227 / 0.1);
+  --primary-contrast: #ffffff;
+  --success: #248a3d;
+  --warning: #b25000;
+  --danger: #d70015;
+  --star: #ff9f0a;
+  --heart: #ff375f;
 
-  --bg: #faf7f0;
+  /* Neutrals */
+  --bg: #f5f5f7;
   --surface: #ffffff;
-  --surface-2: #f3efe4;
-  --surface-3: #ebe5d6;
-  --border: var(--ink);
-  --line: #e4ddcc;
-  --text: var(--ink);
-  --text-muted: #5b5f7c;
-  --text-faint: #8d90a8;
-  --overlay: rgb(16 20 58 / 0.55);
+  --surface-2: #fbfbfd;
+  --fill: rgb(120 120 128 / 0.12);
+  --fill-2: rgb(120 120 128 / 0.07);
+  --line: rgb(0 0 0 / 0.08);
+  --line-strong: rgb(0 0 0 / 0.14);
+  --text: #1d1d1f;
+  --text-muted: #66666b;
+  --text-faint: #7c7c82;
+  --inverse: #1d1d1f;
+  --inverse-text: #f5f5f7;
+  --overlay: rgb(0 0 0 / 0.22);
 
-  --chart-1: var(--violet);
-  --chart-2: var(--lime-600);
-  --chart-3: var(--coral);
-  --chart-4: var(--sky);
-  --chart-5: var(--amber);
-  --chart-6: var(--mint);
+  /* Glass (materials) */
+  --glass: rgb(255 255 255 / 0.62);
+  --glass-strong: rgb(255 255 255 / 0.8);
+  --glass-border: rgb(255 255 255 / 0.65);
+  --glass-hairline: rgb(0 0 0 / 0.05);
+  --glass-edge: inset 0 1px 0 rgb(255 255 255 / 0.85);
+  --blur-sm: saturate(180%) blur(12px);
+  --blur: saturate(180%) blur(24px);
+  --blur-lg: saturate(180%) blur(40px);
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.04), 0 4px 12px -4px rgb(0 0 0 / 0.08);
+  --shadow-glass: 0 1px 2px rgb(0 0 0 / 0.03), 0 14px 40px -16px rgb(0 0 0 / 0.14);
+  --shadow-lg: 0 2px 6px rgb(0 0 0 / 0.04), 0 36px 80px -28px rgb(0 0 0 / 0.28);
+  --edge-fade: rgb(0 0 0 / 0.05);
+
+  /* Ambient light behind the glass */
+  --glow-1: rgb(124 196 255 / 0.55);
+  --glow-2: rgb(255 194 168 / 0.5);
+  --glow-3: rgb(201 184 255 / 0.5);
+
+  /* Course cover gradients */
+  --cv-blue: linear-gradient(140deg, #6cbcff, #0071e3);
+  --cv-indigo: linear-gradient(140deg, #aaa7ff, #5e5ce6);
+  --cv-teal: linear-gradient(140deg, #74e2d3, #1f9bb2);
+  --cv-peach: linear-gradient(140deg, #ffc8a4, #f07a5a);
+  --cv-graphite: linear-gradient(140deg, #a1a1aa, #47474e);
+
+  /* Charts (dashboard only) */
+  --chart-1: #0071e3;
+  --chart-2: #30b0c7;
+  --chart-3: #5e5ce6;
+  --chart-4: #ff9f0a;
+  --chart-5: #ff375f;
+  --chart-6: #8e8e93;
   --chart-dot: #fff;
 
+  /* Type */
   --font-display: 'Estedad', 'Vazirmatn', system-ui, sans-serif;
   --font-body: 'Vazirmatn', system-ui, -apple-system, 'Segoe UI', Tahoma, sans-serif;
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-md: 1.0625rem;
-  --text-lg: 1.25rem;
-  --text-xl: 1.5rem;
-  --text-2xl: clamp(1.6rem, 1.3rem + 1vw, 2rem);
-  --text-3xl: clamp(2rem, 1.5rem + 2vw, 2.75rem);
-  --text-4xl: clamp(2.4rem, 1.6rem + 3.4vw, 4rem);
-  --text-5xl: clamp(2.8rem, 1.6rem + 5vw, 5.5rem);
+  --text-xs: 0.78rem;
+  --text-sm: 0.9rem;
+  --text-base: 1.0625rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.3rem;
+  --text-xl: 1.55rem;
+  --text-2xl: clamp(1.65rem, 1.35rem + 1vw, 2.1rem);
+  --text-3xl: clamp(2rem, 1.5rem + 2vw, 2.9rem);
+  --text-4xl: clamp(2.4rem, 1.6rem + 3.2vw, 4rem);
+  --text-5xl: clamp(2.6rem, 1.4rem + 4.8vw, 5.25rem);
   --leading: 1.9;
-  --leading-tight: 1.35;
+  --leading-tight: 1.3;
 
+  /* Shape + motion */
   --radius-sm: 12px;
-  --radius: 18px;
-  --radius-lg: 26px;
+  --radius: 20px;
+  --radius-lg: 28px;
   --radius-xl: 36px;
   --radius-full: 999px;
-  --bw: 2px;
-  --hard: 4px 4px 0 var(--ink);
-  --hard-lg: 7px 7px 0 var(--ink);
-  --soft: 0 18px 40px -20px rgb(16 20 58 / 0.35);
-
-  --container: 1240px;
-  --header-h: 76px;
-  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --container: 1200px;
+  --header-h: 64px;
+  --ease: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-out: var(--ease);
   --dur: 0.2s;
-  --focus: var(--violet);
+  --press: 0.1s;
+  --focus: var(--primary);
   --scroll-offset: calc(var(--header-h) + 1rem);
 }
 
 [data-theme='dark'] {
-  --ink: #0a0d24;
-  --bg: #0d1130;
-  --surface: #151a42;
-  --surface-2: #1c2252;
-  --surface-3: #252c63;
-  --border: #3a4287;
-  --line: #262d62;
-  --text: #f1efe8;
-  --text-muted: #aeb2d6;
-  --text-faint: #7d82ad;
-  --primary-ink: #0a0d24;
-  --hard: 4px 4px 0 #050718;
-  --hard-lg: 7px 7px 0 #050718;
-  --soft: 0 18px 40px -20px rgb(0 0 0 / 0.7);
-  --chart-dot: #151a42;
-  --violet: #9a86ff;
-  --overlay: rgb(0 0 0 / 0.65);
+  color-scheme: dark;
+
+  --primary: #2997ff;
+  --primary-fill: #0071e3;
+  --primary-hover: #0077ed;
+  --primary-soft: rgb(41 151 255 / 0.16);
+  --primary-contrast: #ffffff;
+  --success: #30d158;
+  --warning: #ff9f0a;
+  --danger: #ff6961;
+
+  --bg: #0b0b0f;
+  --surface: #1c1c1f;
+  --surface-2: #151518;
+  --fill: rgb(120 120 128 / 0.24);
+  --fill-2: rgb(120 120 128 / 0.14);
+  --line: rgb(255 255 255 / 0.09);
+  --line-strong: rgb(255 255 255 / 0.16);
+  --text: #f5f5f7;
+  --text-muted: #a1a1a6;
+  --text-faint: #8e8e93;
+  --inverse: #f5f5f7;
+  --inverse-text: #1d1d1f;
+  --overlay: rgb(0 0 0 / 0.5);
+
+  --glass: rgb(32 32 36 / 0.55);
+  --glass-strong: rgb(36 36 40 / 0.78);
+  --glass-border: rgb(255 255 255 / 0.08);
+  --glass-hairline: rgb(255 255 255 / 0.04);
+  --glass-edge: inset 0 1px 0 rgb(255 255 255 / 0.08);
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.3), 0 4px 12px -4px rgb(0 0 0 / 0.4);
+  --shadow-glass: 0 1px 2px rgb(0 0 0 / 0.3), 0 18px 44px -18px rgb(0 0 0 / 0.6);
+  --shadow-lg: 0 2px 6px rgb(0 0 0 / 0.3), 0 40px 90px -30px rgb(0 0 0 / 0.8);
+  --edge-fade: rgb(0 0 0 / 0.35);
+
+  --glow-1: rgb(10 132 255 / 0.32);
+  --glow-2: rgb(255 140 100 / 0.16);
+  --glow-3: rgb(140 110 255 / 0.26);
+
+  --chart-1: #2997ff;
+  --chart-2: #40c8e0;
+  --chart-3: #7d7aff;
+  --chart-dot: #1c1c1f;
+}
+
+/* Accessibility: solid materials when transparency or extra contrast is requested */
+@media (prefers-reduced-transparency: reduce) {
+  :root,
+  [data-theme='dark'] {
+    --glass: var(--surface);
+    --glass-strong: var(--surface);
+    --blur-sm: none;
+    --blur: none;
+    --blur-lg: none;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root,
+  [data-theme='dark'] {
+    --glass: var(--surface);
+    --glass-strong: var(--surface);
+    --glass-border: var(--line-strong);
+    --line: var(--line-strong);
+    --text-muted: var(--text);
+    --blur-sm: none;
+    --blur: none;
+    --blur-lg: none;
+  }
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  :root,
+  [data-theme='dark'] {
+    --glass: var(--surface);
+    --glass-strong: var(--surface);
+  }
 }

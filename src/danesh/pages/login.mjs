@@ -1,28 +1,16 @@
 import { html, icon } from '../../../tools/lib/html.mjs';
-import { logo, cover } from '../partials.mjs';
-import { courses } from '../data.mjs';
+import { logo } from '../partials.mjs';
 
 export const meta = { title: 'ورود', layout: 'blank', description: 'ورود به حساب کاربری آکادمی دانش' };
 
 export const authLayout = (ctx, title, sub, form) => html`
 <main id="main" class="auth">
-  <section class="auth__form">
-    ${logo(ctx)}
-    <div class="stack" style="--gap:1.25rem;inline-size:min(100%,25rem);margin-block:auto">
-      <h1>${title}</h1>
-      <p class="muted" style="margin-block-start:-.75rem">${sub}</p>
-      ${form}
-    </div>
-    <a class="small muted" href="${ctx.base}index.html">${icon('arrow-right')} بازگشت به صفحه اصلی</a>
+  <div class="auth__top">${logo(ctx)}<a class="small muted" href="${ctx.base}index.html">بازگشت به صفحه اصلی ${icon('chevron-left')}</a></div>
+  <section class="auth__card glass glass--lg">
+    <div class="stack" style="--gap:.4rem"><h1>${title}</h1><p class="muted">${sub}</p></div>
+    ${form}
   </section>
-  <aside class="auth__art" aria-hidden="true">
-    <div class="auth__stack">
-      ${cover(courses[2], 'auth__c1')}
-      ${cover(courses[0], 'auth__c2')}
-      ${cover(courses[3], 'auth__c3')}
-    </div>
-    <p class="auth__quote">«هر روز فقط ۳۰ دقیقه؛<br />یک سال بعد، آدم دیگری هستی.»</p>
-  </aside>
+  <p class="auth__quote">«هر روز فقط ۳۰ دقیقه؛ یک سال بعد، آدم دیگری هستی.»</p>
 </main>`;
 
 export default (ctx) =>

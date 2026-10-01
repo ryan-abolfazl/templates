@@ -1,4 +1,4 @@
-/*! آکادمی دانش v1.0.0 | core UI helpers | vanilla JS, no dependencies */
+/*! آکادمی دانش v2.0.0 | core UI helpers | vanilla JS, no dependencies */
 
 /* ---- util.js ---- */
 /* Shared helpers exposed as window.UI. Every other core module builds on these. */

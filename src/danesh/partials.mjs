@@ -1,12 +1,12 @@
 import { html, icon, fa, toman } from '../../tools/lib/html.mjs';
 import { categories, instructors, catOf } from './data.mjs';
 
-// One letter reads better than two in small round avatars
+// One letter reads better than two in small round avatars. tone is kept for API compatibility; monograms are neutral.
 export const initials = (name) => name.trim()[0];
 
-export const avatar = (name, tone = 'lime', size = '') => html`<span class="avatar ${size ? `avatar--${size}` : ''} tone-${tone}" aria-hidden="true">${initials(name)}</span>`;
+export const avatar = (name, tone = 'lime', size = '') => html`<span class="avatar ${size ? `avatar--${size}` : ''}" aria-hidden="true">${initials(name)}</span>`;
 
-const logoMark = html`<span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2 9l10 5 10-5-10-5Z"/><path d="M6 11.5V16c3 2.5 9 2.5 12 0v-4.5"/><path d="M22 9v6"/></svg></span>`;
+const logoMark = html`<span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2 9l10 5 10-5-10-5Z"/><path d="M6 11.5V16c3 2.5 9 2.5 12 0v-4.5"/><path d="M22 9v6"/></svg></span>`;
 
 export const logo = (ctx, light = false) => html`<a class="logo" href="${ctx.base}index.html" aria-label="آکادمی دانش، صفحه اصلی">${logoMark}<span>دانش<small>آکادمی آنلاین</small></span></a>`;
 
@@ -19,22 +19,22 @@ const NAV = [
 ];
 
 export const header = (ctx) => html`
-<div class="announce">🎓 جشنواره مهر: <b>۴۰٪ تخفیف</b> همه دوره‌ها تا <b data-countdown data-hours="70"><span data-unit="d">۰۲</span> روز و <span data-unit="h">۲۲</span>:<span data-unit="m">۰۰</span>:<span data-unit="s">۰۰</span></b> دیگر · <a href="${ctx.base}courses.html">مشاهده دوره‌ها</a></div>
+<div class="announce">جشنواره مهر: <b>۴۰٪ تخفیف</b> همه دوره‌ها تا <b data-countdown data-hours="70"><span data-unit="d">۰۲</span> روز و <span data-unit="h">۲۲</span>:<span data-unit="m">۰۰</span>:<span data-unit="s">۰۰</span></b> دیگر · <a href="${ctx.base}courses.html">مشاهده دوره‌ها</a></div>
 <header class="header" data-sticky-header>
   <div class="container header__inner">
     <button class="icon-btn menu-btn" type="button" data-drawer-open="menu" aria-controls="menu" aria-expanded="false" aria-label="باز کردن منو">${icon('menu')}</button>
     ${logo(ctx)}
     <nav class="nav" aria-label="منوی اصلی">
       <div data-dropdown>
-        <button class="nav__link${ctx.nav('courses')}" type="button" data-dropdown-toggle aria-expanded="false">دسته‌بندی‌ها ${icon('chevron-down')}</button>
+        <button class="nav__link" type="button" data-dropdown-toggle aria-expanded="false">دسته‌بندی‌ها ${icon('chevron-down')}</button>
         <div class="mega" data-dropdown-menu>
           <div class="mega__cats">
             ${categories.map(
-              (c) => html`<a class="mega__cat" href="${ctx.base}courses.html"><span class="avatar tone-${c.tone}" style="border-radius:12px">${icon(c.icon)}</span><span><b>${c.name}</b><span>${fa(c.count)} دوره</span></span></a>`
+              (c) => html`<a class="mega__cat" href="${ctx.base}courses.html"><span class="mega__icon">${icon(c.icon)}</span><span><b>${c.name}</b><span>${fa(c.count)} دوره</span></span></a>`
             )}
           </div>
           <div class="mega__promo">
-            <span class="badge tone-lime" style="align-self:flex-start">${icon('crown')} اشتراک دانش پلاس</span>
+            <span class="badge tone-accent" style="align-self:flex-start">${icon('crown')} اشتراک دانش پلاس</span>
             <h3>دسترسی نامحدود به بیش از ۳۰۰ دوره با یک اشتراک</h3>
             <a class="btn btn--primary btn--sm" href="${ctx.base}pricing.html">مشاهده طرح‌ها ${icon('arrow-left')}</a>
           </div>
@@ -46,7 +46,7 @@ export const header = (ctx) => html`
       <button class="icon-btn hide-md" type="button" data-modal-open="search" aria-label="جستجو">${icon('search')}</button>
       <button class="icon-btn" type="button" data-theme-toggle aria-label="تغییر حالت روشن و تاریک" aria-pressed="false">${icon('moon', 'theme-icon-light')}${icon('sun', 'theme-icon-dark')}</button>
       <a class="icon-btn" href="${ctx.base}cart.html" aria-label="سبد خرید">${icon('shopping-bag')}<span class="count" data-cart-count>۲</span></a>
-      <a class="btn btn--ink btn--sm hide-md" href="${ctx.base}login.html">${icon('log-in', 'icon-flip')} ورود | ثبت‌نام</a>
+      <a class="btn btn--primary btn--sm hide-md" href="${ctx.base}login.html">ورود | ثبت‌نام</a>
     </div>
   </div>
 </header>
@@ -101,7 +101,7 @@ export const footer = (ctx) => html`
         </div>
       </div>
     </div>
-    <div class="footer__bottom"><p>© ${fa('1405')} آکادمی دانش. تمامی حقوق محفوظ است.</p><p>ساخته‌شده با ☕ و ❤️ در تهران</p></div>
+    <div class="footer__bottom"><p>© ${fa('1405')} آکادمی دانش. تمامی حقوق محفوظ است.</p><p>طراحی‌شده در تهران</p></div>
   </div>
 </footer>
 <button class="btn btn--icon scroll-top" type="button" data-scroll-top aria-label="بازگشت به بالا">${icon('arrow-up')}</button>`;
@@ -112,7 +112,7 @@ export const price = (p, old) =>
     : html`<div class="price">${old ? html`<del>${fa(old)}</del>` : ''}<b>${fa(p)} <small>تومان</small></b></div>`;
 
 export const cover = (c, cls = '') => html`<div class="cover c-${c.tone} ${cls}">
-  ${c.badge ? html`<span class="badge tone-ink cover__tag">${c.badge}</span>` : ''}
+  ${c.badge ? html`<span class="badge tone-dark cover__tag">${c.badge}</span>` : ''}
   <span class="cover__icon">${icon(c.icon)}</span>
   <span class="cover__code">${c.code}</span>
 </div>`;
@@ -125,7 +125,7 @@ export const courseCard = (ctx, c) => {
     <button class="course-card__wish" type="button" data-wishlist aria-pressed="false" aria-label="افزودن ${c.title} به علاقه‌مندی‌ها">${icon('heart')}</button>
   </div>
   <div class="course-card__body">
-    <div class="row-between"><span class="badge tone-${catOf(c.cat).tone}">${catOf(c.cat).name}</span><span class="rating">${icon('star')} ${fa(c.rating).replace('.', '٫')} <small>(${fa(c.reviews)})</small></span></div>
+    <div class="row-between"><span class="badge">${catOf(c.cat).name}</span><span class="rating">${icon('star')} ${fa(c.rating).replace('.', '٫')} <small>(${fa(c.reviews)})</small></span></div>
     <h3><a href="${ctx.base}course.html">${c.title}</a></h3>
     <div class="course-card__meta"><span>${icon('play-circle')} ${fa(c.lessons)} جلسه</span><span>${icon('clock')} ${fa(c.hours)} ساعت</span><span>${icon('signal')} ${c.level}</span></div>
     <div class="course-card__foot">

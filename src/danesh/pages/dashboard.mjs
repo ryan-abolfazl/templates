@@ -17,7 +17,7 @@ export default (ctx) => html`
       <div class="center stack" style="justify-items:center;--gap:.5rem">
         ${avatar('سارا محمدی', 'lime', 'xl')}
         <b>سارا محمدی</b>
-        <span class="badge tone-violet">${icon('crown')} عضو دانش پلاس</span>
+        <span class="badge tone-accent">${icon('crown')} عضو دانش پلاس</span>
       </div>
       <nav class="dash__nav" aria-label="منوی داشبورد">
         <a class="is-active" href="${ctx.base}dashboard.html" aria-current="page">${icon('layout-dashboard')} پیشخوان</a>
@@ -31,13 +31,13 @@ export default (ctx) => html`
 
     <div class="dash__main">
       <div class="dash__hello">
-        <div><h1>سلام سارا! 👋</h1><p class="muted">۵ روز پشت سر هم درس خوانده‌ای؛ رکوردت را نشکن!</p></div>
+        <div><h1>سلام سارا</h1><p class="muted">۵ روز پشت سر هم درس خوانده‌ای؛ رکوردت را نشکن!</p></div>
         <div class="streak">${['ش', 'ی', 'د', 'س', 'چ', 'پ', 'ج'].map((d, i) => html`<span class="${i < 5 ? 'is-on' : ''}">${i < 5 ? icon('flame') : ''}<small>${d}</small></span>`)}</div>
       </div>
 
       <div class="dash__stats">
-        ${[['library-big', 'دوره فعال', 3, 'tone-lime'], ['clock', 'ساعت یادگیری', 46, 'tone-sky'], ['circle-check', 'جلسه تکمیل‌شده', 128, 'tone-violet'], ['award', 'گواهی', 2, 'tone-amber']].map(
-          ([i, l, v, t]) => html`<div class="tile ${t}"><span class="tile__icon">${icon(i)}</span><b class="tile__num">${fa(v)}</b><span class="xs bold">${l}</span></div>`
+        ${[['library-big', 'دوره فعال', 3, ''], ['clock', 'ساعت یادگیری', 46, ''], ['circle-check', 'جلسه تکمیل‌شده', 128, ''], ['award', 'گواهی', 2, '']].map(
+          ([i, l, v, t]) => html`<div class="tile ${t}"><span class="tile__icon">${icon(i)}</span><b class="tile__num">${fa(v)}</b><span class="xs muted">${l}</span></div>`
         )}
       </div>
 
@@ -49,7 +49,7 @@ export default (ctx) => html`
               <div class="continue__cover">${cover(c)}</div>
               <div class="continue__info">
                 <h3>${c.title}</h3>
-                <p class="xs muted">${p === 100 ? 'تبریک! این دوره را به پایان رساندی 🎉' : `بعدی: ${next}`}</p>
+                <p class="xs muted">${p === 100 ? 'تبریک! این دوره را به پایان رساندی.' : `بعدی: ${next}`}</p>
                 <div class="row small"><div class="progress" style="flex:1"><span style="--value:${p}%"></span></div><b>${fa(p)}٪</b></div>
               </div>
               ${p === 100 ? html`<a class="btn btn--sm" href="${ctx.base}certificate.html">${icon('award')} گواهی</a>` : html`<a class="btn btn--sm btn--primary" href="${ctx.base}lesson.html">${icon('play')} ادامه</a>`}

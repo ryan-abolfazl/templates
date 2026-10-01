@@ -47,6 +47,21 @@ executed with precision. Bold maximalism and refined minimalism both work; lukew
 - Consistent radii family (e.g. 10 / 16 / 28). Consistent icon stroke (1.75).
 - Break the grid deliberately in heroes (overlap, asymmetry, oversized numerals), keep inner pages calm and systematic.
 
+## Materials & glass (from apple-design)
+
+Distilled from Emil Kowalski's apple-design skill (github.com/emilkowalski/skills, `skills/apple-design`). Use when a template is glass-based (danesh, labkhand):
+
+- Glass is a functional layer, not decoration: header, sheets, modals, menus, floating cards. Content scrolls underneath.
+- Material weight encodes hierarchy: bigger surfaces get stronger blur and deeper shadow (`.glass` vs `.glass--lg`).
+- Never stack a light translucent surface on another. Inside a glass panel use flat tints (`--fill`), not more glass.
+- A bright 1px inset top edge reads as light catching the material. Prefer a scroll-edge fade under sticky bars over a hard divider.
+- Glass needs something behind it: a few large, soft, fixed light fields. Animate them once on load, never loop.
+- Materialize, don't just fade: animate blur + scale together for modals, menus and toasts; exit along the entry path.
+- Press feedback on pointer-down (`:active { transform: scale(.97) }`, ~100ms). Critically damped easing `cubic-bezier(.32,.72,0,1)`.
+- Always ship `prefers-reduced-transparency` (solid surfaces, no blur), `prefers-contrast: more` (solid + borders) and `prefers-reduced-motion` (cross-fades).
+- Check text contrast against the worst case: glass alpha over the brightest glow. Use a darker accent for text (#0066cc) than for button fills (#0071e3).
+- **Persian override:** the skill's negative tracking on large type applies to Latin/digits only. Never letter-space Persian; it breaks the joins.
+
 ## Motion
 
 - Purposeful and quick: 150–250ms UI, 500–800ms reveals, `cubic-bezier(.22,1,.36,1)`.
@@ -69,7 +84,7 @@ executed with precision. Bold maximalism and refined minimalism both work; lukew
 | niche | direction | palette idea | type |
 |---|---|---|---|
 | admin dashboard | calm precision, data-dense but airy | slate neutrals + electric indigo, semantic green/amber/red | Vazirmatn only, tabular nums |
-| LMS / courses | energetic, optimistic, bento | deep ink navy + lime/chartreuse accent + warm white | Estedad 800 display + Vazirmatn body |
+| LMS / courses | minimal Apple-style glass, calm and confident (danesh v2) | Apple grays #f5f5f7/#1d1d1f + one blue #0066cc/#0071e3, soft sky/peach/lilac glows | Estedad 700–800 display + Vazirmatn body |
 | fashion e-shop | editorial, high contrast, big type | near-black + bone/ecru + one clay/terracotta accent | Noto Kufi Arabic display + Vazirmatn |
 | dental / medical | soft clinical calm, glass & air | white + mint/teal + deep teal text, soft sky tint | Vazirmatn light/regular, generous size |
 | Persian restaurant | Qajar/Safavid warmth, night & gold | charcoal-plum + saffron gold + pomegranate red, tile patterns | Lalezar display, Nastaliq accents, Vazirmatn body |

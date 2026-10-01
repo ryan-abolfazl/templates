@@ -62,13 +62,13 @@ next(); <span class="c">// 2  ← <bdi dir="rtl">count هنوز زنده است!
         <button role="tab" id="lt-3" aria-controls="lp-3" aria-selected="false" type="button">${icon('paperclip')} فایل‌ها</button>
       </div>
       <div role="tabpanel" id="lp-1" aria-labelledby="lt-1" class="tab-body stack">
-        <form class="row" data-validate data-success="سؤال شما ثبت شد؛ منتور به‌زودی پاسخ می‌دهد"><label class="sr-only" for="q">سؤال</label><input class="input" id="q" required placeholder="سؤالت درباره این درس را بپرس…" /><button class="btn btn--ink" type="submit">ارسال</button></form>
+        <form class="row" data-validate data-success="سؤال شما ثبت شد؛ منتور به‌زودی پاسخ می‌دهد"><label class="sr-only" for="q">سؤال</label><input class="input" id="q" required placeholder="سؤالت درباره این درس را بپرس…" /><button class="btn btn--primary" type="submit">ارسال</button></form>
         ${[
           ['نگار صادقی', 'coral', 'چرا count بعد از اجرای makeCounter از بین نمی‌رود؟', 'آرش کاظمی', 'چون تابع برگشتی هنوز به آن ارجاع دارد؛ تا وقتی next وجود دارد، محیط لغوی (Lexical Environment) هم زنده می‌ماند.'],
           ['رضا امینی', 'sky', 'Closure در ری‌اکت کجا به کار می‌آید؟', 'منتور دانش', 'تقریباً همه‌جا! هر هندلر رویدادی که به state دسترسی دارد یک closure است. در فصل «Stale Closure» مفصل بررسی می‌کنیم.'],
         ].map(
           ([a, t, q, r, ans]) => html`<article class="qa"><div class="person">${avatar(a, t, 'sm')}<span><b>${a}</b><span>۲ روز پیش</span></span></div><p>${q}</p>
-            <div class="qa__answer"><div class="person">${avatar(r, 'lime', 'sm')}<span><b>${r} <span class="badge tone-violet">مدرس</span></b></span></div><p>${ans}</p></div></article>`
+            <div class="qa__answer"><div class="person">${avatar(r, 'lime', 'sm')}<span><b>${r} <span class="badge tone-accent">مدرس</span></b></span></div><p>${ans}</p></div></article>`
         )}
       </div>
       <div role="tabpanel" id="lp-2" aria-labelledby="lt-2" class="tab-body" hidden>

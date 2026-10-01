@@ -15,7 +15,7 @@ export const summary = (ctx, { cta = 'ادامه و پرداخت', href = 'check
     <div class="summary__total"><dt>مبلغ قابل پرداخت</dt><dd data-sum-total>—</dd></div>
   </dl>
   ${coupon
-    ? html`<form class="coupon" data-coupon><label class="sr-only" for="coupon">کد تخفیف</label><input class="input ltr" id="coupon" placeholder="کد تخفیف" /><button class="btn btn--ink" type="submit">اعمال</button></form>`
+    ? html`<form class="coupon" data-coupon><label class="sr-only" for="coupon">کد تخفیف</label><input class="input ltr" id="coupon" placeholder="کد تخفیف" /><button class="btn" type="submit">اعمال</button></form>`
     : ''}
   <a class="btn btn--primary btn--lg btn--block" href="${ctx.base}${href}">${cta} ${icon('arrow-left')}</a>
   <p class="xs muted center">${icon('lock')} پرداخت امن از طریق درگاه‌های بانکی عضو شتاب</p>
@@ -45,7 +45,7 @@ ${pageHero(ctx, { title: 'سبد خرید', crumbs: [{ label: 'سبد خرید' 
   </div>
 </section>
 
-<section class="section section--cream section--tight">
+<section class="section section--tight">
   <div class="container">
     <h2 class="mb-2" style="font-size:var(--text-2xl);margin-block-end:1.5rem">پیشنهاد برای شما</h2>
     <div class="course-grid">${[courses[4], courses[11], courses[6], courses[9]].map((c) => courseCard(ctx, c))}</div>

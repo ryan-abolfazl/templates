@@ -86,7 +86,7 @@ for (const rel of pages) {
     });
     await page.waitForTimeout(700);
     // Let reveal animations settle, then force them visible for the screenshot.
-    await page.addStyleTag({ content: '[data-reveal]{opacity:1!important;transform:none!important;transition:none!important}' });
+    await page.addStyleTag({ content: '[data-reveal]{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}' });
     await page.waitForTimeout(300);
 
     const info = await page.evaluate(() => {
